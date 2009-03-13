@@ -5338,6 +5338,28 @@ class LLPromptShowFile : public view_listener_t
 	}
 };
 
+class LLShowURL : public view_listener_t
+{
+	bool handleEvent(LLPointer<LLEvent> event, const LLSD& userdata)
+	{
+		std::string url = userdata.asString();
+		llinfos << "LLShowURL: attempting to navigate to " << url << llendl;
+		LLWeb::loadURL(url);
+		return true;
+	}
+};
+
+class LLShowURLInworld : public view_listener_t
+{
+	bool handleEvent(LLPointer<LLEvent> event, const LLSD& userdata)
+	{
+		std::string url = userdata.asString();
+		llinfos << "LLShowURLInworld: attempting to navigate to " << url << llendl;
+		LLFloaterMediaBrowser::showInstance(url);
+		return true;
+	}
+};
+
 class LLShowAgentProfile : public view_listener_t
 {
 	bool handleEvent(LLPointer<LLEvent> event, const LLSD& userdata)
@@ -9868,6 +9890,8 @@ void initialize_menus()
 	addMenu(new LLShowFloater(), "ShowFloater");
 	addMenu(new LLPromptShowURL(), "PromptShowURL");
 	addMenu(new LLPromptShowFile(), "PromptShowFile");
+	addMenu(new LLShowURL(), "ShowURL");
+	addMenu(new LLShowURLInworld(), "ShowURLInworld");
 	addMenu(new LLShowAgentProfile(), "ShowAgentProfile");
 	addMenu(new LLShowAgentGroups(), "ShowAgentGroups");
 	addMenu(new LLToggleControl(), "ToggleControl");
