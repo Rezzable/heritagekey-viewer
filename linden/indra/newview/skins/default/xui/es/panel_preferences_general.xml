@@ -14,7 +14,6 @@
 		</radio_item>
 	</radio_group>
 	<check_box label="Ocultar mi nombre en la pantalla" name="show_my_name_checkbox" />
-	<check_box label="Ocultar título de mi grupo" name="show_my_title_checkbox" />
 	<check_box label="Nombres de avatares pequeños" name="small_avatar_names_checkbox" />
 	<color_swatch label="" name="effect_color_swatch"
 	     tool_tip="Haga clic para abrir la selección de color" />
@@ -22,13 +21,9 @@
 	<check_box label="Mostrar notificación de amigo online"
 	     name="friends_online_notify_checkbox" />
 	<check_box label="Girar minimapa" name="rotate_mini_map_checkbox" />
-	<check_box label="Notificar cuando Linden dólares (L$) son gastos o recibidos"
-	     name="notify_money_change_checkbox" />
 	<check_box label="Autodetectar hardware gráfico en la próxima vez que iniciar"
 	     name="probe_hardware_checkbox"
 	     tool_tip="Seconf Life automáticamente ajusta algunas configuraciones gráficas con base en su hardware.  Si usted instala un  nuevo hardware,  Second Life debe detectarlo nuevamente." />
-	<check_box label="Usar sistema de color patrón" name="use_system_color_picker_checkbox"
-	     tool_tip="Usar selección del color de sistema patrón al revés del construido en Second Life." />
 	<text type="string" length="1" name="start_location_textbox">
 		Local de inicio:
 	</text>

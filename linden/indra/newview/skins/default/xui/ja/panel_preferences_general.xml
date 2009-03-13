@@ -33,13 +33,6 @@
 		</combo_item>
 	</combo_box>
 	<check_box label="画面上で自分の名前を隠す" name="show_my_name_checkbox" />
-	<text name="group_titles_textbox">
-		グループ・タイトル：
-	</text>
-	<check_box label="グループ・タイトルをすべて非表示"
-	     name="show_all_title_checkbox" />
-	<check_box label="自分のグループ・タイトルを隠す"
-	     name="show_my_title_checkbox" />
 	<check_box label="小さなアバター名" name="small_avatar_names_checkbox" />
 	<color_swatch label="" name="effect_color_swatch"
 	     tool_tip="カラー・ピッカーをクリックして開く" />
@@ -51,17 +44,9 @@
 	<check_box label="オンライン・フレンド通知を表示"
 	     name="friends_online_notify_checkbox" />
 	<check_box label="ミニマップを回転" name="rotate_mini_map_checkbox" />
-	<check_box label="リンデン・ドル（L$）の支払い/受け取りを通知"
-	     name="notify_money_change_checkbox" />
 	<check_box label="次回起動時グラフィックカード自動検出"
 	     name="probe_hardware_checkbox"
 	     tool_tip="Second Lifeは、あなたのハードウェアに基づいて、いくつかのグラフィック設定を自動的に構成します。  新しいハードウェアをインストールした場合は、Second Lifeに再度検出させるようにしてください。" />
-	<check_box label="デフォルト・システムのカラー選択を使用"
-	     name="use_system_color_picker_checkbox"
-	     tool_tip="Second Life内蔵でない、デフォルト・システムのカラー選択を使用" />
-	<check_box label="オーバーレイ・バーに検索パネルを表示"
-	     name="show_search_panel"
-	     tool_tip="組み込みの検索パネルを表示します。" />
 	<text type="string" length="1" name="start_location_textbox">
 		ログイン位置：
 	</text>

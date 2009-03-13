@@ -32,11 +32,6 @@
 		</combo_item>
 	</combo_box>
 	<check_box label="내 화면에서 내 이름 숨기기" name="show_my_name_checkbox" />
-	<text name="group_titles_textbox">
-		그룹 타이틀:
-	</text>
-	<check_box label="모든 그룹 타이틀 숨기기" name="show_all_title_checkbox" />
-	<check_box label="내 그룹명 숨기기" name="show_my_title_checkbox" />
 	<check_box label="작은 아바타 이름" name="small_avatar_names_checkbox" />
 	<color_swatch label="" name="effect_color_swatch"
 	     tool_tip="색 관리기를 열려면 클릭 하십시오." />
@@ -47,15 +42,9 @@
 	<spinner label="자리비움 시간초과:" name="afk_timeout_spinner" />
 	<check_box label="온라인 친구 보여주기" name="friends_online_notify_checkbox" />
 	<check_box label="미니 지도 회전" name="rotate_mini_map_checkbox" />
-	<check_box label="L$ 지출과 기부 알려주기" name="notify_money_change_checkbox" />
 	<check_box label="다음 시작할 때 그래픽 하드웨어 자동 감지"
 	     name="probe_hardware_checkbox"
 	     tool_tip="세컨드라이프는 사용자의 하드웨어에 따라 일부 그래픽 설정을 자동으로 구성합니다.  새로운 하드웨어를 설치하려는 경우, 세컨드라이프가 이를 다시 감지하도록 해야 합니다." />
-	<check_box label="시스템 기본색 관리 사용"
-	     name="use_system_color_picker_checkbox"
-	     tool_tip="세컨드라이프에서 제공하는 것 대신 기본 시스템 색관리를 사용합니다." />
-	<check_box label="오버레이 표시줄에 검색 창 표시" name="show_search_panel"
-	     tool_tip="포함된 검색 창을 표시합니다." />
 	<text type="string" length="1" name="start_location_textbox">
 		시작 위치:
 	</text>
