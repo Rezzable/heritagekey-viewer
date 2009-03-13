@@ -36,70 +36,41 @@
 	     font="SansSerifSmall" height="16" initial_value="false"
 	     label="Hide My Name On My Screen" left="151" name="show_my_name_checkbox"
 	     width="200" />
-	<text type="string" length="1" bottom_delta="-24" follows="left|top" font="SansSerifSmall" h_pad="0"
-	     halign="left" height="16" left="10" name="group_titles_textbox" v_pad="0"
-	     width="394">
-		Group Titles:
-	</text>
-	<check_box bottom_delta="0" control_name="RenderHideGroupTitleAll" follows="left|top"
-	     font="SansSerifSmall" height="16" initial_value="false"
-	     label="Hide All Group Titles" left="151" mouse_opaque="true"
-	     name="show_all_title_checkbox" radio_style="false" width="256" />
-	<check_box bottom_delta="-18" control_name="RenderHideGroupTitle" follows="left|top"
-	     font="SansSerifSmall" height="16" initial_value="false"
-	     label="Hide My Group Title" left="151" name="show_my_title_checkbox"
-	     radio_style="false" width="256" />
-	<color_swatch border_color="0.45098 0.517647 0.607843 1" bottom="-210"
+	<color_swatch border_color="0.45098 0.517647 0.607843 1" bottom="-178"
 	     can_apply_immediately="false" color="1 1 1 1" control_name="EffectColor"
 	     enabled="true" follows="left|top" height="48" label="" left="153"
 	     mouse_opaque="true" name="effect_color_swatch"
 	     tool_tip="Click to open Color Picker" width="32" />
 	<text type="string" length="1" bg_visible="false" border_drop_shadow_visible="false" border_visible="false"
-	     bottom="-215" drop_shadow_visible="true" enabled="true" follows="left|top"
+	     bottom="-195" drop_shadow_visible="true" enabled="true" follows="left|top"
 	     font="SansSerifSmall" h_pad="0" halign="left" height="12" left="10"
 	     mouse_opaque="true" name="UI Size:" v_pad="0" width="128">
 		UI Size:
 	</text>
-	<slider bottom="-217" can_edit_text="true" control_name="UIScaleFactor"
+	<slider bottom="-197" can_edit_text="true" control_name="UIScaleFactor"
 	     decimal_digits="3" enabled="true" height="16" increment="0.025"
 	     initial_val="1" left="148" max_val="1.4" min_val="0.75" mouse_opaque="true"
 	     name="UI Scale" show_text="true" value="1" width="220" />
-  <button bottom="-221" enabled="true" follows="left|top"
+  <button bottom="-201" enabled="true" follows="left|top"
 	     font="SansSerif" halign="center" height="22" label="Reset"
 	     label_selected="Reset" left_delta="226" mouse_opaque="true"
 	     name="reset_ui_size" scale_image="true" width="80" />
-	<check_box bottom="-236" control_name="UIAutoScale" enabled="true" follows="left|top"
+	<check_box bottom="-216" control_name="UIAutoScale" enabled="true" follows="left|top"
 	     font="SansSerifSmall" height="16" initial_value="false"
 	     label="Use resolution independent scale" left="151" mouse_opaque="true"
 	     name="ui_auto_scale" radio_style="false" width="256" />
-	<spinner bottom="-260" control_name="AFKTimeout" decimal_digits="0" enabled="true"
+	<spinner bottom="-255" control_name="AFKTimeout" decimal_digits="0" enabled="true"
 	     follows="left|top" height="16" increment="1" initial_val="300"
 	     label="Away Timeout:" label_width="141" left="10" max_val="600"
 	     min_val="30" mouse_opaque="true" name="afk_timeout_spinner" width="202" />
-	<check_box bottom="-286" control_name="MiniMapRotate" enabled="true" follows="left|top"
+	<check_box bottom="-296" control_name="MiniMapRotate" enabled="true" follows="left|top"
 	     font="SansSerifSmall" height="16" initial_value="false"
 	     label="Rotate Mini-Map" left="151" mouse_opaque="true"
 	     name="rotate_mini_map_checkbox" radio_style="false" width="256" />
-	<check_box bottom="-286" control_name="MiniMapTeleport" enabled="true" follows="left|top"
+	<check_box bottom="-314" control_name="MiniMapTeleport" enabled="true" follows="left|top"
 		   font="SansSerifSmall" height="16" initial_value="false"
-		   label="Doubleclick Mini-Map Teleports" left="280" mouse_opaque="true"
+		   label="Doubleclick Mini-Map Teleports" left="151" mouse_opaque="true"
 		   name="teleport_mini_map_checkbox" radio_style="false" width="256" />
-	<check_box bottom="-304" control_name="NotifyMoneyChange" enabled="true"
-	     follows="left|top" font="SansSerifSmall" height="16" initial_value="false"
-	     label="Notify when Linden dollars (L$) spent or received" left="151"
-	     mouse_opaque="true" name="notify_money_change_checkbox" radio_style="false"
-	     width="256" />
-	<check_box bottom="-322" control_name="UseDefaultColorPicker" enabled="true"
-	     follows="left|top" font="SansSerifSmall" height="16" initial_value="false"
-	     label="Use default system color picker" left="151" mouse_opaque="true"
-	     name="use_system_color_picker_checkbox" radio_style="false"
-	     tool_tip="Use the default system color picker instead of the one built into Second Life."
-	     width="256" />
-	<check_box bottom="-340" control_name="ShowSearchBar" enabled="true" follows="left|top"
-	     font="SansSerifSmall" height="16" initial_value="false"
-	     label="Show search panel in overlay bar" left="151" mouse_opaque="true"
-	     name="show_search_panel" radio_style="false"
-	     tool_tip="Display the embedded search panel." width="256" />
 	<text type="string" length="1" bg_visible="false" border_drop_shadow_visible="false" border_visible="false"
 	     bottom="-20" drop_shadow_visible="true" enabled="true" follows="left|top"
 	     font="SansSerifSmall" h_pad="0" halign="left" height="10" left="10"
@@ -113,19 +84,19 @@
 		Show Names:
 	</text>
 	<text type="string" length="1" bg_visible="false" border_drop_shadow_visible="false" border_visible="false"
-	     bottom="-184" drop_shadow_visible="true" enabled="true" follows="left|top"
+	     bottom="-149" drop_shadow_visible="true" enabled="true" follows="left|top"
 	     font="SansSerifSmall" h_pad="0" halign="left" height="10" left="10"
 	     mouse_opaque="true" name="effects_color_textbox" v_pad="0" width="394">
 		Color For My Effects:
 	</text>
 	<text type="string" length="1" bg_visible="false" border_drop_shadow_visible="false" border_visible="false"
-	     bottom="-254" drop_shadow_visible="true" enabled="true" follows="left|top"
+	     bottom="-249" drop_shadow_visible="true" enabled="true" follows="left|top"
 	     font="SansSerifSmall" h_pad="0" halign="left" height="10" left="220"
 	     mouse_opaque="true" name="seconds_textbox" v_pad="0" width="128">
 		seconds
 	</text>
 	<text type="string" length="1" bg_visible="false" border_drop_shadow_visible="false" border_visible="false"
-	     bottom="-362" drop_shadow_visible="true" enabled="true" follows="left|top"
+	     bottom="-352" drop_shadow_visible="true" enabled="true" follows="left|top"
 	     font="SansSerifSmall" h_pad="0" halign="left" height="18" left="10"
 	     mouse_opaque="true" name="crash_report_textbox" v_pad="0" width="394">
 		Crash reports:
@@ -146,7 +117,7 @@
 	<string name="region_name_prompt">
 		&lt;Type region name&gt;
 	</string>
-	<combo_box allow_text_entry="false" bottom="-362" enabled="true" follows="left|top"
+	<combo_box allow_text_entry="false" bottom="-350" enabled="true" follows="left|top"
 	     height="18" left="153" max_chars="20" mouse_opaque="true"
 	     name="crash_behavior_combobox" width="146">
 		<combo_item type="string" length="1" enabled="true" name="Askbeforesending" value="Ask before sending">
