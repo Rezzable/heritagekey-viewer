@@ -4319,10 +4319,10 @@ will only work if a script is added with a money() event.
 	</alert>
 	<alert modal="true" name="ClickOpenF1Help">
 		<message name="message">
-			Visit the Heritage Key Viewer Support Web site?
+			Visit the Heritage Key viewer support website?
 		</message>
 		<ignore name="ignore">
-      When visiting the Heritage Key Viewer Support Website.
+      When visiting the Heritage viewer support website.
     </ignore>
 		<option name="Gotopage">
 			Go
