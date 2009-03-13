@@ -24,6 +24,4 @@
 	<slider label="Effet Doppler" name="Doppler Effect" left="165" label_width="115" />
 	<slider label="Facteur d&apos;éloignement" name="Distance Factor" left="165" label_width="115" />
 	<slider label="Facteur d&apos;atténuation" name="Rolloff Factor" left="165" label_width="115" />
-	<spinner label="Alerte dépenses" name="L$ Change Threshold" left="165" />
-	<spinner label="Alerte santé" name="Health Change Threshold" left="165" />
 </panel>

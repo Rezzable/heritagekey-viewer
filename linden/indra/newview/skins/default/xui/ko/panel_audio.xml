@@ -4,7 +4,6 @@
 	<slider label="마스터" name="System Volume" />
 	<slider label="음악" name="Music Volume" />
 	<slider label="미디어" name="Media Volume" />
-	<slider label="음성" name="Voice Volume" />
 	<slider label="사운드" name="SFX Volume" />
 	<slider label="주변" name="Wind Volume" />
 	<slider label="UI" name="UI Volume" />

@@ -24,8 +24,6 @@
 	<text type="string" length="1" name="ui_volume_text">
 		UI体积:
 	</text>
-	<spinner label="L$ 整体改变" name="L$ Change Threshold" />
-	<spinner label="从初始更改健康状况" name="Health Change Threshold" />
 	<text type="string" length="1" name="doppler_effect_text">
 		多普勒效应:
 	</text>
