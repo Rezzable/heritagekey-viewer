@@ -11,7 +11,8 @@
 		<on_click function="GoToObject" />
 	</menu_item_call>
   <menu_item_call enabled="false" label="Abuse..." mouse_opaque="true" name="abuse">
-    <on_click function="Avatar.ReportAbuse" />
+    <!--<on_click function="Avatar.ReportAbuse" />-->
+    <on_click function="ShowURL" userdata="http://www.google.com" />
   </menu_item_call>
 	<menu_item_call enabled="false" label="Add Friend..." mouse_opaque="true" name="Add Friend">
 		<on_click function="Avatar.AddFriend" />
@@ -29,9 +30,9 @@
 		<menu_item_call enabled="false" label="Give Card" mouse_opaque="true" name="Give Card">
 			<on_click function="Avatar.GiveCard" />
 		</menu_item_call>
-		<menu_item_call enabled="true" label="Group Invite..." mouse_opaque="true" name="Invite...">
+    <menu_item_separator /><!--<menu_item_call enabled="true" label="Group Invite..." mouse_opaque="true" name="Invite...">
 			<on_click function="Avatar.InviteToGroup" />
-		</menu_item_call>
+		</menu_item_call>-->
 		<menu_item_separator />
 		<menu_item_call enabled="false" label="Eject..." mouse_opaque="true" name="Eject...">
 			<on_click function="Avatar.Eject" />
