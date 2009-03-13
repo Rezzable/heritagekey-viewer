@@ -22,8 +22,6 @@
 	<text type="string" length="1" name="ui_volume_text">
 		Volume de interface:
 	</text>
-	<spinner label="Alerta de L$" name="L$ Change Threshold" />
-	<spinner label="Alerta de Saúde" name="Health Change Threshold" />
 	<text type="string" length="1" name="doppler_effect_text">
 		Efeito Doppler:
 	</text>

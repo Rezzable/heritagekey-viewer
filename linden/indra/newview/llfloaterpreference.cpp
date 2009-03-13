@@ -62,7 +62,6 @@
 #include "llpanelweb.h"
 #include "llpanelskins.h"
 #include "llprefschat.h"
-#include "llprefsvoice.h"
 #include "llprefsim.h"
 #include "llresizehandle.h"
 #include "llresmgr.h"
@@ -160,10 +159,6 @@ LLPreferenceCore::LLPreferenceCore(LLTabContainer* tab_container, LLButton * def
 	mTabContainer->addTabPanel(mPrefsChat->getPanel(), mPrefsChat->getPanel()->getLabel(), FALSE, onTabChanged, mTabContainer);
 	mPrefsChat->getPanel()->setDefaultBtn(default_btn);
 
-	mPrefsVoice = new LLPrefsVoice();
-	mTabContainer->addTabPanel(mPrefsVoice, mPrefsVoice->getLabel(), FALSE, onTabChanged, mTabContainer);
-	mPrefsVoice->setDefaultBtn(default_btn);
-
 	mPrefsIM = new LLPrefsIM();
 	mTabContainer->addTabPanel(mPrefsIM->getPanel(), mPrefsIM->getPanel()->getLabel(), FALSE, onTabChanged, mTabContainer);
 	mPrefsIM->getPanel()->setDefaultBtn(default_btn);
@@ -260,7 +255,6 @@ void LLPreferenceCore::apply()
 	mNetworkPanel->apply();
 	mDisplayPanel->apply();
 	mPrefsChat->apply();
-	mPrefsVoice->apply();
 	mPrefsIM->apply();
 	mMsgPanel->apply();
 	mSkinsPanel->apply();
@@ -288,7 +282,6 @@ void LLPreferenceCore::cancel()
 	mDisplayPanel->cancel();
 	mAudioPanel->cancel();
 	mPrefsChat->cancel();
-	mPrefsVoice->cancel();
 	mPrefsIM->cancel();
 	mMsgPanel->cancel();
 	mSkinsPanel->cancel();

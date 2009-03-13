@@ -3,7 +3,6 @@
 	<slider label="Master" name="System Volume" label_width="65" />
 	<slider label="Musique" name="Music Volume" label_width="65" />
 	<slider label="Média" name="Media Volume" label_width="65" />
-	<slider label="Voix" name="Voice Volume" label_width="65" />
 	<slider label="Sons" name="SFX Volume" label_width="65"/>
 	<slider label="Son ambiant" name="Wind Volume" label_width="65"  />
 	<slider label="UI" name="UI Volume" label_width="65"/>

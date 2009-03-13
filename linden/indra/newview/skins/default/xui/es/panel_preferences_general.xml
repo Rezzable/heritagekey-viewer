@@ -13,7 +13,7 @@
 			Siempre
 		</radio_item>
 	</radio_group>
-	<check_box label="Ocultar mi nombre en la pantalla" name="show_my_name_checkbox" />
+	<check_box label="Ocultar mi nombre en la pantalla" name="show_my_name_checkbox" />l
 	<check_box label="Nombres de avatares pequeños" name="small_avatar_names_checkbox" />
 	<color_swatch label="" name="effect_color_swatch"
 	     tool_tip="Haga clic para abrir la selección de color" />
