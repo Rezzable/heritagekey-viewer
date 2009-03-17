@@ -1617,7 +1617,7 @@ bool LLAppViewer::initConfiguration()
 	if(!loadSettingsFromDirectory(LL_PATH_APP_SETTINGS, set_defaults))
 	{
 		std::ostringstream msg;
-		msg << "Second Life could not load its default settings file. \n" 
+		msg << "Heritage Key could not load its default settings file. \n" 
 			<< "The installation may be corrupted. \n";
 
 		OSMessageBox(
@@ -3019,10 +3019,7 @@ void LLAppViewer::badNetworkHandler()
 		"local installation of " << gSecondLife << ". \n"
 		" \n"
 		"Try uninstalling and reinstalling to see if this resolves \n"
-		"the issue. \n"
-		" \n"
-		"If the problem continues, see the Tech Support FAQ at: \n"
-		"www.secondlife.com/support";
+		"the issue.";
 	forceDisconnect(message.str());
 }
 
