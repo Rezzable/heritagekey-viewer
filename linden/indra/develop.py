@@ -75,7 +75,7 @@ class PlatformSetup(object):
     build_type = build_types['relwithdebinfo']
     standalone = 'FALSE'
     unattended = 'FALSE'
-    project_name = 'Heritage Key'
+    project_name = 'HeritageKey'
     distcc = True
     cmake_opts = []
 

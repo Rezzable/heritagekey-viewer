@@ -430,7 +430,7 @@ set(viewer_SOURCE_FILES
     pipeline.cpp
     )
 
-set(VIEWER_BINARY_NAME "imprudence-bin" CACHE STRING
+set(VIEWER_BINARY_NAME "heritagekey-bin" CACHE STRING
     "The name of the viewer executable to create.")
 
 if (LINUX)
@@ -853,7 +853,7 @@ if (DARWIN)
     macview.r
     gpu_table.txt
     Info-Imprudence.plist
-    Imprudence.nib/
+    HeritageKey.nib/
     # CMake doesn't seem to support Xcode language variants well just yet
     English.lproj/InfoPlist.strings
     English.lproj/language.txt
@@ -1274,12 +1274,12 @@ list(APPEND viewer_SOURCE_FILES ${viewer_HEADER_FILES})
 set_source_files_properties(${viewer_HEADER_FILES}
                             PROPERTIES HEADER_FILE_ONLY TRUE)
 
-add_executable(imprudence-bin
+add_executable(heritagekey-bin
     WIN32
     MACOSX_BUNDLE
     ${viewer_SOURCE_FILES}
     )
-check_message_template(imprudence-bin)
+check_message_template(heritagekey-bin)
 
 set(PACKAGE OFF CACHE BOOL
     "Add a package target that builds an installer package.")
@@ -1291,7 +1291,7 @@ if (WINDOWS)
         set(release_flags "/MAP:Release/imprudence-bin.map")
     endif(MSVC71)
     
-    set_target_properties(imprudence-bin
+    set_target_properties(heritagekey-bin
         PROPERTIES
         LINK_FLAGS "/debug /NODEFAULTLIB:MSVCRT /SUBSYSTEM:WINDOWS"
         LINK_FLAGS_DEBUG "/NODEFAULTLIB:LIBCMT /NODEFAULTLIB:MSVCRTD"
@@ -1301,20 +1301,20 @@ if (WINDOWS)
     # sets the 'working directory' for debugging from visual studio.
     if (NOT UNATTENDED)
         add_custom_command(
-            TARGET imprudence-bin PRE_BUILD
+            TARGET heritagekey-bin PRE_BUILD
             COMMAND ${CMAKE_SOURCE_DIR}/tools/vstool/vstool.exe
             ARGS
               --solution 
               ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.sln
               --workingdir
-              imprudence-bin
+              heritagekey-bin
               ${CMAKE_CURRENT_SOURCE_DIR}
-            COMMENT "Setting the imprudence-bin working directory for debugging."
+            COMMENT "Setting the heritagekey-bin working directory for debugging."
             )
     endif (NOT UNATTENDED)
 
     add_custom_command(
-        TARGET imprudence-bin PRE_BUILD
+        TARGET heritagekey-bin PRE_BUILD
         COMMAND ${CMAKE_COMMAND}
         ARGS
           -E
@@ -1325,7 +1325,7 @@ if (WINDOWS)
         )
 
     add_custom_command(
-        TARGET imprudence-bin PRE_BUILD
+        TARGET heritagekey-bin PRE_BUILD
         COMMAND ${CMAKE_COMMAND}
         ARGS
           -E
@@ -1335,10 +1335,10 @@ if (WINDOWS)
         COMMENT "Copying message.xml to the runtime folder."
         )
        
-    add_dependencies(imprudence-bin copy_win_libs)
+    add_dependencies(heritagekey-bin copy_win_libs)
 
     if (EXISTS ${CMAKE_SOURCE_DIR}/copy_win_scripts)
-      add_dependencies(imprudence-bin copy_win_scripts)
+      add_dependencies(heritagekey-bin copy_win_scripts)
     endif (EXISTS ${CMAKE_SOURCE_DIR}/copy_win_scripts)
         
     add_custom_command(
@@ -1355,7 +1355,7 @@ if (WINDOWS)
               --build=${CMAKE_CURRENT_BINARY_DIR}
               --dest=${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}
               --touch=${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/touched.bat
-        DEPENDS imprudence-bin ${CMAKE_CURRENT_SOURCE_DIR}/viewer_manifest.py
+        DEPENDS heritagekey-bin ${CMAKE_CURRENT_SOURCE_DIR}/viewer_manifest.py
         )
     if (PACKAGE)
       add_custom_target(package ALL DEPENDS ${CMAKE_CFG_INTDIR}/touched.bat)
@@ -1363,7 +1363,7 @@ if (WINDOWS)
     endif (PACKAGE)
 endif (WINDOWS)
 
-target_link_libraries(imprudence-bin
+target_link_libraries(heritagekey-bin
     ${LLAUDIO_LIBRARIES}
     ${LLCHARACTER_LIBRARIES}
     ${LLIMAGE_LIBRARIES}
@@ -1408,13 +1408,13 @@ set(ARTWORK_DIR ${CMAKE_CURRENT_SOURCE_DIR} CACHE PATH
 
 if (LINUX)
   add_custom_command(
-      OUTPUT imprudence-stripped
+      OUTPUT heritagekey-stripped
       COMMAND strip
-      ARGS --strip-debug -o imprudence-stripped imprudence-bin
-      DEPENDS imprudence-bin
+      ARGS --strip-debug -o heritagekey-stripped heritagekey-bin
+      DEPENDS heritagekey-bin
       )
 
-  set(product Imprudence-${ARCH}-${viewer_VERSION})
+  set(product HeritageKey-${ARCH}-${viewer_VERSION})
 
   add_custom_command(
       OUTPUT ${product}.tar.bz2
@@ -1431,7 +1431,7 @@ if (LINUX)
         --build=${CMAKE_CURRENT_BINARY_DIR}
         --dest=${CMAKE_CURRENT_BINARY_DIR}/packaged
         --touch=${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/.${product}.touched
-      DEPENDS imprudence-stripped ${CMAKE_CURRENT_SOURCE_DIR}/viewer_manifest.py
+      DEPENDS heritagekey-stripped ${CMAKE_CURRENT_SOURCE_DIR}/viewer_manifest.py
       )
 
   if (NOT INSTALL)
@@ -1441,23 +1441,23 @@ if (LINUX)
 endif (LINUX)
 
 if (DARWIN)
-  set(product "Imprudence")
+  set(product "Heritage Key")
   set_target_properties(
-    imprudence-bin
+    heritagekey-bin
     PROPERTIES
     OUTPUT_NAME "${product}"
     MACOSX_BUNDLE_INFO_STRING "info string - localize me"
     MACOSX_BUNDLE_ICON_FILE "secondlife.icns"
-    MACOSX_BUNDLE_GUI_IDENTIFIER "Imprudence"
+    MACOSX_BUNDLE_GUI_IDENTIFIER "Heritage Key"
     MACOSX_BUNDLE_LONG_VERSION_STRING "ververver"
-    MACOSX_BUNDLE_BUNDLE_NAME "Imprudence"
+    MACOSX_BUNDLE_BUNDLE_NAME "Heritage Key"
     MACOSX_BUNDLE_SHORT_VERSION_STRING "asdf"
     MACOSX_BUNDLE_BUNDLE_VERSION "asdf"
     MACOSX_BUNDLE_COPYRIGHT "copyright linden lab 2007 - localize me and run me through a legal wringer"
     )
 
   add_custom_command(
-    TARGET imprudence-bin POST_BUILD
+    TARGET heritagekey-bin POST_BUILD
     COMMAND ${PYTHON_EXECUTABLE}
     ARGS
       ${CMAKE_CURRENT_SOURCE_DIR}/viewer_manifest.py
@@ -1468,11 +1468,11 @@ if (DARWIN)
       --artwork=${ARTWORK_DIR}
       --build=${CMAKE_CURRENT_BINARY_DIR}
       --dest=${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/${product}.app
-    DEPENDS imprudence-bin ${CMAKE_CURRENT_SOURCE_DIR}/viewer_manifest.py
+    DEPENDS heritagekey-bin ${CMAKE_CURRENT_SOURCE_DIR}/viewer_manifest.py
     )
 
   if (PACKAGE)
-      add_custom_target(package ALL DEPENDS imprudence-bin) 
+      add_custom_target(package ALL DEPENDS heritagekey-bin) 
       add_dependencies(package mac-updater mac-crash-logger)
 
       add_custom_command(
