@@ -248,12 +248,12 @@ BEGIN
         BLOCK "040904b0"
         BEGIN
             VALUE "CompanyName", "Imprudence Viewer Project"
-            VALUE "FileDescription", "Imprudence"
+            VALUE "FileDescription", "Heritage Key viewer"
             VALUE "FileVersion", "1.0.0"
-            VALUE "InternalName", "Imprudence"
-            VALUE "LegalCopyright", "Copyright © 2001-2008, Linden Research, Inc."
-            VALUE "OriginalFilename", "Imprudence.exe"
-            VALUE "ProductName", "Imprudence"
+            VALUE "InternalName", "Heritage Key"
+            VALUE "LegalCopyright", "GPLv2"
+            VALUE "OriginalFilename", "hkey.exe"
+            VALUE "ProductName", "Heritage Key"
             VALUE "ProductVersion", "1.0.0"
         END
     END
