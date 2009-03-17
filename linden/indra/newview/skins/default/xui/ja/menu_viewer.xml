@@ -260,6 +260,6 @@
 		<menu_item_separator label="-----------" name="separator5" />
 		<menu_item_call label="リリースノート..." name="Release Notes..." />
 		<menu_item_separator label="-----------" name="separator6" />
-		<menu_item_call label="Heritage Keyについて" name="About Heritage Key..." />
+		<menu_item_call label="Heritage Key について" name="About Heritage Key..." />
 	</menu>
 </menu_bar>
