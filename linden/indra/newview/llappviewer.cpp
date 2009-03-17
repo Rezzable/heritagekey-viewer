@@ -336,7 +336,7 @@ void LLAppViewer::gst_plugin_path()
 		
 		std::string plugin_path = "GST_PLUGIN_PATH=" + std::string(buffer) + "\\lib\\gstreamer-plugins";
 
-		// Place GST_PLUGIN_PATH in the environment settings for hkey.exe
+		// Place GST_PLUGIN_PATH in the environment settings for heritagekey.exe
 		const char* gst_plugin_path = plugin_path.c_str();
 		putenv(gst_plugin_path);
 		LL_INFOS("InitInfo") << "GST_PLUGIN_PATH set to " << getenv("GST_PLUGIN_PATH") << LL_ENDL;
@@ -2523,10 +2523,10 @@ void LLAppViewer::initMarkerFile()
 	LL_DEBUGS("MarkerFile") << "Checking marker file for lock..." << LL_ENDL;
 
 	//We've got 4 things to test for here
-	// - Other Process Running (SecondLife.exec_marker present, locked)
-	// - Freeze (SecondLife.exec_marker present, not locked)
-	// - LLError Crash (SecondLife.llerror_marker present)
-	// - Other Crash (SecondLife.error_marker present)
+	// - Other Process Running (HeritageKey.exec_marker present, locked)
+	// - Freeze (HeritageKey.exec_marker present, not locked)
+	// - LLError Crash (HeritageKey.llerror_marker present)
+	// - Other Crash (HeritageKey.error_marker present)
 	// These checks should also remove these files for the last 2 cases if they currently exist
 
 	//LLError/Error checks. Only one of these should ever happen at a time.
