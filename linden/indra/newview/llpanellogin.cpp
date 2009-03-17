@@ -357,7 +357,14 @@ LLPanelLogin::LLPanelLogin(const LLRect &rect,
 
 	// childSetAction("quit_btn", onClickQuit, this);
 
-	std::string imp_channel = gSavedSettings.getString("VersionChannelName");
+	std::string hk_channel = gSavedSettings.getString("VersionChannelName");
+	std::string hk_version = llformat("%d.%d.%d %s",
+		HK_VERSION_MAJOR,
+		HK_VERSION_MINOR,
+		HK_VERSION_PATCH,
+		HK_VERSION_TEST );
+
+	/*std::string imp_channel = gSavedSettings.getString("VersionChannelName");
 	std::string imp_version = llformat("%d.%d.%d %s",
 		IMP_VERSION_MAJOR,
 		IMP_VERSION_MINOR,
@@ -369,13 +376,15 @@ LLPanelLogin::LLPanelLogin(const LLRect &rect,
 		LL_VERSION_MAJOR,
 		LL_VERSION_MINOR,
 		LL_VERSION_PATCH,
-		LL_VIEWER_BUILD );
+		LL_VIEWER_BUILD );*/
 
 	LLTextBox* channel_text = getChild<LLTextBox>("channel_text");
-	channel_text->setTextArg("[CHANNEL]", imp_channel);
-	channel_text->setTextArg("[VERSION]", imp_version);
+	channel_text->setTextArg("[CHANNEL]", hk_channel);
+	channel_text->setTextArg("[VERSION]", hk_version);
+	/*channel_text->setTextArg("[IMP_CHANNEL]", imp_channel);
+	channel_text->setTextArg("[IMP_VERSION]", imp_version);
 	channel_text->setTextArg("[ALT_CHANNEL]", ll_channel);
-	channel_text->setTextArg("[ALT_VERSION]", ll_version);
+	channel_text->setTextArg("[ALT_VERSION]", ll_version);*/
 	channel_text->setClickedCallback(onClickVersion);
 	channel_text->setCallbackUserData(this);
 	

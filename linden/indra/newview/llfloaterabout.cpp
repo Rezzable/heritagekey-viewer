@@ -110,13 +110,17 @@ LLFloaterAbout::LLFloaterAbout()
 	viewer_link_style->setColor(gSavedSettings.getColor4("HTMLLinkColor"));
 
 	// Version string
-	std::string version = llformat(
-	  "%s %d.%d.%d %s / %s %d.%d.%d (%d), %s %s\n",
+	std::string version = llformat("%s %s \n\n%s %d.%d.%d %s / %s %d.%d.%d %s / %s %d.%d.%d (%d)\n",
+		 __DATE__, __TIME__,
+	  
+		 HK_VIEWER_NAME,
+	  HK_VERSION_MAJOR, HK_VERSION_MINOR, HK_VERSION_PATCH, HK_VERSION_TEST,
+
 		IMP_VIEWER_NAME,
 	  IMP_VERSION_MAJOR, IMP_VERSION_MINOR, IMP_VERSION_PATCH, IMP_VERSION_TEST,
+
 		LL_VIEWER_NAME,
-	  LL_VERSION_MAJOR, LL_VERSION_MINOR, LL_VERSION_PATCH, LL_VIEWER_BUILD,
-	  __DATE__, __TIME__);
+	  LL_VERSION_MAJOR, LL_VERSION_MINOR, LL_VERSION_PATCH, LL_VIEWER_BUILD );
 
 	support_widget->appendColoredText(version, FALSE, FALSE, gColors.getColor("TextFgReadOnlyColor"));
 	support_widget->appendStyledText(LLTrans::getString("ReleaseNotes"), FALSE, FALSE, &viewer_link_style);

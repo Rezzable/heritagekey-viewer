@@ -609,7 +609,7 @@ bool LLAppViewer::init()
 	
 	// Need to do this initialization before we do anything else, since anything
 	// that touches files should really go through the lldir API
-	gDirUtilp->initAppDirs(IMP_VIEWER_NAME);
+	gDirUtilp->initAppDirs(HK_VIEWER_NAME);
 	// set skin search path to default, will be overridden later
 	// this allows simple skinned file lookups to work
 	gDirUtilp->setSkinFolder("default");
@@ -631,17 +631,12 @@ bool LLAppViewer::init()
     writeSystemInfo();
 
 	// Build a string representing the current version number.
-    gCurrentVersion = llformat("%s %d.%d.%d %s / %s %d.%d.%d.%d", 
+    gCurrentVersion = llformat("%s %d.%d.%d %s", 
         gSavedSettings.getString("VersionChannelName").c_str(), 
-        IMP_VERSION_MAJOR, 
-        IMP_VERSION_MINOR, 
-        IMP_VERSION_PATCH,
-		IMP_VERSION_TEST,
-        LL_VIEWER_NAME,
-        LL_VERSION_MAJOR, 
-        LL_VERSION_MINOR, 
-        LL_VERSION_PATCH, 
-        LL_VERSION_BUILD );
+        HK_VERSION_MAJOR, 
+        HK_VERSION_MINOR, 
+        HK_VERSION_PATCH,
+		HK_VERSION_TEST );
 
 	gst_plugin_path();
 
@@ -1637,7 +1632,7 @@ bool LLAppViewer::initConfiguration()
 	gSavedSettings.setString("ClientSettingsFile", 
         gDirUtilp->getExpandedFilename(LL_PATH_USER_SETTINGS, "settings_heritagekey.xml"));
 
-	gSavedSettings.setString("VersionChannelName", IMP_VIEWER_NAME);
+	gSavedSettings.setString("VersionChannelName", HK_VIEWER_NAME);
 
 #if !LL_DYNAMIC_FONT_DISCOVERY
 	// static font discovery - user settings can override.
@@ -1899,7 +1894,7 @@ bool LLAppViewer::initConfiguration()
     mYieldTime = gSavedSettings.getS32("YieldTime");
              
 	// XUI:translate
-	gSecondLife = IMP_VIEWER_NAME;
+	gSecondLife = HK_VIEWER_NAME;
 
 	// Read skin/branding settings if specified.
 	//if (! gDirUtilp->getSkinDir().empty() )
@@ -2279,6 +2274,10 @@ void LLAppViewer::writeSystemInfo()
 	gDebugInfo["SLLog"] = LLError::logFileName();
 
 	gDebugInfo["ClientInfo"]["Name"] = gSavedSettings.getString("VersionChannelName");
+	gDebugInfo["ClientInfo"]["HeritageKeyMajorVersion"] = HK_VERSION_MAJOR;
+	gDebugInfo["ClientInfo"]["HeritageKeyMinorVersion"] = HK_VERSION_MINOR;
+	gDebugInfo["ClientInfo"]["HeritageKeyPatchVersion"] = HK_VERSION_PATCH;
+	gDebugInfo["ClientInfo"]["HeritageKeyTestVersion"] = HK_VERSION_TEST;
 	gDebugInfo["ClientInfo"]["ImpMajorVersion"] = IMP_VERSION_MAJOR;
 	gDebugInfo["ClientInfo"]["ImpMinorVersion"] = IMP_VERSION_MINOR;
 	gDebugInfo["ClientInfo"]["ImpPatchVersion"] = IMP_VERSION_PATCH;
@@ -2363,6 +2362,10 @@ void LLAppViewer::handleViewerCrash()
 	//to check against no matter what
 	gDebugInfo["ClientInfo"]["Name"] = gSavedSettings.getString("VersionChannelName");
 
+	gDebugInfo["ClientInfo"]["HeritageKeyMajorVersion"] = HK_VERSION_MAJOR;
+	gDebugInfo["ClientInfo"]["HeritageKeyMinorVersion"] = HK_VERSION_MINOR;
+	gDebugInfo["ClientInfo"]["HeritageKeyPatchVersion"] = HK_VERSION_PATCH;
+	gDebugInfo["ClientInfo"]["HeritageKeyTestVersion"] = HK_VERSION_TEST;
 	gDebugInfo["ClientInfo"]["ImpMajorVersion"] = IMP_VERSION_MAJOR;
 	gDebugInfo["ClientInfo"]["ImpMinorVersion"] = IMP_VERSION_MINOR;
 	gDebugInfo["ClientInfo"]["ImpPatchVersion"] = IMP_VERSION_PATCH;
