@@ -61,16 +61,6 @@ S32 LLGroupNotifyBox::sGroupNotifyBoxCount = 0;
 // LLGroupNotifyBox
 //---------------------------------------------------------------------------
 
-static std::string g_formatted_time(const time_t& the_time)
-{
-	char buffer[30];		/*Flawfinder: ignore*/	
-	time_t t = the_time;
-	if (!t) time(&t);
-	LLStringUtil::copy(buffer, ctime(&t), 30);
-	buffer[24] = '\0';
-	return std::string(buffer);
-}
-
 // static
 LLGroupNotifyBox* LLGroupNotifyBox::show(const std::string& subject,
 										 const std::string& message,
@@ -133,8 +123,10 @@ LLGroupNotifyBox::LLGroupNotifyBox(const std::string& subject,
 	setFocusRoot(TRUE);
 
 	time_t timestamp = (time_t)t;
+	if (!timestamp) time(&timestamp);
 
-	std::string time_buf = g_formatted_time(timestamp);
+	std::string time_buf;
+	timeToFormattedString(timestamp, gSavedSettings.getString("TimestampFormat"), time_buf);
 
 	setFollows(FOLLOWS_TOP|FOLLOWS_RIGHT);
 	setBackgroundVisible(TRUE);

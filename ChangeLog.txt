@@ -1,3 +1,44 @@
+2009-03-17  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/llcommon/lltimer.cpp:
+	Date and timestamps can now displayed in international formats.
+	* linden/indra/llcommon/lltimer.h:
+	Ditto.
+	* linden/indra/newview/app_settings/settings.xml:
+	Ditto.
+	* linden/indra/newview/lleventinfo.cpp:
+	Ditto.
+	* linden/indra/newview/lleventnotifier.cpp:
+	Ditto.
+	* linden/indra/newview/llfloaterinspect.cpp:
+	Ditto.
+	* linden/indra/newview/llfloaterproperties.cpp:
+	Ditto.
+	* linden/indra/newview/llgroupmgr.cpp:
+	Ditto.
+	* linden/indra/newview/llgroupnotify.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelavatar.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelclassified.cpp:
+	Ditto.
+	* linden/indra/newview/llpaneldirbrowser.cpp:
+	Ditto.
+	* linden/indra/newview/llpaneldirevents.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelgroupnotices.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelgroupvoting.cpp:
+	Ditto.
+	* linden/indra/newview/llstatusbar.cpp:
+	Ditto.
+	* linden/indra/newview/llviewermessage.cpp:
+	Ditto.
+	* linden/indra/newview/llviewertexteditor.cpp:
+	Ditto.
+
+
 2009-03-16  McCabe Maxsted  <hakushakukun@gmail.com>
 
  
@@ -6,7 +47,7 @@
 
 
 	* linden/indra/CMakeLists.txt:
-	Develop.py generates correct VS solution file .
+	Develop.py generates correct VS solution file.
 	* linden/indra/develop.py:
 	Ditto.
 	* linden/indra/newview/CMakeLists.txt:
