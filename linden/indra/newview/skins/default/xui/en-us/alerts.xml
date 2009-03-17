@@ -376,7 +376,7 @@ Selecting &quot;Show in Search&quot; will show:
 		<message name="message">
 			You can propose to another Resident or dissolve an existing partnership through the [HERITAGE_KEY] website.
 
-Go to the Second Life web site for more information on partnering?
+Go to the Heritage Key web site for more information on partnering?
 		</message>
 		<option name="GotoPage">
 			Go to Page
@@ -583,7 +583,7 @@ Your selling price will be L$[SALE_PRICE] and will be authorized for sale to [NA
 	</alert>
 	<alert caution="true" modal="true" name="ConfirmLandSaleToAnyoneChange">
 		<message name="message">
-			ATTENTION: Clicking &apos;sell to anyone&apos; makes your land available to the entire Second Life community, even those not in this region.
+			ATTENTION: Clicking &apos;sell to anyone&apos; makes your land available to the entire Heritage Key community, even those not in this region.
 
 The selected [LAND_SIZE] m2 land is being set for sale.
 Your selling price will be L$[SALE_PRICE] and will be authorized for sale to [NAME].
@@ -1096,14 +1096,14 @@ because you have specified the -safe option.
 	</alert>
 	<alert modal="true" name="UnsupportedGLRequirements">
 		<message name="message">
-			You do not appear to have the proper hardware requirements for Second Life. Second Life requires an OpenGL graphics card that has multitexture support. If this is the case, you may want to make sure that you have the latest drivers for your graphics card, and service packs and patches for your operating system.
+			You do not appear to have the proper hardware requirements for Heritage Key. Heritage Key requires an OpenGL graphics card that has multitexture support. If this is the case, you may want to make sure that you have the latest drivers for your graphics card, and service packs and patches for your operating system.
 
 If you continue to have problems, please visit: http://www.secondlife.com/support
 		</message>
 	</alert>
 	<alert modal="true" name="UnsupportedHardware">
 		<message name="message">
-			Warning: Your system does not meet Second Life&apos;s minimum system requirements. If you continue using Second Life, you may experience poor performance. Unfortunately, we cannot provide technical support for unsupported system configurations. 
+			Warning: Your system does not meet Heritage Key&apos;s minimum system requirements. If you continue using Heritage Key, you may experience poor performance. Unfortunately, we cannot provide technical support for unsupported system configurations. 
 
 MINSPECS
 Do you wish to visit [_URL] for more information?
@@ -1151,7 +1151,7 @@ Do you wish to visit [_URL] for more information?
 		<message name="message">
 Your system contains a graphics card that is unknown to us at this time.  
 This is often the case with new hardware we haven't had a chance to 
-test.  Second Life will most likely run properly, but you may need to 
+test.  Heritage Key will most likely run properly, but you may need to 
 adjust your graphics settings to something more appropriate.
 (Edit menu > Preferences > Graphics).
 		</message>
@@ -1857,7 +1857,7 @@ Cannot find the region this land is in.
 	</alert>
 	<alert modal="true" name="CannotCloseFloaterBuyLand">
 		<message name="message">
-			You cannot close the Buy Land window until Second Life
+			You cannot close the Buy Land window until Heritage Key
 estimates the price of this transaction.
 		</message>
 	</alert>
@@ -2610,7 +2610,7 @@ Please check your network connection.
 	</alert>
 	<alert modal="true" name="LoginPacketNeverReceived">
 		<message name="message">
-			We&apos;re having trouble connecting. There may be a problem with your internet connection or the Second Life servers.
+			We&apos;re having trouble connecting. There may be a problem with your internet connection or the Heritage Key servers.
 
 You can either check your internet connection and try again in a few minutes, click Help to connect to our support site, or click Teleport to attempt to teleport home.
 		</message>
@@ -4066,7 +4066,7 @@ Default: off
 	</alert>
 	<alert modal="true" name="VoiceVersionMismatch" title="Voice Version Mismatch">
 		<message name="message">
-			This version of Second Life is not compatible with the Voice Chat feature in this region. In order for Voice Chat to function correctly you will need to update Second Life.
+			This version of Heritage Key is not compatible with the Voice Chat feature in this region. In order for Voice Chat to function correctly you will need to update Heritage Key.
 		</message>
 	</alert>
 	<alert modal="true" name="HelpEstateCovenant" title="Estate Covenant">
@@ -4305,7 +4305,7 @@ will only work if a script is added with a money() event.
 	</alert>
 	<alert modal="true" name="WebLaunchAccountHistory">
 		<message name="message">
-			Go to the Second Life web site to see your account history?
+			Go to the Heritage Key web site to see your account history?
 		</message>
 		<ignore name="ignore">
 			When loading account history web page
@@ -4350,7 +4350,7 @@ will only work if a script is added with a money() event.
 			Are you sure you want to quit?
 		</message>
 		<ignore name="ignore">
-			When Quitting Second Life.
+			When Quitting Heritage Key.
 		</ignore>
 		<option name="Quit">
 			Quit
@@ -4390,9 +4390,9 @@ rules of this region as outlined in the estate Covenant.
 About Land.)
 
 The resolution of this report applies only to this Region; 
-Residents access to other areas of Second Life will not be 
+Residents access to other areas of Heritage Key will not be 
 affected by the outcome of this report. Only Linden Lab can 
-restrict access to the entirety of Second Life.
+restrict access to the entirety of Heritage Key.
 		</message>
 	</alert>
 	<alert modal="true" name="HelpReportBug">
@@ -4469,9 +4469,9 @@ Entering an accurate description helps us file and process bug reports.
 
 You appear to be reporting intellectual property infringement. Please make sure you are reporting it correctly:
 
-(1) The Abuse Process. You may submit an abuse report if you believe a Resident is exploiting the Second Life permissions system, for example, by using CopyBot or similar copying tools, to infringe intellectual property rights. The Abuse Team investigates and issues appropriate disciplinary action for behavior that violates the Second Life Community Standards or Terms of Service. However, the Abuse Team does not handle and will not respond to requests to remove content from the Second Life world.
+(1) The Abuse Process. You may submit an abuse report if you believe a Resident is exploiting the Heritage Key permissions system, for example, by using CopyBot or similar copying tools, to infringe intellectual property rights. The Abuse Team investigates and issues appropriate disciplinary action for behavior that violates the Heritage Key Community Standards or Terms of Service. However, the Abuse Team does not handle and will not respond to requests to remove content from the Heritage Key world.
 
-(2) The DMCA or Content Removal Process. To request removal of content from Second Life, you MUST submit a valid notification of infringement as provided in our DMCA Policy at http://secondlife.com/corporate/dmca.php.
+(2) The DMCA or Content Removal Process. To request removal of content from Heritage Key, you MUST submit a valid notification of infringement as provided in our DMCA Policy at http://secondlife.com/corporate/dmca.php.
 
 If you still wish to continue with the abuse process, please close this window and finish submitting your report.  You may need to select the specific category 'CopyBot or Permissions Exploit'.
 
@@ -4691,7 +4691,7 @@ Click &quot;Advanced Water&quot; to bring up an editor with more advanced settin
 	</alert>
 	<alert modal="true" name="HelpDayCycle">
 		<message name="message">
-			The Day Cycle Editor gives you control over the sky during Second Life&apos;s day/night cycle. This is the cycle that is used by the Basic Environment Editor&apos;s Time of Day slider.
+			The Day Cycle Editor gives you control over the sky during Heritage Key&apos;s day/night cycle. This is the cycle that is used by the Basic Environment Editor&apos;s Time of Day slider.
 
 The Day Cycle Editor works by setting keyframes. These are nodes (represented by the gray blips on the time graph) that have Sky Presets associated with them. As the Time of Day progresses, the WindLight sky &quot;animates&quot; as it interpolates between these keyframes. 
 
@@ -4836,7 +4836,7 @@ with the the D slider.
 	</alert>
 	<alert modal="true" name="HelpClassicClouds">
 		<message name="message">
-			Check this box to enable rendering of Second Life&apos;s older classic clouds in addition to WindLight&apos;s clouds.
+			Check this box to enable rendering of Heritage Key&apos;s older classic clouds in addition to WindLight&apos;s clouds.
 		</message>
 	</alert>
 	<alert modal="true" name="HelpWaterFogColor">
@@ -5005,7 +5005,7 @@ they are part of an attachment.
 	</alert>
 	<alert modal="true" name="BadURL">
 		<message name="message">
-			Second Life doesn&apos;t know how to handle the link:
+			Heritage Key doesn&apos;t know how to handle the link:
  [SLURL]
 Most links are similar to this:
 
@@ -5018,7 +5018,7 @@ Please check the spelling and try again.
 	<alert modal="true" name="NotAgeVerified">
 		<message name="message">
 			You need to be age-verified in order to access this parcel.
-Would you like to visit the Second Life website to verify your age?
+Would you like to visit the Heritage Key website to verify your age?
 
 [_URL]
 		</message>
@@ -5038,7 +5038,7 @@ Would you like to visit the Second Life website to verify your age?
 	<alert modal="true" name="Cannot enter parcel: no payment info on file">
 		<message name="message">
 			This parcel requires that you have payment information on file before you can access it.
-Would you like to visit the Second Life website to set this up?
+Would you like to visit the Heritage Key website to set this up?
 
 [_URL]
 		</message>

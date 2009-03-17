@@ -365,7 +365,7 @@ votre nom, image, et texte &apos;A propos&apos; sur le site [HERITAGE_KEY].
 		<message name="message">
 			Vous pouvez proposer à un autre résident de dissoudre un partenariat existant par le biais du site de [HERITAGE_KEY].
 
-Aller sur le site de Second Life pour avoir plus d&apos;informations sur les partenariats ?
+Aller sur le site de Heritage Key pour avoir plus d&apos;informations sur les partenariats ?
 		</message>
 		<option name="GotoPage">
 			Aller sur cette page
@@ -487,7 +487,7 @@ Voulez-vous poursuivre les modifications ?
 	<alert name="ConfirmLandSaleToAnyoneChange">
 		<message name="message">
 			Attention : En cliquant sur Vendre à n&apos;importe qui, vous rendez votre
-terrain disponible à toute la communauté de Second Life, même aux personnes qui ne sont pas dans
+terrain disponible à toute la communauté de Heritage Key, même aux personnes qui ne sont pas dans
 cette région.
 
 Le terrain sélectionné, de [LAND_SIZE] m², est mis en vente.
@@ -995,14 +995,14 @@ car vous avez activé le mode sans échec.
 	</alert>
 	<alert name="UnsupportedGLRequirements">
 		<message name="message">
-			Vous semblez ne pas avoir le matériel requis pour utiliser Second Life. Second Life requiert une carte graphique OpenGL avec une prise en charge du multitexturing. Si vous avez une telle carte, assurez-vous que vous avez aussi les drivers les plus récents pour la carte, ainsi que les service packs et les patchs pour votre système d&apos;exploitation.
+			Vous semblez ne pas avoir le matériel requis pour utiliser Heritage Key. Heritage Key requiert une carte graphique OpenGL avec une prise en charge du multitexturing. Si vous avez une telle carte, assurez-vous que vous avez aussi les drivers les plus récents pour la carte, ainsi que les service packs et les patchs pour votre système d&apos;exploitation.
 
 Si vous avez toujours des problèmes, veuillez consulter la page suivante : http://www.secondlife.com/support
 		</message>
 	</alert>
 	<alert name="UnsupportedHardware">
 		<message name="message">
-			Avertissement : vous n&apos;avez pas la configuration système requise pour utiliser Second Life. Si vous continuez à utiliser Second Life, votre performance risque d&apos;être moindre. Malheureusement, nous n&apos;offrons aucune assistance pour les problèmes de configuration système. 
+			Avertissement : vous n&apos;avez pas la configuration système requise pour utiliser Heritage Key. Si vous continuez à utiliser Heritage Key, votre performance risque d&apos;être moindre. Malheureusement, nous n&apos;offrons aucune assistance pour les problèmes de configuration système. 
 
 MINSPECS
 Voulez-vous visiter [_URL] pour plus d&apos;informations ?
@@ -1049,7 +1049,7 @@ Voulez-vous visiter [_URL] pour plus d&apos;informations ?
 		<message name="message">
 			Votre système contient une carte graphique que nous ne connaissons pas actuellement. 
 Cela est souvent le cas avec le nouveau materiel qui n&apos;a pas encore été testé.
-Vous pourrez probablement utiliser Second Life sans problème, mais vous devrez peut-être ajuster les paramètres de vos graphiques.
+Vous pourrez probablement utiliser Heritage Key sans problème, mais vous devrez peut-être ajuster les paramètres de vos graphiques.
 (Menu Édition &gt; Préférences &gt; Graphiques).
 		</message>
 		<ignore name="ignore">
@@ -1748,7 +1748,7 @@ la région dans laquelle il est situé est introuvable.
 	</alert>
 	<alert name="CannotCloseFloaterBuyLand">
 		<message name="message">
-			Vous ne pouvez pas fermer la fenêtre Acheter le terrain avant que Second Life n&apos;estime le montant de cette transaction.
+			Vous ne pouvez pas fermer la fenêtre Acheter le terrain avant que Heritage Key n&apos;estime le montant de cette transaction.
 		</message>
 	</alert>
 	<alert name="CannotDeedLandNothingSelected">
@@ -2023,7 +2023,7 @@ en indiquant les paramètres de votre réseau.
 			[MESSAGE]
  
 Nous ne pouvons résoudre ce problème. Veuillez
-désinstaller et réinstaller Second Life avant de réessayer.
+désinstaller et réinstaller Heritage Key avant de réessayer.
 Si le problème persiste, consultez la FAQ du support technique :
 www.secondlife.com/support.
 		</message>
@@ -3774,7 +3774,7 @@ Défaut : désactivé
 	</alert>
 	<alert name="VoiceVersionMismatch" title="Versions de voix non compatibles">
 		<message name="message">
-			Cette version de Second Life n&apos;est pas compatible avec la fonctionnalité de chat vocal dans cette région. Vous devez mettre à jour Second Life pour que le chat vocal fonctionne correctement.
+			Cette version de Heritage Key n&apos;est pas compatible avec la fonctionnalité de chat vocal dans cette région. Vous devez mettre à jour Heritage Key pour que le chat vocal fonctionne correctement.
 		</message>
 	</alert>
 	<alert name="HelpEstateCovenant" title="Clause de sauvegarde du domaine">
@@ -4005,10 +4005,10 @@ réagissent lorsqu&apos;un paiement est effectué.
 	</alert>
 	<alert name="ClickOpenF1Help">
 		<message name="message">
-			Visiter les pages d&apos;aide de Second Life ?
+			Visiter les pages d&apos;aide de Heritage Key ?
 		</message>
 		<ignore name="ignore">
-			Lors de la visite des pages d&apos;aide de Second Life
+			Lors de la visite des pages d&apos;aide de Heritage Key
 		</ignore>
 		<option name="Gotopage">
 			Aller
@@ -4036,7 +4036,7 @@ réagissent lorsqu&apos;un paiement est effectué.
 			Etes-vous sûr(e) de vouloir quitter?
 		</message>
 		<ignore name="ignore">
-			Lorsque vous quittez Second Life
+			Lorsque vous quittez Heritage Key
 		</ignore>
 		<option name="Quit">
 			Quitter
@@ -4073,9 +4073,9 @@ des règles de cette région, comme indiqué dans le réglement du domaine.
 À propos du terrain.)
 
 La résolution de ce rapport ne s&apos;applique qu&apos;à cette région ; 
-L&apos;accès aux autres endroits de Second Life 
+L&apos;accès aux autres endroits de Heritage Key 
 ne sera pas affecté par les résultats de cette enquête. Seul Linden Lab peut 
-interdire l&apos;accès à l&apos;ensemble de Second Life.
+interdire l&apos;accès à l&apos;ensemble de Heritage Key.
 		</message>
 	</alert>
 	<alert name="HelpReportAbuseSelectCategory">
@@ -4144,9 +4144,9 @@ Une description précise nous permet de classer et traiter efficacement les rapp
 
 Si vous signalez une infraction aux droits de propriété intellectuelle, assurez-vous de fournir les détails suivants :
 
-(1) Vous pouvez envoyer un rapport d&apos;infraction si vous pensez qu&apos;un résident exploite le système de permissions de Second Life, par exemple en utilisant CopyBot ou des outils similaires, pour enfreindre des droits de propriété intellectuelle. L&apos;équipe chargée des infractions mènera une enquête et prendra les mesures nécessaires à l&apos;encontre de toute personne non respectueuse des Conditions d&apos;utilisation et des Règles de la communauté. Néanmoins, cette équipe ignorera les requêtes au sujet du retrait de contenu se trouvant sur Second Life.
+(1) Vous pouvez envoyer un rapport d&apos;infraction si vous pensez qu&apos;un résident exploite le système de permissions de Heritage Key, par exemple en utilisant CopyBot ou des outils similaires, pour enfreindre des droits de propriété intellectuelle. L&apos;équipe chargée des infractions mènera une enquête et prendra les mesures nécessaires à l&apos;encontre de toute personne non respectueuse des Conditions d&apos;utilisation et des Règles de la communauté. Néanmoins, cette équipe ignorera les requêtes au sujet du retrait de contenu se trouvant sur Heritage Key.
 
-(2) Pour demander à ce que du contenu soit retiré de Second Life, vous devez soumettre un rapport d&apos;infraction valide, tel que fourni dans notre règlement sur le retrait de contenu à la page suivante : http://secondlife.com/corporate/dmca.php.
+(2) Pour demander à ce que du contenu soit retiré de Heritage Key, vous devez soumettre un rapport d&apos;infraction valide, tel que fourni dans notre règlement sur le retrait de contenu à la page suivante : http://secondlife.com/corporate/dmca.php.
 
 Si vous souhaitez continuer à signaler l&apos;infraction, veuillez fermer cette fenêtre et finir de soumettre votre rapport.
 
@@ -4364,7 +4364,7 @@ En cliquant sur le bouton Eau Avancée, vous aurez accès à tous les réglages 
 	</alert>
 	<alert name="HelpDayCycle">
 		<message name="message">
-			L&apos;éditeur du cycle du jour vous permet de contrôler le ciel au cours du cycle jour/nuit de second Life. C&apos;est ce même cycle qui est contrôlé par le curseur Heure de la journée dans l&apos;éditeur d&apos;environnement basique.
+			L&apos;éditeur du cycle du jour vous permet de contrôler le ciel au cours du cycle jour/nuit de Heritage Key. C&apos;est ce même cycle qui est contrôlé par le curseur Heure de la journée dans l&apos;éditeur d&apos;environnement basique.
 
 L&apos;éditeur du jour fonctionne grâce au réglage d&apos;images-clés. Ces images-clés sont représentées par les marques grises sur la ligne du temps et ont des préréglages qui leurs sont associées. Au cours de la journée et de la nuit, le ciel WindLight s&apos;anime en passant d&apos;une clé à l&apos;autre. 
 
@@ -4490,7 +4490,7 @@ Même chose que l&apos;azimut.
 	</alert>
 	<alert name="HelpClassicClouds">
 		<message name="message">
-			Cochez cette option pour utiliser les anciens nuages de Second Life en plus des nuages WindLight.
+			Cochez cette option pour utiliser les anciens nuages de Heritage Key en plus des nuages WindLight.
 		</message>
 	</alert>
 	<alert name="HelpWaterFogColor">
@@ -4659,7 +4659,7 @@ Même chose que l&apos;azimut.
 	<alert name="NotAgeVerified">
 		<message name="message">
 			Pour que vous puissiez accéder à cette parcelle, votre âge doit être vérifié.
-Voulez-vous aller sur le site de Second Life pour vérifier votre âge ?
+Voulez-vous aller sur le site de Heritage Key pour vérifier votre âge ?
 
 [_URL]
 		</message>
@@ -4679,7 +4679,7 @@ Voulez-vous aller sur le site de Second Life pour vérifier votre âge ?
 	<alert name="Cannot enter parcel: no payment info on file">
 		<message name="message">
 			Avant de pouvoir pénétrer sur cette parcelle, vous devez enregistrer vos informations de paiement.
-Voulez-vous aller sur le site de Second Life pour enregistrer ces informations ?
+Voulez-vous aller sur le site de Heritage Key pour enregistrer ces informations ?
 
 [_URL]
 		</message>

@@ -33,7 +33,7 @@
 	<check_box label="Faire pivoter la mini-carte" name="rotate_mini_map_checkbox" />
 	<check_box label="Détecter carte graphique au prochain démarrage"
 	     name="probe_hardware_checkbox"
-	     tool_tip="Second Life configure automatiquement certains réglages de la carte graphique d&apos;après votre configuration matérielle. Nous vous recommandons d&apos;effectuer la détection à chaque nouvelle installation de matériel." />
+	     tool_tip="Heritage Key configure automatiquement certains réglages de la carte graphique d&apos;après votre configuration matérielle. Nous vous recommandons d&apos;effectuer la détection à chaque nouvelle installation de matériel." />
 	<text type="string" length="1" name="start_location_textbox">
 		Lieu de départ :
 	</text>

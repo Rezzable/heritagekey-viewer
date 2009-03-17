@@ -589,8 +589,8 @@ Ihr Ziel ist mit einem großen roten Strahl markiert.
 <b_path>/panel_login/connect_btn</b_path>
 <c_attribute>label</c_attribute>
 <d_old>Connect</d_old>
-<e_new>Enter Second Life</e_new>
-<f_translation>Second Life betreten</f_translation>
+<e_new>Enter Heritage Key</e_new>
+<f_translation>Heritage Key betreten</f_translation>
 <f_old_trans>Verbinden</f_old_trans>
 </string><string><a_file>panel_preferences_chat.xml</a_file>
 <b_path>/chat/script_error</b_path>

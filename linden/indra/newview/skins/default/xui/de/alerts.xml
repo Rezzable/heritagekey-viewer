@@ -142,7 +142,7 @@ Sie finden es in der Webpage Studio-Ausstellung.
 	<alert name="GrantModifyRights">
 		<message name="message">
 			Die Gewährung von Änderungsrechten an andere Einwohner ermöglicht es diesen,
-JEDES BELIEBIGE Objekt zu ändern oder an sich zu nehmen, das Sie in der Second Life-Welt besitzen. Seien Sie SEHR vorsichtig beim Erteilen
+JEDES BELIEBIGE Objekt zu ändern oder an sich zu nehmen, das Sie in der Heritage Key-Welt besitzen. Seien Sie SEHR vorsichtig beim Erteilen
 dieser Erlaubnis.
 Möchten Sie [FIRST_NAME] [LAST_NAME] Änderungsrechte gewähren?
 		</message>
@@ -156,7 +156,7 @@ Möchten Sie [FIRST_NAME] [LAST_NAME] Änderungsrechte gewähren?
 	<alert name="GrantModifyRightsMultiple">
 		<message name="message">
 			Die Gewährung von Änderungsrechten an andere Einwohner ermöglicht es diesen, 
-JEDES BELIEBIGE Objekt zu ändern, das Sie in der Second Life-Welt besitzen. Seien Sie SEHR vorsichtig beim Erteilen 
+JEDES BELIEBIGE Objekt zu ändern, das Sie in der Heritage Key-Welt besitzen. Seien Sie SEHR vorsichtig beim Erteilen 
 dieser Erlaubnis.
 Möchten Sie den ausgewählten Einwohnern Änderungsrechte gewähren?
 		</message>
@@ -362,7 +362,7 @@ einer Region befindet, die das verbietet.
 		<message name="message">
 			Auf der [HERITAGE_KEY] Website können Sie anderen Einwohnern eine Partnerschaft vorschlagen und bestehende Partnerschaften lösen.
 
-Die Second Life Website für weitere Informationen über Partnerschaften öffnen?
+Die Heritage Key Website für weitere Informationen über Partnerschaften öffnen?
 		</message>
 		<option name="GotoPage">
 			Gehe zu Seite
@@ -501,7 +501,7 @@ Der Verkaufspreis beträgt [SALE_PRICE] L$ und wird automatisch für den Verkauf
 	</alert>
 	<alert name="ConfirmLandSaleToAnyoneChange">
 		<message name="message">
-			ACHTUNG: Wenn Sie auf &apos;An jeden verkaufen&apos; klicken, kann jeder in Second Life Ihr Land kaufen, auch Einwohner in anderen Regionen.
+			ACHTUNG: Wenn Sie auf &apos;An jeden verkaufen&apos; klicken, kann jeder in Heritage Key Ihr Land kaufen, auch Einwohner in anderen Regionen.
 
 Die ausgewählten [LAND_SIZE] qm Land werden zum Verkauf freigegeben.
 Der Verkaufspreis beträgt [SALE_PRICE] L$ und wird automatisch für den Verkauf an [NAME] autorisiert.
@@ -1014,14 +1014,14 @@ da die Option -safe verwendet wurde.
 	</alert>
 	<alert name="UnsupportedGLRequirements">
 		<message name="message">
-			Ihr Computer entspricht nicht den Hardwareanforderungen von Second Life. Second Life setzt eine OpenGL-Grafikkarte mit Multitextur-Unterstützung voraus. Falls Ihre Grafikkarte diese Funktion unterstützt, installieren Sie die neuesten Treiber sowie die aktuellen Service Packs und Patches für Ihr Betriebssystem.
+			Ihr Computer entspricht nicht den Hardwareanforderungen von Heritage Key. Heritage Key setzt eine OpenGL-Grafikkarte mit Multitextur-Unterstützung voraus. Falls Ihre Grafikkarte diese Funktion unterstützt, installieren Sie die neuesten Treiber sowie die aktuellen Service Packs und Patches für Ihr Betriebssystem.
 
 Sollte das Problem fortbestehen, finden Sie weitere Hilfestellung unter: http://www.secondlife.com/support
 		</message>
 	</alert>
 	<alert name="UnsupportedHardware">
 		<message name="message">
-			Achtung: Ihr System erfüllt nicht die Mindestanforderungen von Second Life. Dies kann eine schlechte Darstellungsleistung in Second Life zur Folge haben. Für nicht unterstützte Systemkonfigurationen bieten wir keinen technischen Support. 
+			Achtung: Ihr System erfüllt nicht die Mindestanforderungen von Heritage Key. Dies kann eine schlechte Darstellungsleistung in Heritage Key zur Folge haben. Für nicht unterstützte Systemkonfigurationen bieten wir keinen technischen Support. 
 
 MINDESTANF.
 Die Seite [_URL] für
@@ -1069,7 +1069,7 @@ weitere Informationen öffnen?
 		<message name="message">
 			Ihr System verwendet eine uns zurzeit unbekannte Grafikkarte.  
 Dies ist häufig der Fall bei neuer Hardware, die wir noch nicht testen konnten. 
-Second Life funktioniert aller Voraussicht nach normal, möglicherweise 
+Heritage Key funktioniert aller Voraussicht nach normal, möglicherweise 
 müssen Sie aber die Grafikeinstellungen anpassen.
 (Bearbeiten &gt; Einstellungen &gt; Grafik).
 		</message>
@@ -1775,7 +1775,7 @@ Kann die Region nicht finden, in der sich dieses Land befindet.
 	<alert name="CannotCloseFloaterBuyLand">
 		<message name="message">
 			Das Fenster &apos;Land kaufen&apos; kann erst geschlossen werden,
-nachdem Second Life den Transaktionspreis geschätzt hat.
+nachdem Heritage Key den Transaktionspreis geschätzt hat.
 		</message>
 	</alert>
 	<alert name="CannotDeedLandNothingSelected">
@@ -2497,7 +2497,7 @@ Bitte überprüfen Sie Ihre Netzwerkverbindung.
 	</alert>
 	<alert name="LoginPacketNeverReceived">
 		<message name="message">
-			Die Verbindung kann nicht hergestellt werden. Möglicherweise besteht ein Problem mit Ihrer Internetverbindung oder den Second Life-Servern.
+			Die Verbindung kann nicht hergestellt werden. Möglicherweise besteht ein Problem mit Ihrer Internetverbindung oder den Heritage Key-Servern.
 
 Überprüfen Sie Ihre Internetverbindung und versuchen Sie es dann erneut, oder klicken Sie auf &apos;Hilfe&apos;, um zu unserer Supportseite zu gelangen, oder klicken Sie auf &apos;Teleportieren&apos;, um nach Hause zu teleportieren.
 		</message>
@@ -3906,7 +3906,7 @@ Standard: aus
 	</alert>
 	<alert name="VoiceVersionMismatch" title="Falsche Voice-Version">
 		<message name="message">
-			Diese Version von Second ist mit dem Voice-Chat-Feature in dieser Region nicht kompatibel. Damit Voice-Chat funktioniert, müssen Sie Second Life aktualisieren.
+			Diese Version von Second ist mit dem Voice-Chat-Feature in dieser Region nicht kompatibel. Damit Voice-Chat funktioniert, müssen Sie Heritage Key aktualisieren.
 		</message>
 	</alert>
 	<alert name="HelpEstateCovenant" title="Grunstücksvertrag">
@@ -4128,7 +4128,7 @@ funktioniert aber nur, wenn ein Skript mit einem money() Ereignis hinzugefügt w
 	</alert>
 	<alert name="WebLaunchAccountHistory">
 		<message name="message">
-			Zur Second Life-Website, um Ihre Kontostatistik anzuzeigen?
+			Zur Heritage Key-Website, um Ihre Kontostatistik anzuzeigen?
 		</message>
 		<ignore name="ignore">
 			Beim Laden der Kontostatistik-Website
@@ -4142,10 +4142,10 @@ funktioniert aber nur, wenn ein Skript mit einem money() Ereignis hinzugefügt w
 	</alert>
 	<alert name="ClickOpenF1Help">
 		<message name="message">
-			Die Support-Website von Second Life öffnen?
+			Die Support-Website von Heritage Key öffnen?
 		</message>
 		<ignore name="ignore">
-			Bei Besuch der Second Life Support-Website.
+			Bei Besuch der Heritage Key Support-Website.
 		</ignore>
 		<option name="Gotopage">
 			Los
@@ -4173,7 +4173,7 @@ funktioniert aber nur, wenn ein Skript mit einem money() Ereignis hinzugefügt w
 			Wirklich beenden?
 		</message>
 		<ignore name="ignore">
-			Beim Beenden von Second Life.
+			Beim Beenden von Heritage Key.
 		</ignore>
 		<option name="Quit">
 			Beenden
@@ -4203,7 +4203,7 @@ http://secondlife.com/community/blotter.php
 -
 Als besonderen Service für Einwohner und Besucher übernimmt der Eigentümer dieser Region die Bearbeitung aller anfallenden Meldungen. Von diesem Standort aus eingereichte Meldungen werden nicht von Linden Lab bearbeitet. Der Eigentümer der Region bearbeitet Meldungen auf Grundlage der Richtlinien, die im für diese Region geltenden Grundstücksvertrag festgelegt sind. (Den Vertrag können Sie unter &apos;Welt&apos; &gt; &apos;Land-Info&apos; einsehen.)
 -
-Das Resultat, das sich aus dieser Meldung ergibt, betrifft nur diese Region; der Einwohnerzugang zu anderen Bereichen von Second Life ist davon nicht betroffen. Nur Linden Lab kann den Zugang zu Second Life beschränken.
+Das Resultat, das sich aus dieser Meldung ergibt, betrifft nur diese Region; der Einwohnerzugang zu anderen Bereichen von Heritage Key ist davon nicht betroffen. Nur Linden Lab kann den Zugang zu Heritage Key beschränken.
 		</message>
 	</alert>
 	<alert name="HelpReportBug">
@@ -4278,9 +4278,9 @@ Fehler schneller zu beseitigen.
 
 achten Sie bei der Meldung einer Urheberrechtsverletzung darauf, dass Sie dabei korrekt vorgehen:
 
-1. Missbrauch melden. Wenn Sie der Meinung sind, ein Einwohner nutzt das Berechtigungssystem von Second Life auf unerlaubte Weise zu seinem Vorteil aus, indem er zum Beispiel einen CopyBot oder verwandte Kopiertools verwendet und damit eine Urheberrechtsverletzung begeht, können Sie diesen Missbrauch melden.Das Missbrauchsteam untersucht etwaige Verstöße gegen die Second Life Community Standards oder die Nutzungsbedingungen und verhängt entsprechende Strafen.Das Missbrauchsteam ist jedoch nicht dafür zuständig, Inhalte aus der Second Life-Welt zu entfernen und reagiert auch nicht auf entsprechende Anfragen.
+1. Missbrauch melden. Wenn Sie der Meinung sind, ein Einwohner nutzt das Berechtigungssystem von Heritage Key auf unerlaubte Weise zu seinem Vorteil aus, indem er zum Beispiel einen CopyBot oder verwandte Kopiertools verwendet und damit eine Urheberrechtsverletzung begeht, können Sie diesen Missbrauch melden.Das Missbrauchsteam untersucht etwaige Verstöße gegen die Heritage Key Community Standards oder die Nutzungsbedingungen und verhängt entsprechende Strafen.Das Missbrauchsteam ist jedoch nicht dafür zuständig, Inhalte aus der Heritage Key-Welt zu entfernen und reagiert auch nicht auf entsprechende Anfragen.
 
-2. Die DMCA oder Inhaltsentfernungs-Vorgehensweise. Sie können das Entfernen von Inhalten aus Second Life beantragen. Dazu müssen Sie eine Urheberrechtsverletzung gemäß den in unserer DMCA-Richtlinie unter http://secondlife.com/corporate/dmca.php dargelegten Anweisungen einreichen.
+2. Die DMCA oder Inhaltsentfernungs-Vorgehensweise. Sie können das Entfernen von Inhalten aus Heritage Key beantragen. Dazu müssen Sie eine Urheberrechtsverletzung gemäß den in unserer DMCA-Richtlinie unter http://secondlife.com/corporate/dmca.php dargelegten Anweisungen einreichen.
 
 Wenn Sie jetzt mit der Missbrauchmeldung fortfahren möchten, schließen Sie bitte dieses Fenster und senden Sie Ihren Bericht ein.
 
@@ -4501,7 +4501,7 @@ Klicken Sie auf &quot;Wasser (erweitert)&quot;, um einen Editor mit erweiterten 
 	</alert>
 	<alert name="HelpDayCycle">
 		<message name="message">
-			Im Tageszyklus-Editor steuern Sie den Tag-/Nachtzyklus am Second Life Himmel. Dabei handelt es sich um den Zyklus, der mit dem Tageszeit-Regler im Umwelt-Basiseditor gesteuert wird.
+			Im Tageszyklus-Editor steuern Sie den Tag-/Nachtzyklus am Heritage Key Himmel. Dabei handelt es sich um den Zyklus, der mit dem Tageszeit-Regler im Umwelt-Basiseditor gesteuert wird.
 
 Der Tageszyklus-Editor verwendet sogenannte Keyframes zur Steuerung des Tag-/Nachtablaufs. Dabei handelt es sich um &quot;Schlüsselbilder&quot; (die grauen Kreise auf der Zeitskala), für die bestimmte Himmelseinstellungen definiert wurden. Bei voranschreitender Tageszeit interpoliert WindLight den Übergang zwischen diesen Keyframes und erzeugt eine entsprechende Himmelsanimation. 
 
@@ -4646,7 +4646,7 @@ Wolkendichte.
 	</alert>
 	<alert name="HelpClassicClouds">
 		<message name="message">
-			Aktivieren Sie dieses Kontrollkästchen, um die Darstellung der klassischen Second Life Wolken zusätzlich zu den WindLight-Wolken zu erzwingen.
+			Aktivieren Sie dieses Kontrollkästchen, um die Darstellung der klassischen Heritage Key Wolken zusätzlich zu den WindLight-Wolken zu erzwingen.
 		</message>
 	</alert>
 	<alert name="HelpWaterFogColor">
@@ -4814,7 +4814,7 @@ solange sie Teil eines Anhangs sind.
 	</alert>
 	<alert name="BadURL">
 		<message name="message">
-			Second Life kann den folgenden Link nicht verarbeiten:
+			Heritage Key kann den folgenden Link nicht verarbeiten:
  [SLURL]
 Die meisten Links ähneln dem Folgenden:
 
@@ -4827,7 +4827,7 @@ fd37083abc4c/about
 	<alert name="NotAgeVerified">
 		<message name="message">
 			Um Zugang zu dieser Parzelle zu erhalten, müssen Sie sich einer Altersprüfung unterziehen.
-Möchten Sie auf der Second Life Website eine Altersüberprüfung durchführen?
+Möchten Sie auf der Heritage Key Website eine Altersüberprüfung durchführen?
 
 [_URL]
 		</message>
@@ -4847,7 +4847,7 @@ Möchten Sie auf der Second Life Website eine Altersüberprüfung durchführen?
 	<alert name="Cannot enter parcel: no payment info on file">
 		<message name="message">
 			Um Zugang zu dieser Parzelle zu erhalten, müssen Sie Zahlungsinformationen hinterlegt haben.
-Möchten Sie die Second Life Website öffnen, um diese Angaben zu hinterlegen?
+Möchten Sie die Heritage Key Website öffnen, um diese Angaben zu hinterlegen?
 
 [_URL]
 		</message>

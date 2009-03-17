@@ -902,7 +902,7 @@ bis die Option &apos;Flexibel&apos; deaktiviert wurde.
 	<notify name="FirstDebugMenus">
 		<message name="message">
 			Sie haben das Erweitert-Menü aktiviert. 
-Dieses Menü enthält nützliche Funktionen zum Debuggen von Second Life.
+Dieses Menü enthält nützliche Funktionen zum Debuggen von Heritage Key.
 Drücken Sie in Windows Strg-Alt-D (Mac: Befehl-Opt-Umschalt-D) zum Ein- und Ausschalten dieses Menüs.
 		</message>
 	</notify>

@@ -46,7 +46,7 @@
 	<check_box label="ミニマップを回転" name="rotate_mini_map_checkbox" />
 	<check_box label="次回起動時グラフィックカード自動検出"
 	     name="probe_hardware_checkbox"
-	     tool_tip="Second Lifeは、あなたのハードウェアに基づいて、いくつかのグラフィック設定を自動的に構成します。  新しいハードウェアをインストールした場合は、Second Lifeに再度検出させるようにしてください。" />
+	     tool_tip="Heritage Keyは、あなたのハードウェアに基づいて、いくつかのグラフィック設定を自動的に構成します。  新しいハードウェアをインストールした場合は、Heritage Keyに再度検出させるようにしてください。" />
 	<text type="string" length="1" name="start_location_textbox">
 		ログイン位置：
 	</text>

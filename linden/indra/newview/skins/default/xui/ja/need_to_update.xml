@@ -716,8 +716,8 @@ Follow the red arrow to the beacon, or click the arrow to dismiss the beacon.
 <b_path>/panel_login/connect_btn</b_path>
 <c_attribute>label</c_attribute>
 <d_old>Connect</d_old>
-<e_new>Enter Second Life</e_new>
-<f_translation>Second Lifeに入る</f_translation>
+<e_new>Enter Heritage Key</e_new>
+<f_translation>Heritage Keyに入る</f_translation>
 <f_old_trans>接続</f_old_trans>
 </string>
 <string>

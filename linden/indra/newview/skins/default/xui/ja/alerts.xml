@@ -510,7 +510,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	</alert>
 	<alert name="ConfirmLandSaleToAnyoneChange">
 		<message name="message">
-			注:「誰にでも売却する」をクリックすると、あなたの土地は、Second Lifeのコミュニティのどこからでも（この地域にないコミュニティを含む）購入できるようになります。
+			注:「誰にでも売却する」をクリックすると、あなたの土地は、Heritage Keyのコミュニティのどこからでも（この地域にないコミュニティを含む）購入できるようになります。
 
 選択された[LAND_SIZE]平方メートルの土地は、売り出し中に設定されています。
 売却価格L$[SALE_PRICE]で、[NAME]に売却を認可します。
@@ -1019,14 +1019,14 @@ Studio exhibitのウェブ・ページで確認してください。
 	</alert>
 	<alert name="UnsupportedGLRequirements">
 		<message name="message">
-			Second Life の使用に必要なハードウェアの環境が満たされていないようです。 Second Life ではマルチテクスチャーに対応したOpenGLグラフィック・カードが必要です。 この場合、グラフィック・カードの最新ドライバがインストールされていること、およびオペレーティング・システムにサービス・パックと修正プログラムが適用されていることをご確認ください。
+			Heritage Key の使用に必要なハードウェアの環境が満たされていないようです。 Heritage Key ではマルチテクスチャーに対応したOpenGLグラフィック・カードが必要です。 この場合、グラフィック・カードの最新ドライバがインストールされていること、およびオペレーティング・システムにサービス・パックと修正プログラムが適用されていることをご確認ください。
 
 問題が解決されない場合には、次のサイトにアクセスしてください。 http://www.secondlife.com/support
 		</message>
 	</alert>
 	<alert name="UnsupportedHardware">
 		<message name="message">
-			警告： あなたのシステムは Second Life を使用するために必要な必須動作環境の条件をを満たしていません。 Second Life をこのままご使用になると、不十分なパフォーマンスしか得られないおそれがあります。 また、サポート外のシステム構成でご使用の場合、テクニカルサポートをご利用いただくことができません。 
+			警告： あなたのシステムは Heritage Key を使用するために必要な必須動作環境の条件をを満たしていません。 Heritage Key をこのままご使用になると、不十分なパフォーマンスしか得られないおそれがあります。 また、サポート外のシステム構成でご使用の場合、テクニカルサポートをご利用いただくことができません。 
 
  必須動作環境の条件
 ［_URL］ にアクセスして、さらに詳しい情報をご覧になりますか?
@@ -1072,7 +1072,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	<alert name="UnknownGPU">
 		<message name="message">
 			お使いのシステムには、現時点では不明なグラフィック・カードが搭載されています。  
-これは、当社による動作テストが行われていない新しいハードウェアが使用されている場合がほとんどです。  Second Lifeはほぼ間違いなく正常に動作しますが、必要に応じたグラフィック設定の調整が必要になる場合があります。
+これは、当社による動作テストが行われていない新しいハードウェアが使用されている場合がほとんどです。  Heritage Keyはほぼ間違いなく正常に動作しますが、必要に応じたグラフィック設定の調整が必要になる場合があります。
 ([編集]&gt;[環境設定]&gt;[グラフィック])。
 		</message>
 		<ignore name="ignore">
@@ -1768,7 +1768,7 @@ www.secondlife.comに戻って、新規アカウントの作成を行います�
 	</alert>
 	<alert name="CannotCloseFloaterBuyLand">
 		<message name="message">
-			Second Lifeによるこの取引の見積りが完了するまで［土地を購入］ウィンドウを閉じることはできません。
+			Heritage Keyによるこの取引の見積りが完了するまで［土地を購入］ウィンドウを閉じることはできません。
 		</message>
 	</alert>
 	<alert name="CannotDeedLandNothingSelected">
@@ -2481,7 +2481,7 @@ www.secondlife.comに戻って、新規アカウントの作成を行います�
 	</alert>
 	<alert name="LoginPacketNeverReceived">
 		<message name="message">
-			接続に問題が生じています。 あなたのインターネット接続、またはSecond Lifeサーバーに問題がある可能性があります。
+			接続に問題が生じています。 あなたのインターネット接続、またはHeritage Keyサーバーに問題がある可能性があります。
 
 あなたのインターネット接続を確認して数分後にもう一度試みるか、[ヘルプ]をクリックして当社のサポート・サイトに接続してください。または、[テレポート]をクリックしてホームにテレポートしてみてください。
 		</message>
@@ -3910,7 +3910,7 @@ Linden社所有のメインランドの不動産での太陽の位置に
 	</alert>
 	<alert name="VoiceVersionMismatch" title="ボイスバージョンの不一致">
 		<message name="message">
-			このバージョンの Second Life は、この地域のボイスチャット機能に対応していません。ボイスチャットを正しく使用するには、Second Life のアップデートが必要です。
+			このバージョンの Heritage Key は、この地域のボイスチャット機能に対応していません。ボイスチャットを正しく使用するには、Heritage Key のアップデートが必要です。
 		</message>
 	</alert>
 	<alert name="HelpEstateCovenant" title="不動産約款">
@@ -4148,10 +4148,10 @@ Linden社所有のメインランドの不動産での太陽の位置に
 	</alert>
 	<alert name="ClickOpenF1Help">
 		<message name="message">
-			Second Life のサポートウェブサイトを利用しますか？
+			Heritage Key のサポートウェブサイトを利用しますか？
 		</message>
 		<ignore name="ignore">
-			Second Life のサポートウェブサイトを閲覧するにあたって。
+			Heritage Key のサポートウェブサイトを閲覧するにあたって。
 		</ignore>
 		<option name="Gotopage">
 			行く
@@ -4179,7 +4179,7 @@ Linden社所有のメインランドの不動産での太陽の位置に
 			終了しようとしています。操作を続行しますか？
 		</message>
 		<ignore name="ignore">
-			Second Life の終了にあたって。
+			Heritage Key の終了にあたって。
 		</ignore>
 		<option name="Quit">
 			終了
@@ -4286,9 +4286,9 @@ http://secondlife.com/community/support.php
 
 知的所有権の侵害を報告する場合は、以下のとおり正確に報告してください。
 
-(1) 嫌がらせの処理。 住人がSecond Lifeの許可システムを不当に使用し、知的所有権が侵害されていると考えられる場合は、嫌がらせ報告を提出することができます。許可システムを不当に使用する手段としては、たとえば、CopyBotまたは類似したコピー・ツールがあります。 嫌がらせ対応担当チームが調査を行い、Second Lifeのコミュニティ・スタンダードまたは利用規約に違反する態度に対しては適切な懲罰処分が行われます。 ただし、嫌がらせ対応担当チームでは、コンテンツをSecond Lifeワールドから削除するリクエストに対する処理または回答は行いません。
+(1) 嫌がらせの処理。 住人がHeritage Keyの許可システムを不当に使用し、知的所有権が侵害されていると考えられる場合は、嫌がらせ報告を提出することができます。許可システムを不当に使用する手段としては、たとえば、CopyBotまたは類似したコピー・ツールがあります。 嫌がらせ対応担当チームが調査を行い、Heritage Keyのコミュニティ・スタンダードまたは利用規約に違反する態度に対しては適切な懲罰処分が行われます。 ただし、嫌がらせ対応担当チームでは、コンテンツをHeritage Keyワールドから削除するリクエストに対する処理または回答は行いません。
 
-(2) DMCAまたはコンテンツの削除処理。 Second Lifeからのコンテンツの削除をリクエストするには、http://secondlife.com/corporate/dmca.phpのDMCAポリシーにある、侵害に関する有効な通知を提出する必要があります。
+(2) DMCAまたはコンテンツの削除処理。 Heritage Keyからのコンテンツの削除をリクエストするには、http://secondlife.com/corporate/dmca.phpのDMCAポリシーにある、侵害に関する有効な通知を提出する必要があります。
 
 嫌がらせの処理を継続する場合は、このウインドウを閉じ、報告を提出してください。
 
@@ -4507,7 +4507,7 @@ Linden Lab
 	</alert>
 	<alert name="HelpDayCycle">
 		<message name="message">
-			［デイ・サイクル編集］では Second Life での昼と夜の空の変化を制御できます。 これは［基本環境編集］の［時間帯］スライダーで使用されるサイクルです。
+			［デイ・サイクル編集］では Heritage Key での昼と夜の空の変化を制御できます。 これは［基本環境編集］の［時間帯］スライダーで使用されるサイクルです。
 
 ［デイ・サイクル編集］はキーフレームを設定することで機能します。  各キーフレームにはプリセットされた空の設定が関連付けられています（時間グラフに灰色の節として表示されます）。 ウィンドライト（ WindLight ）はキーフレーム間をデータ補間し、時間の経過とともに空の自然なアニメーションを作り出します。 
 
@@ -4638,7 +4638,7 @@ Linden Lab
 	</alert>
 	<alert name="HelpClassicClouds">
 		<message name="message">
-			このボックスを有効にすると、WindLight の雲に加えて、Second Life の従来の雲もレンダリングできるようになります。
+			このボックスを有効にすると、WindLight の雲に加えて、Heritage Key の従来の雲もレンダリングできるようになります。
 		</message>
 	</alert>
 	<alert name="HelpWaterFogColor">
@@ -4806,7 +4806,7 @@ Linden Lab
 	</alert>
 	<alert name="BadURL">
 		<message name="message">
-			Second Life がリンク（[SLURL]）を処理できません。
+			Heritage Key がリンク（[SLURL]）を処理できません。
 ほとんどのリンクは、次のような形式です。
 
 secondlife:///app/agent/0e346d8b-4433-4d66-a6b0-
@@ -4818,7 +4818,7 @@ fd37083abc4c/about
 	<alert name="NotAgeVerified">
 		<message name="message">
 			この区画にアクセスするためには、年齢確認を行う必要があります。
-Second Lifeのウェブサイトにアクセスして、年齢確認を行いますか？
+Heritage Keyのウェブサイトにアクセスして、年齢確認を行いますか？
 
 [_URL]
 		</message>
@@ -4838,7 +4838,7 @@ Second Lifeのウェブサイトにアクセスして、年齢確認を行いま
 	<alert name="Cannot enter parcel: no payment info on file">
 		<message name="message">
 			この区画にアクセスするには、支払い情報が事前に登録されている必要があります。
-Second Lifeのウェブサイトにアクセスして、設定しますか？
+Heritage Keyのウェブサイトにアクセスして、設定しますか？
 
 [_URL]
 		</message>

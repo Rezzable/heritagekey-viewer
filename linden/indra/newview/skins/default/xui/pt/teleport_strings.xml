@@ -3,13 +3,13 @@
 	<message_set name="errors">
 		<message name="invalid_tport">
 			Foi encontrado um problema na sua solicitação de teleport. Você
-                  provavelmente precisará entrar no Second Life novamente 
+                  provavelmente precisará entrar no Heritage Key novamente 
                   antes de teleportar-se. Se esse problema persistir, por favor 
                   verifique o FAQ do suporte técnico em www.secondlife.com/support.
 		</message>
 		<message name="invalid_region_handoff">
 			Foi encontrado um problema ao processar sua transição entre as 
-                  regiões. Você provavelmente precisará entrar no Second Life 
+                  regiões. Você provavelmente precisará entrar no Heritage Key 
                   novamente antes de conseguir passar entre regiões. 
                   Se esse problema persistir, por favor verifique o FAQ do suporte
                   técnico em www.secondlife.com/support.
@@ -17,7 +17,7 @@
 		<message name="blocked_tport">
 			Desculpe, teleport temporariamente bloqueado. Tente novamente em
                   alguns instantes. Se você ainda não puder teleportar-se, por favor,
-                  entre novamente no Second Life para resolver seu problema.
+                  entre novamente no Heritage Key para resolver seu problema.
 		</message>
 		<message name="nolandmark_tport">
 			Desculpe, mas o sistema não conseguiu localizar a landmark de destino.
@@ -31,7 +31,7 @@
 		</message>
 		<message name="missing_attach_tport">
 			Seus anexos não foram carregados ainda. Tente esperar por alguns
-			segundos ou entre no Second Life novamente antes de tentar
+			segundos ou entre no Heritage Key novamente antes de tentar
 			teleportar-se.
 		</message>
 		<message name="too_many_uploads_tport">

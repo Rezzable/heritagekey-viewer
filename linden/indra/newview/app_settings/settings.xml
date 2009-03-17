@@ -5067,7 +5067,7 @@
     <key>NumSessions</key>
     <map>
       <key>Comment</key>
-      <string>Number of successful logins to Second Life</string>
+      <string>Number of successful logins to Heritage Key</string>
       <key>Persist</key>
       <integer>1</integer>
       <key>Type</key>
@@ -7369,7 +7369,7 @@
     <key>SkyUseClassicClouds</key>
     <map>
       <key>Comment</key>
-      <string>Whether to use the old Second Life particle clouds or not</string>
+      <string>Whether to use the old particle clouds or not</string>
       <key>Persist</key>
       <integer>1</integer>
       <key>Type</key>

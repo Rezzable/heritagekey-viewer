@@ -152,7 +152,7 @@
 	</alert>
 	<alert name="GrantModifyRights">
 		<message name="message">
-			Permite que um outro residente modifique QUALQUER objeto que você tenha no Second Life. Seja muito cuidadoso quando lidar com essa permissão. Você deseja garantir os direitos de edição para  [FIRST_NAME] [LAST_NAME]?
+			Permite que um outro residente modifique QUALQUER objeto que você tenha no Heritage Key. Seja muito cuidadoso quando lidar com essa permissão. Você deseja garantir os direitos de edição para  [FIRST_NAME] [LAST_NAME]?
 		</message>
 		<option name="Yes">
 			Sim
@@ -3506,7 +3506,7 @@ s
 	</alert>
 	<alert name="HelpReportAbuseEmailEO">
 		<message name="message">
-			IMPORTANTE: Este report será enviado ao proprietário da região em que você está e não à Linden Lab. - Como prestador de serviço aos residentes e visitantes, o proprietário da região em que você está escolheu receber e resolver todos os reports originados nesta região. Linden Lab não investigará os reports que você postar deste local. O proprietário da região resolverá os reports baseados nas regras locais desta região como definido pelo corretor da região. (Veja os corretores no menu World e selecione About Land.) - A resolução deste report se aplica apenas a esta região; outras áreas do Second Life não serão afetadas pelo resultado deste report. Somente a Linden Lab pode restringir o acesso a todo o Second Life.
+			IMPORTANTE: Este report será enviado ao proprietário da região em que você está e não à Linden Lab. - Como prestador de serviço aos residentes e visitantes, o proprietário da região em que você está escolheu receber e resolver todos os reports originados nesta região. Linden Lab não investigará os reports que você postar deste local. O proprietário da região resolverá os reports baseados nas regras locais desta região como definido pelo corretor da região. (Veja os corretores no menu World e selecione About Land.) - A resolução deste report se aplica apenas a esta região; outras áreas do Heritage Key não serão afetadas pelo resultado deste report. Somente a Linden Lab pode restringir o acesso a todo o Heritage Key.
 		</message>
 	</alert>
 	<alert name="HelpReportBug">
@@ -3652,7 +3652,7 @@ o conteúdo da pasta achados e perdidos?
 		<message name="message">
 			You can propose to another Resident or dissolve an existing partnership through the [HERITAGE_KEY] website.
 
-Go to the Second Life web site for more information on partnering?
+Go to the Heritage Key web site for more information on partnering?
 		</message>
 		<option name="GotoPage">
 			Go to Page

@@ -42,7 +42,7 @@
 	</notify>
 	<notify name="UploadingAuctionSnapshot">
 		<message name="message">
-			Fazendo upload da imagem no Second Life para o website
+			Fazendo upload da imagem no Heritage Key para o website
 		</message>
 	</notify>
 	<notify name="UploadPayment">
