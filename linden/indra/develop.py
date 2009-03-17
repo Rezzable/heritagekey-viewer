@@ -75,7 +75,7 @@ class PlatformSetup(object):
     build_type = build_types['relwithdebinfo']
     standalone = 'FALSE'
     unattended = 'FALSE'
-    project_name = 'Imprudence'
+    project_name = 'Heritage Key'
     distcc = True
     cmake_opts = []
 
@@ -560,9 +560,9 @@ class WindowsSetup(PlatformSetup):
                 prev_build = ''
             vstool_cmd = (os.path.join('tools','vstool','VSTool.exe') +
                           ' --solution ' +
-                          os.path.join(build_dir,'Imprudence.sln') +
+                          os.path.join(build_dir,'HeritageKey.sln') +
                           ' --config ' + self.build_type +
-                          ' --startup imprudence-bin')
+                          ' --startup heritagekey-bin')
             print 'Running %r in %r' % (vstool_cmd, getcwd())
             self.run(vstool_cmd)        
             print >> open(stamp, 'w'), self.build_type
