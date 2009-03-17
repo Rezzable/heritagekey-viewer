@@ -229,7 +229,7 @@
 		     name="Set Scripts to Not Running in Selection" />
 	</menu>
 	<menu label="ヘルプ" name="Help">
-		<menu_item_call label="Second Life ヘルプ" name="Second Life Help" />
+		<menu_item_call label="ヘルプ" name="Help" />
 		<menu_item_call label="インワールド・ヘルプ：" name="In-World Help" />
 		<menu_item_call label="追加ヘルプ" name="Additional Help" />
 		<menu_item_call label="チュートリアル" name="Tutorial" />
@@ -260,6 +260,6 @@
 		<menu_item_separator label="-----------" name="separator5" />
 		<menu_item_call label="リリースノート..." name="Release Notes..." />
 		<menu_item_separator label="-----------" name="separator6" />
-		<menu_item_call label="Second Lifeについて" name="About Second Life..." />
+		<menu_item_call label="Heritage Keyについて" name="About Heritage Key..." />
 	</menu>
 </menu_bar>

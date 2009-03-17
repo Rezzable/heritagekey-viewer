@@ -221,7 +221,7 @@
 		     name="Set Scripts to Not Running in Selection" />
 	</menu>
 	<menu label="Hilfe" name="Help">
-		<menu_item_call label="Hilfe zu Second Life" name="Second Life Help" />
+		<menu_item_call label="Hilfe" name="Help" />
 		<menu_item_call label="In-Welt-Hilfe" name="In-World Help" />
 		<menu_item_call label="Weitere Hilfe" name="Additional Help" />
 		<menu_item_call label="Tutorial" name="Tutorial" />
@@ -251,6 +251,6 @@
 		</menu>
 		<menu_item_call label="Versionshinweise..." name="Release Notes..." />
 		<menu_item_separator label="-----------" name="separator6" />
-		<menu_item_call label="Über Second Life..." name="About Second Life..." />
+		<menu_item_call label="Über Heritage Key..." name="About Heritage Key..." />
 	</menu>
 </menu_bar>

@@ -198,7 +198,7 @@
 	</menu>
 	<menu label="帮助" name="Help">
 		<tearoff_menu label="~~~~~~~~~~~" name="~~~~~~~~~~~" />
-		<menu_item_call label="第二人生帮助" name="Second Life Help" />
+		<menu_item_call label="第二人生帮助" name="Help" />
 		<menu_item_call label="基础信息..." name="Knowledge Base..." />
 		<menu_item_call label="演示帮助..." name="Live Help..." />
 		<menu_item_separator label="-----------" name="separator" />
@@ -215,6 +215,6 @@
 		<menu_item_call label="报告漏洞..." name="Report Bug..." />
 		<menu_item_call label="释放消息..." name="Release Notes..." />
 		<menu_item_separator label="-----------" name="separator6" />
-		<menu_item_call label="关于第二人生..." name="About Second Life..." />
+		<menu_item_call label="关于第二人生..." name="About Heritage Key..." />
 	</menu>
 </menu_bar>

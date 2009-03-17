@@ -242,7 +242,7 @@
 	</menu>
 	<menu label="Aide" name="Help">
 		<tearoff_menu label="~~~~~~~~~~~" name="~~~~~~~~~~~" />
-		<menu_item_call label="Aide Second Life" name="Second Life Help" />
+		<menu_item_call label="Aide" name="Help" />
 		<menu_item_call label="Base de connaissances…" name="Knowledge Base..." />
 		<menu_item_call label="Aide en ligne" name="Live Help..." />
 		<menu_item_call label="Didacticiel" name="Tutorial" />
@@ -274,6 +274,6 @@
 			<menu_item_separator label="-----------" name="separator9" />
 			<menu_item_call label="Signaler un bug..." name="Report Bug..." />
 		</menu>
-		<menu_item_call label="À propos de Second Life..." name="About Second Life..." />
+		<menu_item_call label="À propos de Heritage Key..." name="About Heritage Key..." />
 	</menu>
 </menu_bar>
