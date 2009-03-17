@@ -297,10 +297,10 @@ BOOL gLogoutInProgress = FALSE;
 // Internal globals... that should be removed.
 static std::string gArgs;
 
-const std::string MARKER_FILE_NAME("Imprudence.exec_marker");
-const std::string ERROR_MARKER_FILE_NAME("Imprudence.error_marker");
-const std::string LLERROR_MARKER_FILE_NAME("Imprudence.llerror_marker");
-const std::string LOGOUT_MARKER_FILE_NAME("Imprudence.logout_marker");
+const std::string MARKER_FILE_NAME("HeritageKey.exec_marker");
+const std::string ERROR_MARKER_FILE_NAME("HeritageKey.error_marker");
+const std::string LLERROR_MARKER_FILE_NAME("HeritageKey.llerror_marker");
+const std::string LOGOUT_MARKER_FILE_NAME("HeritageKey.logout_marker");
 static BOOL gDoDisconnect = FALSE;
 static std::string gLaunchFileOnQuit;
 
@@ -312,7 +312,7 @@ const char *VFS_INDEX_FILE_BASE = "index.db2.x.";
 static std::string gSecondLife;
 static std::string gWindowTitle;
 #ifdef LL_WINDOWS
-	static char sWindowClass[] = "Imprudence";
+	static char sWindowClass[] = "Heritage Key";
 #endif
 
 std::string gLoginPage;
@@ -332,11 +332,11 @@ void LLAppViewer::gst_plugin_path()
 	}
 	else
 	{
-		LL_INFOS("InitInfo") << "Imprudence is installed at " << buffer << LL_ENDL;
+		LL_INFOS("InitInfo") << "Heritage Key is installed at " << buffer << LL_ENDL;
 		
 		std::string plugin_path = "GST_PLUGIN_PATH=" + std::string(buffer) + "\\lib\\gstreamer-plugins";
 
-		// Place GST_PLUGIN_PATH in the environment settings for imprudence.exe
+		// Place GST_PLUGIN_PATH in the environment settings for hkey.exe
 		const char* gst_plugin_path = plugin_path.c_str();
 		putenv(gst_plugin_path);
 		LL_INFOS("InitInfo") << "GST_PLUGIN_PATH set to " << getenv("GST_PLUGIN_PATH") << LL_ENDL;
@@ -1509,15 +1509,15 @@ bool LLAppViewer::initLogging()
 	
 	// Remove the last ".old" log file.
 	std::string old_log_file = gDirUtilp->getExpandedFilename(LL_PATH_LOGS,
-							     "Imprudence.old");
+							     "HeritageKey.old");
 	LLFile::remove(old_log_file);
 
 	// Rename current log file to ".old"
 	std::string log_file = gDirUtilp->getExpandedFilename(LL_PATH_LOGS,
-							     "Imprudence.log");
+							     "HeritageKey.log");
 	LLFile::rename(log_file, old_log_file);
 
-	// Set the log file to Imprudence.log
+	// Set the log file to HeritageKey.log
 
 	LLError::logToFile(log_file);
 
@@ -1635,7 +1635,7 @@ bool LLAppViewer::initConfiguration()
 
 	// - set procedural settings 
 	gSavedSettings.setString("ClientSettingsFile", 
-        gDirUtilp->getExpandedFilename(LL_PATH_USER_SETTINGS, "settings_imprudence.xml"));
+        gDirUtilp->getExpandedFilename(LL_PATH_USER_SETTINGS, "settings_heritagekey.xml"));
 
 	gSavedSettings.setString("VersionChannelName", IMP_VIEWER_NAME);
 

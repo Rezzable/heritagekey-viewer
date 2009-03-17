@@ -376,7 +376,7 @@ WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nSho
 	}
 	else
 	{
-		mbstowcs(window_title, "Imprudence Updater", 2048);
+		mbstowcs(window_title, "Heritage Key Updater", 2048);
 	}
 	
 	WNDCLASSEX wndclassex = { 0 };
@@ -469,11 +469,11 @@ WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nSho
 	if (gTotalBytesRead < (1024 * 1024) && ! cancelled)
 	{
 		MessageBox(gWindow,
-			L"The Imprudence auto-update has failed.\n"
+			L"The Heritage Key auto-update has failed.\n"
 			L"The problem may be caused by other software installed \n"
 			L"on your computer, such as a firewall.\n"
 			L"Please visit http://imprudenceviewer.org/download/ \n"
-			L"to download the latest version of Imprudence.\n",
+			L"to download the latest version of Heritage Key.\n",
 			NULL, MB_OK);
 		return 1;
 	}
@@ -487,7 +487,7 @@ WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nSho
 	if (!success)
 	{
 		MessageBox(gWindow, 
-			L"Imprudence download failed.\n"
+			L"Heritage Key download failed.\n"
 			L"Please try again later.", 
 			NULL, MB_OK);
 		return 1;
