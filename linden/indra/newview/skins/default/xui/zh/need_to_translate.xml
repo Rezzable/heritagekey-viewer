@@ -187,8 +187,8 @@
    <Row>
     <Cell><Data ss:Type="String">alerts.xml</Data></Cell>
     <Cell><Data ss:Type="String">//WebLaunchSupport/message</Data></Cell>
-    <Cell ss:Index="5"><Data ss:Type="String">Contact [SECOND_LIFE] Support.</Data></Cell>
-    <Cell ss:Index="7"><Data ss:Type="String">联系[SECOND_LIFE]支持中心.</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">Contact [HERITAGE_KEY] Support.</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">联系[HERITAGE_KEY]支持中心.</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="String">alerts.xml</Data></Cell>
@@ -539,9 +539,9 @@
    <Row ss:Height="103.5">
     <Cell><Data ss:Type="String">alerts.xml</Data></Cell>
     <Cell><Data ss:Type="String">//DownloadMacMandatory/message</Data></Cell>
-    <Cell ss:Index="4" ss:StyleID="s23"><Data ss:Type="String">A new version of [SECOND_LIFE] is available.&#10;[MESSAGE]&#10; &#10;You must download this update to use the system.&#10; &#10;Download to your Applications folder?</Data></Cell>
-    <Cell ss:StyleID="s23"><Data ss:Type="String">A new version of [SECOND_LIFE] is available.&#10;[MESSAGE]&#10;&#10;You must download this update to use the system.&#10; &#10;Download to your Applications folder?</Data></Cell>
-    <Cell ss:StyleID="s23"><Data ss:Type="String">[SECOND_LIFE]有新版本可用。&#10;[MESSAGE]&#10; &#10;你必须下再次更新才能运行系统。&#10;是否下载更新至应用软件文件夹?</Data></Cell>
+    <Cell ss:Index="4" ss:StyleID="s23"><Data ss:Type="String">A new version of [HERITAGE_KEY] is available.&#10;[MESSAGE]&#10; &#10;You must download this update to use the system.&#10; &#10;Download to your Applications folder?</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">A new version of [HERITAGE_KEY] is available.&#10;[MESSAGE]&#10;&#10;You must download this update to use the system.&#10; &#10;Download to your Applications folder?</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">[HERITAGE_KEY]有新版本可用。&#10;[MESSAGE]&#10; &#10;你必须下再次更新才能运行系统。&#10;是否下载更新至应用软件文件夹?</Data></Cell>
    </Row>
    <Row ss:Height="155.25">
     <Cell><Data ss:Type="String">alerts.xml</Data></Cell>

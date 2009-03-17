@@ -837,7 +837,7 @@ and display different backgrounds.
 	</notify>
 	<notify name="FirstBuild" tip="false">
 		<message name="message">
-			You can build new objects in some areas of [SECOND_LIFE].
+			You can build new objects in some areas of [HERITAGE_KEY].
 Use the tools in the upper left to build, and try 
 holding down Ctrl or Alt to rapidly switch tools.
 Press Esc to stop building.

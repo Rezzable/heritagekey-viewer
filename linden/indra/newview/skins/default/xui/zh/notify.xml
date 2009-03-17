@@ -721,7 +721,7 @@ upper-right corner of the screen.
 	</notify>
 	<notify name="FirstBuild">
 		<message name="message">
-			你可以在[SECOND_LIFE]中的某些区域内创建新东东。
+			你可以在[HERITAGE_KEY]中的某些区域内创建新东东。
 使用左上角的工具创建新东东，并按住Ctrl或者Alt键以迅速的更改工具。
 按Esc键停止创建东东。
 		</message>

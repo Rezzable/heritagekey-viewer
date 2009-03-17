@@ -44,7 +44,7 @@
 	</alert>
 	<alert name="ConnectTimeout">
 		<message name="message">
-			Não foi possível conectar-se ao [SECOND_LIFE]. O sistema pode estar desativado. Por favor, tente novamente em alguns minutos, ou clique em Ajuda para mais informações e exibir a situação da página da web.
+			Não foi possível conectar-se ao [HERITAGE_KEY]. O sistema pode estar desativado. Por favor, tente novamente em alguns minutos, ou clique em Ajuda para mais informações e exibir a situação da página da web.
 		</message>
 		<option name="OK">
 			OK
@@ -290,22 +290,22 @@
 	</alert>
 	<alert name="ClickPublishHelpGroup">
 		<message name="message">
-			Selecionar a opção &quot;Publicar na Web&quot; nos permitirá publicar o nome do grupo, símbolo, cartas, títulos e o fundador no website [SECOND_LIFE]. Você é responsável por indicar se algum dos conteúdos acima for considerado Adulto de acordo com as Regras da Comunidade.
+			Selecionar a opção &quot;Publicar na Web&quot; nos permitirá publicar o nome do grupo, símbolo, cartas, títulos e o fundador no website [HERITAGE_KEY]. Você é responsável por indicar se algum dos conteúdos acima for considerado Adulto de acordo com as Regras da Comunidade.
 		</message>
 	</alert>
 	<alert name="ClickPublishHelpLand">
 		<message name="message">
-			Selecionar a opção &quot;Publicar na Web&quot; nos permitirá publicar o nome, descrição, imagens e localização deste terreno no website [SECOND_LIFE]. Você é responsável por indicar se algum dos conteúdos acima for considerado Adulto de acordo com as Regras da Comunidade.
+			Selecionar a opção &quot;Publicar na Web&quot; nos permitirá publicar o nome, descrição, imagens e localização deste terreno no website [HERITAGE_KEY]. Você é responsável por indicar se algum dos conteúdos acima for considerado Adulto de acordo com as Regras da Comunidade.
 		</message>
 	</alert>
 	<alert name="ClickPublishHelpPostcard">
 		<message name="message">
-			Selecionar a opção &quot;Publicar na Web&quot; nos permitirá publicar o nome do avatar do fotógrafo, comentário, locação, mensagens e as fotos no website [SECOND_LIFE]. Você é responsável por indicar se algum dos conteúdos acima for considerado Adulto de acordo com as Regras da Comunidade.
+			Selecionar a opção &quot;Publicar na Web&quot; nos permitirá publicar o nome do avatar do fotógrafo, comentário, locação, mensagens e as fotos no website [HERITAGE_KEY]. Você é responsável por indicar se algum dos conteúdos acima for considerado Adulto de acordo com as Regras da Comunidade.
 		</message>
 	</alert>
 	<alert name="ClickPublishHelpAvatar">
 		<message name="message">
-			Selecionar a opção &quot;Publicar na Web&quot; nos permitirá publicar seu nome, imagem e textos no website [SECOND_LIFE].
+			Selecionar a opção &quot;Publicar na Web&quot; nos permitirá publicar seu nome, imagem e textos no website [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="ClickWebProfileHelpAvatar">
@@ -555,7 +555,7 @@
 	</alert>
 	<alert name="MustAgreeToLogIn">
 		<message name="message">
-			Você deve concordar com os Termos de Serviço para continuar a entrar no [SECOND_LIFE].
+			Você deve concordar com os Termos de Serviço para continuar a entrar no [HERITAGE_KEY].
 		</message>
 
 	</alert>
@@ -579,7 +579,7 @@
 	</alert>
 	<alert name="MustHaveAccountToLogInNoLinks">
 		<message name="message">
-			Você deve ter uma conta para conectar ao [SECOND_LIFE].
+			Você deve ter uma conta para conectar ao [HERITAGE_KEY].
 		</message>
 		<option name="OK">
 			OK
@@ -591,7 +591,7 @@
 	</alert>
 	<alert name="MustHaveAccountToLogIn">
 		<message name="message">
-			Você deve ter uma conta para conectar ao [SECOND_LIFE]. Ir ao www.secondlife.com para criar uma nova conta?
+			Você deve ter uma conta para conectar ao [HERITAGE_KEY]. Ir ao www.secondlife.com para criar uma nova conta?
 		</message>
 		<option name="OK">
 			OK
@@ -642,7 +642,7 @@
 	</alert>
 	<alert name="DisplayChangeRestart">
 		<message name="message">
-			Alguns displays alteram o que você requeriu [SECOND_LIFE] para desligá-lo imediatamente, o que poderá ocasionar a perda de algum trabalho. Aplique estas mudanças entes de sair.
+			Alguns displays alteram o que você requeriu [HERITAGE_KEY] para desligá-lo imediatamente, o que poderá ocasionar a perda de algum trabalho. Aplique estas mudanças entes de sair.
 		</message>
 		<option name="ApplyandQuit">
 			Aplicar e Sair
@@ -654,7 +654,7 @@
 	</alert>
 	<alert name="PromptGoToEventsPage">
 		<message name="message">
-			Ir até a [SECOND_LIFE] página de events?
+			Ir até a [HERITAGE_KEY] página de events?
 		</message>
 		<option name="GotoPage">
 			Ir à página
@@ -708,18 +708,18 @@
 	</alert>
 	<alert name="CacheWillBeMoved">
 		<message name="message">
-			O Cache será removido após reiniciar [SECOND_LIFE].
+			O Cache será removido após reiniciar [HERITAGE_KEY].
 Nota: Isto limpará o cache.
 		</message>
 	</alert>
 	<alert name="ChangeConnectionPort">
 		<message name="message">
-			Configuração de porta terá efeito após reiniciar [SECOND_LIFE].
+			Configuração de porta terá efeito após reiniciar [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="GoToAuctionPage">
 		<message name="message">
-			Ir para a página do [SECOND_LIFE] para ver os detalhes do leilão ou fazer um lance?
+			Ir para a página do [HERITAGE_KEY] para ver os detalhes do leilão ou fazer um lance?
 		</message>
 		<option name="GotoPage">
 			Ir para a página
@@ -869,7 +869,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="DisplaySettingsNoShaders">
 		<message name="message">
-			[SECOND_LIFE] teve uma falha tentando inicializar os drivers gráficos.
+			[HERITAGE_KEY] teve uma falha tentando inicializar os drivers gráficos.
 			As sombras serão desabilitadas para evitar erros de drivers
 			Recomendamos que você atualize seu drive de vídeo.
 			A sombras poderam ser abilitadas novamente nas Preferências.
@@ -901,7 +901,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="CannotConnectDNSError">
 		<message name="message">
-			Não foi possível conectar-se ao [SECOND_LIFE]. DNS por não encontrar o nome do host. Por favor, verifique se você pode conectar-se ao www.secondlife.com. Caso consiga, mas continue a receber esse erro, por favor entre em contato com o suporte e relate este problema.
+			Não foi possível conectar-se ao [HERITAGE_KEY]. DNS por não encontrar o nome do host. Por favor, verifique se você pode conectar-se ao www.secondlife.com. Caso consiga, mas continue a receber esse erro, por favor entre em contato com o suporte e relate este problema.
 		</message>
 
 	</alert>
@@ -913,19 +913,19 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="CannotConnectVerificationError">
 		<message name="message">
-			Não foi possível conectar-se ao [SECOND_LIFE]. O servidor de entrada não pôde verificá-lo via SSL. Caso você continue a receber este erro, por favor informar a Equipe de Suporte.
+			Não foi possível conectar-se ao [HERITAGE_KEY]. O servidor de entrada não pôde verificá-lo via SSL. Caso você continue a receber este erro, por favor informar a Equipe de Suporte.
 		</message>
 
 	</alert>
 	<alert name="CannotConnectUnknownErrorWindows">
 		<message name="message">
-			Não foi possível conectar-se ao [SECOND_LIFE]. Apesar dos nossos esforços, algo inesperado aconteceu. Por favor, vá a seção de Suporte e reporte este problema a Equipe de Suporte. Se possível, inclua seu arquivo de log do SL (C:\Documents and Settings\(name)\Application Data\SecondLife\logs. Obrigado.
+			Não foi possível conectar-se ao [HERITAGE_KEY]. Apesar dos nossos esforços, algo inesperado aconteceu. Por favor, vá a seção de Suporte e reporte este problema a Equipe de Suporte. Se possível, inclua seu arquivo de log do SL (C:\Documents and Settings\(name)\Application Data\SecondLife\logs. Obrigado.
 		</message>
 
 	</alert>
 	<alert name="CannotConnectUnknownErrorDarwin">
 		<message name="message">
-			Não foi possível conectar-se ao [SECOND_LIFE]. Apesar dos nossos esforços, algo inesperado aconteceu. Por favor, vá a seção de Suporte e reporte este problema a Equipe de Suporte. Se possível, inclua seu arquivo de log (~/Library/Application Support/SecondLife/logs). Obrigado.
+			Não foi possível conectar-se ao [HERITAGE_KEY]. Apesar dos nossos esforços, algo inesperado aconteceu. Por favor, vá a seção de Suporte e reporte este problema a Equipe de Suporte. Se possível, inclua seu arquivo de log (~/Library/Application Support/SecondLife/logs). Obrigado.
 		</message>
 
 	</alert>
@@ -967,7 +967,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="FirstRunDialog">
 		<message name="message">
-			Instalação do [SECOND_LIFE] completa. Caso sej sua primeira vez usando o [SECOND_LIFE], você precisará criar uma conta antes de entrar. Ir até www.secondlife.com para criar uma nova conta?
+			Instalação do [HERITAGE_KEY] completa. Caso sej sua primeira vez usando o [HERITAGE_KEY], você precisará criar uma conta antes de entrar. Ir até www.secondlife.com para criar uma nova conta?
 		</message>
 		<option name="NewAccount...">
 			Nova conta..
@@ -1003,7 +1003,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="WelcomeToSecondLife">
 		<message name="message">
-			Bem-vindo ao [SECOND_LIFE]! Utilize as setas para se mover. Por favor, escolha um personagem masculino ou feminino. Você pode mudar de idéia depois..
+			Bem-vindo ao [HERITAGE_KEY]! Utilize as setas para se mover. Por favor, escolha um personagem masculino ou feminino. Você pode mudar de idéia depois..
 		</message>
 		<option name="Male">
 			Masculino
@@ -1015,7 +1015,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="WelcomeToSecondLifeSimple">
 		<message name="message">
-			Bem-vindo ao [SECOND_LIFE]! Utilize as setas para se mover. Por favor, escolha um personagem masculino ou feminino.
+			Bem-vindo ao [HERITAGE_KEY]! Utilize as setas para se mover. Por favor, escolha um personagem masculino ou feminino.
 		</message>
 		<option name="Male">
 			Masclino
@@ -1807,7 +1807,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="YouHaveBeenLoggedOut">
 		<message name="message">
-			Você se desconectou do [SECOND_LIFE]: [MESSAGE]. Clique em Continuar para observar mensagens existentes ou bate-papo. Você não será capaz de realizar nenhuma operação. Clique em Sair para fechar [SECOND_LIFE] imediatamente.
+			Você se desconectou do [HERITAGE_KEY]: [MESSAGE]. Clique em Continuar para observar mensagens existentes ou bate-papo. Você não será capaz de realizar nenhuma operação. Clique em Sair para fechar [HERITAGE_KEY] imediatamente.
 		</message>
 		<option name="Continue">
 			Continuar
@@ -1906,7 +1906,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="PublishGroupInfoToWeb">
 		<message name="message">
-			Selecionando a opção &quot;Publicar na Web&quot; nos permitirá publicar o nome do grupo, símbolo, cartas, títulos e fundador no website [SECOND_LIFE]. Você é responsável por informar se algum dos conteúdos acima conter tema Adulto de acordo com as Regras da Comunidade.
+			Selecionando a opção &quot;Publicar na Web&quot; nos permitirá publicar o nome do grupo, símbolo, cartas, títulos e fundador no website [HERITAGE_KEY]. Você é responsável por informar se algum dos conteúdos acima conter tema Adulto de acordo com as Regras da Comunidade.
 		</message>
 
 	</alert>
@@ -2122,7 +2122,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="SystemMayBeDown">
 		<message name="message">
-			Incapaz de conectar-se ao [SECOND_LIFE] O sistema pode estar desativado. Por favor, tente novamente em alguns minutos ou clique am Ajuda para mais informações sobre a disponibilidade do sistema.
+			Incapaz de conectar-se ao [HERITAGE_KEY] O sistema pode estar desativado. Por favor, tente novamente em alguns minutos ou clique am Ajuda para mais informações sobre a disponibilidade do sistema.
 		</message>
 		<option name="OK">
 			OK
@@ -2152,7 +2152,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="FirstRun">
 		<message name="message">
-			[SECOND_LIFE] instalação completa. Caso seja sua primeira vez utilizando o [SECOND_LIFE], você precisará criar uma conta antes de ingressar. Ir até www.secondlife.com para criar uma nova conta?
+			[HERITAGE_KEY] instalação completa. Caso seja sua primeira vez utilizando o [HERITAGE_KEY], você precisará criar uma conta antes de ingressar. Ir até www.secondlife.com para criar uma nova conta?
 		</message>
 		<option name="NewAccount...">
 			Nova conta..
@@ -2182,13 +2182,13 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="WelcomeNoClothes">
 		<message name="message">
-			Seu avatar aparecerá em alguns minutos. Utilize as setas para mover-se. Pressione F1 a qualquer momento para aprender mais sobre [SECOND_LIFE].
+			Seu avatar aparecerá em alguns minutos. Utilize as setas para mover-se. Pressione F1 a qualquer momento para aprender mais sobre [HERITAGE_KEY].
 		</message>
 
 	</alert>
 	<alert name="WelcomeChooseSex">
 		<message name="message">
-			Seu avatar aparecerá em alguns minutos. Utilize as setas para mover-se. Pressione F1 a qualquer momento para aprender mais sobre [SECOND_LIFE]. Por favor, escolha um personagem masculino ou feminino. Você pode mudar de idéia depois.
+			Seu avatar aparecerá em alguns minutos. Utilize as setas para mover-se. Pressione F1 a qualquer momento para aprender mais sobre [HERITAGE_KEY]. Por favor, escolha um personagem masculino ou feminino. Você pode mudar de idéia depois.
 		</message>
 		<option name="Male">
 			Masculino
@@ -2368,7 +2368,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="DownloadWindowsMandatory">
 		<message name="message">
-			Uma nova versão do [SECOND_LIFE] está disponível.[MESSAGE] Você deve atualizar sua versão para utilizar o sistema.
+			Uma nova versão do [HERITAGE_KEY] está disponível.[MESSAGE] Você deve atualizar sua versão para utilizar o sistema.
 		</message>
 		<option name="Download">
 			Atualizar
@@ -2380,7 +2380,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="DownloadWindows">
 		<message name="message">
-			Uma nova versão do [SECOND_LIFE] está disponível.[MESSAGE] Essa atualização não é obrigatória, mas sugerimos que a instale para aperfeiçoamento de estabilidade e performance.
+			Uma nova versão do [HERITAGE_KEY] está disponível.[MESSAGE] Essa atualização não é obrigatória, mas sugerimos que a instale para aperfeiçoamento de estabilidade e performance.
 		</message>
 		<option name="Download">
 			Atualizar
@@ -2392,7 +2392,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="DownloadWindowsReleaseForDownload">
 		<message name="message">
-			Uma nova versão do [SECOND_LIFE] está disponível.[MESSAGE] Essa atualização não é obrigatória, mas sugerimos que a instale para aperfeiçoamento de estabilidade e performance.
+			Uma nova versão do [HERITAGE_KEY] está disponível.[MESSAGE] Essa atualização não é obrigatória, mas sugerimos que a instale para aperfeiçoamento de estabilidade e performance.
 		</message>
 		<option name="Download">
 			Atualizar
@@ -2404,7 +2404,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="DownloadMacMandatory">
 		<message name="message">
-			Uma nova versão do [SECOND_LIFE] está disponível.[MESSAGE] Você deve atualizar esta versão para utilizar o sistema. Atualizar para sua pasta de Aplicações?
+			Uma nova versão do [HERITAGE_KEY] está disponível.[MESSAGE] Você deve atualizar esta versão para utilizar o sistema. Atualizar para sua pasta de Aplicações?
 		</message>
 		<option name="Download">
 			Atualizar
@@ -2416,7 +2416,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="DownloadMac">
 		<message name="message">
-			Uma nova versão do [SECOND_LIFE] está disponível.[MESSAGE] Essa atualização não é obrigatória, mas sugerimos que a instale para aperfeiçoamento de estabilidade e performance. Atualizar para sua pasta de Aplicações?
+			Uma nova versão do [HERITAGE_KEY] está disponível.[MESSAGE] Essa atualização não é obrigatória, mas sugerimos que a instale para aperfeiçoamento de estabilidade e performance. Atualizar para sua pasta de Aplicações?
 		</message>
 		<option name="Download">
 			Atualizar
@@ -2428,7 +2428,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="DownloadMacReleaseForDownload">
 		<message name="message">
-			Uma nova versão do [SECOND_LIFE] está disponível.[MESSAGE] Essa atualização não é obrigatória, mas sugerimos que a instale para aperfeiçoamento de estabilidade e performance. Atualizar para sua pasta de Aplicações?
+			Uma nova versão do [HERITAGE_KEY] está disponível.[MESSAGE] Essa atualização não é obrigatória, mas sugerimos que a instale para aperfeiçoamento de estabilidade e performance. Atualizar para sua pasta de Aplicações?
 		</message>
 		<option name="Download">
 			Atualizar
@@ -2470,7 +2470,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="WebLaunchGraphicsDriver">
 		<message name="message">
-			Seu [VENDOR_LABLE] [CARD_NAME] driver de vídeo neste computador está desatualizado. Este é um componente software que controla sua placa de vídeo. Versões antigas podem gerar problemas nos gráficos 3D em programas como [SECOND_LIFE]. Nós recomendamos atualizar seu &quot;[DRIVER_NAME]&quot; driver, disponível gratuitamente pela internet.
+			Seu [VENDOR_LABLE] [CARD_NAME] driver de vídeo neste computador está desatualizado. Este é um componente software que controla sua placa de vídeo. Versões antigas podem gerar problemas nos gráficos 3D em programas como [HERITAGE_KEY]. Nós recomendamos atualizar seu &quot;[DRIVER_NAME]&quot; driver, disponível gratuitamente pela internet.
 		</message>
 		<ignore>
 			Quando iniciar o navegador, visualizar a página de atualizações de drivers
@@ -2485,7 +2485,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="WebLaunchGraphicsDriverIntelExtreme">
 		<message name="message">
-			Seu driver gráfico Intel Extreme está desatualizado.Este é um componente software que controla sua placa de vídeo. Versões antigas podem gerar problemas nos gráficos 3D em programas como [SECOND_LIFE]. Nós recomendamos atualizar seu &quot;[DRIVER_NAME]&quot; driver, disponível na página da Intel.Gostaria de ir até a página de e drivers do [SECOND_LIFE]?
+			Seu driver gráfico Intel Extreme está desatualizado.Este é um componente software que controla sua placa de vídeo. Versões antigas podem gerar problemas nos gráficos 3D em programas como [HERITAGE_KEY]. Nós recomendamos atualizar seu &quot;[DRIVER_NAME]&quot; driver, disponível na página da Intel.Gostaria de ir até a página de e drivers do [HERITAGE_KEY]?
 		</message>
 		<ignore>
 			Quando iniciar o navegador, visualizar a página de atualizações de drivers Intel
@@ -2500,7 +2500,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="RunningInPCI">
 		<message name="message">
-			GL indica que o driver de vídeo neste sistema está funcioando em modo PCImode, um método mais lento de processamento de imanges. Caso você esteja usando uma placa de vídeo PCI, por favor, desconsidere esta mensagem. Caso esteja usando uma placa de vídeo AGP, você deve atualizar sua placa-mãe para melhorar a performance do sistema. Se estiver utilizando uma placa de vídeo PCI Express você pode ativar a AGP a partir do painel Preferências no [SECOND_LIFE].
+			GL indica que o driver de vídeo neste sistema está funcioando em modo PCImode, um método mais lento de processamento de imanges. Caso você esteja usando uma placa de vídeo PCI, por favor, desconsidere esta mensagem. Caso esteja usando uma placa de vídeo AGP, você deve atualizar sua placa-mãe para melhorar a performance do sistema. Se estiver utilizando uma placa de vídeo PCI Express você pode ativar a AGP a partir do painel Preferências no [HERITAGE_KEY].
 		</message>
 		<ignore>
 			Quando funcionar em modo PCI
@@ -2524,7 +2524,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="WebLaunchForums">
 		<message name="message">
-			Buscar pela Base de Conhecimento do [SECOND_LIFE] as últimas dicas e truques.
+			Buscar pela Base de Conhecimento do [HERITAGE_KEY] as últimas dicas e truques.
 		</message>
 		<ignore>
 			Quando iniciar o navegador, ir até a Base de Conhecimento
@@ -2539,7 +2539,7 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="WebLaunchSupport">
 		<message name="message">
-			Contactar o Suporte [SECOND_LIFE].
+			Contactar o Suporte [HERITAGE_KEY].
 		</message>
 		<ignore>
 			Quando iniciar o navegador, contactar o Suporte
@@ -3650,7 +3650,7 @@ o conteúdo da pasta achados e perdidos?
 	</alert>
 	<alert name="ClickPartnerHelpAvatar">
 		<message name="message">
-			You can propose to another Resident or dissolve an existing partnership through the [SECOND_LIFE] website.
+			You can propose to another Resident or dissolve an existing partnership through the [HERITAGE_KEY] website.
 
 Go to the Second Life web site for more information on partnering?
 		</message>

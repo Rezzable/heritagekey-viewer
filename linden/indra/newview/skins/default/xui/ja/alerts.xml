@@ -54,7 +54,7 @@
 	</alert>
 	<alert name="ConnectTimeout">
 		<message name="message">
-			[SECOND_LIFE]に接続できません。
+			[HERITAGE_KEY]に接続できません。
 システムがダウンしている可能性があります。
 
 数分後にもう一度試みるか、または[ヘルプ]とシステム・ステータス
@@ -333,7 +333,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	<alert name="ClickPublishHelpGroup">
 		<message name="message">
 			[ウェブサイト上で公開]オプションを選択すると、
-[SECOND_LIFE]ウェブサイト上でグループ名、記章、特権、タイトル、
+[HERITAGE_KEY]ウェブサイト上でグループ名、記章、特権、タイトル、
 創立者を公開できます。上記のコンテンツがコミュニティ・スタンダードにおいて
 成人向けコンテンツと判断されるかどうかについては、
 あなた自身がそれを明記しなければなりません。
@@ -356,7 +356,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	</alert>
 	<alert name="ClickPublishHelpPostcard">
 		<message name="message">
-			[ウェブサイト上で公開]オプションを選択すると、[SECOND_LIFE]ウェブサイト上で、撮影者の[SECOND_LIFE]名、題名、ロケーション、メッセージ、およびスナップショットを公開できます。上記のコンテンツがコミュニティ・スタンダードにおいて
+			[ウェブサイト上で公開]オプションを選択すると、[HERITAGE_KEY]ウェブサイト上で、撮影者の[HERITAGE_KEY]名、題名、ロケーション、メッセージ、およびスナップショットを公開できます。上記のコンテンツがコミュニティ・スタンダードにおいて
 成人向けコンテンツと判断されるかどうかについては、
 あなた自身がそれをスナップショットごとに明記しなければなりません。
 		</message>
@@ -370,7 +370,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	</alert>
 	<alert name="ClickPartnerHelpAvatar">
 		<message name="message">
-			[SECOND_LIFE]のウェブ・サイトから、他の住人へのプロポーズ、パートナー解消ができます。
+			[HERITAGE_KEY]のウェブ・サイトから、他の住人へのプロポーズ、パートナー解消ができます。
 
 ウェブ・サイトに行って パートナーに関する情報を取得しますか？
 		</message>
@@ -697,7 +697,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	</alert>
 	<alert name="MustAgreeToLogIn">
 		<message name="message">
-			[SECOND_LIFE]へのログインを続けるには、利用規約に同意してください。
+			[HERITAGE_KEY]へのログインを続けるには、利用規約に同意してください。
 		</message>
 	</alert>
 	<alert name="CouldNotPutOnOutfit">
@@ -718,7 +718,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	</alert>
 	<alert name="MustHaveAccountToLogInNoLinks">
 		<message name="message">
-			[SECOND_LIFE]への接続にはアカウントが必要です。
+			[HERITAGE_KEY]への接続にはアカウントが必要です。
 		</message>
 		<option name="OK">
 			閉じる
@@ -729,7 +729,7 @@ Studio exhibitのウェブ・ページで確認してください。
 			おっと! 記入漏れがありますよ。
 アバターのファーストネームとラストネームの両方を入力する必要があります。
 
-[SECOND_LIFE]に入るには、アカウントが必要です。 アカウントを作成しますか?
+[HERITAGE_KEY]に入るには、アカウントが必要です。 アカウントを作成しますか?
 		</message>
 		<option name="OK">
 			新しいアカウントを作成
@@ -798,7 +798,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	<alert name="DisplayChangeRestart">
 		<message name="message">
 			あなたが表示に対して行った変更には、
-[SECOND_LIFE]の即時シャットダウンを必要とするものが
+[HERITAGE_KEY]の即時シャットダウンを必要とするものが
 含まれています。これにより、現在の作業内容が失われる可能性があります。
 
 これらの変更を適用し、終了しますか？
@@ -812,7 +812,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	</alert>
 	<alert name="PromptGoToEventsPage">
 		<message name="message">
-			[SECOND_LIFE]イベント・ウェブ・ページに移動しますか？
+			[HERITAGE_KEY]イベント・ウェブ・ページに移動しますか？
 		</message>
 		<option name="GotoPage">
 			OK
@@ -865,29 +865,29 @@ Studio exhibitのウェブ・ページで確認してください。
 	</alert>
 	<alert name="CacheWillClear">
 		<message name="message">
-			[SECOND_LIFE]の再起動後にキャッシュがクリアされます。
+			[HERITAGE_KEY]の再起動後にキャッシュがクリアされます。
 		</message>
 	</alert>
 	<alert name="CacheWillBeMoved">
 		<message name="message">
-			[SECOND_LIFE]の再起動後にキャッシュが移動されます。
+			[HERITAGE_KEY]の再起動後にキャッシュが移動されます。
 メモ：これによりキャッシュがクリアされます。
 		</message>
 	</alert>
 	<alert name="ChangeConnectionPort">
 		<message name="message">
-			ポートの設定は、[SECOND_LIFE]の再起動後に有効になります。
+			ポートの設定は、[HERITAGE_KEY]の再起動後に有効になります。
 		</message>
 	</alert>
 	<alert name="ChangeSkin">
 		<message name="message">
-			新しいスキンは[SECOND_LIFE]を再起動すると現れます
+			新しいスキンは[HERITAGE_KEY]を再起動すると現れます
 		</message>
 	</alert>
 	<alert name="GoToAuctionPage">
 		<message name="message">
 			オークションの詳細を見たり、
-入札をするために[SECOND_LIFE]ウェブ・ページに移動しますか？
+入札をするために[HERITAGE_KEY]ウェブ・ページに移動しますか？
 		</message>
 		<option name="GotoPage">
 			OK
@@ -1090,7 +1090,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	</alert>
 	<alert name="DisplaySettingsNoShaders">
 		<message name="message">
-			[SECOND_LIFE] は、グラフィック・ドライバの初期化中にクラッシュしました。
+			[HERITAGE_KEY] は、グラフィック・ドライバの初期化中にクラッシュしました。
 一般的なドライバ・エラーを回避するため、[グラフィックの品質]は[低]に設定されます。
 これにより、いくつかのグラフィックス機能は無効になります。
 グラフィックカード・ドライバのアップデートをお勧めします。
@@ -1126,7 +1126,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	</alert>
 	<alert name="CannotConnectDNSError">
 		<message name="message">
-			[SECOND_LIFE]に接続できません。
+			[HERITAGE_KEY]に接続できません。
 DNSはホスト名を解決できませんでした。
 
 www.secondlife.comウェブサイトに接続できることを確認してください。接続できてもこのエラーが出る場合は、
@@ -1146,7 +1146,7 @@ www.secondlife.com/support
 	</alert>
 	<alert name="CannotConnectVerificationError">
 		<message name="message">
-			[SECOND_LIFE]に接続できません。
+			[HERITAGE_KEY]に接続できません。
 ログインサーバーは、SSLを介してサーバー自身を確認できませんでした。
 
 もしこのエラーが続く場合は、
@@ -1156,7 +1156,7 @@ www.secondlife.com/support
 	</alert>
 	<alert name="CannotConnectUnknownErrorWindows">
 		<message name="message">
-			[SECOND_LIFE]に接続できません。
+			[HERITAGE_KEY]に接続できません。
 最善の努力にも関わらず、予期しない出来事が発生しました。
 
 www.secondlife.com/support
@@ -1168,7 +1168,7 @@ www.secondlife.com/support
 	</alert>
 	<alert name="CannotConnectUnknownErrorDarwin">
 		<message name="message">
-			[SECOND_LIFE]に接続できません。
+			[HERITAGE_KEY]に接続できません。
 最善の努力にも関わらず、予期しない出来事が発生しました。
 
 www.secondlife.com/support
@@ -1220,9 +1220,9 @@ www.secondlife.com/support
 	</alert>
 	<alert name="FirstRunDialog">
 		<message name="message">
-			[SECOND_LIFE]のインストールが完了しました。
+			[HERITAGE_KEY]のインストールが完了しました。
 
-[SECOND_LIFE]の使用が初めての方は、ログイン前にアカウントの作成が必要です。
+[HERITAGE_KEY]の使用が初めての方は、ログイン前にアカウントの作成が必要です。
 www.secondlife.comに戻って、新規アカウントの作成を行いますか？
 		</message>
 		<option name="NewAccount...">
@@ -1235,7 +1235,7 @@ www.secondlife.comに戻って、新規アカウントの作成を行います�
 	<alert name="ClothingStillDownloading">
 		<message name="message">
 			あなたのアバターは、ダウンロード中です。
-[SECOND_LIFE]を正常に使用でき、他の住人があなたを
+[HERITAGE_KEY]を正常に使用でき、他の住人があなたを
 正しく見ることができます。
 		</message>
 	</alert>
@@ -1249,7 +1249,7 @@ www.secondlife.comに戻って、新規アカウントの作成を行います�
 	</alert>
 	<alert name="WelcomeToSecondLife">
 		<message name="message">
-			[SECOND_LIFE]にようこそ! 
+			[HERITAGE_KEY]にようこそ! 
 
 矢印キーを使用して歩きます。
 男性あるいは女性のアバターを選択してください。 
@@ -1264,7 +1264,7 @@ www.secondlife.comに戻って、新規アカウントの作成を行います�
 	</alert>
 	<alert name="WelcomeToSecondLifeSimple">
 		<message name="message">
-			[SECOND_LIFE]にようこそ!
+			[HERITAGE_KEY]にようこそ!
 
 矢印キーを使用して歩きます。
 男性あるいは女性のアバターを選択してください。
@@ -2055,9 +2055,9 @@ L$は贈与されません。
 	</alert>
 	<alert name="YouHaveBeenLoggedOut">
 		<message name="message">
-			あなたは[SECOND_LIFE]からログアウトされました。
+			あなたは[HERITAGE_KEY]からログアウトされました。
             [MESSAGE]
-[IMとチャットを表示]をクリックすると、現在あるIMとチャットを確認できます。 確認しない場合は、[終了]をクリックして、すぐに[SECOND_LIFE]を終了してください。
+[IMとチャットを表示]をクリックすると、現在あるIMとチャットを確認できます。 確認しない場合は、[終了]をクリックして、すぐに[HERITAGE_KEY]を終了してください。
 		</message>
 		<option name="Continue">
 			IMとチャットを表示
@@ -2163,7 +2163,7 @@ L$は贈与されません。
 	<alert name="PublishGroupInfoToWeb">
 		<message name="message">
 			[ウェブ上で公開]オプションを選択すると、
-[SECOND_LIFE]ウェブ・サイト上でグループ名、記章、特権、タイトル、および創立者を公開できます。 上記のコンテンツがコミュニティ・スタンダード
+[HERITAGE_KEY]ウェブ・サイト上でグループ名、記章、特権、タイトル、および創立者を公開できます。 上記のコンテンツがコミュニティ・スタンダード
 において成人向けコンテンツと判断されるかどうかについては、
 あなた自身がそれを明記しなければなりません。
 		</message>
@@ -2413,7 +2413,7 @@ L$は贈与されません。
 	</alert>
 	<alert name="SystemMayBeDown">
 		<message name="message">
-			[SECOND_LIFE]に接続できません。
+			[HERITAGE_KEY]に接続できません。
 システムがダウンしている可能性があります。
 
 数分後にもう一度試みるか、または[ヘルプ]とシステム・ステータス
@@ -2451,7 +2451,7 @@ http://www.apple.com/quicktime/で、最新版をダウンロードしてくだ�
 	<alert name="ClothingLoading">
 		<message name="message">
 			あなたの服を、ダウンロード中です。 
-通常どおりに[SECOND_LIFE]を使え、他のユーザーもあなたを正常に見ることができます。
+通常どおりに[HERITAGE_KEY]を使え、他のユーザーもあなたを正常に見ることができます。
 		</message>
 		<ignore name="ignore">
 			服のダウンロードに長い時間がかかる場合
@@ -2459,9 +2459,9 @@ http://www.apple.com/quicktime/で、最新版をダウンロードしてくだ�
 	</alert>
 	<alert name="FirstRun">
 		<message name="message">
-			[SECOND_LIFE]のインストールが完了しました。
+			[HERITAGE_KEY]のインストールが完了しました。
 
-[SECOND_LIFE]の使用が初めての方は、ログイン前にアカウントの作成が必要です。
+[HERITAGE_KEY]の使用が初めての方は、ログイン前にアカウントの作成が必要です。
 www.secondlife.comに戻って、新規アカウントの作成を行いますか？
 		</message>
 		<option name="NewAccount...">
@@ -2500,7 +2500,7 @@ www.secondlife.comに戻って、新規アカウントの作成を行います�
 			まもなくあなたのアバターが表示されます。
 
 矢印キーを使用して歩きます。
-ヘルプが必要なときや[SECOND_LIFE]について知りたいときは、
+ヘルプが必要なときや[HERITAGE_KEY]について知りたいときは、
 F1キーを押してください。
 		</message>
 	</alert>
@@ -2509,7 +2509,7 @@ F1キーを押してください。
 			まもなくあなたのアバターが表示されます。
 
 矢印キーを使用して歩きます。
-ヘルプが必要なときや[SECOND_LIFE]について知りたいときは、
+ヘルプが必要なときや[HERITAGE_KEY]について知りたいときは、
 F1キーを押してください。
 男性あるいは女性のアバターを選択してください。
 あなたの決定は後で変更できます。
@@ -2682,9 +2682,9 @@ F1キーを押してください。
 	</alert>
 	<alert name="DownloadWindowsMandatory">
 		<message name="message">
-			[SECOND_LIFE]の新しいバージョンが利用可能です。
+			[HERITAGE_KEY]の新しいバージョンが利用可能です。
 [MESSAGE]
-[SECOND_LIFE]を使用するために、このアップデートをダウンロードする必要があります。
+[HERITAGE_KEY]を使用するために、このアップデートをダウンロードする必要があります。
 		</message>
 		<option name="Download">
 			ダウンロード
@@ -2695,7 +2695,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="DownloadWindows">
 		<message name="message">
-			[SECOND_LIFE]のアップデート・バージョンが利用可能です。
+			[HERITAGE_KEY]のアップデート・バージョンが利用可能です。
 [MESSAGE]
 このアップデートは必須ではありませんが、パフォーマンスと安定性を向上させるためにインストールすることをお勧めします。
 		</message>
@@ -2708,7 +2708,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="DownloadWindowsReleaseForDownload">
 		<message name="message">
-			[SECOND_LIFE]のアップデート・バージョンが利用可能です。
+			[HERITAGE_KEY]のアップデート・バージョンが利用可能です。
 [MESSAGE]
 このアップデートは必須ではありませんが、パフォーマンスと安定性を向上させるためにインストールすることをお勧めします。
 		</message>
@@ -2721,9 +2721,9 @@ F1キーを押してください。
 	</alert>
 	<alert name="DownloadMacMandatory">
 		<message name="message">
-			[SECOND_LIFE]の新しいバージョンが利用可能です。
+			[HERITAGE_KEY]の新しいバージョンが利用可能です。
 [MESSAGE]
-[SECOND_LIFE]を使用するために、このアップデートをダウンロードする必要があります。
+[HERITAGE_KEY]を使用するために、このアップデートをダウンロードする必要があります。
 
 アプリケーションがあるフォルダにダウンロードしますか？
 		</message>
@@ -2736,7 +2736,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="DownloadMac">
 		<message name="message">
-			[SECOND_LIFE]のアップデート・バージョンが利用可能です。
+			[HERITAGE_KEY]のアップデート・バージョンが利用可能です。
 [MESSAGE]
 このアップデートは必須ではありませんが、パフォーマンスと安定性を向上させるためにインストールすることをお勧めします。
  
@@ -2751,7 +2751,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="DownloadMacReleaseForDownload">
 		<message name="message">
-			[SECOND_LIFE]のアップデート・バージョンが利用可能です。
+			[HERITAGE_KEY]のアップデート・バージョンが利用可能です。
 [MESSAGE]
 このアップデートは必須ではありませんが、パフォーマンスと安定性を向上させるためにインストールすることをお勧めします。
  
@@ -2809,7 +2809,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchBugReport101">
 		<message name="message">
-			[SECOND_LIFE]Wikiで、バグを報告する正しい方法をご覧ください。
+			[HERITAGE_KEY]Wikiで、バグを報告する正しい方法をご覧ください。
 		</message>
 		<ignore name="ignore">
 			バグレポート101 Wikiを閲覧するためのブラウザを開くにあたって
@@ -2823,7 +2823,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchSecurityIssues">
 		<message name="message">
-			[SECOND_LIFE]Wikiで、セキュリティ問題を報告する方法をご覧ください。
+			[HERITAGE_KEY]Wikiで、セキュリティ問題を報告する方法をご覧ください。
 		</message>
 		<ignore name="ignore">
 			セキュリティ問題Wikiを閲覧するためにウェブ・ブラウザを起動するにあたって
@@ -2837,7 +2837,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchQAWiki">
 		<message name="message">
-			[SECOND_LIFE] QA Wikiをご覧ください。
+			[HERITAGE_KEY] QA Wikiをご覧ください。
 		</message>
 		<ignore name="ignore">
 			QA Wikiを閲覧するためにウェブ・ブラウザを起動するにあたって
@@ -2851,7 +2851,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchPublicIssue">
 		<message name="message">
-			[SECOND_LIFE]のパブリック問題トラッカーで、バグやその他の問題を報告できます。
+			[HERITAGE_KEY]のパブリック問題トラッカーで、バグやその他の問題を報告できます。
 		</message>
 		<ignore name="ignore">
 			パブリック問題トラッカーを閲覧するためにウェブ・ブラウザを起動するにあたって
@@ -2865,7 +2865,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchPublicIssueHelp">
 		<message name="message">
-			[SECOND_LIFE]Wikiで、パブリック問題トラッカーの使用方法をご覧ください。
+			[HERITAGE_KEY]Wikiで、パブリック問題トラッカーの使用方法をご覧ください。
 		</message>
 		<ignore name="ignore">
 			パブリック問題トラッカーWikiを閲覧するためにウェブ・ブラウザを起動するにあたって
@@ -2879,7 +2879,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchForums">
 		<message name="message">
-			最新のヒントおよびトリックについては、[SECOND_LIFE]の知識ベースを検索してください。
+			最新のヒントおよびトリックについては、[HERITAGE_KEY]の知識ベースを検索してください。
 		</message>
 		<ignore name="ignore">
 			知識ベースを表示するため、ウェブ・ブラウザーを起動するとき
@@ -2893,7 +2893,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchSupport">
 		<message name="message">
-			[SECOND_LIFE]サポートにコンタクト
+			[HERITAGE_KEY]サポートにコンタクト
 		</message>
 		<ignore name="ignore">
 			サポートに連絡するため、ウェブ・ブラウザーを起動するとき

@@ -55,7 +55,7 @@
 	</alert>
 	<alert name="ConnectTimeout">
 		<message name="message">
-			Verbindung mit [SECOND_LIFE] nicht möglich.
+			Verbindung mit [HERITAGE_KEY] nicht möglich.
 Möglicherweise handelt es sich um einen Systemausfall.
 
 Bitte versuchen Sie es in einigen Minuten erneut oder klicken Sie
@@ -360,7 +360,7 @@ einer Region befindet, die das verbietet.
 	</alert>
 	<alert name="ClickPartnerHelpAvatar">
 		<message name="message">
-			Auf der [SECOND_LIFE] Website können Sie anderen Einwohnern eine Partnerschaft vorschlagen und bestehende Partnerschaften lösen.
+			Auf der [HERITAGE_KEY] Website können Sie anderen Einwohnern eine Partnerschaft vorschlagen und bestehende Partnerschaften lösen.
 
 Die Second Life Website für weitere Informationen über Partnerschaften öffnen?
 		</message>
@@ -692,7 +692,7 @@ um ihren Landepunkt festzulegen.
 	</alert>
 	<alert name="MustAgreeToLogIn">
 		<message name="message">
-			Bevor Sie sich in [SECOND_LIFE] anmelden können, müssen Sie den Nutzungsbedingungen zustimmen.
+			Bevor Sie sich in [HERITAGE_KEY] anmelden können, müssen Sie den Nutzungsbedingungen zustimmen.
 		</message>
 	</alert>
 	<alert name="CouldNotPutOnOutfit">
@@ -713,7 +713,7 @@ Der Outfit-Ordner enthält keine Kleidung, Körperteile oder Anhänge.
 	</alert>
 	<alert name="MustHaveAccountToLogInNoLinks">
 		<message name="message">
-			Sie benötigen ein Konto, um sich in [SECOND_LIFE] anmelden zu können.
+			Sie benötigen ein Konto, um sich in [HERITAGE_KEY] anmelden zu können.
 		</message>
 		<option name="OK">
 			Schließen
@@ -724,7 +724,7 @@ Der Outfit-Ordner enthält keine Kleidung, Körperteile oder Anhänge.
 			Hoppla! Da fehlt noch etwas.
 Geben Sie bitte den Vor- und den Nachnamen Ihres Avatars ein.
 
-Sie benötigen ein Benutzerkonto, um [SECOND_LIFE] betreten zu können. Möchten Sie jetzt ein Benutzerkonto anlegen?
+Sie benötigen ein Benutzerkonto, um [HERITAGE_KEY] betreten zu können. Möchten Sie jetzt ein Benutzerkonto anlegen?
 		</message>
 		<option name="OK">
 			Neues Benutzerkonto anlegen
@@ -793,7 +793,7 @@ Gebühren werden nicht rückerstattet.
 	<alert name="DisplayChangeRestart">
 		<message name="message">
 			Einige Änderungen der Bildschirmeinstellungen erfordern einen
-sofortigen Neustart von [SECOND_LIFE], wodurch
+sofortigen Neustart von [HERITAGE_KEY], wodurch
 alle laufenden Arbeiten verloren gehen.
 
 Die Änderungen übernehmen und das Programm beenden?
@@ -807,7 +807,7 @@ Die Änderungen übernehmen und das Programm beenden?
 	</alert>
 	<alert name="PromptGoToEventsPage">
 		<message name="message">
-			Zur [SECOND_LIFE] Events-Webseite?
+			Zur [HERITAGE_KEY] Events-Webseite?
 		</message>
 		<option name="GotoPage">
 			OK
@@ -860,28 +860,28 @@ Die Änderungen übernehmen und das Programm beenden?
 	</alert>
 	<alert name="CacheWillClear">
 		<message name="message">
-			Der Cache wird nach einem Neustart von [SECOND_LIFE] geleert.
+			Der Cache wird nach einem Neustart von [HERITAGE_KEY] geleert.
 		</message>
 	</alert>
 	<alert name="CacheWillBeMoved">
 		<message name="message">
-			Der Cache wird nach einem Neustart von [SECOND_LIFE] verschoben.
+			Der Cache wird nach einem Neustart von [HERITAGE_KEY] verschoben.
 Hinweis: Der Cache wird dabei gelöscht/geleert.
 		</message>
 	</alert>
 	<alert name="ChangeConnectionPort">
 		<message name="message">
-			Die Port-Einstellungen werden nach einem Neustart von [SECOND_LIFE] wirksam.
+			Die Port-Einstellungen werden nach einem Neustart von [HERITAGE_KEY] wirksam.
 		</message>
 	</alert>
 	<alert name="ChangeSkin">
 		<message name="message">
-			Die neue Haut wird nach dem erneuten Start von [SECOND_LIFE] angezeigt.
+			Die neue Haut wird nach dem erneuten Start von [HERITAGE_KEY] angezeigt.
 		</message>
 	</alert>
 	<alert name="GoToAuctionPage">
 		<message name="message">
-			Zur [SECOND_LIFE]-Webseite, um Auktionen anzuzeigen oder
+			Zur [HERITAGE_KEY]-Webseite, um Auktionen anzuzeigen oder
 ein Gebot abzugeben?
 		</message>
 		<option name="GotoPage">
@@ -1088,7 +1088,7 @@ Anzeige-Einstellungen gewählt.
 	</alert>
 	<alert name="DisplaySettingsNoShaders">
 		<message name="message">
-			[SECOND_LIFE] ist bei der Initialisierung der Grafiktreiber abgestürzt.
+			[HERITAGE_KEY] ist bei der Initialisierung der Grafiktreiber abgestürzt.
 Die Grafikqualität wird auf eine niedrige Stufe zurückgesetzt, um einige typische Treiberfehler zu vermeiden.
 Einige Grafikfunktionen werden ausgeschaltet.
 Wir empfehlen die Aktualisierung Ihrer Grafikkartentreiber.
@@ -1124,7 +1124,7 @@ Verbindung mit [SERVER] nicht möglich
 	</alert>
 	<alert name="CannotConnectDNSError">
 		<message name="message">
-			Verbindung mit [SECOND_LIFE] nicht möglich.
+			Verbindung mit [HERITAGE_KEY] nicht möglich.
 DNS konnte den Hostnamen nicht auflösen.
 
 Prüfen Sie, ob Sie die Website www.secondlife.com öffnen
@@ -1145,7 +1145,7 @@ sollte der Fehler wiederholt auftreten.
 	</alert>
 	<alert name="CannotConnectVerificationError">
 		<message name="message">
-			Verbindung mit [SECOND_LIFE] nicht möglich.
+			Verbindung mit [HERITAGE_KEY] nicht möglich.
 Der Anmeldeserver konnte sich nicht per SSL verifizieren.
 
 Bitte melden Sie das Problem unter
@@ -1155,7 +1155,7 @@ sollte der Fehler wiederholt auftreten.
 	</alert>
 	<alert name="CannotConnectUnknownErrorWindows">
 		<message name="message">
-			Verbindung mit [SECOND_LIFE] nicht möglich.
+			Verbindung mit [HERITAGE_KEY] nicht möglich.
 Trotz all unserer Bemühungen ist ein unerwarteter Fehler aufgetreten.
 
 Bitte melden Sie das Problem auf
@@ -1166,7 +1166,7 @@ Vielen Dank.
 	</alert>
 	<alert name="CannotConnectUnknownErrorDarwin">
 		<message name="message">
-			Verbindung mit [SECOND_LIFE] nicht möglich.
+			Verbindung mit [HERITAGE_KEY] nicht möglich.
 Trotz all unserer Bemühungen ist ein unerwarteter Fehler aufgetreten.
 
 Bitte melden Sie das Problem auf
@@ -1219,9 +1219,9 @@ für Unterstützung und einen Link zur Systemstatus-Webseite auf &apos;Hilfe&apo
 	</alert>
 	<alert name="FirstRunDialog">
 		<message name="message">
-			Die Installation von [SECOND_LIFE] ist abgeschlossen.
+			Die Installation von [HERITAGE_KEY] ist abgeschlossen.
 
-Wenn Sie [SECOND_LIFE] das erste Mal verwenden, müssen Sie ein Konto anlegen,
+Wenn Sie [HERITAGE_KEY] das erste Mal verwenden, müssen Sie ein Konto anlegen,
 bevor Sie sich anmelden können.
 Möchten Sie auf www.secondlife.com ein Konto erstellen?
 		</message>
@@ -1235,7 +1235,7 @@ Möchten Sie auf www.secondlife.com ein Konto erstellen?
 	<alert name="ClothingStillDownloading">
 		<message name="message">
 			Ihr Avatar wird noch heruntergeladen.
-Sie können [SECOND_LIFE] normal verwenden und andere
+Sie können [HERITAGE_KEY] normal verwenden und andere
 Einwohner können Sie sehen.
 		</message>
 	</alert>
@@ -1249,7 +1249,7 @@ Bitte überprüfen Sie Ihre Netzwerkverbindung.
 	</alert>
 	<alert name="WelcomeToSecondLife">
 		<message name="message">
-			Willkommen bei [SECOND_LIFE]! 
+			Willkommen bei [HERITAGE_KEY]! 
 
 Benutzen Sie die Pfeiltasten, um sich fortzubewegen.
 Bitte wählen Sie einen männlichen oder weiblichen Avatar. 
@@ -1264,7 +1264,7 @@ Sie können sich später noch umentscheiden.
 	</alert>
 	<alert name="WelcomeToSecondLifeSimple">
 		<message name="message">
-			Willkommen bei [SECOND_LIFE]!
+			Willkommen bei [HERITAGE_KEY]!
 
 Benutzen Sie die Pfeiltasten, um sich fortzubewegen.
 Bitte wählen Sie einen männlichen oder weiblichen Avatar.
@@ -2067,9 +2067,9 @@ www.secondlife.com/support.
 	</alert>
 	<alert name="YouHaveBeenLoggedOut">
 		<message name="message">
-			Sie wurden von [SECOND_LIFE] abgemeldet:
+			Sie wurden von [HERITAGE_KEY] abgemeldet:
             [MESSAGE]
-Klicken Sie auf &apos;IM &amp; Chat anzeigen&apos;, um vorhandene Nachrichten und Chat weiterhin anzuzeigen. Klicken Sie andernfalls auf &apos;Beenden&apos;, um [SECOND_LIFE] sofort zu beenden.
+Klicken Sie auf &apos;IM &amp; Chat anzeigen&apos;, um vorhandene Nachrichten und Chat weiterhin anzuzeigen. Klicken Sie andernfalls auf &apos;Beenden&apos;, um [HERITAGE_KEY] sofort zu beenden.
 		</message>
 		<option name="Continue">
 			IM &amp; Chat anzeigen
@@ -2428,7 +2428,7 @@ Verbindung mit [IP_ADDRESS] nicht möglich
 	</alert>
 	<alert name="SystemMayBeDown">
 		<message name="message">
-			Verbindung mit [SECOND_LIFE] nicht möglich.
+			Verbindung mit [HERITAGE_KEY] nicht möglich.
 Möglicherweise handelt es sich um einen Systemausfall.
 
 Bitte versuchen Sie es in einigen Minuten erneut oder klicken Sie
@@ -2466,7 +2466,7 @@ Sie wurden zur nächstgelegenen Region teleportiert.
 	<alert name="ClothingLoading">
 		<message name="message">
 			Ihre Kleidung wird noch heruntergeladen. 
-Sie können [SECOND_LIFE] normal verwenden. Andere Benutzer können Sie korrekt dargestellt sehen.
+Sie können [HERITAGE_KEY] normal verwenden. Andere Benutzer können Sie korrekt dargestellt sehen.
 		</message>
 		<ignore name="ignore">
 			Wenn das Herunterladen von Kleidung lange dauert
@@ -2474,9 +2474,9 @@ Sie können [SECOND_LIFE] normal verwenden. Andere Benutzer können Sie korrekt 
 	</alert>
 	<alert name="FirstRun">
 		<message name="message">
-			Die Installation von [SECOND_LIFE] ist abgeschlossen.
+			Die Installation von [HERITAGE_KEY] ist abgeschlossen.
 
-Wenn Sie [SECOND_LIFE] das erste Mal verwenden, müssen Sie ein Konto anlegen,
+Wenn Sie [HERITAGE_KEY] das erste Mal verwenden, müssen Sie ein Konto anlegen,
 bevor Sie sich anmelden können.
 Möchten Sie auf www.secondlife.com ein Konto erstellen?
 		</message>
@@ -2517,7 +2517,7 @@ Bitte überprüfen Sie Ihre Netzwerkverbindung.
 
 Benutzen Sie die Pfeiltasten, um sich fortzubewegen.
 Drücken Sie F1 für Hilfe oder für weitere
-Informationen über [SECOND_LIFE].
+Informationen über [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="WelcomeChooseSex">
@@ -2526,7 +2526,7 @@ Informationen über [SECOND_LIFE].
 
 Benutzen Sie die Pfeiltasten, um sich fortzubewegen.
 Drücken Sie F1 für Hilfe oder für weitere
-Informationen über [SECOND_LIFE].
+Informationen über [HERITAGE_KEY].
 Bitte wählen Sie einen männlichen oder weiblichen Avatar.
 Sie können sich später noch umentscheiden.
 		</message>
@@ -2699,9 +2699,9 @@ Geben Sie das Objekt zum Verkauf frei und versuchen Sie es erneut.
 	</alert>
 	<alert name="DownloadWindowsMandatory">
 		<message name="message">
-			Eine neue Version von [SECOND_LIFE] ist verfügbar.
+			Eine neue Version von [HERITAGE_KEY] ist verfügbar.
 [MESSAGE]
-Sie müssen das Update herunterladen, um [SECOND_LIFE] weiter verwenden zu können.
+Sie müssen das Update herunterladen, um [HERITAGE_KEY] weiter verwenden zu können.
 		</message>
 		<option name="Download">
 			Herunterladen
@@ -2712,7 +2712,7 @@ Sie müssen das Update herunterladen, um [SECOND_LIFE] weiter verwenden zu könn
 	</alert>
 	<alert name="DownloadWindows">
 		<message name="message">
-			Eine aktualisierte Version von [SECOND_LIFE] ist verfügbar.
+			Eine aktualisierte Version von [HERITAGE_KEY] ist verfügbar.
 [MESSAGE]
 Dieses Update ist nicht erforderlich, für bessere Leistung und Stabilität sollte es jedoch installiert werden.
 		</message>
@@ -2725,7 +2725,7 @@ Dieses Update ist nicht erforderlich, für bessere Leistung und Stabilität soll
 	</alert>
 	<alert name="DownloadWindowsReleaseForDownload">
 		<message name="message">
-			Eine aktualisierte Version von [SECOND_LIFE] ist verfügbar.
+			Eine aktualisierte Version von [HERITAGE_KEY] ist verfügbar.
 [MESSAGE]
 Dieses Update ist nicht erforderlich, für bessere Leistung und Stabilität sollte es jedoch installiert werden.
 		</message>
@@ -2738,9 +2738,9 @@ Dieses Update ist nicht erforderlich, für bessere Leistung und Stabilität soll
 	</alert>
 	<alert name="DownloadMacMandatory">
 		<message name="message">
-			Eine neue Version von [SECOND_LIFE] ist verfügbar.
+			Eine neue Version von [HERITAGE_KEY] ist verfügbar.
 [MESSAGE]
-Sie müssen das Update herunterladen, um [SECOND_LIFE] weiter verwenden zu können.
+Sie müssen das Update herunterladen, um [HERITAGE_KEY] weiter verwenden zu können.
 
 In Ihren Anwendungsordner herunterladen?
 		</message>
@@ -2753,7 +2753,7 @@ In Ihren Anwendungsordner herunterladen?
 	</alert>
 	<alert name="DownloadMac">
 		<message name="message">
-			Eine aktualisierte Version von [SECOND_LIFE] ist verfügbar.
+			Eine aktualisierte Version von [HERITAGE_KEY] ist verfügbar.
 [MESSAGE]
 Dieses Update ist nicht erforderlich, für bessere Leistung und Stabilität sollte es jedoch installiert werden.
  
@@ -2768,7 +2768,7 @@ In Ihren Anwendungsordner herunterladen?
 	</alert>
 	<alert name="DownloadMacReleaseForDownload">
 		<message name="message">
-			Eine aktualisierte Version von [SECOND_LIFE] ist verfügbar.
+			Eine aktualisierte Version von [HERITAGE_KEY] ist verfügbar.
 [MESSAGE]
 Dieses Update ist nicht erforderlich, für bessere Leistung und Stabilität sollte es jedoch installiert werden.
  
@@ -2826,7 +2826,7 @@ In Ihren Anwendungsordner herunterladen?
 	</alert>
 	<alert name="WebLaunchBugReport101">
 		<message name="message">
-			Informieren Sie sich im [SECOND_LIFE] Wiki, wie man Fehler richtig meldet.
+			Informieren Sie sich im [HERITAGE_KEY] Wiki, wie man Fehler richtig meldet.
 		</message>
 		<ignore name="ignore">
 			Beim Starten eines Browsers, um das Fehlermeldungs-Wiki anzuzeigen
@@ -2840,7 +2840,7 @@ In Ihren Anwendungsordner herunterladen?
 	</alert>
 	<alert name="WebLaunchSecurityIssues">
 		<message name="message">
-			Informieren Sie sich im [SECOND_LIFE] Wiki, wie man Sicherheitsprobleme richtig meldet.
+			Informieren Sie sich im [HERITAGE_KEY] Wiki, wie man Sicherheitsprobleme richtig meldet.
 		</message>
 		<ignore name="ignore">
 			Beim Starten eines Browsers, um das Sicherheitsfragen-Wiki anzuzeigen
@@ -2854,7 +2854,7 @@ In Ihren Anwendungsordner herunterladen?
 	</alert>
 	<alert name="WebLaunchQAWiki">
 		<message name="message">
-			Besuchen Sie das [SECOND_LIFE] QA-Wiki.
+			Besuchen Sie das [HERITAGE_KEY] QA-Wiki.
 		</message>
 		<ignore name="ignore">
 			Beim Starten eines Browsers, um das QA-Wiki anzuzeigen
@@ -2868,7 +2868,7 @@ In Ihren Anwendungsordner herunterladen?
 	</alert>
 	<alert name="WebLaunchPublicIssue">
 		<message name="message">
-			Im [SECOND_LIFE] Allgemeine-Fragen-Tracker können Sie Fehler und andere Probleme melden.
+			Im [HERITAGE_KEY] Allgemeine-Fragen-Tracker können Sie Fehler und andere Probleme melden.
 		</message>
 		<ignore name="ignore">
 			Beim Starten eines Browsers, um den Allgemeine Probleme Tracker anzuzeigen
@@ -2882,7 +2882,7 @@ In Ihren Anwendungsordner herunterladen?
 	</alert>
 	<alert name="WebLaunchPublicIssueHelp">
 		<message name="message">
-			Informieren Sie sich im [SECOND_LIFE] Wiki über den Allgemeine Fragen-Tracker.
+			Informieren Sie sich im [HERITAGE_KEY] Wiki über den Allgemeine Fragen-Tracker.
 		</message>
 		<ignore name="ignore">
 			Beim Starten eines Browsers, um das Allgemeine Fragen-Wiki anzuzeigen
@@ -2896,7 +2896,7 @@ In Ihren Anwendungsordner herunterladen?
 	</alert>
 	<alert name="WebLaunchForums">
 		<message name="message">
-			Durchsuchen Sie die [SECOND_LIFE] Knowledge Base nach aktuellen Tipps und Tricks.
+			Durchsuchen Sie die [HERITAGE_KEY] Knowledge Base nach aktuellen Tipps und Tricks.
 		</message>
 		<ignore name="ignore">
 			Beim Starten eines Browsers, um die Knowledge Base anzuzeigen
@@ -2910,7 +2910,7 @@ In Ihren Anwendungsordner herunterladen?
 	</alert>
 	<alert name="WebLaunchSupport">
 		<message name="message">
-			Wenden Sie sich an den Support von [SECOND_LIFE].
+			Wenden Sie sich an den Support von [HERITAGE_KEY].
 		</message>
 		<ignore name="ignore">
 			Beim Starten eines Browsers, um den Support zu kontaktieren

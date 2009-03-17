@@ -837,7 +837,7 @@
 	</notify>
 	<notify name="FirstBuild">
 		<message name="message">
-			새로운 오브젝트를 [SECOND_LIFE]에서 제작할 수 있습니다.
+			새로운 오브젝트를 [HERITAGE_KEY]에서 제작할 수 있습니다.
 왼쪽 상단의 도구를 사용하여 제작하고 
 Ctrl 또는 Alt 키를 누른 상태에서 신속하게 도구를 전환하십시오.
 제작을 중단하려면 Esc 키를 누르십시오.

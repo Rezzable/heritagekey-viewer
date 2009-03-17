@@ -671,7 +671,7 @@
 	</notify>
 	<notify name="FirstBuild">
 		<message name="message">
-			Você pode construir novos objetos no [SECOND_LIFE].Use as ferramentas corretas e aperte ESC por qualquer eventualdade.
+			Você pode construir novos objetos no [HERITAGE_KEY].Use as ferramentas corretas e aperte ESC por qualquer eventualdade.
 		</message>
 	</notify>
 	<notify name="FirstLeftClickNoHit">

@@ -55,7 +55,7 @@
 	</alert>
 	<alert name="ConnectTimeout">
 		<message name="message">
-			[SECOND_LIFE]에 연결하지 못했습니다.
+			[HERITAGE_KEY]에 연결하지 못했습니다.
 시스템이 다운된 것일 수 있습니다.
 
 몇 초 후에 다시 시도하거나 도움말을 클릭하여
@@ -340,7 +340,7 @@
 	<alert name="ClickPublishHelpLand">
 		<message name="message">
 			웹에 게시 옵션을 선택하면 
-[SECOND_LIFE] 
+[HERITAGE_KEY] 
  웹 사이트에 이 구획의 이름, 설명, 스냅샷 및 위치를 게시할 수 있습니다.상기 내용 중 지역 사회 기준으로 볼 때 
  성인 전용으로 간주될 수 있는 내용이 있을 경우 그 사실을 
  표시할 의무가 있습니다.
@@ -364,7 +364,7 @@
 	</alert>
 	<alert name="ClickPartnerHelpAvatar">
 		<message name="message">
-			[SECOND_LIFE] 웹사이트를 통해 다른 주민과의 파트너 관계을 제안하거나 기존 파트너 관계을 해제할 수 있습니다.
+			[HERITAGE_KEY] 웹사이트를 통해 다른 주민과의 파트너 관계을 제안하거나 기존 파트너 관계을 해제할 수 있습니다.
 
 파트너 관계에 대한 추가 정보를 보려면 세컨드라이프 웹사이트로 이동하십시오.
 		</message>
@@ -696,7 +696,7 @@ L$0로 판매하는 경우, 팔 사람을 선택하십시오.
 	</alert>
 	<alert name="MustAgreeToLogIn">
 		<message name="message">
-			[SECOND_LIFE]에 로그인하려면 이용 약관에 동의해야 합니다.
+			[HERITAGE_KEY]에 로그인하려면 이용 약관에 동의해야 합니다.
 		</message>
 	</alert>
 	<alert name="CouldNotPutOnOutfit">
@@ -717,7 +717,7 @@ L$0로 판매하는 경우, 팔 사람을 선택하십시오.
 	</alert>
 	<alert name="MustHaveAccountToLogInNoLinks">
 		<message name="message">
-			[SECOND_LIFE]에 연결하려면 계정을 갖고 있어야 합니다.
+			[HERITAGE_KEY]에 연결하려면 계정을 갖고 있어야 합니다.
 		</message>
 		<option name="OK">
 			확인
@@ -728,7 +728,7 @@ L$0로 판매하는 경우, 팔 사람을 선택하십시오.
 			죄송합니다. 일부 항목이 비어 있습니다.
 아바타의 성과 이름을 모두 입력해야 합니다.
 
-[SECOND_LIFE]에 연결하려면 계정을 갖고 있어야 합니다. 지금 새로운 계정을 만드시겠습니까?
+[HERITAGE_KEY]에 연결하려면 계정을 갖고 있어야 합니다. 지금 새로운 계정을 만드시겠습니까?
 		</message>
 		<option name="OK">
 			새 계정 만들기
@@ -797,7 +797,7 @@ L$0로 판매하는 경우, 팔 사람을 선택하십시오.
 	<alert name="DisplayChangeRestart">
 		<message name="message">
 			일부 디스플레이 변경 사항을 적용하려면
-[SECOND_LIFE]를 즉시 종료해야 합니다.
+[HERITAGE_KEY]를 즉시 종료해야 합니다.
 그렇지 않으면 진행 중인 모든 작업이 손실됩니다.
 
 해당 변경 사항을 적용한 후 종료하시겠습니까?
@@ -811,7 +811,7 @@ L$0로 판매하는 경우, 팔 사람을 선택하십시오.
 	</alert>
 	<alert name="PromptGoToEventsPage">
 		<message name="message">
-			[SECOND_LIFE]이벤트 웹 사이트로 갑니까?
+			[HERITAGE_KEY]이벤트 웹 사이트로 갑니까?
 		</message>
 		<option name="GotoPage">
 			페이지로 이동
@@ -864,28 +864,28 @@ L$0로 판매하는 경우, 팔 사람을 선택하십시오.
 	</alert>
 	<alert name="CacheWillClear">
 		<message name="message">
-			[SECOND_LIFE]를 다시 시작하면 캐시가 비워 집니다.
+			[HERITAGE_KEY]를 다시 시작하면 캐시가 비워 집니다.
 		</message>
 	</alert>
 	<alert name="CacheWillBeMoved">
 		<message name="message">
-			[SECOND_LIFE]를 다시 시작하면 캐시가 이동합니다.
+			[HERITAGE_KEY]를 다시 시작하면 캐시가 이동합니다.
 참고: 이 작업은 캐시를 비웁니다.
 		</message>
 	</alert>
 	<alert name="ChangeConnectionPort">
 		<message name="message">
-			포트 설정은 [SECOND_LIFE]를 다시 시작한 후 유효합니다.
+			포트 설정은 [HERITAGE_KEY]를 다시 시작한 후 유효합니다.
 		</message>
 	</alert>
 	<alert name="ChangeSkin">
 		<message name="message">
-			새로운 스킨은 [SECOND_LIFE]를 재시동한 후 적용됩니다.
+			새로운 스킨은 [HERITAGE_KEY]를 재시동한 후 적용됩니다.
 		</message>
 	</alert>
 	<alert name="GoToAuctionPage">
 		<message name="message">
-			경매 세부사항을 보거나, 경매를 하려면[SECOND_LIFE]웹 페이지로 갑니다.
+			경매 세부사항을 보거나, 경매를 하려면[HERITAGE_KEY]웹 페이지로 갑니다.
 		</message>
 		<option name="GotoPage">
 			페이지로 이동
@@ -1090,7 +1090,7 @@ L$0로 판매하는 경우, 팔 사람을 선택하십시오.
 	</alert>
 	<alert name="DisplaySettingsNoShaders">
 		<message name="message">
-			그래픽 드라이버 초기화 중 [SECOND_LIFE]에 오류가 발생했습니다.
+			그래픽 드라이버 초기화 중 [HERITAGE_KEY]에 오류가 발생했습니다.
 일반적인 드라이버 오류를 방지하기 위해 그래픽 품질이 낮게 설정됩니다.
 이로 인해 일부 그래픽 기능을 사용할 수 없게 될 수 있습니다..
 그래픽 카드 드라이버의 업데이트를 권장합니다.
@@ -1126,7 +1126,7 @@ L$0로 판매하는 경우, 팔 사람을 선택하십시오.
 	</alert>
 	<alert name="CannotConnectDNSError">
 		<message name="message">
-			[SECOND_LIFE]에 연결하지 못했습니다.
+			[HERITAGE_KEY]에 연결하지 못했습니다.
 DNS가 호스트 이름을 확인할 수 없습니다.
 
 www.secondlife.com 웹사이트에 연결할 수 있는지 여부를
@@ -1147,7 +1147,7 @@ www.secondlife.com/support로 이동한 다음
 	</alert>
 	<alert name="CannotConnectVerificationError">
 		<message name="message">
-			[SECOND_LIFE]에 연결하지 못했습니다.
+			[HERITAGE_KEY]에 연결하지 못했습니다.
 SSL을 통해 로그인 서버가 확인되지 않습니다.
 
 이 오류가 계속해서 발생하는 경우에는
@@ -1157,7 +1157,7 @@ www.secondlife.com/support로 이동한 다음
 	</alert>
 	<alert name="CannotConnectUnknownErrorWindows">
 		<message name="message">
-			[SECOND_LIFE]에 연결하지 못했습니다.
+			[HERITAGE_KEY]에 연결하지 못했습니다.
 예상치 못한 문제가 발생했습니다.
 
 www.secondlife.com/support로 이동한 다음
@@ -1168,7 +1168,7 @@ www.secondlife.com/support로 이동한 다음
 	</alert>
 	<alert name="CannotConnectUnknownErrorDarwin">
 		<message name="message">
-			[SECOND_LIFE]에 연결하지 못했습니다.
+			[HERITAGE_KEY]에 연결하지 못했습니다.
 예상치 못한 문제가 발생했습니다.
 
 www.secondlife.com/support로 이동한 다음
@@ -1221,9 +1221,9 @@ www.secondlife.com/support에서 관련 정보를 참고하십시오.
 	</alert>
 	<alert name="FirstRunDialog">
 		<message name="message">
-			[SECOND_LIFE] 설치가 완료되었습니다.
+			[HERITAGE_KEY] 설치가 완료되었습니다.
 
-[SECOND_LIFE]를 처음 사용하시는 경우 먼저 계정을 만들어야
+[HERITAGE_KEY]를 처음 사용하시는 경우 먼저 계정을 만들어야
 로그인할 수 있습니다.
 www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 		</message>
@@ -1251,7 +1251,7 @@ www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 	</alert>
 	<alert name="WelcomeToSecondLife">
 		<message name="message">
-			[SECOND_LIFE]에 오신 것을 환영합니다! 
+			[HERITAGE_KEY]에 오신 것을 환영합니다! 
 
 화살표 키를 이용하여 걸을 수 있습니다.
 남성 또는 여성 캐릭터를 선택해 주십시오. 
@@ -1266,7 +1266,7 @@ www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 	</alert>
 	<alert name="WelcomeToSecondLifeSimple">
 		<message name="message">
-			[SECOND_LIFE]에 오신 것을 환영합니다!
+			[HERITAGE_KEY]에 오신 것을 환영합니다!
 
 화살표 키를 이용하여 걸을 수 있습니다.
 남성 또는 여성 캐릭터를 선택해 주십시오.
@@ -2074,9 +2074,9 @@ www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 	</alert>
 	<alert name="YouHaveBeenLoggedOut">
 		<message name="message">
-			[SECOND_LIFE]에서 로그아웃하셨습니다:
+			[HERITAGE_KEY]에서 로그아웃하셨습니다:
             [MESSAGE]
-기존의 메신저와 채팅을 보려면 &apos;메신저 및 채팅 보기&apos;를 클릭하십시오. 그렇지 않고 [SECOND_LIFE]를 즉시 끝내려면 &apos;종료&apos;를 클릭하십시오.
+기존의 메신저와 채팅을 보려면 &apos;메신저 및 채팅 보기&apos;를 클릭하십시오. 그렇지 않고 [HERITAGE_KEY]를 즉시 끝내려면 &apos;종료&apos;를 클릭하십시오.
 		</message>
 		<option name="Continue">
 			메신저 및 채팅 보기
@@ -2188,7 +2188,7 @@ www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 	<alert name="PublishGroupInfoToWeb">
 		<message name="message">
 			웹에 게시 옵션을 선택하면 
-[SECOND_LIFE] 
+[HERITAGE_KEY] 
  웹 사이트에 그룹 이름, 로고, 설립 조항, 타이틀 및 설립자 이름을 게시할 수 있습니다.상기 내용 중 지역 사회 기준으로 볼 때 
  성인 전용으로 간주될 수 있는 내용이 있을 경우 그 사실을 
  표시할 의무가 있습니다.
@@ -2441,7 +2441,7 @@ www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 	</alert>
 	<alert name="SystemMayBeDown">
 		<message name="message">
-			[SECOND_LIFE]에 연결하지 못했습니다.
+			[HERITAGE_KEY]에 연결하지 못했습니다.
 시스템이 다운된 것일 수 있습니다.
 
 몇 초 후에 다시 시도하거나 도움말을 클릭하여
@@ -2479,7 +2479,7 @@ http://www.apple.com/quicktime/을 방문하여 최신 버전을 다운로드하
 	<alert name="ClothingLoading">
 		<message name="message">
 			의복을 다운로드하고 있습니다. 
-[SECOND_LIFE]를 사용할 수 있으며 다른 사용자에게 귀하의 모습이 정상적으로 표시될 것입니다.
+[HERITAGE_KEY]를 사용할 수 있으며 다른 사용자에게 귀하의 모습이 정상적으로 표시될 것입니다.
 		</message>
 		<ignore name="ignore">
 			의복 다운로드 시간이 오래 걸리는 경우
@@ -2487,9 +2487,9 @@ http://www.apple.com/quicktime/을 방문하여 최신 버전을 다운로드하
 	</alert>
 	<alert name="FirstRun">
 		<message name="message">
-			[SECOND_LIFE] 설치가 완료되었습니다.
+			[HERITAGE_KEY] 설치가 완료되었습니다.
 
-[SECOND_LIFE]를 처음 사용하시는 경우 먼저 계정을 만들어야
+[HERITAGE_KEY]를 처음 사용하시는 경우 먼저 계정을 만들어야
 로그인할 수 있습니다.
 www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 		</message>
@@ -2530,7 +2530,7 @@ www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 
 화살표 키를 이용하여 걸을 수 있습니다.
 언제든지 F1 키를 누르면 도움말을 보거나
-[SECOND_LIFE]를 자세히 배울 수 있습니다.
+[HERITAGE_KEY]를 자세히 배울 수 있습니다.
 		</message>
 	</alert>
 	<alert name="WelcomeChooseSex">
@@ -2539,7 +2539,7 @@ www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 
 화살표 키를 이용하여 걸을 수 있습니다.
 언제든지 F1 키를 누르면 도움말을 보거나
-[SECOND_LIFE]를 자세히 배울 수 있습니다.
+[HERITAGE_KEY]를 자세히 배울 수 있습니다.
 남성 또는 여성 캐릭터를 선택해 주십시오.
 캐릭터는 차후에 변경이 가능합니다.
 		</message>
@@ -2712,9 +2712,9 @@ www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 	</alert>
 	<alert name="DownloadWindowsMandatory">
 		<message name="message">
-			[SECOND_LIFE] 새 버전이 출시되었습니다.
+			[HERITAGE_KEY] 새 버전이 출시되었습니다.
 [MESSAGE]
-[SECOND_LIFE]를 사용하려면 이 업데이트를 다운로드해야 합니다.
+[HERITAGE_KEY]를 사용하려면 이 업데이트를 다운로드해야 합니다.
 		</message>
 		<option name="Download">
 			다운로드
@@ -2725,7 +2725,7 @@ www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 	</alert>
 	<alert name="DownloadWindows">
 		<message name="message">
-			[SECOND_LIFE] 업데이트 버전이 출시되었습니다.
+			[HERITAGE_KEY] 업데이트 버전이 출시되었습니다.
 [MESSAGE]
 본 업데이트는 필수 사항은 아니나 성능 및 안전성 향상을 위해 설치를 권장합니다.
 		</message>
@@ -2738,7 +2738,7 @@ www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 	</alert>
 	<alert name="DownloadWindowsReleaseForDownload">
 		<message name="message">
-			[SECOND_LIFE] 업데이트 버전이 출시되었습니다.
+			[HERITAGE_KEY] 업데이트 버전이 출시되었습니다.
 [MESSAGE]
 본 업데이트는 필수 사항은 아니나 성능 및 안전성 향상을 위해 설치를 권장합니다.
 		</message>
@@ -2751,9 +2751,9 @@ www.secondlife.com으로 돌아가 신규 계정을 만드시겠습니까?
 	</alert>
 	<alert name="DownloadMacMandatory">
 		<message name="message">
-			[SECOND_LIFE] 새 버전이 출시되었습니다.
+			[HERITAGE_KEY] 새 버전이 출시되었습니다.
 [MESSAGE]
-[SECOND_LIFE]를 사용하려면 이 업데이트를 다운로드해야 합니다.
+[HERITAGE_KEY]를 사용하려면 이 업데이트를 다운로드해야 합니다.
 
 Applications 폴더에 다운로드하시겠습니까?
 		</message>
@@ -2766,7 +2766,7 @@ Applications 폴더에 다운로드하시겠습니까?
 	</alert>
 	<alert name="DownloadMac">
 		<message name="message">
-			[SECOND_LIFE] 업데이트 버전이 출시되었습니다.
+			[HERITAGE_KEY] 업데이트 버전이 출시되었습니다.
 [MESSAGE]
 본 업데이트는 필수 사항은 아니나 성능 및 안전성 향상을 위해 설치를 권장합니다.
  
@@ -2781,7 +2781,7 @@ Applications 폴더에 다운로드하시겠습니까?
 	</alert>
 	<alert name="DownloadMacReleaseForDownload">
 		<message name="message">
-			[SECOND_LIFE] 업데이트 버전이 출시되었습니다.
+			[HERITAGE_KEY] 업데이트 버전이 출시되었습니다.
 [MESSAGE]
 본 업데이트는 필수 사항은 아니나 성능 및 안전성 향상을 위해 설치를 권장합니다.
  
@@ -2867,7 +2867,7 @@ Applications 폴더에 다운로드하시겠습니까?
 	</alert>
 	<alert name="WebLaunchQAWiki">
 		<message name="message">
-			[SECOND_LIFE] QA Wiki를 방문합니다.
+			[HERITAGE_KEY] QA Wiki를 방문합니다.
 		</message>
 		<ignore name="ignore">
 			QA Wiki를 보기 위해 웹 브라우저를 시작할 때
@@ -2909,7 +2909,7 @@ Applications 폴더에 다운로드하시겠습니까?
 	</alert>
 	<alert name="WebLaunchForums">
 		<message name="message">
-			최신 팁 및 트릭은 [SECOND_LIFE] 지식 창고를 검색합니다.
+			최신 팁 및 트릭은 [HERITAGE_KEY] 지식 창고를 검색합니다.
 		</message>
 		<ignore name="ignore">
 			지식창고를 보려고 웹 브라우저를 시작할 때
@@ -2923,7 +2923,7 @@ Applications 폴더에 다운로드하시겠습니까?
 	</alert>
 	<alert name="WebLaunchSupport">
 		<message name="message">
-			[SECOND_LIFE] 고객지원에 문의 하십시오.
+			[HERITAGE_KEY] 고객지원에 문의 하십시오.
 		</message>
 		<ignore name="ignore">
 			지원 요청하기 위해 웹 브라우저를 시작할 때

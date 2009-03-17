@@ -93,23 +93,23 @@ Bei Anzeige ihres Profils kann jeder Einwohner diesen URL öffnen.
 <b_path>//MustHaveAccountToLogIn/message</b_path>
 <c_attribute></c_attribute>
 <d_old>
-			You must have an account to connect to [SECOND_LIFE].
+			You must have an account to connect to [HERITAGE_KEY].
 Go to www.secondlife.com to create an account?
 		</d_old>
 <e_new>
 Oops! Something was left blank.
 You need to enter both the First and Last name of your avatar.
 
-You need an account to enter [SECOND_LIFE]. Would you like to create one now?
+You need an account to enter [HERITAGE_KEY]. Would you like to create one now?
 </e_new>
 <f_translation>
 Hoppla! Da fehlt noch etwas.
 Geben Sie bitte den Vor- und den Nachnamen Ihres Avatars ein.
 
-Sie benötigen ein Benutzerkonto, um [SECOND_LIFE] betreten zu können.Möchten Sie jetzt ein Benutzerkonto anlegen?
+Sie benötigen ein Benutzerkonto, um [HERITAGE_KEY] betreten zu können.Möchten Sie jetzt ein Benutzerkonto anlegen?
 </f_translation>
 <f_old_trans>
-			Sie benötigen ein Konto, um sich in [SECOND_LIFE] anmelden zu können.
+			Sie benötigen ein Konto, um sich in [HERITAGE_KEY] anmelden zu können.
 Möchten Sie auf www.secondlife.com ein Konto anlegen?
 		</f_old_trans>
 </string><string><a_file>alerts.xml</a_file>
@@ -146,16 +146,16 @@ Möchten Sie auf www.secondlife.com ein Konto anlegen?
 <b_path>//ChangeSkin/message</b_path>
 <c_attribute></c_attribute>
 <d_old>
-      New skin will appear after you restart [SECOND_LIFE].
+      New skin will appear after you restart [HERITAGE_KEY].
     </d_old>
 <e_new>
-      The new skin will appear after you restart [SECOND_LIFE].
+      The new skin will appear after you restart [HERITAGE_KEY].
     </e_new>
 <f_translation>
-Die neue Haut wird nach dem erneuten Start von [SECOND_LIFE] angezeigt.
+Die neue Haut wird nach dem erneuten Start von [HERITAGE_KEY] angezeigt.
     </f_translation>
 <f_old_trans>
-			Die neue Benutzeroberfläche wird nach einem Neustart von [SECOND_LIFE] erscheinen.
+			Die neue Benutzeroberfläche wird nach einem Neustart von [HERITAGE_KEY] erscheinen.
 		</f_old_trans>
 </string><string><a_file>alerts.xml</a_file>
 <b_path>//CannotGiveCategory/message</b_path>
@@ -199,30 +199,30 @@ Kann die Region nicht finden, in der sich dieses Land befindet.
 <b_path>//YouHaveBeenLoggedOut/message</b_path>
 <c_attribute></c_attribute>
 <d_old>
-			You have been logged out of [SECOND_LIFE]:
+			You have been logged out of [HERITAGE_KEY]:
 [MESSAGE]
 
 Click Continue to look at existing IM and chat.
 You will not be able to perform any other operations.
-Click Quit to exit [SECOND_LIFE] immediately.
+Click Quit to exit [HERITAGE_KEY] immediately.
 		</d_old>
 <e_new>
-You have been logged out of [SECOND_LIFE]:
+You have been logged out of [HERITAGE_KEY]:
             [MESSAGE]
-You can still look at existing IM and chat by clicking &apos;View IM &amp; Chat&apos;. Otherwise, click &apos;Quit&apos; to exit [SECOND_LIFE] immediately.
+You can still look at existing IM and chat by clicking &apos;View IM &amp; Chat&apos;. Otherwise, click &apos;Quit&apos; to exit [HERITAGE_KEY] immediately.
     </e_new>
 <f_translation>
-Sie wurden von [SECOND_LIFE] abgemeldet:
+Sie wurden von [HERITAGE_KEY] abgemeldet:
             [MESSAGE]
-Klicken Sie auf &apos;IM &amp; Chat anzeigen&apos;, um vorhandene Nachrichten und Chat weiterhin anzuzeigen. Klicken Sie andernfalls auf &apos;Beenden&apos;, um [SECOND_LIFE] sofort zu beenden.
+Klicken Sie auf &apos;IM &amp; Chat anzeigen&apos;, um vorhandene Nachrichten und Chat weiterhin anzuzeigen. Klicken Sie andernfalls auf &apos;Beenden&apos;, um [HERITAGE_KEY] sofort zu beenden.
     </f_translation>
 <f_old_trans>
-			Sie wurden von [SECOND_LIFE] abgemeldet:
+			Sie wurden von [HERITAGE_KEY] abgemeldet:
 [MESSAGE]
 
 Klicken Sie auf &apos;Weiter&apos;, um IM und Chat anzuzeigen.
 Andere Optionen sind nicht mehr möglich.
-Klicken Sie auf &apos;Beenden&apos;, um [SECOND_LIFE] zu schließen.
+Klicken Sie auf &apos;Beenden&apos;, um [HERITAGE_KEY] zu schließen.
 		</f_old_trans>
 </string><string><a_file>alerts.xml</a_file>
 <b_path>//YouHaveBeenLoggedOut/Continue</b_path>

@@ -833,7 +833,7 @@
 	</notify>
 	<notify name="FirstBuild">
 		<message name="message">
-			[SECOND_LIFE]には、新しいオブジェクトを作ることができる地域があります。
+			[HERITAGE_KEY]には、新しいオブジェクトを作ることができる地域があります。
 作成には画面上部左のツールが使え、Ctrl キーや 
  Alt キーを押したままにすれば素早くツールを切り替えられます。
  Escキーを押すと、作成は終了します。

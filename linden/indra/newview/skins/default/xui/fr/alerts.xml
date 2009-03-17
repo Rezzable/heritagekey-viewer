@@ -55,7 +55,7 @@
 	</alert>
 	<alert name="ConnectTimeout">
 		<message name="message">
-			Connexion impossible à [SECOND_LIFE]
+			Connexion impossible à [HERITAGE_KEY]
 Le service est peut-être interrompu.
 Veuillez réessayer d&apos;ici quelques minutes, ou cliquez sur Aide
 pour des conseils et un lien vers la page web d&apos;état du service.
@@ -327,7 +327,7 @@ Ajouter cette Faculté à &apos;[ROLE_NAME]&apos;?
 		<message name="message">
 			L&apos;option &quot;Publier sur le Web&quot; nous permet de publier
 le nom du groupe, son insigne, sa charte, ses titres, et ses fondateurs sur le
-site [SECOND_LIFE]. Il est de votre responsabilité d&apos;indiquer si 
+site [HERITAGE_KEY]. Il est de votre responsabilité d&apos;indiquer si 
 tout ou partie du contenu ci-dessus est considéré comme Adulte au regard
 des règles de base de la Communauté.
 		</message>
@@ -336,7 +336,7 @@ des règles de base de la Communauté.
 		<message name="message">
 			L&apos;option &quot;Publier sur le Web&quot; nous permet de publier
 le nom, la description, l&apos;instantané et la localisation de cette parcelle
-sur le site [SECOND_LIFE]. Il est de votre responsabilité d&apos;indiquer si 
+sur le site [HERITAGE_KEY]. Il est de votre responsabilité d&apos;indiquer si 
 tout ou partie du contenu ci-dessus est considéré comme Adulte au regard
 des règles de base de la Communauté.
 		</message>
@@ -349,8 +349,8 @@ des règles de base de la Communauté.
 	<alert name="ClickPublishHelpPostcard">
 		<message name="message">
 			L&apos;option &quot;Publier sur le Web&quot; nous permet de publier
-le nom du photographe dans [SECOND_LIFE], le sujet, le lieu, le message et
-l&apos;instantané sur le site [SECOND_LIFE]. Il est de votre responsabilité d&apos;indiquer si 
+le nom du photographe dans [HERITAGE_KEY], le sujet, le lieu, le message et
+l&apos;instantané sur le site [HERITAGE_KEY]. Il est de votre responsabilité d&apos;indiquer si 
 tout ou partie du contenu des instantanés ci-dessus est considéré comme Adulte au regard
 des règles de base de la Communauté.
 		</message>
@@ -358,12 +358,12 @@ des règles de base de la Communauté.
 	<alert name="ClickPublishHelpAvatar">
 		<message name="message">
 			L&apos;option &quot;Publier sur le Web&quot; nous permet de publier
-votre nom, image, et texte &apos;A propos&apos; sur le site [SECOND_LIFE].
+votre nom, image, et texte &apos;A propos&apos; sur le site [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="ClickPartnerHelpAvatar">
 		<message name="message">
-			Vous pouvez proposer à un autre résident de dissoudre un partenariat existant par le biais du site de [SECOND_LIFE].
+			Vous pouvez proposer à un autre résident de dissoudre un partenariat existant par le biais du site de [HERITAGE_KEY].
 
 Aller sur le site de Second Life pour avoir plus d&apos;informations sur les partenariats ?
 		</message>
@@ -671,7 +671,7 @@ pour définir le point d&apos;atterrissage.
 	</alert>
 	<alert name="MustAgreeToLogIn">
 		<message name="message">
-			Vous devez accepter les Conditions Générales d&apos;Utilisation pour continuer à vous connecter à [SECOND_LIFE].
+			Vous devez accepter les Conditions Générales d&apos;Utilisation pour continuer à vous connecter à [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="CouldNotPutOnOutfit">
@@ -693,7 +693,7 @@ Veuillez réessayer dans une minute.
 	</alert>
 	<alert name="MustHaveAccountToLogInNoLinks">
 		<message name="message">
-			Vous devez disposer d&apos;un compte pour vous connecter à [SECOND_LIFE].
+			Vous devez disposer d&apos;un compte pour vous connecter à [HERITAGE_KEY].
 		</message>
 		<option name="OK">
 			OK
@@ -701,7 +701,7 @@ Veuillez réessayer dans une minute.
 	</alert>
 	<alert name="MustHaveAccountToLogIn">
 		<message name="message">
-			Vous devez disposer d&apos;un compte pour vous connecter à [SECOND_LIFE].
+			Vous devez disposer d&apos;un compte pour vous connecter à [HERITAGE_KEY].
  
 Vous rendre sur www.secondlife.com pour créer un nouveau compte ?
 		</message>
@@ -774,7 +774,7 @@ Les frais d&apos;insertion sont non remboursables.
 	<alert name="DisplayChangeRestart">
 		<message name="message">
 			Certaines modifications d&apos;affichage effectuées
-nécessitent la fermeture immédiate de [SECOND_LIFE].
+nécessitent la fermeture immédiate de [HERITAGE_KEY].
 Tout travail en cours sera perdu.
  
 Veuillez appliquer vos modifications et quitter
@@ -788,7 +788,7 @@ Veuillez appliquer vos modifications et quitter
 	</alert>
 	<alert name="PromptGoToEventsPage">
 		<message name="message">
-			Aller sur la page des événements [SECOND_LIFE] ?
+			Aller sur la page des événements [HERITAGE_KEY] ?
 		</message>
 		<option name="GotoPage">
 			Aller à la Page
@@ -841,28 +841,28 @@ Veuillez appliquer vos modifications et quitter
 	</alert>
 	<alert name="CacheWillClear">
 		<message name="message">
-			Le cache sera vidé au redémarrage de [SECOND_LIFE].
+			Le cache sera vidé au redémarrage de [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="CacheWillBeMoved">
 		<message name="message">
-			Le cache sera déplacé après le redémarrage de [SECOND_LIFE].
+			Le cache sera déplacé après le redémarrage de [HERITAGE_KEY].
 Remarque : cela videra le cache.
 		</message>
 	</alert>
 	<alert name="ChangeConnectionPort">
 		<message name="message">
-			Les paramètres du port prendront effet après le redémarrage de [SECOND_LIFE].
+			Les paramètres du port prendront effet après le redémarrage de [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="ChangeSkin">
 		<message name="message">
-			Le nouveau thème apparaîtra après le redémarrage de [SECOND_LIFE].
+			Le nouveau thème apparaîtra après le redémarrage de [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="GoToAuctionPage">
 		<message name="message">
-			Aller sur la page [SECOND_LIFE] pour afficher le détail des enchères
+			Aller sur la page [HERITAGE_KEY] pour afficher le détail des enchères
 ou enchérir ?
 		</message>
 		<option name="GotoPage">
@@ -1067,7 +1067,7 @@ d&apos;après votre configuration matérielle.
 	</alert>
 	<alert name="DisplaySettingsNoShaders">
 		<message name="message">
-			[SECOND_LIFE] a planté lors de l&apos;initialisation des drivers graphiques.
+			[HERITAGE_KEY] a planté lors de l&apos;initialisation des drivers graphiques.
 La qualité des graphiques sera paramétrée sur Faible pour éviter certaines erreurs de driver fréquentes.
 Certaines fonctionnalités graphiques seront donc désactivées.
 Nous vous recommandons de mettre à jour les drivers de votre carte graphique.
@@ -1104,7 +1104,7 @@ Connexion impossible à [SERVER]
 	</alert>
 	<alert name="CannotConnectDNSError">
 		<message name="message">
-			Connexion impossible à [SECOND_LIFE].
+			Connexion impossible à [HERITAGE_KEY].
 Une erreur DNS s&apos;est produite.
 Veuillez vérifier que vous parvenez à vous connecter au site
 www.secondlife.com. Si c&apos;est le cas, et que vous continuez à recevoir ce message d&apos;erreur,
@@ -1125,7 +1125,7 @@ afin de signaler le problème.
 	</alert>
 	<alert name="CannotConnectVerificationError">
 		<message name="message">
-			Connexion impossible à [SECOND_LIFE].
+			Connexion impossible à [HERITAGE_KEY].
 Le serveur d&apos;identification a rencontré une erreur de connexion SSL.
 Si vous continuez à recevoir ce message d&apos;erreur, veuillez vous rendre
 à la rubrique Support de SecondLife.com pour
@@ -1134,7 +1134,7 @@ signaler ce problème.
 	</alert>
 	<alert name="CannotConnectUnknownErrorWindows">
 		<message name="message">
-			Connexion impossible à [SECOND_LIFE].
+			Connexion impossible à [HERITAGE_KEY].
 Malgré nos efforts, une erreur inattendue s&apos;est produite.
 Veuillez vous rendre à la rubrique Support du site SecondLife.com
 pour signaler ce problème.  Si possible, joignez votre fichier SecondLife.log
@@ -1144,7 +1144,7 @@ Merci.
 	</alert>
 	<alert name="CannotConnectUnknownErrorDarwin">
 		<message name="message">
-			Connexion impossible à [SECOND_LIFE].
+			Connexion impossible à [HERITAGE_KEY].
 Malgré nos efforts, une erreur inattendue s&apos;est produite.
 Veuillez vous rendre à la rubrique Support du site SecondLife.com
 pour signaler ce problème.  Si possible, joignez votre fichier SecondLife.log
@@ -1196,9 +1196,9 @@ pour des conseils et un lien vers la page web d&apos;état du service.
 	</alert>
 	<alert name="FirstRunDialog">
 		<message name="message">
-			L&apos;installation de [SECOND_LIFE] est terminée.
+			L&apos;installation de [HERITAGE_KEY] est terminée.
  
-Si vous utilisez [SECOND_LIFE] pour la première fois, vous devez ouvrir un compte
+Si vous utilisez [HERITAGE_KEY] pour la première fois, vous devez ouvrir un compte
 avant de pouvoir vous connecter. 
  
 Retourner sur www.secondlife.com pour ouvrir un nouveau compte ?
@@ -1226,7 +1226,7 @@ Veuillez vérifier votre connexion.
 	</alert>
 	<alert name="WelcomeToSecondLife">
 		<message name="message">
-			Welcome to [SECOND_LIFE] ! 
+			Welcome to [HERITAGE_KEY] ! 
  
 Utilisez les touches de direction pour vous déplacer.
  
@@ -1242,7 +1242,7 @@ Vous pourrez changer d&apos;avis plus tard.
 	</alert>
 	<alert name="WelcomeToSecondLifeSimple">
 		<message name="message">
-			Bienvenue dans [SECOND_LIFE] ! 
+			Bienvenue dans [HERITAGE_KEY] ! 
  
 Utilisez les touches de direction pour vous déplacer.
  
@@ -2033,13 +2033,13 @@ www.secondlife.com/support.
 	</alert>
 	<alert name="YouHaveBeenLoggedOut">
 		<message name="message">
-			Vous avez été déconnecté(e) de [SECOND_LIFE]:
+			Vous avez été déconnecté(e) de [HERITAGE_KEY]:
  
 [MESSAGE]
  
 Cliquez sur Continuer pour afficher les IM et le chat.
 Vous ne pourrez pas effectuer d&apos;autres opérations.
-Cliquez sur Quitter pour quitter [SECOND_LIFE] maintenant.
+Cliquez sur Quitter pour quitter [HERITAGE_KEY] maintenant.
 		</message>
 		<option name="Continue">
 			Continuer
@@ -2159,7 +2159,7 @@ sur L&apos;ENSEMBLE DU TERRAIN de ce sim ?
 		<message name="message">
 			L&apos;option &quot;Publier sur le Web&quot; nous permet de publier
 le nom du groupe, son insigne, sa charte, ses titres, et ses fondateurs sur le
-site [SECOND_LIFE]. Il est de votre responsabilité d&apos;indiquer si 
+site [HERITAGE_KEY]. Il est de votre responsabilité d&apos;indiquer si 
 tout ou partie du contenu ci-dessus est considéré comme Adulte au regard
 des règles de base de la Communauté.
 		</message>
@@ -2412,7 +2412,7 @@ Connexion impossible à [IP_ADDRESS]
 	</alert>
 	<alert name="SystemMayBeDown">
 		<message name="message">
-			Connexion impossible à [SECOND_LIFE]
+			Connexion impossible à [HERITAGE_KEY]
 Le service est peut-être interrompu.
 Veuillez réessayer d&apos;ici quelques minutes, ou cliquez sur Aide
 pour des conseils et un lien vers la page web d&apos;état du service.
@@ -2441,9 +2441,9 @@ vous verront correctement.
 	</alert>
 	<alert name="FirstRun">
 		<message name="message">
-			L&apos;installation de [SECOND_LIFE] est terminée.
+			L&apos;installation de [HERITAGE_KEY] est terminée.
  
-Si vous utilisez [SECOND_LIFE] pour la première fois, vous devez ouvrir un compte
+Si vous utilisez [HERITAGE_KEY] pour la première fois, vous devez ouvrir un compte
 avant de pouvoir vous connecter. 
  
 Retourner sur www.secondlife.com pour ouvrir un nouveau compte ?
@@ -2487,7 +2487,7 @@ pour des conseils et un lien vers la page web d&apos;état du service.
 Utilisez les touches de direction pour marcher.
  
 Appuyez sur la touche F1 pour obtenir de l&apos;aide
-ou en savoir plus sur [SECOND_LIFE].
+ou en savoir plus sur [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="WelcomeChooseSex">
@@ -2497,7 +2497,7 @@ ou en savoir plus sur [SECOND_LIFE].
 Utilisez les touches de direction pour marcher.
  
 Appuyez sur la touche F1 pour obtenir de l&apos;aide
-ou en savoir plus sur [SECOND_LIFE].
+ou en savoir plus sur [HERITAGE_KEY].
  
 Veuillez choisir le sexe de votre personnage.
 Vous pourrez le modifier ultérieurement.
@@ -2671,9 +2671,9 @@ Veuillez mettre l&apos;objet en vente et réessayez.
 	</alert>
 	<alert name="DownloadWindowsMandatory">
 		<message name="message">
-			Une nouvelle version de [SECOND_LIFE] est disponible.
+			Une nouvelle version de [HERITAGE_KEY] est disponible.
 [MESSAGE]
-Pour utiliser [SECOND_LIFE] vous devez télécharger cette mise à jour.
+Pour utiliser [HERITAGE_KEY] vous devez télécharger cette mise à jour.
 		</message>
 		<option name="Download">
 			Télécharger
@@ -2684,7 +2684,7 @@ Pour utiliser [SECOND_LIFE] vous devez télécharger cette mise à jour.
 	</alert>
 	<alert name="DownloadWindows">
 		<message name="message">
-			Une mise à jour de [SECOND_LIFE] est disponible.
+			Une mise à jour de [HERITAGE_KEY] est disponible.
 [MESSAGE]
 Cette mise à jour n&apos;est pas requise mais si vous voulez une meilleure performance et plus de stabilité, nous vous recommandons de l&apos;installer.
 		</message>
@@ -2697,7 +2697,7 @@ Cette mise à jour n&apos;est pas requise mais si vous voulez une meilleure perf
 	</alert>
 	<alert name="DownloadWindowsReleaseForDownload">
 		<message name="message">
-			Une mise à jour de [SECOND_LIFE] est disponible.
+			Une mise à jour de [HERITAGE_KEY] est disponible.
 [MESSAGE]
 Cette mise à jour n&apos;est pas requise mais si vous voulez une meilleure performance et plus de stabilité, nous vous recommandons de l&apos;installer.
 		</message>
@@ -2710,9 +2710,9 @@ Cette mise à jour n&apos;est pas requise mais si vous voulez une meilleure perf
 	</alert>
 	<alert name="DownloadMacMandatory">
 		<message name="message">
-			Une nouvelle version de [SECOND_LIFE] est disponible.
+			Une nouvelle version de [HERITAGE_KEY] est disponible.
 [MESSAGE]
-Pour utiliser [SECOND_LIFE] vous devez télécharger cette mise à jour.
+Pour utiliser [HERITAGE_KEY] vous devez télécharger cette mise à jour.
 
 Télécharger vers le dossier Applications ?
 		</message>
@@ -2725,7 +2725,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="DownloadMac">
 		<message name="message">
-			Une mise à jour de [SECOND_LIFE] est disponible.
+			Une mise à jour de [HERITAGE_KEY] est disponible.
 [MESSAGE]
 Cette mise à jour n&apos;est pas requise mais si vous voulez une meilleure performance et plus de stabilité, nous vous recommandons de l&apos;installer.
  
@@ -2740,7 +2740,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="DownloadMacReleaseForDownload">
 		<message name="message">
-			Une mise à jour de [SECOND_LIFE] est disponible.
+			Une mise à jour de [HERITAGE_KEY] est disponible.
 [MESSAGE]
 Cette mise à jour n&apos;est pas requise mais si vous voulez une meilleure performance et plus de stabilité, nous vous recommandons de l&apos;installer.
  
@@ -2795,7 +2795,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="WebLaunchForums">
 		<message name="message">
-			Consultez la base de connaissances de [SECOND_LIFE] pour les derniers trucs &amp; astuces.
+			Consultez la base de connaissances de [HERITAGE_KEY] pour les derniers trucs &amp; astuces.
 		</message>
 		<option name="Gotopage">
 			Aller à la page

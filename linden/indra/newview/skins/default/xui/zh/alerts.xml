@@ -46,7 +46,7 @@
 	</alert>
 	<alert name="ConnectTimeout">
 		<message name="message">
-			无法连接到[SECOND_LIFE].
+			无法连接到[HERITAGE_KEY].
 系统可能出现故障。
 请几分钟后再试, 或点击帮助
 获得建议和到达系统状态的网页链接。
@@ -308,22 +308,22 @@
 	</alert>
 	<alert name="ClickPublishHelpGroup">
 		<message name="message">
-			选择 &quot;在网络上发布&quot;选项将允许我们发布社团的名称，徽章，规章制度，头衔和创始人至[SECOND_LIFE]网站。如果你发布的内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
+			选择 &quot;在网络上发布&quot;选项将允许我们发布社团的名称，徽章，规章制度，头衔和创始人至[HERITAGE_KEY]网站。如果你发布的内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
 		</message>
 	</alert>
 	<alert name="ClickPublishHelpLand">
 		<message name="message">
-			选择 &quot;在网络上发布&quot;选项将允许我们发布土地的名称，描述，快照和地点至[SECOND_LIFE]网站。如果你发布的内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
+			选择 &quot;在网络上发布&quot;选项将允许我们发布土地的名称，描述，快照和地点至[HERITAGE_KEY]网站。如果你发布的内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
 		</message>
 	</alert>
 	<alert name="ClickPublishHelpPostcard">
 		<message name="message">
-			选择 &quot;在网络上发布&quot;选项将允许我们发布摄影师在[SECOND_LIFE]的名字，工作，地点，信息和快照至[SECOND_LIFE]网站。如果你发布的任何快照内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
+			选择 &quot;在网络上发布&quot;选项将允许我们发布摄影师在[HERITAGE_KEY]的名字，工作，地点，信息和快照至[HERITAGE_KEY]网站。如果你发布的任何快照内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
 		</message>
 	</alert>
 	<alert name="ClickPublishHelpAvatar">
 		<message name="message">
-			选择 &quot;在网络上发布&quot;选项将允许我们发布你的名字，图像，和‘关于自己’的文本至[SECOND_LIFE]网站。
+			选择 &quot;在网络上发布&quot;选项将允许我们发布你的名字，图像，和‘关于自己’的文本至[HERITAGE_KEY]网站。
 		</message>
 	</alert>
 	<alert name="ClickWebProfileHelpAvatar">
@@ -637,7 +637,7 @@ in this region back to their owner&apos;s inventory?
 	</alert>
 	<alert name="MustAgreeToLogIn">
 		<message name="message">
-			你必须同意服务协议才能继续登陆至[SECOND_LIFE]。
+			你必须同意服务协议才能继续登陆至[HERITAGE_KEY]。
 		</message>
 	</alert>
 	<alert name="CouldNotPutOnOutfit">
@@ -658,7 +658,7 @@ in this region back to their owner&apos;s inventory?
 	</alert>
 	<alert name="MustHaveAccountToLogInNoLinks">
 		<message name="message">
-			你必须先创建一个新帐户才能登陆到[SECOND_LIFE].
+			你必须先创建一个新帐户才能登陆到[HERITAGE_KEY].
 		</message>
 		<option name="OK">
 			OK
@@ -669,7 +669,7 @@ in this region back to their owner&apos;s inventory?
 	</alert>
 	<alert name="MustHaveAccountToLogIn">
 		<message name="message">
-			你必须先创建一个新帐户才能登陆到[SECOND_LIFE].
+			你必须先创建一个新帐户才能登陆到[HERITAGE_KEY].
  
 现在到www.secondlife.com注册新帐户?
 		</message>
@@ -749,7 +749,7 @@ in this region back to their owner&apos;s inventory?
 	<alert name="DisplayChangeRestart">
 		<message name="message">
 			有一些你执行的显示设置的改变
-会要求[SECOND_LIFE]立即关闭，
+会要求[HERITAGE_KEY]立即关闭，
 这会导致进程中的所有工作丢失。
  
 应用改变并退出
@@ -763,7 +763,7 @@ in this region back to their owner&apos;s inventory?
 	</alert>
 	<alert name="PromptGoToEventsPage">
 		<message name="message">
-			是否跳至[SECOND_LIFE]事件网页?
+			是否跳至[HERITAGE_KEY]事件网页?
 		</message>
 		<option name="GotoPage">
 			回主页
@@ -805,12 +805,12 @@ in this region back to their owner&apos;s inventory?
 	</alert>
 	<alert name="CacheWillClear">
 		<message name="message">
-			重启[SECOND_LIFE]后将清除缓存。
+			重启[HERITAGE_KEY]后将清除缓存。
 		</message>
 	</alert>
 	<alert name="GoToAuctionPage">
 		<message name="message">
-			是否跳至[SECOND_LIFE]网页查看有声信息
+			是否跳至[HERITAGE_KEY]网页查看有声信息
 或者参与投标?
 		</message>
 		<option name="GotoPage">
@@ -979,7 +979,7 @@ in this region back to their owner&apos;s inventory?
 	</alert>
 	<alert name="CannotConnectDNSError">
 		<message name="message">
-			无法连接到[SECOND_LIFE].
+			无法连接到[HERITAGE_KEY].
 DNS服务器无法解读。
 请确定可以连接主页 www.secondlife.com。
 如果可以，但一直收到错误信息，
@@ -1000,13 +1000,13 @@ SecondLife.com网站，与技术支持部门联系，
 	</alert>
 	<alert name="CannotConnectVerificationError">
 		<message name="message">
-			无法连接到[SECOND_LIFE].
+			无法连接到[HERITAGE_KEY].
 登陆服务器无法识别自身。
 		</message>
 	</alert>
 	<alert name="CannotConnectUnknownErrorWindows">
 		<message name="message">
-			无法连接至[SECOND_LIFE].
+			无法连接至[HERITAGE_KEY].
 尽管我们尽了最大努力, 一些不可知的错误导致了这次连接失败.
 请尝试登陆SecondLife.com网站的技术支持部门，并报告问题，如果可能，请附上你的SecondLife.log文件，文件路径为: C:\Documents and Settings\(name)\Application Data\SecondLife\logs
 非常感谢.
@@ -1014,7 +1014,7 @@ SecondLife.com网站，与技术支持部门联系，
 	</alert>
 	<alert name="CannotConnectUnknownErrorDarwin">
 		<message name="message">
-			无法连接到[SECOND_LIFE].
+			无法连接到[HERITAGE_KEY].
 尽管我们做了最大努力, 仍有一些不可预知的错误发生。
 请登陆the SecondLife.com 网站，与技术支持部门
 联系并报告问题。如果有可能，请附上你的
@@ -1067,9 +1067,9 @@ SecondLife.log文件。谢谢。
 	</alert>
 	<alert name="FirstRunDialog">
 		<message name="message">
-			[SECOND_LIFE] 安装已完成。
+			[HERITAGE_KEY] 安装已完成。
  
-这是你第一次使用[SECOND_LIFE], 登陆前你
+这是你第一次使用[HERITAGE_KEY], 登陆前你
 需要创建一个新帐户。
  
 返回www.secondlife.com创建账户?
@@ -1112,7 +1112,7 @@ SecondLife.log文件。谢谢。
 	</alert>
 	<alert name="WelcomeToSecondLife">
 		<message name="message">
-			欢迎来到[SECOND_LIFE]! 
+			欢迎来到[HERITAGE_KEY]! 
  
 使用箭头键来行走.
  
@@ -1128,7 +1128,7 @@ SecondLife.log文件。谢谢。
 	</alert>
 	<alert name="WelcomeToSecondLifeSimple">
 		<message name="message">
-			欢迎来到[SECOND_LIFE]! 
+			欢迎来到[HERITAGE_KEY]! 
  
 使用箭头键来行走.
  
@@ -1143,7 +1143,7 @@ SecondLife.log文件。谢谢。
 	</alert>
 	<alert name="WebLaunchSupport">
 		<message name="message">
-			联系[SECOND_LIFE]支持中心.
+			联系[HERITAGE_KEY]支持中心.
 		</message>
 		<option name="Gotopage">
 			翻页
@@ -1966,7 +1966,7 @@ SecondLife.log文件。谢谢。
 	</alert>
 	<alert name="YouHaveBeenLoggedOut">
 		<message name="message">
-			你已经退出登陆[SECOND_LIFE]:
+			你已经退出登陆[HERITAGE_KEY]:
  
 [MESSAGE]
  
@@ -2062,7 +2062,7 @@ SecondLife.log文件。谢谢。
 	</alert>
 	<alert name="PublishGroupInfoToWeb">
 		<message name="message">
-			选择 &quot;在网络上发布&quot;选项将允许我们发布社团的名称，徽章，规章制度，头衔和创始人至[SECOND_LIFE]网站。如果你发布的内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
+			选择 &quot;在网络上发布&quot;选项将允许我们发布社团的名称，徽章，规章制度，头衔和创始人至[HERITAGE_KEY]网站。如果你发布的内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
 		</message>
 	</alert>
 	<alert name="ErrorEncodingSnapshot">
@@ -2317,7 +2317,7 @@ Please enter a higher price.
 	</alert>
 	<alert name="SystemMayBeDown">
 		<message name="message">
-			无法连接到[SECOND_LIFE]
+			无法连接到[HERITAGE_KEY]
 可能是系统故障。
 请几分钟后再试,或者点击帮助
 获得建议和到达系统状态的网页链接。
@@ -2350,9 +2350,9 @@ You have been moved into a nearby region.
 	</alert>
 	<alert name="FirstRun">
 		<message name="message">
-			[SECOND_LIFE] 安装已完成。
+			[HERITAGE_KEY] 安装已完成。
  
-这是你第一次使用[SECOND_LIFE], 登陆前你
+这是你第一次使用[HERITAGE_KEY], 登陆前你
 需要创建一个新帐户。
  
 返回www.secondlife.com创建账户?
@@ -2391,7 +2391,7 @@ You have been moved into a nearby region.
 			你的角色将在数秒后出现。
 使用箭头键走动。
  
-任何时候都可以按F1键获取帮助，或学习更多关于[SECOND_LIFE]的信息.
+任何时候都可以按F1键获取帮助，或学习更多关于[HERITAGE_KEY]的信息.
 		</message>
 	</alert>
 	<alert name="WelcomeChooseSex">
@@ -2400,7 +2400,7 @@ You have been moved into a nearby region.
  
 使用方向箭头键控制走路。
  
-任何时间都可以按F1键获取帮助，或者学习更多关于[SECOND_LIFE]. 
+任何时间都可以按F1键获取帮助，或者学习更多关于[HERITAGE_KEY]. 
  
 请选择一个男性或女性的角色。
 你可以之后改变你的选择。
@@ -2618,7 +2618,7 @@ You have been moved into a nearby region.
 	</alert>
 	<alert name="DownloadWindowsMandatory">
 		<message name="message">
-			[SECOND_LIFE]有新版本可用。
+			[HERITAGE_KEY]有新版本可用。
 [MESSAGE]
  
 你必须下载此更新才能运行系统。
@@ -2632,7 +2632,7 @@ You have been moved into a nearby region.
 	</alert>
 	<alert name="DownloadWindows">
 		<message name="message">
-			[SECOND_LIFE]有新版本可用。
+			[HERITAGE_KEY]有新版本可用。
 [MESSAGE]
  
 这个更新不是必须的,但我们建议下载并安装此更新，以改善画面质量和稳定性.
@@ -2646,7 +2646,7 @@ You have been moved into a nearby region.
 	</alert>
 	<alert name="DownloadWindowsReleaseForDownload">
 		<message name="message">
-			[SECOND_LIFE]有新版本可用。
+			[HERITAGE_KEY]有新版本可用。
 [MESSAGE]
  
 这个更新不是必须的,但我们建议下载并安装此更新，以改善画面质量和稳定性.
@@ -2660,7 +2660,7 @@ You have been moved into a nearby region.
 	</alert>
 	<alert name="DownloadMacMandatory">
 		<message name="message">
-			[SECOND_LIFE]有新版本可用。
+			[HERITAGE_KEY]有新版本可用。
 [MESSAGE]
  
 你必须下再次更新才能运行系统。
@@ -2675,7 +2675,7 @@ You have been moved into a nearby region.
 	</alert>
 	<alert name="DownloadMac">
 		<message name="message">
-			[SECOND_LIFE]有新版本可用。
+			[HERITAGE_KEY]有新版本可用。
 [MESSAGE]
  
 这个更新不是必须的,但我们建议下载并安装此更新，以改善画面质量和稳定性.
@@ -2691,7 +2691,7 @@ You have been moved into a nearby region.
 	</alert>
 	<alert name="DownloadMacReleaseForDownload">
 		<message name="message">
-			[SECOND_LIFE]有新版本可用。
+			[HERITAGE_KEY]有新版本可用。
 [MESSAGE]
  
 这个更新不是必须的,但我们建议下载并安装此更新，以改善画面质量和稳定性.
@@ -2740,10 +2740,10 @@ You have been moved into a nearby region.
 		<message name="message">
 			你在这台计算机上的[VENDOR_LABLE] [CARD_NAME]图像驱动已经过期。
  
-这是控制你的图像卡的软件的一部分。旧的驱动可以导致3D图像程序，例如[SECOND_LIFE]运行缓慢或崩溃。
+这是控制你的图像卡的软件的一部分。旧的驱动可以导致3D图像程序，例如[HERITAGE_KEY]运行缓慢或崩溃。
 我们强烈推荐升级 &quot;[DRIVER_NAME]&quot; 驱动, 免费的驱动下载在 [VENDOR_LABLE].
  
-你是否愿意登陆[SECOND_LIFE]驱动网页?
+你是否愿意登陆[HERITAGE_KEY]驱动网页?
 		</message>
 		<option name="Gotopage">
 			回主页
@@ -2757,11 +2757,11 @@ You have been moved into a nearby region.
 			你计算机上的图片处理驱动程序已经过期。
  
 这是一款控制图形卡的软件。
-旧的驱动版本可能会使3D画面的程序，例如 [SECOND_LIFE]运行缓慢甚至崩溃。
+旧的驱动版本可能会使3D画面的程序，例如 [HERITAGE_KEY]运行缓慢甚至崩溃。
  
 我们强烈建议升级到最新版本的驱动, 可以在因特网上找到免费下载的版本。
  
-你愿意登陆[SECOND_LIFE]驱动程序网页吗?
+你愿意登陆[HERITAGE_KEY]驱动程序网页吗?
 		</message>
 		<option name="Gotopage">
 			回主页
@@ -2777,7 +2777,7 @@ You have been moved into a nearby region.
 则可以忽略这条消息。如果你正在使用 AGP视频卡，你可以
 更新你的木板驱动，获得更好的图像性能和其他一些
 3D应用程序。如果你正在使用PCI快速图像卡，你就可以使
-AGP绘图加速器起作用。Options panel in Preferences in [SECOND_LIFE].
+AGP绘图加速器起作用。Options panel in Preferences in [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="WebLaunchJoinNow">
@@ -2793,7 +2793,7 @@ AGP绘图加速器起作用。Options panel in Preferences in [SECOND_LIFE].
 	</alert>
 	<alert name="WebLaunchForums">
 		<message name="message">
-			在[SECOND_LIFE]基础知识中查找最新的小贴士和小技巧。
+			在[HERITAGE_KEY]基础知识中查找最新的小贴士和小技巧。
 		</message>
 		<option name="Gotopage">
 			回主页
