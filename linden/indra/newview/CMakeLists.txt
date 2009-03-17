@@ -852,7 +852,7 @@ if (DARWIN)
     secondlife.icns
     macview.r
     gpu_table.txt
-    Info-Imprudence.plist
+    Info-HeritageKey.plist
     HeritageKey.nib/
     # CMake doesn't seem to support Xcode language variants well just yet
     English.lproj/InfoPlist.strings
@@ -920,7 +920,7 @@ if (WINDOWS)
         res/bitmap2.bmp
         res/circleandline.cur
         res/icon1.ico
-        res/imprudence_icon.png
+        res/heritage_key_icon.png
         res/install_icon.BMP
         res/install_icon.ico
         res/llarrow.cur
@@ -1286,9 +1286,9 @@ set(PACKAGE OFF CACHE BOOL
 
 if (WINDOWS)
     if(MSVC71)
-        set(release_flags "/MAP:Release/imprudence-bin.map /MAPINFO:LINES")
+        set(release_flags "/MAP:Release/heritagekey-bin.map /MAPINFO:LINES")
     else(MSVC71)
-        set(release_flags "/MAP:Release/imprudence-bin.map")
+        set(release_flags "/MAP:Release/heritagekey-bin.map")
     endif(MSVC71)
     
     set_target_properties(heritagekey-bin
