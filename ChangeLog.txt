@@ -1,6 +1,18 @@
 2009-03-18  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_attachment.xml:
+	Removed 'Abuse' from the pie menu, finalized pies.
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_avatar.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_land.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_object.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_self.xml:
+	Ditto.
+
+
 	* linden/indra/llcommon/llsecondlifeurls.cpp:
 	Added HK urls for help, register account, etc.
 	* linden/indra/newview/app_settings/settings.xml:
