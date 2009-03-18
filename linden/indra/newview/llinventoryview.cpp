@@ -303,7 +303,7 @@ void LLInventoryViewFinder::rebuildFilter()
 		filter &= ~(LLInventoryType::NIT_SNAPSHOT);
 	}
 
-	if (filter != LLInventoryType::NIT_ALL)
+	if (filter != LLInventoryType::NIT_DEFAULT)
 	{
 		// don't include folders in filter, unless I've selected everything
 		filter &= ~(LLInventoryType::NIT_FOLDER);
@@ -1094,8 +1094,8 @@ void LLInventoryView::onQuickFilterCommit(LLUICtrl* ctrl, void* user_data)
 
 	else if (view->getString("filter_type_all") == item_type)
 	{
-		// Show all types
-		filter_type = LLInventoryType::NIT_ALL;
+		// Show default types
+		filter_type = LLInventoryType::NIT_DEFAULT;
 	}
 
 	else
@@ -1144,7 +1144,7 @@ void LLInventoryView::refreshQuickFilter(LLUICtrl* ctrl)
 
 
 	U32 filter_type = view->mActivePanel->getFilterTypes();
-  filter_type &= LLInventoryType::NIT_ALL;
+  filter_type &= LLInventoryType::NIT_DEFAULT;
 
 
   //llinfos << "filter_type: " << filter_type << llendl;
@@ -1152,7 +1152,7 @@ void LLInventoryView::refreshQuickFilter(LLUICtrl* ctrl)
 	std::string selection;
 
 
-	if (filter_type == LLInventoryType::NIT_ALL)
+	if (filter_type == LLInventoryType::NIT_DEFAULT)
 	{
 		selection = view->getString("filter_type_all");
 	}
