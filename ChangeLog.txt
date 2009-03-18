@@ -1,5 +1,11 @@
 2009-03-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/skins/default/xui/en-us/floater_inventory.xml:
+	Removed cards, scripts, and sounds from Quick Filter list.
+	* linden/indra/newview/llinventoryview.cpp:
+	Ditto.
+
+
 	* linden/indra/newview/llfolderview.cpp:
 	Hide Calling Cards, Scripts, and Sounds folders.
 

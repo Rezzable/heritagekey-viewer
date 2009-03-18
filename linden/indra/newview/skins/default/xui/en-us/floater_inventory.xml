@@ -34,14 +34,11 @@
 		<separator />
 		<combo_item name="filter_type_animation">Animations</combo_item>
 		<combo_item name="filter_type_bodypart">Body Parts</combo_item>
-		<combo_item name="filter_type_callingcard">Calling Cards</combo_item>
 		<combo_item name="filter_type_clothing">Clothing</combo_item>
 		<combo_item name="filter_type_gesture">Gestures</combo_item>
 		<combo_item name="filter_type_landmark">Landmarks</combo_item>
 		<combo_item name="filter_type_notecard">Notecards</combo_item>
 		<combo_item name="filter_type_object">Objects</combo_item>
-		<combo_item name="filter_type_script">Scripts</combo_item>
-		<combo_item name="filter_type_sound">Sounds</combo_item>
 		<combo_item name="filter_type_texture">Textures</combo_item>
 		<combo_item name="filter_type_snapshot">Snapshots</combo_item>
 		<separator />
