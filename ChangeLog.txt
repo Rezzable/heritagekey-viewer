@@ -1,6 +1,10 @@
 2009-03-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/llfolderview.cpp:
+	Hide Calling Cards, Scripts, and Sounds folders.
+
+
+	* linden/indra/newview/llfolderview.cpp:
 	Made inventory filter check code more readable.
 
 

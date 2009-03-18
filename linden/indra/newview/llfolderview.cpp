@@ -4526,32 +4526,46 @@ BOOL LLInventoryFilter::check(LLFolderViewItem* item)
 	mSubStringMatchOffset = mFilterSubString.size() ? item->getSearchableLabel().find(mFilterSubString) : std::string::npos;
 
 
+	// We want to hide these top-level folders
+	bool is_cc_s_or_s = ( item->getLabel() == "Calling Cards" ||
+	                      item->getLabel() == "Scripts" ||
+	                      item->getLabel() == "Sounds" );
+
+	LLFolderViewFolder *parent = item->getParentFolder();
+	bool parent_is_top = ( parent && parent->getParentFolder() ==
+	                                   parent->getRoot() );
+
+
 	BOOL passed = \
-	              // Item Type Check
-	              (listener->getNInventoryType() & mFilterOps.mFilterTypes ||
-	               listener->getNInventoryType() == LLInventoryType::NIT_NONE)
-	              &&
+		// Item Type Check
+		(listener->getNInventoryType() & mFilterOps.mFilterTypes ||
+		 listener->getNInventoryType() == LLInventoryType::NIT_NONE)
+		&&
 
-	              // Name Search Check
-	              (mFilterSubString.size() == 0 ||
-	               mSubStringMatchOffset != std::string::npos)
-	              &&
+		// Name Search Check
+		(mFilterSubString.size() == 0 ||
+		 mSubStringMatchOffset != std::string::npos)
+		&&
 
-	              // Worn Item Check
-	              (mFilterWorn == false ||
-	               gAgent.isWearingItem(item_id) ||
-	               gAgent.getAvatarObject() &&
-	                 gAgent.getAvatarObject()->isWearingAttachment(item_id))
-	              &&
+		// Worn Item Check
+		(mFilterWorn == false ||
+		 gAgent.isWearingItem(item_id) ||
+		 gAgent.getAvatarObject() &&
+		 gAgent.getAvatarObject()->isWearingAttachment(item_id))
+		&&
 
-	              // Permissions Check
-	              ((listener->getPermissionMask() & mFilterOps.mPermissions)
-	                  == mFilterOps.mPermissions)
-	              &&
+		// Permissions Check
+		((listener->getPermissionMask() & mFilterOps.mPermissions)
+		 == mFilterOps.mPermissions)
+		&&
 
-	              // Date Range Check
-	              (listener->getCreationDate() >= earliest &&
-	               listener->getCreationDate() <= mFilterOps.mMaxDate);
+		// Date Range Check
+		(listener->getCreationDate() >= earliest &&
+		 listener->getCreationDate() <= mFilterOps.mMaxDate)
+		&&
+
+		// Hidden Top-Level Folders Check
+		!(is_cc_s_or_s && parent_is_top);
 
 
 	return passed;
