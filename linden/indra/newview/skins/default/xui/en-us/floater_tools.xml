@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <floater bottom="-359" can_close="true" can_drag_on_left="false" can_minimize="true"
-     can_resize="false" follows="left|top" height="550" 
+     can_resize="false" follows="left|top" height="515" 
      left="308" min_height="100" min_width="100" mouse_opaque="true"
-     name="toolbox floater" rect_control="ToolboxRect" sound_flags="0" title=""
-     short_title="Build" width="272">
+     name="toolbox floater" rect_control="ToolboxRect" sound_flags="0" title="Edit Attachment"
+     short_title="Edit Attachment" width="272">
 
 <!-- Main floater tabs -->
 
-	<button bottom="-34" follows="left|top" font="SansSerif" halign="center" height="32"
+	<!--<button bottom="-34" follows="left|top" font="SansSerif" halign="center" height="32"
 	     image_disabled="tool_zoom.tga"
 	     image_disabled_selected="tool_zoom_active.tga"
 	     image_selected="tool_zoom_active.tga" image_unselected="tool_zoom.tga"
@@ -18,14 +18,14 @@
 	     image_disabled_selected="UIImgGrabSelectedUUID"
 	     image_selected="UIImgGrabSelectedUUID" image_unselected="UIImgGrabUUID"
 	     label="" label_selected="" left="40" mouse_opaque="true" name="button move"
-	     tool_tip="Move" width="32" />
-	<button bottom="-34" follows="left|top" font="SansSerif" halign="center" height="32"
+	     tool_tip="Move" width="32" />-->
+	<!--<button bottom="-34" follows="left|top" font="SansSerif" halign="center" height="0"
 	     image_disabled="UIImgFaceUUID"
 	     image_disabled_selected="UIImgFaceSelectedUUID"
 	     image_selected="UIImgFaceSelectedUUID" image_unselected="UIImgFaceUUID"
 	     label="" label_selected="" left="76" mouse_opaque="true" name="button edit"
-	     tool_tip="Edit" width="32" />
-	<button bottom="-34" follows="left|top" font="SansSerif" halign="center" height="32"
+	     tool_tip="Edit" width="0" />-->
+	<!--<button bottom="-34" follows="left|top" font="SansSerif" halign="center" height="32"
 	     image_disabled="UIImgCreateUUID"
 	     image_disabled_selected="UIImgCreateSelectedUUID"
 	     image_selected="UIImgCreateSelectedUUID" image_unselected="UIImgCreateUUID"
@@ -36,7 +36,7 @@
 	     image_disabled_selected="tool_dozer_active.tga"
 	     image_selected="tool_dozer_active.tga" image_unselected="tool_dozer.tga"
 	     label="" label_selected="" left="148" mouse_opaque="true"
-	     name="button land" tool_tip="Land" width="32" />
+	     name="button land" tool_tip="Land" width="32" />-->
 
 <!-- Focus panel -->
 
@@ -67,7 +67,7 @@
 
 <!-- Edit panel -->
 
-	<check_box bottom="-70" follows="left|top" font="SansSerifSmall" height="16"
+	<check_box bottom="-52" follows="left|top" font="SansSerifSmall" height="16"
 	     initial_value="false" label="Position" left="4" mouse_opaque="true"
 	     name="radio position" radio_style="true" width="114" />
 	<check_box bottom_delta="-15" follows="left|top" font="SansSerifSmall" height="16"
@@ -76,9 +76,6 @@
 	<check_box bottom_delta="-15" follows="left|top" font="SansSerifSmall" height="16"
 	     initial_value="false" label="Stretch (Ctrl-Shift)" left="4"
 	     mouse_opaque="true" name="radio stretch" radio_style="true" width="123" />
-	<check_box bottom_delta="-15" follows="left|top" font="SansSerifSmall" height="16"
-	     initial_value="false" label="Select Faces to Texture" left="4" mouse_opaque="true"
-	     name="radio select face" radio_style="true" width="114" />
 	<check_box bottom_delta="-19" control_name="EditLinkedParts" follows="left|top"
 	     font="SansSerifSmall" height="16" initial_value="false"
 	     label="Edit linked parts" left="4" mouse_opaque="true"
@@ -102,7 +99,7 @@
 			Reference
 		</combo_item>
 	</combo_box>
-	<check_box bottom="-70" control_name="ScaleUniform" follows="left|top"
+	<check_box bottom="-52" control_name="ScaleUniform" follows="left|top"
 	     font="SansSerifSmall" height="16" initial_value="false"
 	     label="Stretch Both Sides" left="143" mouse_opaque="true"
 	     name="checkbox uniform" width="134" />
@@ -120,10 +117,10 @@
 <!-- Help text -->
 
 	<text bg_visible="false" border_drop_shadow_visible="false" border_visible="false"
-	     bottom="-52" drop_shadow_visible="true" follows="left|top"
+	     bottom="-35" drop_shadow_visible="true" follows="left|top"
 	     font="SansSerifSmall" h_pad="0" halign="left" height="16" left="4"
 	     mouse_opaque="true" name="text status" v_pad="0" width="264">
-		Drag to move, shift-drag to copy
+		Drag to move
 	</text>
 
 <!-- Create panel -->
@@ -302,14 +299,14 @@
 	     mouse_opaque="true" name="slider force" width="80" />	
 
 
-	<button bottom="-163" follows="left|top" font="SansSerifSmall" halign="center"
+	<!--<button bottom="-163" follows="left|top" font="SansSerifSmall" halign="center"
 	     height="20" label="More &gt;&gt;" left="186" mouse_opaque="true"
 	     name="button more" scale_image="TRUE" tool_tip="Advanced Options"
 	     width="80" />
 	<button bottom_delta="0" follows="left|top" font="SansSerifSmall" halign="center"
 	     height="20" label="&lt;&lt; Less" left_delta="0" mouse_opaque="true"
 	     name="button less" scale_image="TRUE" tool_tip="Advanced Options"
-	     width="80" />
+	     width="80" />-->
 
 <!-- Sub-tabs -->
 
@@ -1285,7 +1282,7 @@
 		Click and drag to stretch selected side
 	</string>
 	<string name="status_move">
-		Drag to move, shift-drag to copy
+		Drag to move
 	</string>
 	<string name="status_modifyland">
 		Click and hold to modify land

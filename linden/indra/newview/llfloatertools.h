@@ -111,11 +111,11 @@ private:
 
 public:
 
-	LLButton		*mBtnFocus;
-	LLButton		*mBtnMove;
+	/*LLButton		*mBtnFocus;
+	LLButton		*mBtnMove;*/
 	LLButton		*mBtnEdit;
-	LLButton		*mBtnCreate;
-	LLButton		*mBtnLand;
+	/*LLButton		*mBtnCreate;
+	LLButton		*mBtnLand;*/
 
 	LLTextBox		*mTextStatus;
 
@@ -133,7 +133,7 @@ public:
 	LLCheckBoxCtrl	*mRadioPosition;
 	LLCheckBoxCtrl	*mRadioRotate;
 	LLCheckBoxCtrl	*mRadioStretch;
-	LLCheckBoxCtrl	*mRadioSelectFace;
+	/*LLCheckBoxCtrl	*mRadioSelectFace;*/
 
 	LLCheckBoxCtrl	*mCheckSelectIndividual;
 

@@ -40,6 +40,18 @@
 	Ditto.
 
 
+	* linden/indra/newview/app_settings/settings.xml:
+	Truncated tools to just edit.
+	* linden/indra/newview/llfloatertools.cpp:
+	Ditto.
+	* linden/indra/newview/llfloatertools.h:
+	Ditto.
+	* linden/indra/newview/llviewermenu.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_tools.xml:
+	Ditto.
+
+
 2009-03-17  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
