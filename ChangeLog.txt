@@ -1,3 +1,8 @@
+2009-03-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/llfolderview.cpp:
+	Hide calling cards, scripts, and sounds by default.
+
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 =-                       1.1.0 RC2                        -=

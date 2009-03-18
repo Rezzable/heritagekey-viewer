@@ -4480,6 +4480,13 @@ LLInventoryFilter::LLInventoryFilter(const std::string& name) :
 	mNeedTextRebuild(TRUE)
 {
 	mFilterOps.mFilterTypes = LLInventoryType::NIT_ALL;
+
+	// Filter out Callcards, Scripts, and Sounds - HK
+	mFilterOps.mFilterTypes &= ~(LLInventoryType::NIT_CALLCARD | \
+	                             LLInventoryType::NIT_SCRIPT_LSL2 | \
+	                             LLInventoryType::NIT_SOUND);
+
+
 	mFilterOps.mMinDate = time_min();
 	mFilterOps.mMaxDate = time_max();
 	mFilterOps.mHoursAgo = 0;
