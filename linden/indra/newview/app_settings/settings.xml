@@ -2558,6 +2558,50 @@
       <key>Value</key>
       <integer>0</integer>
     </map>
+    <key>LongDateFormat</key>
+    <map>
+      <key>Comment</key>
+      <string>Long date format to use</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>String</string>
+      <key>Value</key>
+      <string>%A %Y-%m-%d</string>
+    </map>
+    <key>ShortDateFormat</key>
+    <map>
+      <key>Comment</key>
+      <string>Short date format to use</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>String</string>
+      <key>Value</key>
+      <string>%Y-%m-%d</string>
+    </map>
+    <key>TimeFormat</key>
+    <map>
+      <key>Comment</key>
+      <string>Time format to use</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>String</string>
+      <key>Value</key>
+      <string>%H:%M</string>
+    </map>
+    <key>TimestampFormat</key>
+    <map>
+      <key>Comment</key>
+      <string>Timestamp format to use</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>String</string>
+      <key>Value</key>
+      <string>%Y-%m-%dT%H:%M:%SZ</string>
+    </map>
     <key>FloaterAboutRect</key>
     <map>
       <key>Comment</key>

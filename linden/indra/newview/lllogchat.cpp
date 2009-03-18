@@ -32,7 +32,7 @@
 #include "llviewerprecompiledheaders.h"
 
 #include "lllogchat.h"
-#include "llappviewer.h"
+#include "llviewercontrol.h"
 #include "llfloaterchat.h"
 
 const S32 LOG_RECALL_SIZE = 2048;
@@ -60,21 +60,26 @@ std::string LLLogChat::cleanFileName(std::string filename)
 
 std::string LLLogChat::timestamp(bool withdate)
 {
+	// Get current UTC time, adjusted for the user's clock
+	// being off.
 	time_t utc_time;
 	utc_time = time_corrected();
 
 	// There's only one internal tm buffer.
-	struct tm* timep;
-
-	// Convert to Pacific, based on server's opinion of whether
-	// it's daylight savings time there.
-	timep = utc_to_pacific_time(utc_time, gPacificDaylightTime);
+	struct tm* internal_time;
+	time(&utc_time);
+	internal_time = gmtime(&utc_time);
 
 	std::string text;
 	if (withdate)
-		text = llformat("[%d/%02d/%02d %d:%02d]  ", (timep->tm_year-100)+2000, timep->tm_mon+1, timep->tm_mday, timep->tm_hour, timep->tm_min);
+	{
+		timeStructToFormattedString(internal_time, gSavedSettings.getString("TimestampFormat"), text);
+	}
 	else
-		text = llformat("[%d:%02d]  ", timep->tm_hour, timep->tm_min);
+	{
+		timeStructToFormattedString(internal_time, gSavedSettings.getString("TimeFormat"), text);
+	}
+	text = "[" + text + "]  ";
 
 	return text;
 }

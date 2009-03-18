@@ -4664,8 +4664,10 @@ void container_inventory_arrived(LLViewerObject* object,
 // method to format the time.
 std::string formatted_time(const time_t& the_time)
 {
+	std::string timestr;
+	timeToFormattedString(the_time, gSavedSettings.getString("TimestampFormat"), timestr);
 	char buffer[30]; /* Flawfinder: ignore */
-	LLStringUtil::copy(buffer, ctime(&the_time), 30);
+	LLStringUtil::copy(buffer, timestr.c_str(), 30);
 	buffer[24] = '\0';
 	return std::string(buffer);
 }

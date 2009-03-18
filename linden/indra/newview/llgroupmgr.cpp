@@ -48,6 +48,7 @@
 #include "lltransactiontypes.h"
 #include "llstatusbar.h"
 #include "lleconomy.h"
+#include "llviewercontrol.h"
 #include "llviewerwindow.h"
 #include "llfloaterdirectory.h"
 #include "llfloatergroupinfo.h"
@@ -840,6 +841,14 @@ void LLGroupMgr::processGroupMembersReply(LLMessageSystem* msg, void** data)
 
 			if (member_id.notNull())
 			{
+				tm t;
+				if (sscanf(online_status.c_str(), "%u/%u/%u", &t.tm_mon, &t.tm_mday, &t.tm_year) == 3 && t.tm_year > 1900)
+				{
+					t.tm_year -= 1900;
+					t.tm_mon--;
+					t.tm_hour = t.tm_min = t.tm_sec = 0;
+					timeStructToFormattedString(&t, gSavedSettings.getString("ShortDateFormat"), online_status);
+				}
 				//llinfos << "Member " << member_id << " has powers " << std::hex << agent_powers << std::dec << llendl;
 				LLGroupMemberData* newdata = new LLGroupMemberData(member_id, 
 																	contribution, 

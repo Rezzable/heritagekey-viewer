@@ -59,8 +59,6 @@
 #include "llmemorystream.h"
 #include "llmenugl.h"
 
-#include "llappviewer.h" // for gPacificDaylightTime
-
 static LLRegisterWidget<LLViewerTextEditor> r("text_editor");
 
 ///----------------------------------------------------------------------------
@@ -1244,17 +1242,19 @@ std::string LLViewerTextEditor::getEmbeddedText()
 
 std::string LLViewerTextEditor::appendTime(bool prepend_newline)
 {
+	// Get current UTC time, adjusted for the user's clock
+	// being off.
 	time_t utc_time;
 	utc_time = time_corrected();
 
 	// There's only one internal tm buffer.
-	struct tm* timep;
+	struct tm* internal_time;
+	time(&utc_time);
+	internal_time = gmtime(&utc_time);
 
-	// Convert to Pacific, based on server's opinion of whether
-	// it's daylight savings time there.
-	timep = utc_to_pacific_time(utc_time, gPacificDaylightTime);
-
-	std::string text = llformat("[%d:%02d]  ", timep->tm_hour, timep->tm_min);
+	std::string text;
+	timeStructToFormattedString(internal_time, gSavedSettings.getString("TimeFormat"), text);
+	text = "[" + text + "]  ";
 	appendColoredText(text, false, prepend_newline, LLColor4::grey);
 
 	return text;
