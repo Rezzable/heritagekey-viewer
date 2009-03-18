@@ -4862,18 +4862,6 @@ std::string LLInventoryFilter::rebuildFilterText()
 		filtered_by_all_types = FALSE;
 	}
 
-	if (isFilterWith(LLInventoryType::NIT_CALLCARD))
-	{
-		filtered_types += " Calling Cards,";
-		filtered_by_type = TRUE;
-		num_filter_types++;
-	}
-	else
-	{
-		not_filtered_types += " Calling Cards,";
-		filtered_by_all_types = FALSE;
-	}
-
 	if (isFilterWith(LLInventoryType::NIT_CLOTHING))
 	{
 		filtered_types += " Clothing,";
@@ -4934,30 +4922,6 @@ std::string LLInventoryFilter::rebuildFilterText()
 		filtered_by_all_types = FALSE;
 	}
 	
-	if (isFilterWith(LLInventoryType::NIT_SCRIPT_LSL2))
-	{
-		filtered_types += " Scripts,";
-		filtered_by_type = TRUE;
-		num_filter_types++;
-	}
-	else
-	{
-		not_filtered_types += " Scripts,";
-		filtered_by_all_types = FALSE;
-	}
-	
-	if (isFilterWith(LLInventoryType::NIT_SOUND))
-	{
-		filtered_types += " Sounds,";
-		filtered_by_type = TRUE;
-		num_filter_types++;
-	}
-	else
-	{
-		not_filtered_types += " Sounds,";
-		filtered_by_all_types = FALSE;
-	}
-
 	if (isFilterWith(LLInventoryType::NIT_TEXTURE))
 	{
 		filtered_types += " Textures,";

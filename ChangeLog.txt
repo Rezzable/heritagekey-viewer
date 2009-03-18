@@ -1,5 +1,9 @@
 2009-03-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/llfolderview.cpp:
+	Removed cards, scripts, and sounds from inv window titler.
+
+
 	* linden/indra/newview/skins/default/xui/en-us/floater_inventory_view_finder.xml:
 	Removed Show Filter checkboxes for cards, scripts, and sounds.
 
