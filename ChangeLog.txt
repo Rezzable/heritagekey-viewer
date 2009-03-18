@@ -1,3 +1,11 @@
+2009-03-18  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/skins/default/xui/en-us/panel_preferences_im.xml:
+	Removed group reference from en-us preferences
+	(not sure about the other langs).
+
+
 2009-03-17  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
