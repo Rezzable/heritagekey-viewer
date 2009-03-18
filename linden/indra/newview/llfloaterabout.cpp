@@ -278,17 +278,17 @@ void LLFloaterAbout::show(void*)
 
 static std::string get_viewer_release_notes_url()
 {
-	std::ostringstream version;
-	version << IMP_VERSION_MAJOR << "."
-	        << IMP_VERSION_MINOR << "."
-	        << IMP_VERSION_PATCH;
+	//std::ostringstream version;
+	//version << IMP_VERSION_MAJOR << "."
+	//        << IMP_VERSION_MINOR << "."
+	//        << IMP_VERSION_PATCH;
 
-	// Append the test version if it's not empty
-	if( strcmp(IMP_VERSION_TEST, "") != 0 )
-		version << "-" << IMP_VERSION_TEST;
+	//// Append the test version if it's not empty
+	//if( strcmp(IMP_VERSION_TEST, "") != 0 )
+	//	version << "-" << IMP_VERSION_TEST;
 
 	std::ostringstream url;
-	url << RELEASE_NOTES_BASE_URL << version.str();
+	url << "http://heritage-key.com/virtual-experience/viewer/release-notes" ;
 
 	return url.str();
 }

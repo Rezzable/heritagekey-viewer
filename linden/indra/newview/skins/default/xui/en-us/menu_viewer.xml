@@ -802,7 +802,7 @@
     </menu_item_call>
     <menu_item_separator />-->
     <menu_item_call name="Report Abuse..." label="Report Abuse...">
-      <on_click function="ShowURL" userdata="http://www.google.com" />
+      <on_click function="ShowURL" userdata="http://heritage-key.com/contact" />
     </menu_item_call>
     <!--<menu_item_call name="Bumps, Pushes &amp;amp; Hits..."
                     label="Bumps, Pushes &amp; Hits...">

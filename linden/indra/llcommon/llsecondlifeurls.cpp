@@ -33,7 +33,7 @@
 #include "llsecondlifeurls.h"
 
 const std::string CREATE_ACCOUNT_URL ( 
-	"http://secondlife.com/registration/");
+	"http://heritage-key.com/user/register/");
 
 const std::string MANAGE_ACCOUNT ( 
 	"http://secondlife.com/account/");
@@ -63,7 +63,7 @@ const std::string VIA_URL (
 	"http://secondlife.com/support/");
 
 const std::string SUPPORT_URL ( 
-    "http://secondlife.com/support/");
+    "http://heritage-key.com/virtual-experience/help");
 
 const std::string INTEL_CHIPSET_URL ( 
 	"http://secondlife.com/support/");

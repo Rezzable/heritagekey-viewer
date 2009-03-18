@@ -852,45 +852,47 @@ void LLPanelLogin::loadLoginPage()
 	}
 	oStr << login_page;
 	
-	// Use the right delimeter depending on how LLURI parses the URL
-	LLURI login_page_uri = LLURI(login_page);
-	std::string first_query_delimiter = "&";
-	if (login_page_uri.queryMap().size() == 0)
-	{
-		first_query_delimiter = "?";
-	}
+	// We won't be needing any of these -- McCabe
 
-	// Language
-	std::string language(gSavedSettings.getString("Language"));
-	if(language == "default")
-	{
-		language = gSavedSettings.getString("SystemLanguage");
-	}
-	oStr << first_query_delimiter<<"lang=" << language;
-	
-	// First Login?
-	if (gSavedSettings.getBOOL("FirstLoginThisInstall"))
-	{
-		oStr << "&firstlogin=TRUE";
-	}
+	//// Use the right delimeter depending on how LLURI parses the URL
+	//LLURI login_page_uri = LLURI(login_page);
+	//std::string first_query_delimiter = "&";
+	//if (login_page_uri.queryMap().size() == 0)
+	//{
+	//	first_query_delimiter = "?";
+	//}
 
-	// Channel and Version
-	std::string version = llformat("%d.%d.%d (%d)",
-						LL_VERSION_MAJOR, LL_VERSION_MINOR, LL_VERSION_PATCH, LL_VIEWER_BUILD);
+	//// Language
+	//std::string language(gSavedSettings.getString("Language"));
+	//if(language == "default")
+	//{
+	//	language = gSavedSettings.getString("SystemLanguage");
+	//}
+	//oStr << first_query_delimiter<<"lang=" << language;
+	//
+	//// First Login?
+	//if (gSavedSettings.getBOOL("FirstLoginThisInstall"))
+	//{
+	//	oStr << "&firstlogin=TRUE";
+	//}
 
-	char* curl_channel = curl_escape(gSavedSettings.getString("VersionChannelName").c_str(), 0);
-	char* curl_version = curl_escape(version.c_str(), 0);
+	//// Channel and Version
+	//std::string version = llformat("%d.%d.%d (%d)",
+	//					LL_VERSION_MAJOR, LL_VERSION_MINOR, LL_VERSION_PATCH, LL_VIEWER_BUILD);
 
-	oStr << "&channel=" << curl_channel;
-	oStr << "&version=" << curl_version;
+	//char* curl_channel = curl_escape(gSavedSettings.getString("VersionChannelName").c_str(), 0);
+	//char* curl_version = curl_escape(version.c_str(), 0);
 
-	curl_free(curl_channel);
-	curl_free(curl_version);
+	//oStr << "&channel=" << curl_channel;
+	//oStr << "&version=" << curl_version;
 
-	// Grid
-	char* curl_grid = curl_escape(LLViewerLogin::getInstance()->getGridCodeName().c_str(), 0);
-	oStr << "&grid=" << curl_grid;
-	curl_free(curl_grid);
+	//curl_free(curl_channel);
+	//curl_free(curl_version);
+
+	//// Grid
+	//char* curl_grid = curl_escape(LLViewerLogin::getInstance()->getGridCodeName().c_str(), 0);
+	//oStr << "&grid=" << curl_grid;
+	//curl_free(curl_grid);
 
 	gViewerWindow->setMenuBackgroundColor(false, !LLViewerLogin::getInstance()->isInProductionGrid());
 	gLoginMenuBarView->setBackgroundColor(gMenuBarView->getBackgroundColor());
