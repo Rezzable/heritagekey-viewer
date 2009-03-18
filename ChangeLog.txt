@@ -1,6 +1,14 @@
 2009-03-17  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
+	* linden/indra/newview/llstatusbar.cpp:
+	Removed unnecessary options from status bar.
+	* linden/indra/newview/skins/default/xui/en-us/panel_status_bar.xml:
+	Ditto.
+	* linden/indra/newview/skins/silver/xui/en-us/panel_status_bar.xml:
+	Ditto.
+
+
 	* linden/indra/newview/llfloaterbump.cpp:
 	All HK timestamps now display in UTC.
 	* linden/indra/newview/lllogchat.cpp:

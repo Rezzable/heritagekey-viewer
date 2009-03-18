@@ -587,7 +587,7 @@ void LLStatusBar::refresh()
 
 	childGetRect("TimeText", r);
 	// mTextTime->getTextPixelWidth();
-	r.translate( new_right - r.mRight, 0);
+	r.translate( new_right - r.mRight - 12, 0);
 	childSetRect("TimeText", r);
 	// new_right -= r.getWidth() + MENU_PARCEL_SPACING;
 
