@@ -1,5 +1,9 @@
 2009-03-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/llfolderview.cpp:
+	Made inventory filter check code more readable.
+
+
 	* linden/indra/llinventory/llinventorytype.h:
 	Defined and using NIT_DEFAULT for simplicity/adaptability.
 	Currently set to all types except cards, scripts, and sounds.

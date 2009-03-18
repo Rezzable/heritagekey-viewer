@@ -4524,12 +4524,36 @@ BOOL LLInventoryFilter::check(LLFolderViewItem* item)
 	LLFolderViewEventListener* listener = item->getListener();
 	const LLUUID& item_id = listener->getUUID();
 	mSubStringMatchOffset = mFilterSubString.size() ? item->getSearchableLabel().find(mFilterSubString) : std::string::npos;
-	BOOL passed = (listener->getNInventoryType() & mFilterOps.mFilterTypes || listener->getNInventoryType() == LLInventoryType::NIT_NONE)
-					&& (mFilterSubString.size() == 0 || mSubStringMatchOffset != std::string::npos)
-					&& (mFilterWorn == false || gAgent.isWearingItem(item_id) ||
-						gAgent.getAvatarObject() && gAgent.getAvatarObject()->isWearingAttachment(item_id))
-					&& ((listener->getPermissionMask() & mFilterOps.mPermissions) == mFilterOps.mPermissions)
-					&& (listener->getCreationDate() >= earliest && listener->getCreationDate() <= mFilterOps.mMaxDate);
+
+
+	BOOL passed = \
+	              // Item Type Check
+	              (listener->getNInventoryType() & mFilterOps.mFilterTypes ||
+	               listener->getNInventoryType() == LLInventoryType::NIT_NONE)
+	              &&
+
+	              // Name Search Check
+	              (mFilterSubString.size() == 0 ||
+	               mSubStringMatchOffset != std::string::npos)
+	              &&
+
+	              // Worn Item Check
+	              (mFilterWorn == false ||
+	               gAgent.isWearingItem(item_id) ||
+	               gAgent.getAvatarObject() &&
+	                 gAgent.getAvatarObject()->isWearingAttachment(item_id))
+	              &&
+
+	              // Permissions Check
+	              ((listener->getPermissionMask() & mFilterOps.mPermissions)
+	                  == mFilterOps.mPermissions)
+	              &&
+
+	              // Date Range Check
+	              (listener->getCreationDate() >= earliest &&
+	               listener->getCreationDate() <= mFilterOps.mMaxDate);
+
+
 	return passed;
 }
 
