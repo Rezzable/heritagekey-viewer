@@ -2567,7 +2567,7 @@
       <key>Type</key>
       <string>String</string>
       <key>Value</key>
-      <string>%A %d %B %Y</string>
+      <string>%A %Y-%m-%d</string>
     </map>
     <key>ShortDateFormat</key>
     <map>
@@ -2600,7 +2600,7 @@
       <key>Type</key>
       <string>String</string>
       <key>Value</key>
-      <string>%a %d %b %Y %H:%M:%S</string>
+      <string>%Y-%m-%dT%H:%M:%SZ</string>
     </map>
     <key>FloaterAboutRect</key>
     <map>

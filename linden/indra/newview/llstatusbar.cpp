@@ -260,21 +260,12 @@ void LLStatusBar::refresh()
 
 	// There's only one internal tm buffer.
 	struct tm* internal_time;
-
-	// Convert to Pacific, based on server's opinion of whether
-	// it's daylight savings time there.
-	internal_time = utc_to_pacific_time(utc_time, gPacificDaylightTime);
+	time(&utc_time);
+	internal_time = gmtime(&utc_time);
 
 	std::string t;
 	timeStructToFormattedString(internal_time, gSavedSettings.getString("TimeFormat"), t);
-	if (gPacificDaylightTime)
-	{
-		t += " PDT";
-	}
-	else
-	{
-		t += " PST";
-	}
+	t += " UTC";
 	mTextTime->setText(t);
 
 	std::string date;

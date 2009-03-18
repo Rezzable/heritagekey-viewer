@@ -1,6 +1,18 @@
 2009-03-17  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
+	* linden/indra/newview/llfloaterbump.cpp:
+	All HK timestamps now display in UTC.
+	* linden/indra/newview/lllogchat.cpp:
+	Ditto.
+	* linden/indra/newview/llstatusbar.cpp:
+	Ditto.
+	* linden/indra/newview/app_settings/settings.xml:
+	Ditto.
+	* linden/indra/newview/llviewertexteditor.cpp:
+	Ditto.
+
+
 	* linden/indra/llcommon/lltimer.cpp:
 	Date and timestamps can now displayed in international formats.
 	* linden/indra/llcommon/lltimer.h:
