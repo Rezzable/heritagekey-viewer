@@ -1,5 +1,9 @@
 2009-03-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/skins/default/xui/en-us/floater_tools.xml:
+	Removed "New Script" button from object contents tab.
+
+
 	* linden/indra/newview/skins/default/xui/en-us/floater_inventory.xml:
 	Removed inventory window Create menu entirely.
 
