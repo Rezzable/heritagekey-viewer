@@ -121,14 +121,11 @@ LLInventoryViewFinder::LLInventoryViewFinder(const std::string& name,
 
 	childSetCommitCallback("check_animation",    onCheckFilterType, this);
 	childSetCommitCallback("check_bodypart",     onCheckFilterType, this);
-	childSetCommitCallback("check_calling_card", onCheckFilterType, this);
 	childSetCommitCallback("check_clothing",     onCheckFilterType, this);
 	childSetCommitCallback("check_gesture",      onCheckFilterType, this);
 	childSetCommitCallback("check_landmark",     onCheckFilterType, this);
 	childSetCommitCallback("check_notecard",     onCheckFilterType, this);
 	childSetCommitCallback("check_object",       onCheckFilterType, this);
-	childSetCommitCallback("check_script",       onCheckFilterType, this);
-	childSetCommitCallback("check_sound",        onCheckFilterType, this);
 	childSetCommitCallback("check_texture",      onCheckFilterType, this);
 	childSetCommitCallback("check_snapshot",     onCheckFilterType, this);
 
@@ -230,8 +227,6 @@ void LLInventoryViewFinder::updateElementsFromFilter()
 	              (S32)(filter_types & LLInventoryType::NIT_ANIMATION));
 	childSetValue("check_bodypart",
 	              (S32)(filter_types & LLInventoryType::NIT_BODYPART));
-	childSetValue("check_calling_card",
-	              (S32)(filter_types & LLInventoryType::NIT_CALLCARD));
 	childSetValue("check_clothing",
 	              (S32)(filter_types & LLInventoryType::NIT_CLOTHING));
 	childSetValue("check_gesture",
@@ -242,10 +237,6 @@ void LLInventoryViewFinder::updateElementsFromFilter()
 	              (S32)(filter_types & LLInventoryType::NIT_NOTECARD));
 	childSetValue("check_object",
 	              (S32)(filter_types & LLInventoryType::NIT_OBJECT));
-	childSetValue("check_script",
-	              (S32)(filter_types & LLInventoryType::NIT_SCRIPT_LSL2));
-	childSetValue("check_sound",
-	              (S32)(filter_types & LLInventoryType::NIT_SOUND));
 	childSetValue("check_texture",
 	              (S32)(filter_types & LLInventoryType::NIT_TEXTURE));
 	childSetValue("check_snapshot",
@@ -282,11 +273,6 @@ void LLInventoryViewFinder::rebuildFilter()
 		filter &= ~(LLInventoryType::NIT_BODYPART);
 	}
 
-	if (!childGetValue("check_calling_card"))
-	{
-		filter &= ~(LLInventoryType::NIT_CALLCARD);
-	}
-
 	if (!childGetValue("check_clothing"))
 	{
 		filter &= ~(LLInventoryType::NIT_CLOTHING);
@@ -310,16 +296,6 @@ void LLInventoryViewFinder::rebuildFilter()
 	if (!childGetValue("check_object"))
 	{
 		filter &= ~(LLInventoryType::NIT_OBJECT);
-	}
-
-	if (!childGetValue("check_script"))
-	{
-		filter &= ~(LLInventoryType::NIT_SCRIPT_LSL2);
-	}
-
-	if (!childGetValue("check_sound"))
-	{
-		filter &= ~(LLInventoryType::NIT_SOUND);
 	}
 
 	if (!childGetValue("check_texture"))
@@ -401,14 +377,11 @@ void LLInventoryViewFinder::selectAllTypes(void* user_data)
 
 	self->childSetValue("check_animation", TRUE);
 	self->childSetValue("check_bodypart", TRUE);
-	self->childSetValue("check_calling_card", TRUE);
 	self->childSetValue("check_clothing", TRUE);
 	self->childSetValue("check_gesture", TRUE);
 	self->childSetValue("check_landmark", TRUE);
 	self->childSetValue("check_notecard", TRUE);
 	self->childSetValue("check_object", TRUE);
-	self->childSetValue("check_script", TRUE);
-	self->childSetValue("check_sound", TRUE);
 	self->childSetValue("check_texture", TRUE);
 	self->childSetValue("check_snapshot", TRUE);
 
@@ -423,14 +396,11 @@ void LLInventoryViewFinder::selectNoTypes(void* user_data)
 
 	self->childSetValue("check_animation", FALSE);
 	self->childSetValue("check_bodypart", FALSE);
-	self->childSetValue("check_calling_card", FALSE);
 	self->childSetValue("check_clothing", FALSE);
 	self->childSetValue("check_gesture", FALSE);
 	self->childSetValue("check_landmark", FALSE);
 	self->childSetValue("check_notecard", FALSE);
 	self->childSetValue("check_object", FALSE);
-	self->childSetValue("check_script", FALSE);
-	self->childSetValue("check_sound", FALSE);
 	self->childSetValue("check_texture", FALSE);
 	self->childSetValue("check_snapshot", FALSE);
 

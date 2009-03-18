@@ -1,6 +1,10 @@
 2009-03-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/llinventoryview.cpp:
+	Removed refs to card, script, and sound filter checkboxes.
+
+
+	* linden/indra/newview/llinventoryview.cpp:
 	Cards, scripts, and sounds disabled when rebuilding filter.
 
 
