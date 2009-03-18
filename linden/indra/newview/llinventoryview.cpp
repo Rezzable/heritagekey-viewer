@@ -267,6 +267,11 @@ void LLInventoryViewFinder::rebuildFilter()
 {
 	U32 filter = LLInventoryType::NIT_ALL;
 
+	// Disabled by default
+	filter &= ~(LLInventoryType::NIT_CALLCARD | \
+	            LLInventoryType::NIT_SCRIPT_LSL2 | \
+	            LLInventoryType::NIT_SOUND);
+
 	if (!childGetValue("check_animation"))
 	{
 		filter &= ~(LLInventoryType::NIT_ANIMATION);

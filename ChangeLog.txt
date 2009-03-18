@@ -1,5 +1,9 @@
 2009-03-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/llinventoryview.cpp:
+	Cards, scripts, and sounds disabled when rebuilding filter.
+
+
 	* linden/indra/newview/llfolderview.cpp:
 	Hide calling cards, scripts, and sounds by default.
 
