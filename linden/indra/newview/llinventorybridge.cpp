@@ -1954,10 +1954,6 @@ void LLFolderBridge::buildContextMenu(LLMenuGL& menu, U32 flags)
 		if(item_array.count() > 0) contains_calling_cards = TRUE;
 */
 		mItems.push_back(std::string("New Folder"));
-		mItems.push_back(std::string("New Note"));
-		mItems.push_back(std::string("New Gesture"));
-		mItems.push_back(std::string("New Clothes"));
-		mItems.push_back(std::string("New Body Parts"));
 
 		getClipboardEntries(false, mItems, mDisabledItems, flags);
 

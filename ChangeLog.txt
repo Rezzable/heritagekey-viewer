@@ -1,6 +1,12 @@
 2009-03-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/llinventorybridge.cpp:
+	Removed create actions (except folder) from inv context menu.
+	* linden/indra/newview/skins/default/xui/en-us/menu_inventory.xml:
+	Ditto.
+
+
+	* linden/indra/newview/llinventorybridge.cpp:
 	Removed New Script from inventory context menu.
 	* linden/indra/newview/skins/default/xui/en-us/menu_inventory.xml: 
 	Ditto.
