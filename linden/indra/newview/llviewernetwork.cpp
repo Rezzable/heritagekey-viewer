@@ -47,6 +47,11 @@ struct LLGridData
 static LLGridData gGridInfo[GRID_INFO_COUNT] = 
 {
 	{ "None", "", "", "", "" },
+	{ "Heritage Key Grid",
+	  "",
+	  "HeritageKey",
+	  "http://login.heritage-key.com/",
+	  "" },
 	{ "SL Main Grid",
 	  "Agni",
 	  "util.agni.lindenlab.com", 
