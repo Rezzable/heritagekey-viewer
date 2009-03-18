@@ -1,5 +1,8 @@
 2009-03-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/skins/default/xui/en-us/floater_inventory_view_finder.xml:
+	Removed Show Filter checkboxes for cards, scripts, and sounds.
+
 	* linden/indra/newview/llinventoryview.cpp:
 	Removed refs to card, script, and sound filter checkboxes.
 
