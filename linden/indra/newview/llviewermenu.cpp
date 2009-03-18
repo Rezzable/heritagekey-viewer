@@ -1844,8 +1844,6 @@ class LLObjectEdit : public view_listener_t
 		LLViewerJoystick::getInstance()->moveObjects(true);
 		LLViewerJoystick::getInstance()->setNeedsReset(true);
 
-		// Could be first use
-		LLFirstUse::useBuild();
 		return true;
 	}
 };
