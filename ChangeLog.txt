@@ -6,6 +6,12 @@
 	(not sure about the other langs).
 
 
+	* linden/indra/newview/skins/default/xui/en-us/panel_toolbar.xml:
+	Removed build and search from toolbar.
+	* linden/indra/newview/skins/silver/xui/en-us/panel_toolbar.xml:
+	Ditto.
+
+
 2009-03-17  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
@@ -91,7 +97,7 @@
 
 
 	* linden/indra/llmessage/llinstantmessage.cpp:
-	System message should now be branded 'Heritage Key' .
+	System message should now be branded 'Heritage Key'.
 
  
 	* linden/indra/develop.py:
