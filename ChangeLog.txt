@@ -1,5 +1,11 @@
 2009-03-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/llinventorybridge.cpp:
+	Removed New Script from inventory context menu.
+	* linden/indra/newview/skins/default/xui/en-us/menu_inventory.xml: 
+	Ditto.
+
+
 	* linden/indra/newview/skins/default/xui/en-us/floater_tools.xml:
 	Removed "New Script" button from object contents tab.
 
