@@ -1,3 +1,11 @@
+2009-03-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/viewer_manifest.py:
+	Updated Linux manifest and wrapper script to new executable name.
+	* linden/indra/newview/linux_tools/wrapper.sh:
+	Ditto.
+
+
 2009-03-18  McCabe Maxsted  <hakushakukun@gmail.com>
 
 

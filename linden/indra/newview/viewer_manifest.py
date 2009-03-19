@@ -570,7 +570,7 @@ class LinuxManifest(ViewerManifest):
         if self.prefix("linux_tools", dst=""):
             #self.path("client-readme.txt","README-linux.txt")
             #self.path("client-readme-voice.txt","README-linux-voice.txt")
-            self.path("wrapper.sh","imprudence")
+            self.path("wrapper.sh","heritagekey")
             self.path("handle_secondlifeprotocol.sh")
             self.path("register_secondlifeprotocol.sh")
             self.end_prefix("linux_tools")
@@ -642,7 +642,7 @@ class LinuxManifest(ViewerManifest):
 class Linux_i686Manifest(LinuxManifest):
     def construct(self):
         super(Linux_i686Manifest, self).construct()
-        self.path("imprudence-stripped","bin/do-not-directly-run-imprudence-bin")
+        self.path("heritagekey-stripped","bin/do-not-directly-run-heritagekey-bin")
 #        self.path("../linux_crash_logger/linux-crash-logger-stripped","linux-crash-logger.bin")
         self.path("linux_tools/launch_url.sh","launch_url.sh")
         if self.prefix("res-sdl"):
