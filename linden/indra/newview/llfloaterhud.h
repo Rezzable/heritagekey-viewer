@@ -56,4 +56,24 @@ private:
 	static LLFloaterHUD* sInstance;
 };
 
+class LLFloaterMapImage : public LLFloater
+{
+public:
+	static LLFloaterMapImage* getInstance(); ///< get instance creating if necessary
+
+	static void show(); ///< show the map
+
+	// Save our visibility state during close
+	/*virtual*/ void onClose(bool app_quitting);
+
+private:
+	// Handles its own construction and destruction, so private.
+	LLFloaterMapImage();
+	/*virtual*/ ~LLFloaterMapImage();
+
+private:
+	LLWebBrowserCtrl* mWebBrowser; ///< the actual web browser control
+	static LLFloaterMapImage* sInstance2;
+};
+
 #endif // LL_LLFLOATERHUD_H

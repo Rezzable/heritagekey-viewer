@@ -48,6 +48,7 @@
 #include "llfloaterchat.h"
 #include "llfloaterclothing.h"
 #include "llfloaterdirectory.h"
+#include "llfloaterhud.h"
 #include "llfloatermap.h"
 #include "llfloaterworldmap.h"
 #include "llgivemoney.h"
@@ -90,7 +91,7 @@ void handle_mouselook(void*)
 
 void handle_map(void*)
 {
-	LLFloaterWorldMap::toggle(NULL);
+	LLFloaterMapImage::show();
 }
 
 void handle_mini_map(void*)

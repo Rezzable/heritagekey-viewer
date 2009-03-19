@@ -316,10 +316,10 @@
       <on_click function="ShowFloater" userdata="movement controls" />
       <on_check function="FloaterVisible" userdata="movement controls" />
     </menu_item_check>
-    <menu_item_call name="World Map" label="World Map"
+    <menu_item_check name="World Map" label="World Map"
                      shortcut="control|M">
-      <on_click function="ShowURLInworld" userdata="http://www.google.com" />
-    </menu_item_call>
+      <on_click function="ShowFloater" userdata="world map" />
+    </menu_item_check>
     <menu_item_check name="Mini-Map" label="Mini-Map"
                      shortcut="control|shift|M">
       <on_click function="ShowFloater" userdata="mini map" />
@@ -891,6 +891,14 @@
                     shortcut="control|shift|F2">
       <on_click function="Advanced.ReloadSettingsOverrides" userdata="" />
     </menu_item_call>
+
+
+    <!-- USEFUL STUFF -->
+    
+    
+    <menu_item_check name="Original World Map" label="Original World Map">
+      <on_click function="ShowFloater" userdata="original world map" />
+    </menu_item_check>
 
 
 

@@ -5129,9 +5129,13 @@ class LLShowFloater : public view_listener_t
 		{
 			LLFloaterMove::toggleInstance();
 		}
-		else if (floater_name == "world map")
+		else if (floater_name == "original world map")
 		{
 			LLFloaterWorldMap::toggle(NULL);
+		}
+		else if (floater_name == "world map")
+		{
+			LLFloaterMapImage::show();
 		}
 		else if (floater_name == "mini map")
 		{
