@@ -156,28 +156,15 @@ void LLFloaterHUD::onClose(bool app_quitting)
 
 // statics 
 LLFloaterMapImage* LLFloaterMapImage::sInstance2 = 0; 
-const std::string FLOATER_TITLE = "World Map";
 
 // Default constructor
 LLFloaterMapImage::LLFloaterMapImage()
-:	LLFloater(std::string("floater_map_image"), std::string("FloaterMapImageRect"), FLOATER_TITLE, 
-			  RESIZE_YES, 350, 350, DRAG_ON_TOP, MINIMIZE_YES, CLOSE_YES),
+:	LLFloater(std::string("floater_map_image")),
 	mWebBrowser(0)
 {
 	// Create floater from its XML definition
 	LLUICtrlFactory::getInstance()->buildFloater(this, "floater_map_image.xml");
 	
-	// Don't grab the focus as it will impede performing in-world actions
-	// while using the map
-	//setIsChrome(TRUE);
-
-	// Chrome doesn't show the window title by default, but here we
-	// want to show it.
-	//setTitleVisible(true);
-	
-	// Opaque background since we never get the focus
-	//setBackgroundOpaque(TRUE);
-
 	// Remember the one instance
 	sInstance2 = this;
 
@@ -231,9 +218,9 @@ void LLFloaterMapImage::show()
 	// Create the instance if necessary
 	LLFloaterMapImage* map = getInstance();
 
-	/*LLRect rect = gSavedSettings.getRect("FloaterMapImageRect");
+	LLRect rect = gSavedSettings.getRect("FloaterMapImageRect");
 	map->reshape(rect.getWidth(), rect.getHeight());
-	map->setRect(rect);*/
+	map->setRect(rect);
 
 	/*if(sInstance2 && sInstance2->getVisible())
 	{
