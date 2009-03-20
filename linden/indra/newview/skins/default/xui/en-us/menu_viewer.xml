@@ -768,11 +768,11 @@
   <menu name="Help" create_jump_keys="true" label="Help"
         opaque="true" tear_off="true">
     <menu_item_call name="Help" label="Help" shortcut="F1">
-      <on_click function="PromptShowURL" userdata="ClickOpenF1Help,http://www.google.com" />
+      <on_click function="ShowFloater" userdata="help f1" />
     </menu_item_call>
-    <menu_item_call name="Tutorial" label="Tutorial">
+    <!--<menu_item_call name="Tutorial" label="Tutorial">
       <on_click function="ShowURL" userdata="http://www.google.com" />
-    </menu_item_call>
+    </menu_item_call>-->
     <!--<menu_item_separator />
     <menu_item_call name="Imprudence Blog..."
                     label="Imprudence Blog...">

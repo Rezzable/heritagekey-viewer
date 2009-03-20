@@ -22,6 +22,11 @@
 	* linden/indra/newview/skins/default/xui/en-us/floater_map_image.xml:
 	Ditto.
 	* linden/indra/newview/CMakeLists.txt:
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/menu_viewer.xml:
+	Removed tutorial menu option.
 
 
 
