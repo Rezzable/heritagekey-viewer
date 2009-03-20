@@ -105,7 +105,7 @@ fi
 export GST_PLUGIN_PATH="${GST_PLUGIN_PATH}:${RUN_PATH}/lib/gstreamer-plugins/"
 
 export SL_ENV='LD_LIBRARY_PATH="`pwd`"/lib:"`pwd`"/app_settings/mozilla-runtime-linux-i686:"${LD_LIBRARY_PATH}"'
-export SL_CMD='$LL_WRAPPER bin/do-not-directly-run-imprudence-bin'
+export SL_CMD='$LL_WRAPPER bin/do-not-directly-run-heritagekey-bin'
 export SL_OPT="`cat gridargs.dat` $@"
 
 # Run the program
