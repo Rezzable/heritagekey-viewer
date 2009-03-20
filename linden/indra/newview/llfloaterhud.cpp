@@ -210,24 +210,19 @@ LLFloaterMapImage::~LLFloaterMapImage()
 // Show the map
 void LLFloaterMapImage::show()
 {
-	// Position floater based on saved location
-	/*LLRect saved_position_rect = gSavedSettings.getRect("FloaterMapImageRect");
-	reshape(saved_position_rect.getWidth(), saved_position_rect.getHeight(), FALSE);
-	setRect(saved_position_rect);*/
-
-	// Create the instance if necessary
-	LLFloaterMapImage* map = getInstance();
-
-	LLRect rect = gSavedSettings.getRect("FloaterMapImageRect");
-	map->reshape(rect.getWidth(), rect.getHeight());
-	map->setRect(rect);
-
-	/*if(sInstance2 && sInstance2->getVisible())
+	if(sInstance2 && sInstance2->getVisible())
 	{
-		map->close();
+		sInstance2->close();
 	}
-	else*/
+	else
 	{
+		// Create the instance if necessary
+		LLFloaterMapImage* map = getInstance();
+
+		LLRect rect = gSavedSettings.getRect("FloaterMapImageRect");
+		map->reshape(rect.getWidth(), rect.getHeight());
+		map->setRect(rect);
+
 		std::string map_image_url = map->getString("real_url");
 
 		// do not build the floater if there the url is empty
