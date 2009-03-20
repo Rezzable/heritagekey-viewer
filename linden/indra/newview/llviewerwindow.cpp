@@ -1778,6 +1778,8 @@ void LLViewerWindow::adjustRectanglesForFirstUse(const LLRect& window)
 
 	adjust_rect_top_left("FloaterBuildOptionsRect", window);
 
+	adjust_rect_top_left("FloaterMapImageRect", window);
+
 	// bottom-right
 	r = gSavedSettings.getRect("FloaterInventoryRect");
 	if (r.mLeft == 0 && r.mBottom == 0)

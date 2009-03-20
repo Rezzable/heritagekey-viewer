@@ -3059,6 +3059,22 @@
         <integer>0</integer>
       </array>
     </map>
+    <key>FloaterMapImageRect</key>
+    <map>
+      <key>Comment</key>
+      <string>Rectangle for inworld map image</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>Rect</string>
+      <key>Value</key>
+      <array>
+        <integer>0</integer>
+        <integer>350</integer>
+        <integer>350</integer>
+        <integer>0</integer>
+      </array>
+    </map>
     <key>FloaterMediaRect</key>
     <map>
       <key>Comment</key>

@@ -5,6 +5,26 @@
 	Removed pay button from friends list.
 
 
+	* linden/indra/newview/app_settings/settings.xml:
+	Map now loads in its own unique floater.
+	* linden/indra/newview/llfloaterhud.cpp:
+	Ditto.
+	* linden/indra/newview/llfloaterhud.h:
+	Ditto.
+	* linden/indra/newview/llmenucommands.cpp:
+	Ditto.
+	* linden/indra/newview/llviewermenu.cpp:
+	Ditto.
+	* linden/indra/newview/llviewerwindow.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_viewer.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_map_image.xml:
+	Ditto.
+	* linden/indra/newview/CMakeLists.txt:
+	Ditto.
+
+
 2009-03-18  McCabe Maxsted  <hakushakukun@gmail.com>
 
 

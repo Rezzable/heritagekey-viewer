@@ -1062,6 +1062,7 @@ set(viewer_XUI_FILES
     skins/default/xui/en-us/floater_landmark_ctrl.xml
     skins/default/xui/en-us/floater_live_lsleditor.xml
     skins/default/xui/en-us/floater_lsl_guide.xml
+    skins/default/xui/en-us/floater_map_image.xml
     skins/default/xui/en-us/floater_media_browser.xml
     skins/default/xui/en-us/floater_moveview.xml
     skins/default/xui/en-us/floater_mute_object.xml
