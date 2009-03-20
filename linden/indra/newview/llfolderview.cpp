@@ -4479,7 +4479,7 @@ LLInventoryFilter::LLInventoryFilter(const std::string& name) :
 	mModified(FALSE),
 	mNeedTextRebuild(TRUE)
 {
-	mFilterOps.mFilterTypes = LLInventoryType::NIT_ALL;
+	mFilterOps.mFilterTypes = LLInventoryType::NIT_DEFAULT;
 	mFilterOps.mMinDate = time_min();
 	mFilterOps.mMaxDate = time_max();
 	mFilterOps.mHoursAgo = 0;
@@ -4524,12 +4524,50 @@ BOOL LLInventoryFilter::check(LLFolderViewItem* item)
 	LLFolderViewEventListener* listener = item->getListener();
 	const LLUUID& item_id = listener->getUUID();
 	mSubStringMatchOffset = mFilterSubString.size() ? item->getSearchableLabel().find(mFilterSubString) : std::string::npos;
-	BOOL passed = (listener->getNInventoryType() & mFilterOps.mFilterTypes || listener->getNInventoryType() == LLInventoryType::NIT_NONE)
-					&& (mFilterSubString.size() == 0 || mSubStringMatchOffset != std::string::npos)
-					&& (mFilterWorn == false || gAgent.isWearingItem(item_id) ||
-						gAgent.getAvatarObject() && gAgent.getAvatarObject()->isWearingAttachment(item_id))
-					&& ((listener->getPermissionMask() & mFilterOps.mPermissions) == mFilterOps.mPermissions)
-					&& (listener->getCreationDate() >= earliest && listener->getCreationDate() <= mFilterOps.mMaxDate);
+
+
+	// We want to hide these top-level folders
+	bool is_cc_s_or_s = ( item->getLabel() == "Calling Cards" ||
+	                      item->getLabel() == "Scripts" ||
+	                      item->getLabel() == "Sounds" );
+
+	LLFolderViewFolder *parent = item->getParentFolder();
+	bool parent_is_top = ( parent && parent->getParentFolder() ==
+	                                   parent->getRoot() );
+
+
+	BOOL passed = \
+		// Item Type Check
+		(listener->getNInventoryType() & mFilterOps.mFilterTypes ||
+		 listener->getNInventoryType() == LLInventoryType::NIT_NONE)
+		&&
+
+		// Name Search Check
+		(mFilterSubString.size() == 0 ||
+		 mSubStringMatchOffset != std::string::npos)
+		&&
+
+		// Worn Item Check
+		(mFilterWorn == false ||
+		 gAgent.isWearingItem(item_id) ||
+		 gAgent.getAvatarObject() &&
+		 gAgent.getAvatarObject()->isWearingAttachment(item_id))
+		&&
+
+		// Permissions Check
+		((listener->getPermissionMask() & mFilterOps.mPermissions)
+		 == mFilterOps.mPermissions)
+		&&
+
+		// Date Range Check
+		(listener->getCreationDate() >= earliest &&
+		 listener->getCreationDate() <= mFilterOps.mMaxDate)
+		&&
+
+		// Hidden Top-Level Folders Check
+		!(is_cc_s_or_s && parent_is_top);
+
+
 	return passed;
 }
 
@@ -4855,18 +4893,6 @@ std::string LLInventoryFilter::rebuildFilterText()
 		filtered_by_all_types = FALSE;
 	}
 
-	if (isFilterWith(LLInventoryType::NIT_CALLCARD))
-	{
-		filtered_types += " Calling Cards,";
-		filtered_by_type = TRUE;
-		num_filter_types++;
-	}
-	else
-	{
-		not_filtered_types += " Calling Cards,";
-		filtered_by_all_types = FALSE;
-	}
-
 	if (isFilterWith(LLInventoryType::NIT_CLOTHING))
 	{
 		filtered_types += " Clothing,";
@@ -4927,30 +4953,6 @@ std::string LLInventoryFilter::rebuildFilterText()
 		filtered_by_all_types = FALSE;
 	}
 	
-	if (isFilterWith(LLInventoryType::NIT_SCRIPT_LSL2))
-	{
-		filtered_types += " Scripts,";
-		filtered_by_type = TRUE;
-		num_filter_types++;
-	}
-	else
-	{
-		not_filtered_types += " Scripts,";
-		filtered_by_all_types = FALSE;
-	}
-	
-	if (isFilterWith(LLInventoryType::NIT_SOUND))
-	{
-		filtered_types += " Sounds,";
-		filtered_by_type = TRUE;
-		num_filter_types++;
-	}
-	else
-	{
-		not_filtered_types += " Sounds,";
-		filtered_by_all_types = FALSE;
-	}
-
 	if (isFilterWith(LLInventoryType::NIT_TEXTURE))
 	{
 		filtered_types += " Textures,";

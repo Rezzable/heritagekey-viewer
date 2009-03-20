@@ -34,14 +34,11 @@
 		<separator />
 		<combo_item name="filter_type_animation">Animations</combo_item>
 		<combo_item name="filter_type_bodypart">Body Parts</combo_item>
-		<combo_item name="filter_type_callingcard">Calling Cards</combo_item>
 		<combo_item name="filter_type_clothing">Clothing</combo_item>
 		<combo_item name="filter_type_gesture">Gestures</combo_item>
 		<combo_item name="filter_type_landmark">Landmarks</combo_item>
 		<combo_item name="filter_type_notecard">Notecards</combo_item>
 		<combo_item name="filter_type_object">Objects</combo_item>
-		<combo_item name="filter_type_script">Scripts</combo_item>
-		<combo_item name="filter_type_sound">Sounds</combo_item>
 		<combo_item name="filter_type_texture">Textures</combo_item>
 		<combo_item name="filter_type_snapshot">Snapshots</combo_item>
 		<separator />
@@ -102,84 +99,6 @@
 			     name="Empty Trash" width="128">
 				<on_click filter="" function="Inventory.EmptyTrash" userdata="" />
 			</menu_item_call>
-		</menu>
-		<menu bottom_delta="80" drop_shadow="true" height="121"
-		     label="Create" left="0" mouse_opaque="false" name="Create" opaque="true"
-		     tear_off="true" width="121">
-			<menu_item_call bottom_delta="-18" height="18" label="New Folder" left="0" mouse_opaque="true"
-			     name="New Folder" width="121">
-				<on_click filter="" function="Inventory.DoCreate" userdata="category" />
-			</menu_item_call>
-			<menu_item_call bottom_delta="-18" height="18" label="New Script" left="0" mouse_opaque="true"
-			     name="New Script" width="121">
-				<on_click filter="" function="Inventory.DoCreate" userdata="lsl" />
-			</menu_item_call>
-			<menu_item_call bottom_delta="-18" height="18" label="New Note" left="0" mouse_opaque="true"
-			     name="New Note" width="121">
-				<on_click filter="" function="Inventory.DoCreate" userdata="notecard" />
-			</menu_item_call>
-			<menu_item_call bottom_delta="-18" height="18" label="New Gesture" left="0" mouse_opaque="true"
-			     name="New Gesture" width="121">
-				<on_click filter="" function="Inventory.DoCreate" userdata="gesture" />
-			</menu_item_call>
-			<menu bottom_delta="-689" drop_shadow="true" height="175" left="0"
-			     mouse_opaque="false" name="New Clothes" opaque="true" width="125">
-				<menu_item_call bottom_delta="-18" height="18" label="New Shirt" left="0" mouse_opaque="true"
-				     name="New Shirt" width="125">
-					<on_click filter="" function="Inventory.DoCreate" userdata="shirt" />
-				</menu_item_call>
-				<menu_item_call bottom_delta="-18" height="18" label="New Pants" left="0" mouse_opaque="true"
-				     name="New Pants" width="125">
-					<on_click filter="" function="Inventory.DoCreate" userdata="pants" />
-				</menu_item_call>
-				<menu_item_call bottom_delta="-18" height="18" label="New Shoes" left="0" mouse_opaque="true"
-				     name="New Shoes" width="125">
-					<on_click filter="" function="Inventory.DoCreate" userdata="shoes" />
-				</menu_item_call>
-				<menu_item_call bottom_delta="-18" height="18" label="New Socks" left="0" mouse_opaque="true"
-				     name="New Socks" width="125">
-					<on_click filter="" function="Inventory.DoCreate" userdata="socks" />
-				</menu_item_call>
-				<menu_item_call bottom_delta="-18" height="18" label="New Jacket" left="0" mouse_opaque="true"
-				     name="New Jacket" width="125">
-					<on_click filter="" function="Inventory.DoCreate" userdata="jacket" />
-				</menu_item_call>
-				<menu_item_call bottom_delta="-18" height="18" label="New Skirt" left="0" mouse_opaque="true"
-				     name="New Skirt" width="125">
-					<on_click filter="" function="Inventory.DoCreate" userdata="skirt" />
-				</menu_item_call>
-				<menu_item_call bottom_delta="-18" height="18" label="New Gloves" left="0" mouse_opaque="true"
-				     name="New Gloves" width="125">
-					<on_click filter="" function="Inventory.DoCreate" userdata="gloves" />
-				</menu_item_call>
-				<menu_item_call bottom_delta="-18" height="18" label="New Undershirt" left="0"
-				     mouse_opaque="true" name="New Undershirt" width="125">
-					<on_click filter="" function="Inventory.DoCreate" userdata="undershirt" />
-				</menu_item_call>
-				<menu_item_call bottom_delta="-18" height="18" label="New Underpants" left="0"
-				     mouse_opaque="true" name="New Underpants" width="125">
-					<on_click filter="" function="Inventory.DoCreate" userdata="underpants" />
-				</menu_item_call>
-			</menu>
-			<menu bottom_delta="-599" drop_shadow="true" height="85" left="0"
-			     mouse_opaque="false" name="New Body Parts" opaque="true" width="118">
-				<menu_item_call bottom_delta="-18" height="18" label="New Shape" left="0" mouse_opaque="true"
-				     name="New Shape" width="118">
-					<on_click filter="" function="Inventory.DoCreate" userdata="shape" />
-				</menu_item_call>
-				<menu_item_call bottom_delta="-18" height="18" label="New Skin" left="0" mouse_opaque="true"
-				     name="New Skin" width="118">
-					<on_click filter="" function="Inventory.DoCreate" userdata="skin" />
-				</menu_item_call>
-				<menu_item_call bottom_delta="-18" height="18" label="New Hair" left="0" mouse_opaque="true"
-				     name="New Hair" width="118">
-					<on_click filter="" function="Inventory.DoCreate" userdata="hair" />
-				</menu_item_call>
-				<menu_item_call bottom_delta="-18" height="18" label="New Eyes" left="0" mouse_opaque="true"
-				     name="New Eyes" width="118">
-					<on_click filter="" function="Inventory.DoCreate" userdata="eyes" />
-				</menu_item_call>
-			</menu>
 		</menu>
 		<menu bottom_delta="64" drop_shadow="true" height="49"
 		     label="Sort" left="0" mouse_opaque="false" name="Sort" opaque="true"

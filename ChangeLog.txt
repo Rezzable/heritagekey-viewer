@@ -85,6 +85,81 @@
 	Ditto.
 
 
+
+
+	Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/llinventorybridge.cpp:
+	Removed create actions (except folder) from inv context menu.
+	* linden/indra/newview/skins/default/xui/en-us/menu_inventory.xml:
+	Ditto.
+
+
+	* linden/indra/newview/llinventorybridge.cpp:
+	Removed New Script from inventory context menu.
+	* linden/indra/newview/skins/default/xui/en-us/menu_inventory.xml: 
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_tools.xml:
+	Removed "New Script" button from object contents tab.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_inventory.xml:
+	Removed inventory window Create menu entirely.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_inventory.xml:
+	Removed Create > New Script from inventory window menu.
+
+
+	* linden/indra/newview/llinventoryview.cpp:
+	Quick Filter shows "All" not "Custom" for the default.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_inventory.xml:
+	Removed cards, scripts, and sounds from Quick Filter list.
+	* linden/indra/newview/llinventoryview.cpp:
+	Ditto.
+
+
+	* linden/indra/newview/llfolderview.cpp:
+	Hide Calling Cards, Scripts, and Sounds folders.
+
+
+	* linden/indra/newview/llfolderview.cpp:
+	Made inventory filter check code more readable.
+
+
+	* linden/indra/llinventory/llinventorytype.h:
+	Defined and using NIT_DEFAULT for simplicity/adaptability.
+	Currently set to all types except cards, scripts, and sounds.
+	* linden/indra/newview/llfolderview.cpp:
+	Ditto.
+	* linden/indra/newview/llinventoryview.cpp:
+	Ditto.
+
+
+	* linden/indra/newview/llfolderview.cpp:
+	Removed cards, scripts, and sounds from inv window titler.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_inventory_view_finder.xml:
+	Removed Show Filter checkboxes for cards, scripts, and sounds.
+
+
+	* linden/indra/newview/llinventoryview.cpp:
+	Removed refs to card, script, and sound filter checkboxes.
+
+
+	* linden/indra/newview/llinventoryview.cpp:
+	Cards, scripts, and sounds disabled when rebuilding filter.
+
+
+	* linden/indra/newview/llfolderview.cpp:
+	Hide calling cards, scripts, and sounds by default.
+
+
 2009-03-17  McCabe Maxsted  <hakushakukun@gmail.com>
 
 

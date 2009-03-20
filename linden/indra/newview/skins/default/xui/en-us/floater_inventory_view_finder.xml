@@ -20,13 +20,6 @@
 	     font="SansSerifSmall" initial_value="false" />
 
 
-	<icon name="icon_calling_card" image_name="inv_item_callingcard_online.tga"
-	     bottom_delta="-20" left="8" height="16" width="16" follows="left|top" />
-	<check_box label="Calling Cards" name="check_calling_card"
-	     bottom_delta="0" left="26" height="16" width="126" follows="left|top"
-	     font="SansSerifSmall" initial_value="false" />
-
-
 	<icon name="icon_clothing" image_name="inv_item_shirt.tga"
 	     bottom_delta="-20" left="8" height="16" width="16" follows="left|top" />
 	<check_box label="Clothing" name="check_clothing"
@@ -58,20 +51,6 @@
 	<icon name="icon_object" image_name="inv_item_object.tga"
 	     bottom_delta="-20" left="8" height="16" width="16" follows="left|top" />
 	<check_box label="Objects" name="check_object"
-	     bottom_delta="0" left="26" height="16" width="126" follows="left|top"
-	     font="SansSerifSmall" initial_value="false" />
-
-
-	<icon name="icon_script" image_name="inv_item_script.tga"
-	     bottom_delta="-20" left="8" height="16" width="16" follows="left|top" />
-	<check_box label="Scripts" name="check_script"
-	     bottom_delta="0" left="26" height="16" width="126" follows="left|top"
-	     font="SansSerifSmall" initial_value="false" />
-
-
-	<icon name="icon_sound" image_name="inv_item_sound.tga"
-	     bottom_delta="-20" left="8" height="16" width="16" follows="left|top" />
-	<check_box label="Sounds" name="check_sound"
 	     bottom_delta="0" left="26" height="16" width="126" follows="left|top"
 	     font="SansSerifSmall" initial_value="false" />
 
