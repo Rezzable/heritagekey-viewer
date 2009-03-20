@@ -326,11 +326,6 @@
       <on_check control="ShowMiniMap" />
     </menu_item_check>
     <!--<menu_item_separator />
-    <menu_item_check name="Statistics Bar" label="Statistics Bar"
-                     shortcut="control|shift|1">
-      <on_click function="ShowFloater" userdata="stat bar" />
-      <on_check function="FloaterVisible" userdata="stat bar" />
-    </menu_item_check>
     <menu_item_check name="Property Lines" label="Property Lines"
                      shortcut="control|alt|shift|P">
       <on_click function="ToggleControl" userdata="ShowPropertyLines" />
@@ -898,8 +893,14 @@
     
     <menu_item_check name="Original World Map" label="Original World Map">
       <on_click function="ShowFloater" userdata="original world map" />
+      <on_check function="FloaterVisible" userdata="original world map" />
     </menu_item_check>
 
+    <menu_item_check name="Statistics Bar" label="Statistics Bar"
+                 shortcut="control|shift|1">
+      <on_click function="ShowFloater" userdata="stat bar" />
+      <on_check function="FloaterVisible" userdata="stat bar" />
+    </menu_item_check>
 
 
     <!-- HUD INFO -->
