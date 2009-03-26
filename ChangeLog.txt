@@ -1,3 +1,16 @@
+2009-03-25  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/llpanellogin.cpp:
+	Menu background color now stays constant regardless of grid.
+	* linden/indra/newview/llviewermenu.cpp:
+	Ditto.
+	* linden/indra/newview/llviewerwindow.cpp:
+	Ditto.
+	* linden/indra/newview/llviewerwindow.h:
+	Ditto.
+
+
 2009-03-22  McCabe Maxsted  <hakushakukun@gmail.com>
 
 

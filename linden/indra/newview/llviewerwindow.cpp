@@ -2133,8 +2133,7 @@ void LLViewerWindow::setNormalControlsVisible( BOOL visible )
 		gMenuBarView->setEnabled( visible );
 
 		// ...and set the menu color appropriately.
-		setMenuBackgroundColor(gAgent.getGodLevel() > GOD_NOT, 
-			LLViewerLogin::getInstance()->isInProductionGrid());
+		setMenuBackgroundColor(gAgent.getGodLevel() > GOD_NOT);
 	}
         
 	if ( gStatusBar )
@@ -2144,22 +2143,14 @@ void LLViewerWindow::setNormalControlsVisible( BOOL visible )
 	}
 }
 
-void LLViewerWindow::setMenuBackgroundColor(bool god_mode, bool dev_grid)
+void LLViewerWindow::setMenuBackgroundColor(bool god_mode)
 {
    	LLStringUtil::format_map_t args;
     LLColor4 new_bg_color;
 
-    if(god_mode && LLViewerLogin::getInstance()->isInProductionGrid())
+    if(god_mode)
     {
         new_bg_color = gColors.getColor( "MenuBarGodBgColor" );
-    }
-    else if(god_mode && !LLViewerLogin::getInstance()->isInProductionGrid())
-    {
-        new_bg_color = gColors.getColor( "MenuNonProductionGodBgColor" );
-    }
-    else if(!god_mode && !LLViewerLogin::getInstance()->isInProductionGrid())
-    {
-        new_bg_color = gColors.getColor( "MenuNonProductionBgColor" );
     }
     else 
     {

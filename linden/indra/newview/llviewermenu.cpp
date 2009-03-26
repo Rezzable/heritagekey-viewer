@@ -633,15 +633,9 @@ void init_menus()
 	color = gColors.getColor( "MenuPopupBgColor" );
 	gPopupMenuView->setBackgroundColor( color );
 
-	// If we are not in production, use a different color to make it apparent.
-	if (LLViewerLogin::getInstance()->isInProductionGrid())
-	{
-		color = gColors.getColor( "MenuBarBgColor" );
-	}
-	else
-	{
-		color = gColors.getColor( "MenuNonProductionBgColor" );
-	}
+	// Always use the production grid menu color
+	color = gColors.getColor( "MenuBarBgColor" );
+
 	gMenuBarView = (LLMenuBarGL*)LLUICtrlFactory::getInstance()->buildMenu("menu_viewer.xml", gMenuHolder);
 	gMenuBarView->setRect(LLRect(0, top, 0, top - MENU_BAR_HEIGHT));
 	gMenuBarView->setBackgroundColor( color );
@@ -655,8 +649,7 @@ void init_menus()
 	// flash when an item is triggered (the flash occurs in the holder)
 	gViewerWindow->getRootView()->addChild(gMenuHolder);
    
-    gViewerWindow->setMenuBackgroundColor(false, 
-        LLViewerLogin::getInstance()->isInProductionGrid());
+    gViewerWindow->setMenuBackgroundColor(false);
 
 	// *TODO:Get the cost info from the server
 	const std::string upload_cost("10");
@@ -2634,8 +2627,7 @@ void set_god_level(U8 god_level)
 
     if(gViewerWindow)
     {
-        gViewerWindow->setMenuBackgroundColor(god_level > GOD_NOT,
-            LLViewerLogin::getInstance()->isInProductionGrid());
+        gViewerWindow->setMenuBackgroundColor(god_level > GOD_NOT);
     }
 
     LLStringUtil::format_map_t args;

@@ -894,7 +894,7 @@ void LLPanelLogin::loadLoginPage()
 	//oStr << "&grid=" << curl_grid;
 	//curl_free(curl_grid);
 
-	gViewerWindow->setMenuBackgroundColor(false, !LLViewerLogin::getInstance()->isInProductionGrid());
+	gViewerWindow->setMenuBackgroundColor(false);
 	gLoginMenuBarView->setBackgroundColor(gMenuBarView->getBackgroundColor());
 
 

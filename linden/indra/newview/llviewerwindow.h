@@ -264,7 +264,7 @@ public:
 
 	// Hide normal UI when a logon fails, re-show everything when logon is attempted again
 	void			setNormalControlsVisible( BOOL visible );
-	void			setMenuBackgroundColor(bool god_mode = false, bool dev_grid = false);
+	void			setMenuBackgroundColor(bool god_mode = false);
 
 	void			reshape(S32 width, S32 height);
 	void			sendShapeToSim();
