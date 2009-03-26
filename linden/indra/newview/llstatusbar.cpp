@@ -103,7 +103,7 @@ const F32 ICON_TIMER_EXPIRY		= 3.f; // How long the balance and health icons sho
 const F32 ICON_FLASH_FREQUENCY	= 2.f;
 const S32 TEXT_HEIGHT = 18;
 
-static void onClickParcelInfo(void*);
+//static void onClickParcelInfo(void*);
 static void onClickBalance(void*);
 static void onClickBuyCurrency(void*);
 static void onClickHealth(void*);
@@ -168,7 +168,7 @@ mSquareMetersCommitted(0)
 	childSetVisible("search_btn", gSavedSettings.getBOOL("ShowSearchBar"));
 	childSetVisible("menubar_search_bevel_bg", gSavedSettings.getBOOL("ShowSearchBar"));
 
-	childSetActionTextbox("ParcelNameText", onClickParcelInfo );
+	/*childSetActionTextbox("ParcelNameText", onClickParcelInfo );*/
 	childSetActionTextbox("BalanceText", onClickBalance );
 
 	// Adding Net Stat Graph
@@ -724,12 +724,12 @@ S32 LLStatusBar::getSquareMetersLeft() const
 	return mSquareMetersCredit - mSquareMetersCommitted;
 }
 
-static void onClickParcelInfo(void* data)
-{
-	LLViewerParcelMgr::getInstance()->selectParcelAt(gAgent.getPositionGlobal());
-
-	LLFloaterLand::showInstance();
-}
+//static void onClickParcelInfo(void* data)
+//{
+//	LLViewerParcelMgr::getInstance()->selectParcelAt(gAgent.getPositionGlobal());
+//
+//	LLFloaterLand::showInstance();
+//}
 
 static void onClickBalance(void* data)
 {

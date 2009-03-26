@@ -11,6 +11,14 @@
 	Ditto.
 
 
+	* linden/indra/newview/llstatusbar.cpp:
+	Parcel info no longer clickable.
+	* linden/indra/newview/skins/default/xui/en-us/panel_status_bar.xml:
+	Ditto.
+	* linden/indra/newview/skins/silver/xui/en-us/panel_status_bar.xml:
+	Ditto.
+
+
 2009-03-22  McCabe Maxsted  <hakushakukun@gmail.com>
 
 

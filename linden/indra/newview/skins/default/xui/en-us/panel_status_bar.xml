@@ -7,7 +7,7 @@
 	     bottom="-22" drop_shadow_visible="true" enabled="true"
 	     follows="left|right|bottom" font="SansSerifSmall" h_pad="0" halign="left"
 	     height="18" hover="true" left="561" mouse_opaque="true"
-	     name="ParcelNameText" text_color="ParcelTextColor" hover_color="ParcelHoverColor"
+	     name="ParcelNameText" text_color="ParcelTextColor" hover_color="ParcelTextColor"
 	     tool_tip="Name of land parcel on which you are standing. Click for About Land."
 	     v_pad="2" width="1039">
 		parcel name goes here
