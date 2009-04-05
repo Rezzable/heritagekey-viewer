@@ -211,14 +211,6 @@
       <string>UserLoginInfo</string>
     </map>
 
-    <key>god</key>
-    <map>
-      <key>desc</key>
-      <string>Log in a god if you have god access.</string>
-      <key>map-to</key>
-      <string>ConnectAsGod</string>
-    </map>
-
     <key>console</key>
     <map>
       <key>count</key>

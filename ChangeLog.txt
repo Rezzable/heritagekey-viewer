@@ -23,6 +23,10 @@
 	Ditto.
 
 
+	* linden/indra/newview/app_settings/cmd_line.xml:
+	Removed God command line option.
+
+
 2009-03-25  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
