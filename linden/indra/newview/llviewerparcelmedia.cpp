@@ -49,9 +49,6 @@
 S32 LLViewerParcelMedia::sMediaParcelLocalID = 0;
 LLUUID LLViewerParcelMedia::sMediaRegionID;
 
-// Local functions
-void callback_play_media(S32 option, void* data);
-
 // Move this to its own file.
 // helper class that tries to download a URL from a web site and calls a method
 // on the Panel Land Media and to discover the MIME type
@@ -167,9 +164,9 @@ void LLViewerParcelMedia::update(LLParcel* parcel)
 				// First use warning
 				if(	gSavedSettings.getWarning("FirstStreamingVideo") )
 				{
-					gViewerWindow->alertXml("ParcelCanPlayMedia",
-						callback_play_media, (void*)parcel);
-
+					play(parcel);
+					
+					gSavedSettings.setWarning("FirstStreamingVideo", FALSE);
 				}
 
 			}
@@ -380,15 +377,5 @@ void LLViewerParcelMedia::processParcelMediaUpdate( LLMessageSystem *msg, void *
 			play(parcel);
 		}
 	}
-}
-
-void callback_play_media(S32 option, void* data)
-{
-	if (option == 0)
-	{
-		LLParcel* parcel = (LLParcel*)data;
-		LLViewerParcelMedia::play(parcel);
-	}
-	gSavedSettings.setWarning("FirstStreamingVideo", FALSE);
 }
 

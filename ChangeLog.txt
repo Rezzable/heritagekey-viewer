@@ -1,3 +1,14 @@
+2009-03-05  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Removed streaming prompts.
+	* linden/indra/newview/llviewerparcelmedia.cpp:
+	Ditto.
+	* linden/indra/newview/llviewerparcelmgr.cpp:
+	Ditto.
+
+
 2009-03-04  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
