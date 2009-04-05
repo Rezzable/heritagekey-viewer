@@ -1,3 +1,10 @@
+2009-03-04  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_map_image.xml
+	Updated map url.
+
+
 2009-03-25  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
