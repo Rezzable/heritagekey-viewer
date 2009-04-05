@@ -75,9 +75,6 @@
 
 #if LL_WINDOWS
 	#include "llwindebug.h"
-	#include <direct.h>
-	#include <errno.h>
-	#include <stdlib.h>
 #endif
 
 #if LL_WINDOWS
@@ -318,31 +315,6 @@ static std::string gWindowTitle;
 std::string gLoginPage;
 std::vector<std::string> gLoginURIs;
 static std::string gHelperURI;
-
-
-void LLAppViewer::gst_plugin_path()
-{
-#ifdef LL_WINDOWS
-	char* buffer;
-
-	// Get the current working directory: 
-	if((buffer = _getcwd(NULL,0)) == NULL)
-	{
-		LL_INFOS("InitInfo") << "_getcwd error" << LL_ENDL;
-	}
-	else
-	{
-		LL_INFOS("InitInfo") << "Heritage Key is installed at " << buffer << LL_ENDL;
-		
-		std::string plugin_path = "GST_PLUGIN_PATH=" + std::string(buffer) + "\\lib\\gstreamer-plugins";
-
-		// Place GST_PLUGIN_PATH in the environment settings for heritagekey.exe
-		const char* gst_plugin_path = plugin_path.c_str();
-		putenv(gst_plugin_path);
-		LL_INFOS("InitInfo") << "GST_PLUGIN_PATH set to " << getenv("GST_PLUGIN_PATH") << LL_ENDL;
-	}
-#endif //LL_WINDOWS
-}
 
 void idle_afk_check()
 {
@@ -637,8 +609,6 @@ bool LLAppViewer::init()
         HK_VERSION_MINOR, 
         HK_VERSION_PATCH,
 		HK_VERSION_TEST );
-
-	gst_plugin_path();
 
 	//////////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////

@@ -704,6 +704,118 @@
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
+2009-03-30  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	Cleaned up logic for bad streams.
+
+
+2009-03-29  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	Added loading status to the log's plugin list.
+	set_gst_plugin_path now compiles for windows.
+
+
+	* linden/indra/newview/llappviewer.cpp:
+	Removed unnecessary headers.
+
+
+	* linden/indra/cmake/00-Common.cmake
+	Added VS optimizations to cmake
+	Added flag for multi-core compiling in VS2005
+
+
+2009-03-28  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	Improved set_gst_plugin_path, more comprehensive path.
+	Also tried to tidy up a bit.
+
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	Moved Windows GST_PLUGIN_PATH setup to LLMediaImplGStreamer.
+	LLAppViewer::gst_plugin_path -->
+	   LLMediaImplGStreamer::set_gst_plugin_path
+
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	Ditto.
+	* linden/indra/newview/llappviewer.h:
+	Ditto.
+	* linden/indra/newview/llappviewer.cpp:
+	Ditto.
+
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	Print out the plugins gstreamer finds, for debugging.
+
+
+2009-03-27  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	Fixed video streams freezing the viewer.
+
+
+2009-03-26  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/llmedia/llmediaimplgstreamervidplug.cpp:
+	Fixed/improved how slvideo gst plugin is registered.
+
+
+	* linden/indra/llmedia/llmediaimplgstreamer_syms.cpp:
+	Removed obsolete gstreamer_syms files.
+	* linden/indra/llmedia/llmediaimplgstreamer_syms.h:
+	Ditto.
+	* linden/indra/llmedia/llmediaimplgstreamer_syms_raw.inc:
+	Ditto.
+	* linden/indra/llmedia/llmediaimplgstreamer_syms_rawa.inc:
+	Ditto.
+	* linden/indra/llmedia/llmediaimplgstreamer_syms_rawv.inc:
+	Ditto.
+
+	
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	Removed all that llgst and symbol grabbing silliness.
+	Some symbols require gstreamer >= 0.10.11.
+	* linden/indra/llmedia/llmediaimplgstreamervidplug.cpp:
+	Ditto.
+	* linden/indra/llmedia/CMakeLists.txt:
+	Ditto.
+
+
+	* linden/indra/cmake/GStreamer.cmake:
+	Link with some gstreamer core libs on Linux.
+
+
+2009-03-22  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/newview/llappviewer.cpp:
+	Removed slviewer-0-v12160-LostConnectionOnLogin.patch.
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Removed slviewer-0-v12160-RememberStatsPosAndSize.patch.
+	* linden/indra/newview/lldebugview.cpp:
+	Ditto.
+	* linden/indra/newview/llfloaterstats.cpp:
+	Ditto.
+
+	* linden/indra/newview/llfloaterurldisplay.cpp:
+	Removed slviewer-0-v12160-VisitedLandmarks.patch.
+	* linden/indra/newview/llinventorybridge.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelinventory.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelplace.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelplace.h:
+	Ditto.
+	* linden/indra/newview/llpreviewlandmark.cpp:
+	Ditto.
+	* linden/indra/newview/llviewermessage.cpp:
+	Ditto.
+
+
 2009-03-16  McCabe Maxsted  <hakushakukun@gmail.com>
 
 	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
