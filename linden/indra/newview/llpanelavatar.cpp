@@ -1640,11 +1640,11 @@ void LLPanelAvatar::onClickOK(void *userdata)
 		{
 			self->mPanelClassified->apply();
 
-			LLFloaterAvatarInfo *infop = LLFloaterAvatarInfo::getInstance(self->mAvatarID);
+			/*LLFloaterAvatarInfo *infop = LLFloaterAvatarInfo::getInstance(self->mAvatarID);
 			if (infop)
 			{
 				infop->close();
-			}
+			}*/
 		}
 		else
 		{
@@ -1652,11 +1652,11 @@ void LLPanelAvatar::onClickOK(void *userdata)
 			{
 				self->mPanelClassified->apply();
 
-				LLFloaterAvatarInfo *infop = LLFloaterAvatarInfo::getInstance(self->mAvatarID);
+				/*LLFloaterAvatarInfo *infop = LLFloaterAvatarInfo::getInstance(self->mAvatarID);
 				if (infop)
 				{
 					infop->close();
-				}
+				}*/
 			}
 		}
 	}
@@ -1669,17 +1669,17 @@ void LLPanelAvatar::onClickCancel(void *userdata)
 
 	if (self)
 	{
-		LLFloaterAvatarInfo *infop;
+		/*LLFloaterAvatarInfo *infop;
 		if ((infop = LLFloaterAvatarInfo::getInstance(self->mAvatarID)))
 		{
 			infop->close();
 		}
 		else
-		{
+		{*/
 			// We're in the Search directory and are cancelling an edit
 			// to our own profile, so reset.
 			self->sendAvatarPropertiesRequest();
-		}
+		/*}*/
 	}
 }
 

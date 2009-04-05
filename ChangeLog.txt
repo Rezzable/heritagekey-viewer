@@ -1,12 +1,26 @@
 2009-03-04  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
-	* linden/indra/newview/skins/default/xui/en-us/floater_map_image.xml
+	* linden/indra/newview/skins/default/xui/en-us/floater_map_image.xml:
 	Updated map url.
 
 
-	* linden/indra/newview/app_settings/settings.xml
+	* linden/indra/newview/app_settings/settings.xml:
 	Updated help url.
+
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Profile now opens in a browser window.
+	* linden/indra/newview/llagent.cpp:
+	Ditto.
+	* linden/indra/newview/llfloateravatarinfo.cpp:
+	Ditto.
+	* linden/indra/newview/llfloateravatarinfo.h:
+	Ditto.
+	* linden/indra/newview/llpanelavatar.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_profile.xml:
+	Ditto.
 
 
 2009-03-25  McCabe Maxsted  <hakushakukun@gmail.com>

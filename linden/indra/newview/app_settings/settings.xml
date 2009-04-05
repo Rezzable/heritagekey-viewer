@@ -3171,6 +3171,22 @@
         <integer>0</integer>
       </array>
     </map>
+	  <key>FloaterProfileRect</key>
+	  <map>
+		  <key>Comment</key>
+		  <string>Rectangle for profile window</string>
+		  <key>Persist</key>
+		  <integer>1</integer>
+		  <key>Type</key>
+		  <string>Rect</string>
+		  <key>Value</key>
+		  <array>
+			  <integer>0</integer>
+			  <integer>350</integer>
+			  <integer>350</integer>
+			  <integer>0</integer>
+		  </array>
+	  </map>
     <key>FloaterRegionInfo</key>
     <map>
       <key>Comment</key>
