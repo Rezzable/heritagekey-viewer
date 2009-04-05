@@ -5,6 +5,10 @@
 	Updated map url.
 
 
+	* linden/indra/newview/app_settings/settings.xml
+	Updated help url.
+
+
 2009-03-25  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
