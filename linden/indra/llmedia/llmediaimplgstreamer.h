@@ -48,6 +48,7 @@ extern "C" {
 }
 
 #include "llmediaimplgstreamervidplug.h"
+#include "llgstplaythread.h"
 
 class LLMediaManagerData;
 class LLMediaImplMaker;
@@ -69,6 +70,23 @@ class LLMediaImplGStreamer:
 		// Sets GST_PLUGIN_PATH env var for GStreamer.
 		static void set_gst_plugin_path();
 
+		/* virtual */ bool setDebugLevel( LLMediaBase::EDebugLevel level );
+
+		// Function given to GStreamer for handling debug messages
+		static void gstreamer_log(GstDebugCategory *category,
+		                          GstDebugLevel level,
+		                          const gchar *file,
+		                          const gchar *function,
+		                          gint line,
+		                          GObject *object,
+		                          GstDebugMessage *message,
+		                          gpointer data)
+#if __GNUC__
+		                          // recommended by the gstreamer docs
+		                          G_GNUC_NO_INSTRUMENT
+#endif
+		                          ;
+
 		/* virtual */ std::string getVersion();
 		/* virtual */ bool navigateTo( const std::string url );
 		/* virtual */ bool updateMedia();
@@ -78,6 +96,9 @@ class LLMediaImplGStreamer:
 		/* virtual */ int getTextureFormatInternal() const;
 		/* virtual */ bool seek( double time );
 	    /* virtual */ bool setVolume( float volume );
+
+		void startPlay();
+
 
 	        LLMediaEmitter< LLMediaObserver > getEventEmitter() const {return mEventEmitter;};
 
@@ -104,6 +125,8 @@ class LLMediaImplGStreamer:
 		GstSLVideo *mVideoSink;
 		GstState mState;
 		GstState getState() const { return mState; }
+
+		LLGstPlayThread *mPlayThread;
 };
 
 class LLMediaImplGStreamerMaker : public LLMediaImplMaker

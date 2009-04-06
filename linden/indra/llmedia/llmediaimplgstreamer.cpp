@@ -39,6 +39,7 @@
 	#pragma warning(disable : 4244)
 #endif
 
+#include "linden_common.h"
 #include "llmediaimplgstreamer.h"
 
 extern "C" {
@@ -56,9 +57,8 @@ extern "C" {
 #include "llmediaimplregister.h"
 
 #include "llmediaimplgstreamervidplug.h"
+#include "llgstplaythread.h"
 
-#include "llerror.h"
-#include "linden_common.h"
 
 // register this impl with media manager factory
 static LLMediaImplRegister sLLMediaImplGStreamerReg( "LLMediaImplGStreamer", new LLMediaImplGStreamerMaker() );
@@ -85,7 +85,8 @@ LLMediaImplGStreamer () :
 	mPump ( NULL ),
 	mPlaybin ( NULL ),
 	mVideoSink ( NULL ),
-    mState( GST_STATE_NULL )
+	mState( GST_STATE_NULL ),
+	mPlayThread ( NULL )
 {
 	startup( NULL );  // Startup gstreamer if it hasn't been already.
 
@@ -189,7 +190,11 @@ bool LLMediaImplGStreamer::startup (LLMediaManagerData* init_data)
 			return false;
 		}
 		setlocale(LC_ALL, saved_locale.c_str() );
-		
+
+		// Set up logging facilities
+		gst_debug_remove_log_function( gst_debug_log_default );
+		gst_debug_add_log_function( gstreamer_log, NULL );
+
 		// Init our custom plugins - only really need do this once.
 		gst_slvideo_init_class();
 
@@ -276,8 +281,60 @@ void LLMediaImplGStreamer::set_gst_plugin_path()
 }
 
 
+void LLMediaImplGStreamer::gstreamer_log(GstDebugCategory *category,
+                                         GstDebugLevel level,
+                                         const gchar *file,
+                                         const gchar *function,
+                                         gint line,
+                                         GObject *object,
+                                         GstDebugMessage *message,
+                                         gpointer data)
+{
+	std::stringstream log(std::stringstream::out);
+
+	// Log format example:
+	// 
+	// GST_ELEMENT_PADS: removing pad 'sink' (in gstelement.c:757:gst_element_remove_pad)
+	// 
+	log << gst_debug_category_get_name( category ) << ": "
+	    << gst_debug_message_get(message) << " "
+	    << "(in " << file << ":" << line << ":" << function << ")";
+
+	switch( level )
+	{
+		case GST_LEVEL_ERROR:
+			LL_ERRS("MediaImpl") << log.str() << LL_ENDL;
+			break;
+		case GST_LEVEL_WARNING:
+			LL_WARNS("MediaImpl") << log.str() << LL_ENDL;
+			break;
+		case GST_LEVEL_DEBUG:
+			LL_DEBUGS("MediaImpl") << log.str() << LL_ENDL;
+			break;
+		case GST_LEVEL_INFO:
+			LL_INFOS("MediaImpl") << log.str() << LL_ENDL;
+			break;
+		default:
+			// Do nothing.
+			break;
+	}
+}
+
+
 bool LLMediaImplGStreamer::closedown()
 {
+	return true;
+}
+
+
+bool LLMediaImplGStreamer::setDebugLevel( LLMediaBase::EDebugLevel level )
+{
+	// Do parent class stuff.
+	LLMediaImplCommon::setDebugLevel(level);
+
+	// Set GStreamer verbosity.
+	gst_debug_set_default_threshold( (GstDebugLevel)level );
+
 	return true;
 }
 
@@ -681,6 +738,30 @@ bool LLMediaImplGStreamer::play()
 	if (!mPlaybin || mState == GST_STATE_NULL)
 		return true;
 
+	// Clean up the existing thread, if any.
+	if( mPlayThread != NULL && mPlayThread->isStopped())
+	{
+		delete mPlayThread;
+		mPlayThread = NULL;
+	}
+
+	if( mPlayThread == NULL )
+	{
+		// Make a new thread to start playing. This keeps the viewer
+		// responsive while the stream is resolved and buffered.
+		mPlayThread = new LLGstPlayThread( (LLMediaImplCommon *)this, "GstPlayThread", NULL);
+		mPlayThread->start();
+	}
+
+	return true;
+}
+
+
+void LLMediaImplGStreamer::startPlay()
+{
+	GstElement *pipeline = (GstElement *)gst_object_ref(GST_OBJECT(mPlaybin));
+	gst_object_unref(pipeline);
+	
 	GstStateChangeReturn state_change;
 
 	state_change = gst_element_set_state(mPlaybin, GST_STATE_PLAYING);
@@ -697,11 +778,6 @@ bool LLMediaImplGStreamer::play()
 		// We also force a stop in case the operations don't sync
 		setStatus(LLMediaBase::STATUS_UNKNOWN);
 		stop();
-		return false;
-	}
-	else
-	{
-		return true;
 	}
 }
 
