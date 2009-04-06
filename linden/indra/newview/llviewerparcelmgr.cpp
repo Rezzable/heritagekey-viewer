@@ -62,6 +62,7 @@
 #include "llviewerimagelist.h"
 #include "llviewermenu.h"
 #include "llviewerparcelmedia.h"
+#include "llviewerparcelmediaautoplay.h"
 #include "llviewerparceloverlay.h"
 #include "llviewerregion.h"
 #include "llworld.h"
@@ -1641,53 +1642,75 @@ void LLViewerParcelMgr::processParcelProperties(LLMessageSystem *msg, void **use
 	}
 	else
 	{
-		// look for music.
-		if (gAudiop)
-		{
-			if (parcel)
-			{
-				std::string music_url_raw = parcel->getMusicURL();
-
-				// Trim off whitespace from front and back
-				std::string music_url = music_url_raw;
-				LLStringUtil::trim(music_url);
-
-				// On entering a new parcel, stop the last stream if the
-				// new parcel has a different music url.  (Empty URL counts
-				// as different.)
-				const std::string& stream_url = gAudiop->getInternetStreamURL();
-
-				if (music_url.empty() || music_url != stream_url)
-				{
-					// URL is different from one currently playing.
-					gAudiop->stopInternetStream();
-
-					// If there is a new music URL and it's valid, play it.
-					if (music_url.size() > 12)
-					{
-						if (music_url.substr(0,7) == "http://")
-						{
-							optionally_start_music(music_url);
-						}
-					}
-					else if (!gAudiop->getInternetStreamURL().empty())
-					{
-						llinfos << "Stopping parcel music" << llendl;
-						gAudiop->startInternetStream(LLStringUtil::null);
-					}
-				}
-			}
-			else
-			{
-				// Public land has no music
-				gAudiop->stopInternetStream();
-			}
-		}//if gAudiop
+		// check for music
+		updateMusic(parcel);
 
 		// now check for video
 		LLViewerParcelMedia::update( parcel );
 	};
 }
+
+// static
+void LLViewerParcelMgr::updateMusic(LLParcel* parcel)
+{
+	if (gAudiop)
+	{
+		if (parcel)
+		{
+			std::string music_url_raw = parcel->getMusicURL();
+
+			// Trim off whitespace from front and back
+			std::string music_url = music_url_raw;
+			LLStringUtil::trim(music_url);
+
+			// On entering a new parcel, stop the last stream if the
+			// new parcel has a different music url.  (Empty URL counts
+			// as different.)
+			const std::string& stream_url = gAudiop->getInternetStreamURL();
+
+			if (music_url.empty() || music_url != stream_url)
+			{
+				// URL is different from one currently playing.
+				gAudiop->stopInternetStream();
+
+				// If there is a new music URL and it's valid, play it.
+				if (music_url.size() > 12)
+				{
+					if (music_url.substr(0,7) == "http://")
+					{
+						if (gSavedSettings.getBOOL("ParcelMusicAutoPlayEnable") 
+							&& gSavedSettings.getBOOL("AudioStreamingMusic"))
+						{
+							// Check to see if this your first time on a music-enabled parcel.
+							if (gSavedSettings.getWarning("FirstStreamingMusic"))
+							{
+								gSavedSettings.setWarning("FirstStreamingMusic", FALSE);
+							}
+
+							gAudiop->startInternetStream(music_url);
+							LLOverlayBar::musicFirstRun();
+						}
+						else
+						{
+							optionally_start_music(music_url);
+						}
+					}
+				}
+				else if (!gAudiop->getInternetStreamURL().empty())
+				{
+					llinfos << "Stopping parcel music" << llendl;
+					gAudiop->startInternetStream(LLStringUtil::null);
+				}
+			}
+		}
+		else
+		{
+			// Public land has no music
+			gAudiop->stopInternetStream();
+		}
+	} //if gAudiop
+}
+
 
 void optionally_start_music(const std::string& music_url)
 {

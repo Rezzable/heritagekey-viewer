@@ -9,6 +9,20 @@
 	Ditto.
 
 
+	* linden/indra/newview/app_settings/settings.xml:
+	Parcel music now autoplays along with media.
+	* linden/indra/newview/llviewerparcelmediaautoplay.cpp:
+	Ditto.
+	* linden/indra/newview/llviewerparcelmediaautoplay.h:
+	Ditto.
+	* linden/indra/newview/llviewerparcelmgr.cpp:
+	Ditto.
+	* linden/indra/newview/llviewerparcelmgr.h:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/panel_preferences_audio.xml:
+	Ditto.
+
+
 2009-03-04  McCabe Maxsted  <hakushakukun@gmail.com>
 
 

@@ -5288,6 +5288,17 @@
       <key>Value</key>
       <integer>1</integer>
     </map>
+    <key>ParcelMusicAutoPlayEnable</key>
+    <map>
+      <key>Comment</key>
+      <string>Auto play parcel music when available</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>Boolean</string>
+      <key>Value</key>
+      <integer>1</integer>
+    </map>
     <key>PerAccountSettingsFile</key>
     <map>
       <key>Comment</key>

@@ -25,17 +25,22 @@
 	     mouse_opaque="true" name="Volume Panel" width="260" />
 	<check_box bottom="-220" control_name="AudioStreamingMusic" enabled="true"
 	     follows="left|top" font="SansSerifSmall" height="16" initial_value="true"
-	     label="Play Streaming Music When Available (uses more bandwidth)"
+	     label="Play Streaming Music (uses more bandwidth)"
 	     left="142" mouse_opaque="true" name="streaming_music" radio_style="false"
 	     width="339" />
+  <check_box bottom_delta="-20" control_name="ParcelMusicAutoPlayEnable" enabled="true"
+	     follows="left|top" font="SansSerifSmall" height="16"
+	     initial_value="true" label="Automatically play music when available" left="162"
+	     mouse_opaque="true" name="auto_streaming_music" radio_style="false"
+	     width="338" />
 	<check_box bottom_delta="-20" control_name="AudioStreamingVideo" enabled="true"
 	     follows="left|top" font="SansSerifSmall" height="16" initial_value="true"
-	     label="Play Streaming Media When Available (uses more bandwidth)"
+	     label="Play Streaming Media (uses more bandwidth)"
 	     left="142" mouse_opaque="true" name="streaming_video" radio_style="false"
 	     width="338" />
 	<check_box bottom_delta="-20" control_name="ParcelMediaAutoPlayEnable" enabled="true"
 	     follows="left|top" font="SansSerifSmall" height="16"
-	     initial_value="true" label="Automatically play media" left="162"
+	     initial_value="true" label="Automatically play media when available" left="162"
 	     mouse_opaque="true" name="auto_streaming_video" radio_style="false"
 	     width="338" />
 	<check_box bottom_delta="-65" control_name="MuteWhenMinimized" enabled="true"
