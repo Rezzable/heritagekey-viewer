@@ -396,14 +396,14 @@ class WindowsManifest(ViewerManifest):
 class DarwinManifest(ViewerManifest):
     def construct(self):
         # copy over the build result (this is a no-op if run within the xcode script)
-        self.path(self.args['configuration'] + "/Imprudence.app", dst="")
+        self.path(self.args['configuration'] + "/Heritage Key.app", dst="")
 
         if self.prefix(src="", dst="Contents"):  # everything goes in Contents
             # Expand the tar file containing the assorted mozilla bits into
             #  <bundle>/Contents/MacOS/
             self.contents_of_tar(self.args['source']+'/mozilla-universal-darwin.tgz', 'MacOS')
 
-            self.path("Info-Imprudence.plist", dst="Info.plist")
+            self.path("Info-HeritageKey.plist", dst="Info.plist")
 
             # copy additional libs in <bundle>/Contents/MacOS/
             if self.prefix(src="../../libraries/universal-darwin/lib_release", dst="MacOS/"):

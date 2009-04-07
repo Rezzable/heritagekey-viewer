@@ -1,3 +1,9 @@
+2009-04-07  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/viewer_manifest.py:
+	Mac manifest rebranding fixes. (Imprudence -> Heritage Key).
+
+
 2009-03-05  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
