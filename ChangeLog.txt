@@ -23,6 +23,12 @@
 	Ditto.
 
 
+	* linden/indra/newview/llviewermenu.cpp:
+	Removed Advanced menu.
+	* linden/indra/newview/llviewerwindow.cpp:
+	Ditto.
+
+
 2009-03-04  McCabe Maxsted  <hakushakukun@gmail.com>
 
 

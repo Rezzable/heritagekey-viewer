@@ -2357,13 +2357,14 @@ BOOL LLViewerWindow::handleKey(KEY key, MASK mask)
 		gHoverView->setTyping(TRUE);
 	}
 
+	// Advanced menu removed -- McCabe
 	// Explicit hack for debug menu.
-	if ((MASK_ALT & mask) &&
+	/*if ((MASK_ALT & mask) &&
 		(MASK_CONTROL & mask) &&
 		('D' == key || 'd' == key))
 	{
 		toggle_debug_menus(NULL);
-	}
+	}*/
 
 		// Explicit hack for debug menu.
 	if ((mask == (MASK_SHIFT | MASK_CONTROL)) &&
