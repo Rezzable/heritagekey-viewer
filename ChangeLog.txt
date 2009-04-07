@@ -1,6 +1,10 @@
 2009-04-07  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/Info-HeritageKey.plist:
+	Mac viewer advertises as handling genesis:// URLs.
+
+
+	* linden/indra/newview/Info-HeritageKey.plist:
 	Renamed Info-Imprudence.plist -> Info-HeritageKey.plist.
 
 
