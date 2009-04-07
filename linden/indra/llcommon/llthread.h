@@ -84,7 +84,7 @@ public:
 	apr_pool_t *getAPRPool() { return mAPRPoolp; }
 	
 private:
-	BOOL				mPaused;
+	bool				mPaused;
 	
 	// static function passed to APR thread creation routine
 	static void *APR_THREAD_FUNC staticRun(apr_thread_t *apr_threadp, void *datap);
@@ -95,7 +95,7 @@ protected:
 
 	apr_thread_t		*mAPRThreadp;
 	apr_pool_t			*mAPRPoolp;
-	BOOL				mIsLocalPool;
+	bool				mIsLocalPool;
 	EThreadStatus		mStatus;
 
 	void setQuitting();
@@ -137,7 +137,7 @@ public:
 protected:
 	apr_thread_mutex_t *mAPRMutexp;
 	apr_pool_t			*mAPRPoolp;
-	BOOL				mIsLocalPool;
+	bool				mIsLocalPool;
 };
 
 // Actually a condition/mutex pair (since each condition needs to be associated with a mutex).
