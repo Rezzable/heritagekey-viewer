@@ -1,6 +1,13 @@
 2009-03-05  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
+	* linden/indra/newview/llviewermenu.cpp:
+	Fixed stack heap corruption error in llmenugl.cpp.
+
+
+2009-03-05  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
 	* linden/indra/newview/app_settings/settings.xml:
 	Removed streaming prompts.
 	* linden/indra/newview/llviewerparcelmedia.cpp:
