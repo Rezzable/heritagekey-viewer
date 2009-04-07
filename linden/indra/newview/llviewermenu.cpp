@@ -4556,29 +4556,37 @@ void print_agent_nvpairs(void*)
 
 void show_debug_menus()
 {
-	// this can get called at login screen where there is no menu so only toggle it if one exists
-	if ( gMenuBarView )
-	{
-		BOOL debug = gSavedSettings.getBOOL("UseDebugMenus");
-		
-		if(debug)
-		{
-			LLFirstUse::useDebugMenus();
-		}
+	// Advanced menu and Admin menu are now always disabled -- McCabe
+	gMenuBarView->setItemVisible(CLIENT_MENU_NAME, FALSE);
+	gMenuBarView->setItemEnabled(CLIENT_MENU_NAME, FALSE);
+	gMenuBarView->setItemVisible(SERVER_MENU_NAME, FALSE);
+	gMenuBarView->setItemEnabled(SERVER_MENU_NAME, FALSE);
 
-		gMenuBarView->setItemVisible(CLIENT_MENU_NAME, debug);
-		gMenuBarView->setItemEnabled(CLIENT_MENU_NAME, debug);
+	gMenuBarView->arrange(); // clean-up positioning 
 
-		// Server ('Admin') menu hidden when not in godmode.
-		const bool show_server_menu = debug && (gAgent.getGodLevel() > GOD_NOT);
-		gMenuBarView->setItemVisible(SERVER_MENU_NAME, show_server_menu);
-		gMenuBarView->setItemEnabled(SERVER_MENU_NAME, show_server_menu);
+	//// this can get called at login screen where there is no menu so only toggle it if one exists
+	//if ( gMenuBarView )
+	//{
+	//	BOOL debug = gSavedSettings.getBOOL("UseDebugMenus");
+	//	
+	//	if(debug)
+	//	{
+	//		LLFirstUse::useDebugMenus();
+	//	}
 
-		//gMenuBarView->setItemVisible("DebugOptions",	visible);
-		//gMenuBarView->setItemVisible(std::string(AVI_TOOLS),	visible);
+	//	gMenuBarView->setItemVisible(CLIENT_MENU_NAME, debug);
+	//	gMenuBarView->setItemEnabled(CLIENT_MENU_NAME, debug);
 
-		gMenuBarView->arrange(); // clean-up positioning 
-	};
+	//	// Server ('Admin') menu hidden when not in godmode.
+	//	const bool show_server_menu = debug && (gAgent.getGodLevel() > GOD_NOT);
+	//	gMenuBarView->setItemVisible(SERVER_MENU_NAME, show_server_menu);
+	//	gMenuBarView->setItemEnabled(SERVER_MENU_NAME, show_server_menu);
+
+	//	//gMenuBarView->setItemVisible("DebugOptions",	visible);
+	//	//gMenuBarView->setItemVisible(std::string(AVI_TOOLS),	visible);
+
+	//	gMenuBarView->arrange(); // clean-up positioning 
+	//};
 }
 
 void toggle_debug_menus(void*)
