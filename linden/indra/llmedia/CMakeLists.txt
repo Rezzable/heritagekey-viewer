@@ -31,6 +31,7 @@ set(llmedia_SOURCE_FILES
     llmediamanager.cpp
     llmediaimplgstreamer.cpp
     llmediaimplgstreamervidplug.cpp
+    llgstplaythread.cpp
     )
     
 set(llmedia_HEADER_FILES
@@ -47,6 +48,7 @@ set(llmedia_HEADER_FILES
     llmediaobserver.h
     llmediaimplgstreamer.h
     llmediaimplgstreamervidplug.h
+    llgstplaythread.h
     )
 
   # Work around a bad interaction between broken gstreamer headers and
@@ -62,19 +64,6 @@ if (MOZLIB)
 
   list(APPEND llmedia_HEADER_FILES llmediaimplllmozlib.h)
 endif (MOZLIB)
-
-if (QUICKTIME)
-  list(APPEND llmedia_SOURCE_FILES llmediaimplquicktime.cpp)
-  list(APPEND llmedia_HEADER_FILES llmediaimplquicktime.h)
-
-  # We use a bunch of deprecated system APIs.
-  if (DARWIN)
-    set_source_files_properties(
-        llmediaimplquicktime.cpp PROPERTIES
-        COMPILE_FLAGS -Wno-deprecated-declarations
-        )
-  endif (DARWIN)
-endif (QUICKTIME)
 
 set_source_files_properties(${llmedia_HEADER_FILES}
                             PROPERTIES HEADER_FILE_ONLY TRUE)
