@@ -777,6 +777,44 @@
 =-                   \/ Imprudence \/                     -=
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+2009-04-20  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/llaudio/audioengine_openal.cpp:
+	Imported GreenLife Emerald Viewer's OpenAL code. It works!
+	* linden/indra/llaudio/audioengine_openal.h:
+	Ditto.
+
+
+	* linden/indra/newview/viewer_manifest.py:
+	We'll use libopenal.1.dylib after all (yet again).
+
+
+	* linden/indra/cmake/OPENAL.cmake:
+	Help (force) Mac find the right OpenAL lib and header dir.
+
+
+	* linden/install.xml:
+	Mac viewer uses Thomas Shikami's OpenAL libs.
+
+
+2009-04-10  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/viewer_manifest.py:
+	Added libneon to Mac manifest.
+
+
+	* linden/indra/cmake/OPENAL.cmake:
+	Help Mac find the right libalut.0.dylib.
+
+
+	* linden/indra/cmake/GStreamer.cmake:
+	Help Mac find the right libxml2.2.dylib.
+
+
+	* linden/indra/newview/viewer_manifest.py:
+	Tweaked Mac lib manifest.
+	Removed pango, commented out libopenal, added libxml2.
+
 
 2009-04-06  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
