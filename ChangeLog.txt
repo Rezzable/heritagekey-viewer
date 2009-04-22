@@ -3,6 +3,10 @@
 
 	* linden/indra/newview/skins/default/xui/en-us/floater_snapshot.xml:
 	Removed "Upload Snapshot" option.
+	
+	
+	* linden/indra/newview/skins/default/html/en-us/loading/loading.html:
+	Removed linden-branded loading hand.
 
 
 2009-03-05  McCabe Maxsted  <hakushakukun@gmail.com>
