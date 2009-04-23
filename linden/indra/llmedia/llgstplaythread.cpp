@@ -50,5 +50,7 @@ LLGstPlayThread::~LLGstPlayThread()
 // virtual
 void LLGstPlayThread::run()
 {
+	LL_INFOS("MediaImpl") << "LLGstPlayThread::run() start play called next" << LL_ENDL;
 	((LLMediaImplGStreamer *)mMediaImpl)->startPlay();
+	LL_INFOS("MediaImpl") << "LLGstPlayThread::run() start play call finished" << LL_ENDL;
 }

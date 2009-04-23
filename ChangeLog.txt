@@ -1,3 +1,14 @@
+2009-04-22  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_snapshot.xml:
+	Removed "Upload Snapshot" option.
+	
+	
+	* linden/indra/newview/skins/default/html/en-us/loading/loading.html:
+	Removed linden-branded loading hand.
+
+
 2009-04-07  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/Info-HeritageKey.plist:
@@ -10,6 +21,13 @@
 
 	* linden/indra/newview/viewer_manifest.py:
 	Mac manifest rebranding fixes. (Imprudence -> Heritage Key).
+
+
+2009-03-05  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/llviewermenu.cpp:
+	Fixed stack heap corruption error in llmenugl.cpp.
 
 
 2009-03-05  McCabe Maxsted  <hakushakukun@gmail.com>

@@ -664,7 +664,7 @@ void init_menus()
 	gDetachSubMenu = gMenuBarView->getChildMenuByName("Detach Object", TRUE);
 
 	// TomY TODO convert these two
-	LLMenuGL*menu;
+	//LLMenuGL*menu; // Disabled along with the Advanced menu -- McCabe
 
 	// Advanced (Client) menu is XUI now! \o/
 	/*
@@ -674,10 +674,10 @@ void init_menus()
 	menu->updateParent(LLMenuGL::sMenuContainer);
 	*/
 
-	menu = new LLMenuGL(SERVER_MENU_NAME);
+	/*menu = new LLMenuGL(SERVER_MENU_NAME);
 	init_server_menu(menu);
 	gMenuBarView->appendMenu( menu );
-	menu->updateParent(LLMenuGL::sMenuContainer);
+	menu->updateParent(LLMenuGL::sMenuContainer);*/
 
 	gMenuBarView->createJumpKeys();
 
@@ -700,263 +700,263 @@ void init_menus()
 }
 
 
-
-void init_client_menu(LLMenuGL* menu)
-{
-	LLMenuGL* sub_menu = NULL;
-
-	//menu->append(new LLMenuItemCallGL("Permissions Control", &show_permissions_control));
-	// this is now in the view menu so we don't need it here!
-	
-	{
-		// *TODO: Translate
-		LLMenuGL* sub = new LLMenuGL("Consoles");
-		menu->appendMenu(sub);
-		sub->append(new LLMenuItemCheckGL("Frame Console", 
-										&toggle_visibility,
-										NULL,
-										&get_visibility,
-										(void*)gDebugView->mFrameStatView,
-										'2', MASK_CONTROL|MASK_SHIFT ) );
-		sub->append(new LLMenuItemCheckGL("Texture Console", 
-										&toggle_visibility,
-										NULL,
-										&get_visibility,
-										(void*)gTextureView,
-									   	'3', MASK_CONTROL|MASK_SHIFT ) );
-		LLView* debugview = gDebugView->mDebugConsolep;
-		sub->append(new LLMenuItemCheckGL("Debug Console", 
-										&toggle_visibility,
-										NULL,
-										&get_visibility,
-										debugview,
-									   	'4', MASK_CONTROL|MASK_SHIFT ) );
-
-		sub->append(new LLMenuItemCheckGL("Fast Timers", 
-										&toggle_visibility,
-										NULL,
-										&get_visibility,
-										(void*)gDebugView->mFastTimerView,
-										  '9', MASK_CONTROL|MASK_SHIFT ) );
-#if MEM_TRACK_MEM
-		sub->append(new LLMenuItemCheckGL("Memory", 
-										&toggle_visibility,
-										NULL,
-										&get_visibility,
-										(void*)gDebugView->mMemoryView,
-										  '0', MASK_CONTROL|MASK_SHIFT ) );
-#endif
-		sub->appendSeparator();
-		sub->append(new LLMenuItemCallGL("Region Info to Debug Console", 
-			&handle_region_dump_settings, NULL));
-		sub->append(new LLMenuItemCallGL("Group Info to Debug Console",
-			&handle_dump_group_info, NULL, NULL));
-		sub->append(new LLMenuItemCallGL("Capabilities Info to Debug Console",
-			&handle_dump_capabilities_info, NULL, NULL));
-		sub->createJumpKeys();
-	}
-	
-	// neither of these works particularly well at the moment
-	/*menu->append(new LLMenuItemCallGL(  "Reload UI XML",	&reload_ui,	
-	  				NULL, NULL) );*/
-	/*menu->append(new LLMenuItemCallGL("Reload settings/colors", 
-					&handle_reload_settings, NULL, NULL));*/
-	menu->append(new LLMenuItemCallGL("Reload personal setting overrides", 
-		&reload_personal_settings_overrides, NULL, NULL, KEY_F2, MASK_CONTROL|MASK_SHIFT));
-
-	sub_menu = new LLMenuGL("HUD Info");
-	{
-		sub_menu->append(new LLMenuItemCheckGL("Velocity", 
-												&toggle_visibility,
-												NULL,
-												&get_visibility,
-												(void*)gVelocityBar));
-
-		sub_menu->append(new LLMenuItemToggleGL("Camera",	&gDisplayCameraPos ) );
-		sub_menu->append(new LLMenuItemToggleGL("Wind", 	&gDisplayWindInfo) );
-		sub_menu->append(new LLMenuItemToggleGL("FOV",  	&gDisplayFOV ) );
-		sub_menu->createJumpKeys();
-	}
-	menu->appendMenu(sub_menu);
-
-	menu->appendSeparator();
-	
-	menu->append(new LLMenuItemCheckGL( "Quiet Snapshots to Disk",
-										&menu_toggle_control,
-										NULL,
-										&menu_check_control,
-										(void*)"QuietSnapshotsToDisk"));
-
-	menu->append(new LLMenuItemCheckGL("Show Mouselook Crosshairs",
-									   &menu_toggle_control,
-									   NULL,
-									   &menu_check_control,
-									   (void*)"ShowCrosshairs"));
-
-	menu->append(new LLMenuItemCheckGL("Debug Permissions",
-									   &menu_toggle_control,
-									   NULL,
-									   &menu_check_control,
-									   (void*)"DebugPermissions"));
-	
-
-
-#ifdef TOGGLE_HACKED_GODLIKE_VIEWER
-	if (!LLViewerLogin::getInstance()->isInProductionGrid())
-	{
-		menu->append(new LLMenuItemCheckGL("Hacked Godmode",
-										   &handle_toggle_hacked_godmode,
-										   NULL,
-										   &check_toggle_hacked_godmode,
-										   (void*)"HackedGodmode"));
-	}
-#endif
-
-	menu->append(new LLMenuItemCallGL("Clear Group Cache", 
-									  LLGroupMgr::debugClearAllGroups));
-	menu->appendSeparator();
-
-	sub_menu = new LLMenuGL("Rendering");
-	init_debug_rendering_menu(sub_menu);
-	menu->appendMenu(sub_menu);
-
-	sub_menu = new LLMenuGL("World");
-	init_debug_world_menu(sub_menu);
-	menu->appendMenu(sub_menu);
-
-	sub_menu = new LLMenuGL("UI");
-	init_debug_ui_menu(sub_menu);
-	menu->appendMenu(sub_menu);
-
-	sub_menu = new LLMenuGL("XUI");
-	init_debug_xui_menu(sub_menu);
-	menu->appendMenu(sub_menu);
-
-	sub_menu = new LLMenuGL("Character");
-	init_debug_avatar_menu(sub_menu);
-	menu->appendMenu(sub_menu);
-
-{
-		LLMenuGL* sub = NULL;
-		sub = new LLMenuGL("Network");
-
-		sub->append(new LLMenuItemCallGL("Enable Message Log",  
-			&handle_viewer_enable_message_log,  NULL));
-		sub->append(new LLMenuItemCallGL("Disable Message Log", 
-			&handle_viewer_disable_message_log, NULL));
-
-		sub->appendSeparator();
-
-		sub->append(new LLMenuItemCheckGL("Velocity Interpolate Objects", 
-										  &velocity_interpolate,
-										  NULL, 
-										  &menu_check_control,
-										  (void*)"VelocityInterpolate"));
-		sub->append(new LLMenuItemCheckGL("Ping Interpolate Object Positions", 
-										  &menu_toggle_control,
-										  NULL, 
-										  &menu_check_control,
-										  (void*)"PingInterpolate"));
-
-		sub->appendSeparator();
-
-		sub->append(new LLMenuItemCallGL("Drop a Packet", 
-			&drop_packet, NULL, NULL, 
-			'L', MASK_ALT | MASK_CONTROL));
-
-		menu->appendMenu( sub );
-		sub->createJumpKeys();
-	}
-	{
-		LLMenuGL* sub = NULL;
-		sub = new LLMenuGL("Recorder");
-
-		sub->append(new LLMenuItemCheckGL("Full Session Logging", &menu_toggle_control, NULL, &menu_check_control, (void*)"StatsSessionTrackFrameStats"));
-
-		sub->append(new LLMenuItemCallGL("Start Logging",	&LLFrameStats::startLogging, NULL));
-		sub->append(new LLMenuItemCallGL("Stop Logging",	&LLFrameStats::stopLogging, NULL));
-		sub->append(new LLMenuItemCallGL("Log 10 Seconds", &LLFrameStats::timedLogging10, NULL));
-		sub->append(new LLMenuItemCallGL("Log 30 Seconds", &LLFrameStats::timedLogging30, NULL));
-		sub->append(new LLMenuItemCallGL("Log 60 Seconds", &LLFrameStats::timedLogging60, NULL));
-		sub->appendSeparator();
-		sub->append(new LLMenuItemCallGL("Start Playback", &LLAgentPilot::startPlayback, NULL));
-		sub->append(new LLMenuItemCallGL("Stop Playback",	&LLAgentPilot::stopPlayback, NULL));
-		sub->append(new LLMenuItemToggleGL("Loop Playback", &LLAgentPilot::sLoop) );
-		sub->append(new LLMenuItemCallGL("Start Record",	&LLAgentPilot::startRecord, NULL));
-		sub->append(new LLMenuItemCallGL("Stop Record",	&LLAgentPilot::saveRecord, NULL));
-
-		menu->appendMenu( sub );
-		sub->createJumpKeys();
-	}
-
-	menu->appendSeparator();
-
-	menu->append(new LLMenuItemToggleGL("Show Updates", 
-		&gShowObjectUpdates));
-	
-	menu->appendSeparator(); 
-	
-	menu->append(new LLMenuItemCallGL("Compress Images...", 
-		&handle_compress_image, NULL, NULL));
-
-	menu->append(new LLMenuItemCheckGL("Limit Select Distance", 
-									   &menu_toggle_control,
-									   NULL, 
-									   &menu_check_control,
-									   (void*)"LimitSelectDistance"));
-
-	menu->append(new LLMenuItemCheckGL("Mouse Smoothing",
-										&menu_toggle_control,
-										NULL,
-										&menu_check_control,
-										(void*) "MouseSmooth"));
-	menu->appendSeparator();
-
-	menu->append(new LLMenuItemCheckGL( "Console Window", 
-										&menu_toggle_control,
-										NULL, 
-										&menu_check_control,
-										(void*)"ShowConsoleWindow"));
-
-	if(gSavedSettings.getBOOL("QAMode"))
-	{
-		LLMenuGL* sub = NULL;
-		sub = new LLMenuGL("Debugging");
-#if LL_WINDOWS
-        sub->append(new LLMenuItemCallGL("Force Breakpoint", &force_error_breakpoint, NULL, NULL, 'B', MASK_CONTROL | MASK_ALT));
-#endif
-		sub->append(new LLMenuItemCallGL("Force LLError And Crash", &force_error_llerror));
-        sub->append(new LLMenuItemCallGL("Force Bad Memory Access", &force_error_bad_memory_access));
-		sub->append(new LLMenuItemCallGL("Force Infinite Loop", &force_error_infinite_loop));
-		// *NOTE:Mani this isn't handled yet... sub->append(new LLMenuItemCallGL("Force Software Exception", &force_error_unhandled_exception)); 
-		sub->createJumpKeys();
-		menu->appendMenu(sub);
-	}
-
-	menu->append(new LLMenuItemCheckGL( "Output Debug Minidump", 
-										&menu_toggle_control,
-										NULL, 
-										&menu_check_control,
-										(void*)"SaveMinidump"));
-
-	// TomY Temporary menu item so we can test this floater
-	menu->append(new LLMenuItemCheckGL("Clothing...", 
-												&handle_clothing,
-												NULL,
-												NULL,
-												NULL));
-
-	menu->append(new LLMenuItemCallGL("Debug Settings...", LLFloaterSettingsDebug::show, NULL, NULL));
-	menu->append(new LLMenuItemCheckGL("View Admin Options", &handle_admin_override_toggle, NULL, &check_admin_override, NULL, 'V', MASK_CONTROL | MASK_ALT));
-
-	menu->append(new LLMenuItemCallGL("Request Admin Status", 
-		&handle_god_mode, NULL, NULL, 'G', MASK_ALT | MASK_CONTROL));
-
-	menu->append(new LLMenuItemCallGL("Leave Admin Status", 
-		&handle_leave_god_mode, NULL, NULL, 'G', MASK_ALT | MASK_SHIFT | MASK_CONTROL));
-
-	menu->createJumpKeys();
-}
+// Advanced menu disabled -- McCabe 
+//void init_client_menu(LLMenuGL* menu)
+//{
+//	LLMenuGL* sub_menu = NULL;
+//
+//	//menu->append(new LLMenuItemCallGL("Permissions Control", &show_permissions_control));
+//	// this is now in the view menu so we don't need it here!
+//	
+//	{
+//		// *TODO: Translate
+//		LLMenuGL* sub = new LLMenuGL("Consoles");
+//		menu->appendMenu(sub);
+//		sub->append(new LLMenuItemCheckGL("Frame Console", 
+//										&toggle_visibility,
+//										NULL,
+//										&get_visibility,
+//										(void*)gDebugView->mFrameStatView,
+//										'2', MASK_CONTROL|MASK_SHIFT ) );
+//		sub->append(new LLMenuItemCheckGL("Texture Console", 
+//										&toggle_visibility,
+//										NULL,
+//										&get_visibility,
+//										(void*)gTextureView,
+//									   	'3', MASK_CONTROL|MASK_SHIFT ) );
+//		LLView* debugview = gDebugView->mDebugConsolep;
+//		sub->append(new LLMenuItemCheckGL("Debug Console", 
+//										&toggle_visibility,
+//										NULL,
+//										&get_visibility,
+//										debugview,
+//									   	'4', MASK_CONTROL|MASK_SHIFT ) );
+//
+//		sub->append(new LLMenuItemCheckGL("Fast Timers", 
+//										&toggle_visibility,
+//										NULL,
+//										&get_visibility,
+//										(void*)gDebugView->mFastTimerView,
+//										  '9', MASK_CONTROL|MASK_SHIFT ) );
+//#if MEM_TRACK_MEM
+//		sub->append(new LLMenuItemCheckGL("Memory", 
+//										&toggle_visibility,
+//										NULL,
+//										&get_visibility,
+//										(void*)gDebugView->mMemoryView,
+//										  '0', MASK_CONTROL|MASK_SHIFT ) );
+//#endif
+//		sub->appendSeparator();
+//		sub->append(new LLMenuItemCallGL("Region Info to Debug Console", 
+//			&handle_region_dump_settings, NULL));
+//		sub->append(new LLMenuItemCallGL("Group Info to Debug Console",
+//			&handle_dump_group_info, NULL, NULL));
+//		sub->append(new LLMenuItemCallGL("Capabilities Info to Debug Console",
+//			&handle_dump_capabilities_info, NULL, NULL));
+//		sub->createJumpKeys();
+//	}
+//	
+//	// neither of these works particularly well at the moment
+//	/*menu->append(new LLMenuItemCallGL(  "Reload UI XML",	&reload_ui,	
+//	  				NULL, NULL) );*/
+//	/*menu->append(new LLMenuItemCallGL("Reload settings/colors", 
+//					&handle_reload_settings, NULL, NULL));*/
+//	menu->append(new LLMenuItemCallGL("Reload personal setting overrides", 
+//		&reload_personal_settings_overrides, NULL, NULL, KEY_F2, MASK_CONTROL|MASK_SHIFT));
+//
+//	sub_menu = new LLMenuGL("HUD Info");
+//	{
+//		sub_menu->append(new LLMenuItemCheckGL("Velocity", 
+//												&toggle_visibility,
+//												NULL,
+//												&get_visibility,
+//												(void*)gVelocityBar));
+//
+//		sub_menu->append(new LLMenuItemToggleGL("Camera",	&gDisplayCameraPos ) );
+//		sub_menu->append(new LLMenuItemToggleGL("Wind", 	&gDisplayWindInfo) );
+//		sub_menu->append(new LLMenuItemToggleGL("FOV",  	&gDisplayFOV ) );
+//		sub_menu->createJumpKeys();
+//	}
+//	menu->appendMenu(sub_menu);
+//
+//	menu->appendSeparator();
+//	
+//	menu->append(new LLMenuItemCheckGL( "Quiet Snapshots to Disk",
+//										&menu_toggle_control,
+//										NULL,
+//										&menu_check_control,
+//										(void*)"QuietSnapshotsToDisk"));
+//
+//	menu->append(new LLMenuItemCheckGL("Show Mouselook Crosshairs",
+//									   &menu_toggle_control,
+//									   NULL,
+//									   &menu_check_control,
+//									   (void*)"ShowCrosshairs"));
+//
+//	menu->append(new LLMenuItemCheckGL("Debug Permissions",
+//									   &menu_toggle_control,
+//									   NULL,
+//									   &menu_check_control,
+//									   (void*)"DebugPermissions"));
+//	
+//
+//
+//#ifdef TOGGLE_HACKED_GODLIKE_VIEWER
+//	if (!LLViewerLogin::getInstance()->isInProductionGrid())
+//	{
+//		menu->append(new LLMenuItemCheckGL("Hacked Godmode",
+//										   &handle_toggle_hacked_godmode,
+//										   NULL,
+//										   &check_toggle_hacked_godmode,
+//										   (void*)"HackedGodmode"));
+//	}
+//#endif
+//
+//	menu->append(new LLMenuItemCallGL("Clear Group Cache", 
+//									  LLGroupMgr::debugClearAllGroups));
+//	menu->appendSeparator();
+//
+//	sub_menu = new LLMenuGL("Rendering");
+//	init_debug_rendering_menu(sub_menu);
+//	menu->appendMenu(sub_menu);
+//
+//	sub_menu = new LLMenuGL("World");
+//	init_debug_world_menu(sub_menu);
+//	menu->appendMenu(sub_menu);
+//
+//	sub_menu = new LLMenuGL("UI");
+//	init_debug_ui_menu(sub_menu);
+//	menu->appendMenu(sub_menu);
+//
+//	sub_menu = new LLMenuGL("XUI");
+//	init_debug_xui_menu(sub_menu);
+//	menu->appendMenu(sub_menu);
+//
+//	sub_menu = new LLMenuGL("Character");
+//	init_debug_avatar_menu(sub_menu);
+//	menu->appendMenu(sub_menu);
+//
+//{
+//		LLMenuGL* sub = NULL;
+//		sub = new LLMenuGL("Network");
+//
+//		sub->append(new LLMenuItemCallGL("Enable Message Log",  
+//			&handle_viewer_enable_message_log,  NULL));
+//		sub->append(new LLMenuItemCallGL("Disable Message Log", 
+//			&handle_viewer_disable_message_log, NULL));
+//
+//		sub->appendSeparator();
+//
+//		sub->append(new LLMenuItemCheckGL("Velocity Interpolate Objects", 
+//										  &velocity_interpolate,
+//										  NULL, 
+//										  &menu_check_control,
+//										  (void*)"VelocityInterpolate"));
+//		sub->append(new LLMenuItemCheckGL("Ping Interpolate Object Positions", 
+//										  &menu_toggle_control,
+//										  NULL, 
+//										  &menu_check_control,
+//										  (void*)"PingInterpolate"));
+//
+//		sub->appendSeparator();
+//
+//		sub->append(new LLMenuItemCallGL("Drop a Packet", 
+//			&drop_packet, NULL, NULL, 
+//			'L', MASK_ALT | MASK_CONTROL));
+//
+//		menu->appendMenu( sub );
+//		sub->createJumpKeys();
+//	}
+//	{
+//		LLMenuGL* sub = NULL;
+//		sub = new LLMenuGL("Recorder");
+//
+//		sub->append(new LLMenuItemCheckGL("Full Session Logging", &menu_toggle_control, NULL, &menu_check_control, (void*)"StatsSessionTrackFrameStats"));
+//
+//		sub->append(new LLMenuItemCallGL("Start Logging",	&LLFrameStats::startLogging, NULL));
+//		sub->append(new LLMenuItemCallGL("Stop Logging",	&LLFrameStats::stopLogging, NULL));
+//		sub->append(new LLMenuItemCallGL("Log 10 Seconds", &LLFrameStats::timedLogging10, NULL));
+//		sub->append(new LLMenuItemCallGL("Log 30 Seconds", &LLFrameStats::timedLogging30, NULL));
+//		sub->append(new LLMenuItemCallGL("Log 60 Seconds", &LLFrameStats::timedLogging60, NULL));
+//		sub->appendSeparator();
+//		sub->append(new LLMenuItemCallGL("Start Playback", &LLAgentPilot::startPlayback, NULL));
+//		sub->append(new LLMenuItemCallGL("Stop Playback",	&LLAgentPilot::stopPlayback, NULL));
+//		sub->append(new LLMenuItemToggleGL("Loop Playback", &LLAgentPilot::sLoop) );
+//		sub->append(new LLMenuItemCallGL("Start Record",	&LLAgentPilot::startRecord, NULL));
+//		sub->append(new LLMenuItemCallGL("Stop Record",	&LLAgentPilot::saveRecord, NULL));
+//
+//		menu->appendMenu( sub );
+//		sub->createJumpKeys();
+//	}
+//
+//	menu->appendSeparator();
+//
+//	menu->append(new LLMenuItemToggleGL("Show Updates", 
+//		&gShowObjectUpdates));
+//	
+//	menu->appendSeparator(); 
+//	
+//	menu->append(new LLMenuItemCallGL("Compress Images...", 
+//		&handle_compress_image, NULL, NULL));
+//
+//	menu->append(new LLMenuItemCheckGL("Limit Select Distance", 
+//									   &menu_toggle_control,
+//									   NULL, 
+//									   &menu_check_control,
+//									   (void*)"LimitSelectDistance"));
+//
+//	menu->append(new LLMenuItemCheckGL("Mouse Smoothing",
+//										&menu_toggle_control,
+//										NULL,
+//										&menu_check_control,
+//										(void*) "MouseSmooth"));
+//	menu->appendSeparator();
+//
+//	menu->append(new LLMenuItemCheckGL( "Console Window", 
+//										&menu_toggle_control,
+//										NULL, 
+//										&menu_check_control,
+//										(void*)"ShowConsoleWindow"));
+//
+//	if(gSavedSettings.getBOOL("QAMode"))
+//	{
+//		LLMenuGL* sub = NULL;
+//		sub = new LLMenuGL("Debugging");
+//#if LL_WINDOWS
+//        sub->append(new LLMenuItemCallGL("Force Breakpoint", &force_error_breakpoint, NULL, NULL, 'B', MASK_CONTROL | MASK_ALT));
+//#endif
+//		sub->append(new LLMenuItemCallGL("Force LLError And Crash", &force_error_llerror));
+//        sub->append(new LLMenuItemCallGL("Force Bad Memory Access", &force_error_bad_memory_access));
+//		sub->append(new LLMenuItemCallGL("Force Infinite Loop", &force_error_infinite_loop));
+//		// *NOTE:Mani this isn't handled yet... sub->append(new LLMenuItemCallGL("Force Software Exception", &force_error_unhandled_exception)); 
+//		sub->createJumpKeys();
+//		menu->appendMenu(sub);
+//	}
+//
+//	menu->append(new LLMenuItemCheckGL( "Output Debug Minidump", 
+//										&menu_toggle_control,
+//										NULL, 
+//										&menu_check_control,
+//										(void*)"SaveMinidump"));
+//
+//	// TomY Temporary menu item so we can test this floater
+//	menu->append(new LLMenuItemCheckGL("Clothing...", 
+//												&handle_clothing,
+//												NULL,
+//												NULL,
+//												NULL));
+//
+//	menu->append(new LLMenuItemCallGL("Debug Settings...", LLFloaterSettingsDebug::show, NULL, NULL));
+//	menu->append(new LLMenuItemCheckGL("View Admin Options", &handle_admin_override_toggle, NULL, &check_admin_override, NULL, 'V', MASK_CONTROL | MASK_ALT));
+//
+//	menu->append(new LLMenuItemCallGL("Request Admin Status", 
+//		&handle_god_mode, NULL, NULL, 'G', MASK_ALT | MASK_CONTROL));
+//
+//	menu->append(new LLMenuItemCallGL("Leave Admin Status", 
+//		&handle_leave_god_mode, NULL, NULL, 'G', MASK_ALT | MASK_SHIFT | MASK_CONTROL));
+//
+//	menu->createJumpKeys();
+//}
 
 void init_debug_world_menu(LLMenuGL* menu)
 {
@@ -1007,446 +1007,446 @@ extern BOOL gDebugWindowProc;
 extern BOOL gDebugTextEditorTips;
 extern BOOL gDebugSelectMgr;
 
-void init_debug_ui_menu(LLMenuGL* menu)
-{
-	menu->append(new LLMenuItemCallGL("SLURL Test", &handle_slurl_test));
-	menu->append(new LLMenuItemCallGL("Editable UI", &edit_ui));
-	menu->append(new LLMenuItemToggleGL("Async Keystrokes", &gHandleKeysAsync));
-	menu->append(new LLMenuItemCallGL( "Dump SelectMgr", &dump_select_mgr));
-	menu->append(new LLMenuItemCallGL( "Dump Inventory", &dump_inventory));
-	menu->append(new LLMenuItemCallGL( "Dump Focus Holder", &handle_dump_focus, NULL, NULL, 'F', MASK_ALT | MASK_CONTROL));
-	menu->append(new LLMenuItemCallGL( "Print Selected Object Info",	&print_object_info, NULL, NULL, 'P', MASK_CONTROL|MASK_SHIFT ));
-	menu->append(new LLMenuItemCallGL( "Print Agent Info",			&print_agent_nvpairs, NULL, NULL, 'P', MASK_SHIFT ));
-	menu->append(new LLMenuItemCallGL( "Memory Stats",  &output_statistics, NULL, NULL, 'M', MASK_SHIFT | MASK_ALT | MASK_CONTROL));
-	menu->append(new LLMenuItemCheckGL("Double-Click Auto-Pilot", 
-		menu_toggle_control, NULL, menu_check_control, 
-		(void*)"DoubleClickAutoPilot"));
-	menu->appendSeparator();
-//	menu->append(new LLMenuItemCallGL( "Print Packets Lost",			&print_packets_lost, NULL, NULL, 'L', MASK_SHIFT ));
-	menu->append(new LLMenuItemToggleGL("Debug SelectMgr", &gDebugSelectMgr));
-	menu->append(new LLMenuItemToggleGL("Debug Clicks", &gDebugClicks));
-	menu->append(new LLMenuItemToggleGL("Debug Views", &LLView::sDebugRects));
-	menu->append(new LLMenuItemCheckGL("Show Name Tooltips", toggle_show_xui_names, NULL, check_show_xui_names, NULL));
-	menu->append(new LLMenuItemToggleGL("Debug Mouse Events", &LLView::sDebugMouseHandling));
-	menu->append(new LLMenuItemToggleGL("Debug Keys", &LLView::sDebugKeys));
-	menu->append(new LLMenuItemToggleGL("Debug WindowProc", &gDebugWindowProc));
-	menu->append(new LLMenuItemToggleGL("Debug Text Editor Tips", &gDebugTextEditorTips));
-	menu->appendSeparator();
-	menu->append(new LLMenuItemCheckGL("Show Time", menu_toggle_control, NULL, menu_check_control, (void*)"DebugShowTime"));
-	menu->append(new LLMenuItemCheckGL("Show Render Info", menu_toggle_control, NULL, menu_check_control, (void*)"DebugShowRenderInfo"));
-	menu->append(new LLMenuItemCheckGL("Show Color Under Cursor", menu_toggle_control, NULL, menu_check_control, (void*)"DebugShowColor"));
-	
-	menu->createJumpKeys();
-}
+//void init_debug_ui_menu(LLMenuGL* menu)
+//{
+//	menu->append(new LLMenuItemCallGL("SLURL Test", &handle_slurl_test));
+//	menu->append(new LLMenuItemCallGL("Editable UI", &edit_ui));
+//	menu->append(new LLMenuItemToggleGL("Async Keystrokes", &gHandleKeysAsync));
+//	menu->append(new LLMenuItemCallGL( "Dump SelectMgr", &dump_select_mgr));
+//	menu->append(new LLMenuItemCallGL( "Dump Inventory", &dump_inventory));
+//	menu->append(new LLMenuItemCallGL( "Dump Focus Holder", &handle_dump_focus, NULL, NULL, 'F', MASK_ALT | MASK_CONTROL));
+//	menu->append(new LLMenuItemCallGL( "Print Selected Object Info",	&print_object_info, NULL, NULL, 'P', MASK_CONTROL|MASK_SHIFT ));
+//	menu->append(new LLMenuItemCallGL( "Print Agent Info",			&print_agent_nvpairs, NULL, NULL, 'P', MASK_SHIFT ));
+//	menu->append(new LLMenuItemCallGL( "Memory Stats",  &output_statistics, NULL, NULL, 'M', MASK_SHIFT | MASK_ALT | MASK_CONTROL));
+//	menu->append(new LLMenuItemCheckGL("Double-Click Auto-Pilot", 
+//		menu_toggle_control, NULL, menu_check_control, 
+//		(void*)"DoubleClickAutoPilot"));
+//	menu->appendSeparator();
+////	menu->append(new LLMenuItemCallGL( "Print Packets Lost",			&print_packets_lost, NULL, NULL, 'L', MASK_SHIFT ));
+//	menu->append(new LLMenuItemToggleGL("Debug SelectMgr", &gDebugSelectMgr));
+//	menu->append(new LLMenuItemToggleGL("Debug Clicks", &gDebugClicks));
+//	menu->append(new LLMenuItemToggleGL("Debug Views", &LLView::sDebugRects));
+//	menu->append(new LLMenuItemCheckGL("Show Name Tooltips", toggle_show_xui_names, NULL, check_show_xui_names, NULL));
+//	menu->append(new LLMenuItemToggleGL("Debug Mouse Events", &LLView::sDebugMouseHandling));
+//	menu->append(new LLMenuItemToggleGL("Debug Keys", &LLView::sDebugKeys));
+//	menu->append(new LLMenuItemToggleGL("Debug WindowProc", &gDebugWindowProc));
+//	menu->append(new LLMenuItemToggleGL("Debug Text Editor Tips", &gDebugTextEditorTips));
+//	menu->appendSeparator();
+//	menu->append(new LLMenuItemCheckGL("Show Time", menu_toggle_control, NULL, menu_check_control, (void*)"DebugShowTime"));
+//	menu->append(new LLMenuItemCheckGL("Show Render Info", menu_toggle_control, NULL, menu_check_control, (void*)"DebugShowRenderInfo"));
+//	menu->append(new LLMenuItemCheckGL("Show Color Under Cursor", menu_toggle_control, NULL, menu_check_control, (void*)"DebugShowColor"));
+//	
+//	menu->createJumpKeys();
+//}
+//
+//void init_debug_xui_menu(LLMenuGL* menu)
+//{
+//	menu->append(new LLMenuItemCallGL("Floater Test...", LLFloaterTest::show));
+//	menu->append(new LLMenuItemCallGL("Export Menus to XML...", handle_export_menus_to_xml));
+//	menu->append(new LLMenuItemCallGL("Edit UI...", LLFloaterEditUI::show));	
+//	menu->append(new LLMenuItemCallGL("Load from XML...", handle_load_from_xml));
+//	menu->append(new LLMenuItemCallGL("Save to XML...", handle_save_to_xml));
+//	menu->append(new LLMenuItemCheckGL("Show XUI Names", toggle_show_xui_names, NULL, check_show_xui_names, NULL));
+//
+//	//menu->append(new LLMenuItemCallGL("Buy Currency...", handle_buy_currency));
+//	menu->createJumpKeys();
+//}
 
-void init_debug_xui_menu(LLMenuGL* menu)
-{
-	menu->append(new LLMenuItemCallGL("Floater Test...", LLFloaterTest::show));
-	menu->append(new LLMenuItemCallGL("Export Menus to XML...", handle_export_menus_to_xml));
-	menu->append(new LLMenuItemCallGL("Edit UI...", LLFloaterEditUI::show));	
-	menu->append(new LLMenuItemCallGL("Load from XML...", handle_load_from_xml));
-	menu->append(new LLMenuItemCallGL("Save to XML...", handle_save_to_xml));
-	menu->append(new LLMenuItemCheckGL("Show XUI Names", toggle_show_xui_names, NULL, check_show_xui_names, NULL));
-
-	//menu->append(new LLMenuItemCallGL("Buy Currency...", handle_buy_currency));
-	menu->createJumpKeys();
-}
-
-void init_debug_rendering_menu(LLMenuGL* menu)
-{
-	LLMenuGL* sub_menu = NULL;
-
-	///////////////////////////
-	//
-	// Debug menu for types/pools
-	//
-	sub_menu = new LLMenuGL("Types");
-	menu->appendMenu(sub_menu);
-
-	sub_menu->append(new LLMenuItemCheckGL("Simple",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_SIMPLE,	'1', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
-	sub_menu->append(new LLMenuItemCheckGL("Alpha",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_ALPHA, '2', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
-	sub_menu->append(new LLMenuItemCheckGL("Tree",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_TREE, '3', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
-	sub_menu->append(new LLMenuItemCheckGL("Character",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_AVATAR, '4', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
-	sub_menu->append(new LLMenuItemCheckGL("SurfacePatch",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_TERRAIN, '5', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
-	sub_menu->append(new LLMenuItemCheckGL("Sky",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_SKY, '6', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
-	sub_menu->append(new LLMenuItemCheckGL("Water",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_WATER, '7', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
-	sub_menu->append(new LLMenuItemCheckGL("Ground",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_GROUND, '8', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
-	sub_menu->append(new LLMenuItemCheckGL("Volume",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_VOLUME, '9', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
-	sub_menu->append(new LLMenuItemCheckGL("Grass",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_GRASS, '0', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
-	sub_menu->append(new LLMenuItemCheckGL("Clouds",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_CLOUDS, '-', MASK_CONTROL|MASK_ALT| MASK_SHIFT));
-	sub_menu->append(new LLMenuItemCheckGL("Particles",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_PARTICLES, '=', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
-	sub_menu->append(new LLMenuItemCheckGL("Bump",
-											&LLPipeline::toggleRenderTypeControl, NULL,
-											&LLPipeline::hasRenderTypeControl,
-											(void*)LLPipeline::RENDER_TYPE_BUMP, '\\', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
-	sub_menu->createJumpKeys();
-	sub_menu = new LLMenuGL("Features");
-	menu->appendMenu(sub_menu);
-	sub_menu->append(new LLMenuItemCheckGL("UI",
-											&LLPipeline::toggleRenderDebugFeature, NULL,
-											&LLPipeline::toggleRenderDebugFeatureControl,
-											(void*)LLPipeline::RENDER_DEBUG_FEATURE_UI, KEY_F1, MASK_ALT|MASK_CONTROL));
-	sub_menu->append(new LLMenuItemCheckGL("Selected",
-											&LLPipeline::toggleRenderDebugFeature, NULL,
-											&LLPipeline::toggleRenderDebugFeatureControl,
-											(void*)LLPipeline::RENDER_DEBUG_FEATURE_SELECTED, KEY_F2, MASK_ALT|MASK_CONTROL));
-	sub_menu->append(new LLMenuItemCheckGL("Highlighted",
-											&LLPipeline::toggleRenderDebugFeature, NULL,
-											&LLPipeline::toggleRenderDebugFeatureControl,
-											(void*)LLPipeline::RENDER_DEBUG_FEATURE_HIGHLIGHTED, KEY_F3, MASK_ALT|MASK_CONTROL));
-	sub_menu->append(new LLMenuItemCheckGL("Dynamic Textures",
-											&LLPipeline::toggleRenderDebugFeature, NULL,
-											&LLPipeline::toggleRenderDebugFeatureControl,
-											(void*)LLPipeline::RENDER_DEBUG_FEATURE_DYNAMIC_TEXTURES, KEY_F4, MASK_ALT|MASK_CONTROL));
-	sub_menu->append(new LLMenuItemCheckGL( "Foot Shadows", 
-											&LLPipeline::toggleRenderDebugFeature, NULL,
-											&LLPipeline::toggleRenderDebugFeatureControl,
-											(void*)LLPipeline::RENDER_DEBUG_FEATURE_FOOT_SHADOWS, KEY_F5, MASK_ALT|MASK_CONTROL));
-	sub_menu->append(new LLMenuItemCheckGL("Fog",
-											&LLPipeline::toggleRenderDebugFeature, NULL,
-											&LLPipeline::toggleRenderDebugFeatureControl,
-											(void*)LLPipeline::RENDER_DEBUG_FEATURE_FOG, KEY_F6, MASK_ALT|MASK_CONTROL));
-	sub_menu->append(new LLMenuItemCheckGL("Palletized Textures",
-											&LLPipeline::toggleRenderDebugFeature, NULL,
-											&LLPipeline::toggleRenderDebugFeatureControl,
-											(void*)LLPipeline::RENDER_DEBUG_FEATURE_PALETTE, KEY_F7, MASK_ALT|MASK_CONTROL));
-	sub_menu->append(new LLMenuItemCheckGL("Test FRInfo",
-											&LLPipeline::toggleRenderDebugFeature, NULL,
-											&LLPipeline::toggleRenderDebugFeatureControl,
-											(void*)LLPipeline::RENDER_DEBUG_FEATURE_FR_INFO, KEY_F8, MASK_ALT|MASK_CONTROL));
-	sub_menu->append(new LLMenuItemCheckGL( "Flexible Objects", 
-											&LLPipeline::toggleRenderDebugFeature, NULL,
-											&LLPipeline::toggleRenderDebugFeatureControl,
-											(void*)LLPipeline::RENDER_DEBUG_FEATURE_FLEXIBLE, KEY_F9, MASK_ALT|MASK_CONTROL));
-	sub_menu->createJumpKeys();
-
-	/////////////////////////////
-	//
-	// Debug menu for info displays
-	//
-	sub_menu = new LLMenuGL("Info Displays");
-	menu->appendMenu(sub_menu);
-
-	sub_menu->append(new LLMenuItemCheckGL("Verify",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_VERIFY));
-	sub_menu->append(new LLMenuItemCheckGL("BBoxes",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_BBOXES));
-	sub_menu->append(new LLMenuItemCheckGL("Points",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_POINTS));
-	sub_menu->append(new LLMenuItemCheckGL("Octree",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_OCTREE));
-	sub_menu->append(new LLMenuItemCheckGL("Occlusion",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_OCCLUSION));
-	sub_menu->append(new LLMenuItemCheckGL("Render Batches", &LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_BATCH_SIZE));
-	sub_menu->append(new LLMenuItemCheckGL("Animated Textures",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_TEXTURE_ANIM));
-	sub_menu->append(new LLMenuItemCheckGL("Texture Priority",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_TEXTURE_PRIORITY));
-	sub_menu->append(new LLMenuItemCheckGL("Avatar Rendering Cost",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_SHAME));
-	sub_menu->append(new LLMenuItemCheckGL("Texture Area (sqrt(A))",&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_TEXTURE_AREA));
-	sub_menu->append(new LLMenuItemCheckGL("Face Area (sqrt(A))",&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_FACE_AREA));
-	sub_menu->append(new LLMenuItemCheckGL("Pick Render",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_PICKING));
-	sub_menu->append(new LLMenuItemCheckGL("Lights",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_LIGHTS));
-	sub_menu->append(new LLMenuItemCheckGL("Particles",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_PARTICLES));
-	sub_menu->append(new LLMenuItemCheckGL("Composition", &LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_COMPOSITION));
-	sub_menu->append(new LLMenuItemCheckGL("Glow",&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_GLOW));
-	sub_menu->append(new LLMenuItemCheckGL("Raycasting",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_RAYCAST));
-	sub_menu->append(new LLMenuItemCheckGL("Sculpt",	&LLPipeline::toggleRenderDebug, NULL,
-													&LLPipeline::toggleRenderDebugControl,
-													(void*)LLPipeline::RENDER_DEBUG_SCULPTED));
-	
-	sub_menu->append(new LLMenuItemToggleGL("Show Select Buffer", &gDebugSelect));
-
-	sub_menu->append(new LLMenuItemCallGL("Vectorize Perf Test", &run_vectorize_perf_test));
-
-	sub_menu = new LLMenuGL("Render Tests");
-
-	sub_menu->append(new LLMenuItemCheckGL("Camera Offset", 
-										  &menu_toggle_control,
-										  NULL, 
-										  &menu_check_control,
-										  (void*)"CameraOffset"));
-
-	sub_menu->append(new LLMenuItemToggleGL("Randomize Framerate", &gRandomizeFramerate));
-
-	sub_menu->append(new LLMenuItemToggleGL("Periodic Slow Frame", &gPeriodicSlowFrame));
-
-	sub_menu->append(new LLMenuItemToggleGL("Frame Test", &LLPipeline::sRenderFrameTest));
-
-	sub_menu->createJumpKeys();
-
-	menu->appendMenu( sub_menu );
-
-	menu->appendSeparator();
-	menu->append(new LLMenuItemCheckGL("Axes", menu_toggle_control, NULL, menu_check_control, (void*)"ShowAxes"));
-//	menu->append(new LLMenuItemCheckGL("Cull Small Objects", toggle_cull_small, NULL, menu_check_control, (void*)"RenderCullBySize"));
-
-	menu->appendSeparator();
-	menu->append(new LLMenuItemToggleGL("Hide Selected", &gHideSelectedObjects));
-	menu->appendSeparator();
-	menu->append(new LLMenuItemCheckGL("Tangent Basis", menu_toggle_control, NULL, menu_check_control, (void*)"ShowTangentBasis"));
-	menu->append(new LLMenuItemCallGL("Selected Texture Info", handle_selected_texture_info, NULL, NULL, 'T', MASK_CONTROL|MASK_SHIFT|MASK_ALT));
-	//menu->append(new LLMenuItemCallGL("Dump Image List", handle_dump_image_list, NULL, NULL, 'I', MASK_CONTROL|MASK_SHIFT));
-	
-	menu->append(new LLMenuItemToggleGL("Wireframe", &gUseWireframe, 
-			'R', MASK_CONTROL|MASK_SHIFT));
-
-	LLMenuItemCheckGL* item;
-	item = new LLMenuItemCheckGL("Object-Object Occlusion", menu_toggle_control, NULL, menu_check_control, (void*)"UseOcclusion", 'O', MASK_CONTROL|MASK_SHIFT);
-	item->setEnabled(gGLManager.mHasOcclusionQuery && LLFeatureManager::getInstance()->isFeatureAvailable("UseOcclusion"));
-	menu->append(item);
-
-	item = new LLMenuItemCheckGL("Debug GL", menu_toggle_control, NULL, menu_check_control, (void*)"RenderDebugGL");
-	menu->append(item);
-	
-	item = new LLMenuItemCheckGL("Debug Pipeline", menu_toggle_control, NULL, menu_check_control, (void*)"RenderDebugPipeline");
-	menu->append(item);
-	
-	item = new LLMenuItemCheckGL("Fast Alpha", menu_toggle_control, NULL, menu_check_control, (void*)"RenderFastAlpha");
-	menu->append(item);
-	
-	item = new LLMenuItemCheckGL("Animate Textures", menu_toggle_control, NULL, menu_check_control, (void*)"AnimateTextures");
-	menu->append(item);
-	
-	item = new LLMenuItemCheckGL("Disable Textures", menu_toggle_variable, NULL, menu_check_variable, (void*)&LLViewerImage::sDontLoadVolumeTextures);
-	menu->append(item);
-	
-#ifndef LL_RELEASE_FOR_DOWNLOAD
-	item = new LLMenuItemCheckGL("HTTP Get Textures", menu_toggle_control, NULL, menu_check_control, (void*)"ImagePipelineUseHTTP");
-	menu->append(item);
-#endif
-	
-	item = new LLMenuItemCheckGL("Run Multiple Threads", menu_toggle_control, NULL, menu_check_control, (void*)"RunMultipleThreads");
-	menu->append(item);
-
-	item = new LLMenuItemCheckGL("Cheesy Beacon", menu_toggle_control, NULL, menu_check_control, (void*)"CheesyBeacon");
-	menu->append(item);
-
-	item = new LLMenuItemCheckGL("Attached Lights", menu_toggle_attached_lights, NULL, menu_check_control, (void*)"RenderAttachedLights");
-	menu->append(item);
-
-	item = new LLMenuItemCheckGL("Attached Particles", menu_toggle_attached_particles, NULL, menu_check_control, (void*)"RenderAttachedParticles");
-	menu->append(item);
-
-#ifndef LL_RELEASE_FOR_DOWNLOAD
-	menu->appendSeparator();
-	menu->append(new LLMenuItemCallGL("Memory Leaking Simulation", LLFloaterMemLeak::show, NULL, NULL));
-#else
-	if(gSavedSettings.getBOOL("QAMode"))
-	{
-		menu->appendSeparator();
-		menu->append(new LLMenuItemCallGL("Memory Leaking Simulation", LLFloaterMemLeak::show, NULL, NULL));
-	}
-#endif
-	
-	menu->createJumpKeys();
-}
+//void init_debug_rendering_menu(LLMenuGL* menu)
+//{
+//	LLMenuGL* sub_menu = NULL;
+//
+//	///////////////////////////
+//	//
+//	// Debug menu for types/pools
+//	//
+//	sub_menu = new LLMenuGL("Types");
+//	menu->appendMenu(sub_menu);
+//
+//	sub_menu->append(new LLMenuItemCheckGL("Simple",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_SIMPLE,	'1', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
+//	sub_menu->append(new LLMenuItemCheckGL("Alpha",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_ALPHA, '2', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
+//	sub_menu->append(new LLMenuItemCheckGL("Tree",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_TREE, '3', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
+//	sub_menu->append(new LLMenuItemCheckGL("Character",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_AVATAR, '4', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
+//	sub_menu->append(new LLMenuItemCheckGL("SurfacePatch",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_TERRAIN, '5', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
+//	sub_menu->append(new LLMenuItemCheckGL("Sky",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_SKY, '6', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
+//	sub_menu->append(new LLMenuItemCheckGL("Water",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_WATER, '7', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
+//	sub_menu->append(new LLMenuItemCheckGL("Ground",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_GROUND, '8', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
+//	sub_menu->append(new LLMenuItemCheckGL("Volume",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_VOLUME, '9', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
+//	sub_menu->append(new LLMenuItemCheckGL("Grass",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_GRASS, '0', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
+//	sub_menu->append(new LLMenuItemCheckGL("Clouds",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_CLOUDS, '-', MASK_CONTROL|MASK_ALT| MASK_SHIFT));
+//	sub_menu->append(new LLMenuItemCheckGL("Particles",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_PARTICLES, '=', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
+//	sub_menu->append(new LLMenuItemCheckGL("Bump",
+//											&LLPipeline::toggleRenderTypeControl, NULL,
+//											&LLPipeline::hasRenderTypeControl,
+//											(void*)LLPipeline::RENDER_TYPE_BUMP, '\\', MASK_CONTROL|MASK_ALT|MASK_SHIFT));
+//	sub_menu->createJumpKeys();
+//	sub_menu = new LLMenuGL("Features");
+//	menu->appendMenu(sub_menu);
+//	sub_menu->append(new LLMenuItemCheckGL("UI",
+//											&LLPipeline::toggleRenderDebugFeature, NULL,
+//											&LLPipeline::toggleRenderDebugFeatureControl,
+//											(void*)LLPipeline::RENDER_DEBUG_FEATURE_UI, KEY_F1, MASK_ALT|MASK_CONTROL));
+//	sub_menu->append(new LLMenuItemCheckGL("Selected",
+//											&LLPipeline::toggleRenderDebugFeature, NULL,
+//											&LLPipeline::toggleRenderDebugFeatureControl,
+//											(void*)LLPipeline::RENDER_DEBUG_FEATURE_SELECTED, KEY_F2, MASK_ALT|MASK_CONTROL));
+//	sub_menu->append(new LLMenuItemCheckGL("Highlighted",
+//											&LLPipeline::toggleRenderDebugFeature, NULL,
+//											&LLPipeline::toggleRenderDebugFeatureControl,
+//											(void*)LLPipeline::RENDER_DEBUG_FEATURE_HIGHLIGHTED, KEY_F3, MASK_ALT|MASK_CONTROL));
+//	sub_menu->append(new LLMenuItemCheckGL("Dynamic Textures",
+//											&LLPipeline::toggleRenderDebugFeature, NULL,
+//											&LLPipeline::toggleRenderDebugFeatureControl,
+//											(void*)LLPipeline::RENDER_DEBUG_FEATURE_DYNAMIC_TEXTURES, KEY_F4, MASK_ALT|MASK_CONTROL));
+//	sub_menu->append(new LLMenuItemCheckGL( "Foot Shadows", 
+//											&LLPipeline::toggleRenderDebugFeature, NULL,
+//											&LLPipeline::toggleRenderDebugFeatureControl,
+//											(void*)LLPipeline::RENDER_DEBUG_FEATURE_FOOT_SHADOWS, KEY_F5, MASK_ALT|MASK_CONTROL));
+//	sub_menu->append(new LLMenuItemCheckGL("Fog",
+//											&LLPipeline::toggleRenderDebugFeature, NULL,
+//											&LLPipeline::toggleRenderDebugFeatureControl,
+//											(void*)LLPipeline::RENDER_DEBUG_FEATURE_FOG, KEY_F6, MASK_ALT|MASK_CONTROL));
+//	sub_menu->append(new LLMenuItemCheckGL("Palletized Textures",
+//											&LLPipeline::toggleRenderDebugFeature, NULL,
+//											&LLPipeline::toggleRenderDebugFeatureControl,
+//											(void*)LLPipeline::RENDER_DEBUG_FEATURE_PALETTE, KEY_F7, MASK_ALT|MASK_CONTROL));
+//	sub_menu->append(new LLMenuItemCheckGL("Test FRInfo",
+//											&LLPipeline::toggleRenderDebugFeature, NULL,
+//											&LLPipeline::toggleRenderDebugFeatureControl,
+//											(void*)LLPipeline::RENDER_DEBUG_FEATURE_FR_INFO, KEY_F8, MASK_ALT|MASK_CONTROL));
+//	sub_menu->append(new LLMenuItemCheckGL( "Flexible Objects", 
+//											&LLPipeline::toggleRenderDebugFeature, NULL,
+//											&LLPipeline::toggleRenderDebugFeatureControl,
+//											(void*)LLPipeline::RENDER_DEBUG_FEATURE_FLEXIBLE, KEY_F9, MASK_ALT|MASK_CONTROL));
+//	sub_menu->createJumpKeys();
+//
+//	/////////////////////////////
+//	//
+//	// Debug menu for info displays
+//	//
+//	sub_menu = new LLMenuGL("Info Displays");
+//	menu->appendMenu(sub_menu);
+//
+//	sub_menu->append(new LLMenuItemCheckGL("Verify",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_VERIFY));
+//	sub_menu->append(new LLMenuItemCheckGL("BBoxes",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_BBOXES));
+//	sub_menu->append(new LLMenuItemCheckGL("Points",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_POINTS));
+//	sub_menu->append(new LLMenuItemCheckGL("Octree",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_OCTREE));
+//	sub_menu->append(new LLMenuItemCheckGL("Occlusion",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_OCCLUSION));
+//	sub_menu->append(new LLMenuItemCheckGL("Render Batches", &LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_BATCH_SIZE));
+//	sub_menu->append(new LLMenuItemCheckGL("Animated Textures",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_TEXTURE_ANIM));
+//	sub_menu->append(new LLMenuItemCheckGL("Texture Priority",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_TEXTURE_PRIORITY));
+//	sub_menu->append(new LLMenuItemCheckGL("Avatar Rendering Cost",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_SHAME));
+//	sub_menu->append(new LLMenuItemCheckGL("Texture Area (sqrt(A))",&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_TEXTURE_AREA));
+//	sub_menu->append(new LLMenuItemCheckGL("Face Area (sqrt(A))",&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_FACE_AREA));
+//	sub_menu->append(new LLMenuItemCheckGL("Pick Render",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_PICKING));
+//	sub_menu->append(new LLMenuItemCheckGL("Lights",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_LIGHTS));
+//	sub_menu->append(new LLMenuItemCheckGL("Particles",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_PARTICLES));
+//	sub_menu->append(new LLMenuItemCheckGL("Composition", &LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_COMPOSITION));
+//	sub_menu->append(new LLMenuItemCheckGL("Glow",&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_GLOW));
+//	sub_menu->append(new LLMenuItemCheckGL("Raycasting",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_RAYCAST));
+//	sub_menu->append(new LLMenuItemCheckGL("Sculpt",	&LLPipeline::toggleRenderDebug, NULL,
+//													&LLPipeline::toggleRenderDebugControl,
+//													(void*)LLPipeline::RENDER_DEBUG_SCULPTED));
+//	
+//	sub_menu->append(new LLMenuItemToggleGL("Show Select Buffer", &gDebugSelect));
+//
+//	sub_menu->append(new LLMenuItemCallGL("Vectorize Perf Test", &run_vectorize_perf_test));
+//
+//	sub_menu = new LLMenuGL("Render Tests");
+//
+//	sub_menu->append(new LLMenuItemCheckGL("Camera Offset", 
+//										  &menu_toggle_control,
+//										  NULL, 
+//										  &menu_check_control,
+//										  (void*)"CameraOffset"));
+//
+//	sub_menu->append(new LLMenuItemToggleGL("Randomize Framerate", &gRandomizeFramerate));
+//
+//	sub_menu->append(new LLMenuItemToggleGL("Periodic Slow Frame", &gPeriodicSlowFrame));
+//
+//	sub_menu->append(new LLMenuItemToggleGL("Frame Test", &LLPipeline::sRenderFrameTest));
+//
+//	sub_menu->createJumpKeys();
+//
+//	menu->appendMenu( sub_menu );
+//
+//	menu->appendSeparator();
+//	menu->append(new LLMenuItemCheckGL("Axes", menu_toggle_control, NULL, menu_check_control, (void*)"ShowAxes"));
+////	menu->append(new LLMenuItemCheckGL("Cull Small Objects", toggle_cull_small, NULL, menu_check_control, (void*)"RenderCullBySize"));
+//
+//	menu->appendSeparator();
+//	menu->append(new LLMenuItemToggleGL("Hide Selected", &gHideSelectedObjects));
+//	menu->appendSeparator();
+//	menu->append(new LLMenuItemCheckGL("Tangent Basis", menu_toggle_control, NULL, menu_check_control, (void*)"ShowTangentBasis"));
+//	menu->append(new LLMenuItemCallGL("Selected Texture Info", handle_selected_texture_info, NULL, NULL, 'T', MASK_CONTROL|MASK_SHIFT|MASK_ALT));
+//	//menu->append(new LLMenuItemCallGL("Dump Image List", handle_dump_image_list, NULL, NULL, 'I', MASK_CONTROL|MASK_SHIFT));
+//	
+//	menu->append(new LLMenuItemToggleGL("Wireframe", &gUseWireframe, 
+//			'R', MASK_CONTROL|MASK_SHIFT));
+//
+//	LLMenuItemCheckGL* item;
+//	item = new LLMenuItemCheckGL("Object-Object Occlusion", menu_toggle_control, NULL, menu_check_control, (void*)"UseOcclusion", 'O', MASK_CONTROL|MASK_SHIFT);
+//	item->setEnabled(gGLManager.mHasOcclusionQuery && LLFeatureManager::getInstance()->isFeatureAvailable("UseOcclusion"));
+//	menu->append(item);
+//
+//	item = new LLMenuItemCheckGL("Debug GL", menu_toggle_control, NULL, menu_check_control, (void*)"RenderDebugGL");
+//	menu->append(item);
+//	
+//	item = new LLMenuItemCheckGL("Debug Pipeline", menu_toggle_control, NULL, menu_check_control, (void*)"RenderDebugPipeline");
+//	menu->append(item);
+//	
+//	item = new LLMenuItemCheckGL("Fast Alpha", menu_toggle_control, NULL, menu_check_control, (void*)"RenderFastAlpha");
+//	menu->append(item);
+//	
+//	item = new LLMenuItemCheckGL("Animate Textures", menu_toggle_control, NULL, menu_check_control, (void*)"AnimateTextures");
+//	menu->append(item);
+//	
+//	item = new LLMenuItemCheckGL("Disable Textures", menu_toggle_variable, NULL, menu_check_variable, (void*)&LLViewerImage::sDontLoadVolumeTextures);
+//	menu->append(item);
+//	
+//#ifndef LL_RELEASE_FOR_DOWNLOAD
+//	item = new LLMenuItemCheckGL("HTTP Get Textures", menu_toggle_control, NULL, menu_check_control, (void*)"ImagePipelineUseHTTP");
+//	menu->append(item);
+//#endif
+//	
+//	item = new LLMenuItemCheckGL("Run Multiple Threads", menu_toggle_control, NULL, menu_check_control, (void*)"RunMultipleThreads");
+//	menu->append(item);
+//
+//	item = new LLMenuItemCheckGL("Cheesy Beacon", menu_toggle_control, NULL, menu_check_control, (void*)"CheesyBeacon");
+//	menu->append(item);
+//
+//	item = new LLMenuItemCheckGL("Attached Lights", menu_toggle_attached_lights, NULL, menu_check_control, (void*)"RenderAttachedLights");
+//	menu->append(item);
+//
+//	item = new LLMenuItemCheckGL("Attached Particles", menu_toggle_attached_particles, NULL, menu_check_control, (void*)"RenderAttachedParticles");
+//	menu->append(item);
+//
+//#ifndef LL_RELEASE_FOR_DOWNLOAD
+//	menu->appendSeparator();
+//	menu->append(new LLMenuItemCallGL("Memory Leaking Simulation", LLFloaterMemLeak::show, NULL, NULL));
+//#else
+//	if(gSavedSettings.getBOOL("QAMode"))
+//	{
+//		menu->appendSeparator();
+//		menu->append(new LLMenuItemCallGL("Memory Leaking Simulation", LLFloaterMemLeak::show, NULL, NULL));
+//	}
+//#endif
+//	
+//	menu->createJumpKeys();
+//}
 
 extern BOOL gDebugAvatarRotation;
 
-void init_debug_avatar_menu(LLMenuGL* menu)
-{
-	LLMenuGL* sub_menu = new LLMenuGL("Grab Baked Texture");
-	init_debug_baked_texture_menu(sub_menu);
-	menu->appendMenu(sub_menu);
+//void init_debug_avatar_menu(LLMenuGL* menu)
+//{
+//	LLMenuGL* sub_menu = new LLMenuGL("Grab Baked Texture");
+//	init_debug_baked_texture_menu(sub_menu);
+//	menu->appendMenu(sub_menu);
+//
+//	sub_menu = new LLMenuGL("Character Tests");
+//	sub_menu->append(new LLMenuItemToggleGL("Go Away/AFK When Idle",
+//		&gAllowIdleAFK));
+//
+//	sub_menu->append(new LLMenuItemCallGL("Appearance To XML", 
+//		&LLVOAvatar::dumpArchetypeXML));
+//
+//	// HACK for easy testing of avatar geometry
+//	sub_menu->append(new LLMenuItemCallGL( "Toggle Character Geometry", 
+//		&handle_god_request_avatar_geometry, &enable_god_customer_service, NULL));
+//
+//	sub_menu->append(new LLMenuItemCallGL("Test Male", 
+//		handle_test_male));
+//
+//	sub_menu->append(new LLMenuItemCallGL("Test Female", 
+//		handle_test_female));
+//
+//	sub_menu->append(new LLMenuItemCallGL("Toggle PG", handle_toggle_pg));
+//
+//	sub_menu->append(new LLMenuItemToggleGL("Allow Select Avatar", &gAllowSelectAvatar));
+//	sub_menu->createJumpKeys();
+//
+//	menu->appendMenu(sub_menu);
+//
+//	menu->append(new LLMenuItemCheckGL("Enable Lip Sync (Beta)", menu_toggle_control, NULL, menu_check_control, (void*)"LipSyncEnabled"));
+//	menu->append(new LLMenuItemToggleGL("Tap-Tap-Hold To Run", &gAllowTapTapHoldRun));
+//	menu->append(new LLMenuItemCallGL("Force Params to Default", &LLAgent::clearVisualParams, NULL));
+//	menu->append(new LLMenuItemCallGL("Reload Vertex Shader", &reload_vertex_shader, NULL));
+//	menu->append(new LLMenuItemToggleGL("Animation Info", &LLVOAvatar::sShowAnimationDebug));
+//	menu->append(new LLMenuItemCallGL("Slow Motion Animations", &slow_mo_animations, NULL));
+//	menu->append(new LLMenuItemToggleGL("Show Look At", &LLHUDEffectLookAt::sDebugLookAt));
+//	menu->append(new LLMenuItemToggleGL("Show Point At", &LLHUDEffectPointAt::sDebugPointAt));
+//	menu->append(new LLMenuItemToggleGL("Debug Joint Updates", &LLVOAvatar::sJointDebug));
+//	menu->append(new LLMenuItemToggleGL("Disable LOD", &LLViewerJoint::sDisableLOD));
+//	menu->append(new LLMenuItemToggleGL("Debug Character Vis", &LLVOAvatar::sDebugInvisible));
+//	//menu->append(new LLMenuItemToggleGL("Show Attachment Points", &LLVOAvatar::sShowAttachmentPoints));
+//	//diabling collision plane due to DEV-14477 -brad
+//	//menu->append(new LLMenuItemToggleGL("Show Collision Plane", &LLVOAvatar::sShowFootPlane));
+//	menu->append(new LLMenuItemToggleGL("Show Collision Skeleton", &LLVOAvatar::sShowCollisionVolumes));
+//	menu->append(new LLMenuItemToggleGL( "Display Agent Target", &LLAgent::sDebugDisplayTarget));
+//	menu->append(new LLMenuItemToggleGL( "Debug Rotation", &gDebugAvatarRotation));
+//	menu->append(new LLMenuItemCallGL("Dump Attachments", handle_dump_attachments));
+//	menu->append(new LLMenuItemCallGL("Refresh Appearance", handle_rebake_textures, NULL, NULL, 'R', MASK_ALT | MASK_CONTROL ));
+//#ifndef LL_RELEASE_FOR_DOWNLOAD
+//	menu->append(new LLMenuItemCallGL("Debug Avatar Textures", handle_debug_avatar_textures, NULL, NULL, 'A', MASK_SHIFT|MASK_CONTROL|MASK_ALT));
+//	menu->append(new LLMenuItemCallGL("Dump Local Textures", handle_dump_avatar_local_textures, NULL, NULL, 'M', MASK_SHIFT|MASK_ALT ));	
+//#endif
+//	menu->createJumpKeys();
+//}
 
-	sub_menu = new LLMenuGL("Character Tests");
-	sub_menu->append(new LLMenuItemToggleGL("Go Away/AFK When Idle",
-		&gAllowIdleAFK));
+//void init_debug_baked_texture_menu(LLMenuGL* menu)
+//{
+//	menu->append(new LLMenuItemCallGL("Iris", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_EYES_BAKED));
+//	menu->append(new LLMenuItemCallGL("Head", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_HEAD_BAKED));
+//	menu->append(new LLMenuItemCallGL("Upper Body", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_UPPER_BAKED));
+//	menu->append(new LLMenuItemCallGL("Lower Body", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_LOWER_BAKED));
+//	menu->append(new LLMenuItemCallGL("Skirt", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_SKIRT_BAKED));
+//	menu->createJumpKeys();
+//}
 
-	sub_menu->append(new LLMenuItemCallGL("Appearance To XML", 
-		&LLVOAvatar::dumpArchetypeXML));
-
-	// HACK for easy testing of avatar geometry
-	sub_menu->append(new LLMenuItemCallGL( "Toggle Character Geometry", 
-		&handle_god_request_avatar_geometry, &enable_god_customer_service, NULL));
-
-	sub_menu->append(new LLMenuItemCallGL("Test Male", 
-		handle_test_male));
-
-	sub_menu->append(new LLMenuItemCallGL("Test Female", 
-		handle_test_female));
-
-	sub_menu->append(new LLMenuItemCallGL("Toggle PG", handle_toggle_pg));
-
-	sub_menu->append(new LLMenuItemToggleGL("Allow Select Avatar", &gAllowSelectAvatar));
-	sub_menu->createJumpKeys();
-
-	menu->appendMenu(sub_menu);
-
-	menu->append(new LLMenuItemCheckGL("Enable Lip Sync (Beta)", menu_toggle_control, NULL, menu_check_control, (void*)"LipSyncEnabled"));
-	menu->append(new LLMenuItemToggleGL("Tap-Tap-Hold To Run", &gAllowTapTapHoldRun));
-	menu->append(new LLMenuItemCallGL("Force Params to Default", &LLAgent::clearVisualParams, NULL));
-	menu->append(new LLMenuItemCallGL("Reload Vertex Shader", &reload_vertex_shader, NULL));
-	menu->append(new LLMenuItemToggleGL("Animation Info", &LLVOAvatar::sShowAnimationDebug));
-	menu->append(new LLMenuItemCallGL("Slow Motion Animations", &slow_mo_animations, NULL));
-	menu->append(new LLMenuItemToggleGL("Show Look At", &LLHUDEffectLookAt::sDebugLookAt));
-	menu->append(new LLMenuItemToggleGL("Show Point At", &LLHUDEffectPointAt::sDebugPointAt));
-	menu->append(new LLMenuItemToggleGL("Debug Joint Updates", &LLVOAvatar::sJointDebug));
-	menu->append(new LLMenuItemToggleGL("Disable LOD", &LLViewerJoint::sDisableLOD));
-	menu->append(new LLMenuItemToggleGL("Debug Character Vis", &LLVOAvatar::sDebugInvisible));
-	//menu->append(new LLMenuItemToggleGL("Show Attachment Points", &LLVOAvatar::sShowAttachmentPoints));
-	//diabling collision plane due to DEV-14477 -brad
-	//menu->append(new LLMenuItemToggleGL("Show Collision Plane", &LLVOAvatar::sShowFootPlane));
-	menu->append(new LLMenuItemToggleGL("Show Collision Skeleton", &LLVOAvatar::sShowCollisionVolumes));
-	menu->append(new LLMenuItemToggleGL( "Display Agent Target", &LLAgent::sDebugDisplayTarget));
-	menu->append(new LLMenuItemToggleGL( "Debug Rotation", &gDebugAvatarRotation));
-	menu->append(new LLMenuItemCallGL("Dump Attachments", handle_dump_attachments));
-	menu->append(new LLMenuItemCallGL("Refresh Appearance", handle_rebake_textures, NULL, NULL, 'R', MASK_ALT | MASK_CONTROL ));
-#ifndef LL_RELEASE_FOR_DOWNLOAD
-	menu->append(new LLMenuItemCallGL("Debug Avatar Textures", handle_debug_avatar_textures, NULL, NULL, 'A', MASK_SHIFT|MASK_CONTROL|MASK_ALT));
-	menu->append(new LLMenuItemCallGL("Dump Local Textures", handle_dump_avatar_local_textures, NULL, NULL, 'M', MASK_SHIFT|MASK_ALT ));	
-#endif
-	menu->createJumpKeys();
-}
-
-void init_debug_baked_texture_menu(LLMenuGL* menu)
-{
-	menu->append(new LLMenuItemCallGL("Iris", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_EYES_BAKED));
-	menu->append(new LLMenuItemCallGL("Head", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_HEAD_BAKED));
-	menu->append(new LLMenuItemCallGL("Upper Body", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_UPPER_BAKED));
-	menu->append(new LLMenuItemCallGL("Lower Body", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_LOWER_BAKED));
-	menu->append(new LLMenuItemCallGL("Skirt", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_SKIRT_BAKED));
-	menu->createJumpKeys();
-}
-
-void init_server_menu(LLMenuGL* menu)
-{
-	{
-		LLMenuGL* sub = new LLMenuGL("Object");
-		menu->appendMenu(sub);
-
-		sub->append(new LLMenuItemCallGL( "Take Copy",
-										  &force_take_copy, &enable_god_customer_service, NULL,
-										  'O', MASK_SHIFT | MASK_ALT | MASK_CONTROL));
-#ifdef _CORY_TESTING
-		sub->append(new LLMenuItemCallGL( "Export Copy",
-										   &force_export_copy, NULL, NULL));
-		sub->append(new LLMenuItemCallGL( "Import Geometry",
-										   &force_import_geometry, NULL, NULL));
-#endif
-		//sub->append(new LLMenuItemCallGL( "Force Public", 
-		//			&handle_object_owner_none, NULL, NULL));
-		//sub->append(new LLMenuItemCallGL( "Force Ownership/Permissive", 
-		//			&handle_object_owner_self_and_permissive, NULL, NULL, 'K', MASK_SHIFT | MASK_ALT | MASK_CONTROL));
-		sub->append(new LLMenuItemCallGL( "Force Owner To Me", 
-					&handle_object_owner_self, &enable_god_customer_service));
-		sub->append(new LLMenuItemCallGL( "Force Owner Permissive", 
-					&handle_object_owner_permissive, &enable_god_customer_service));
-		//sub->append(new LLMenuItemCallGL( "Force Totally Permissive", 
-		//			&handle_object_permissive));
-		sub->append(new LLMenuItemCallGL( "Delete", 
-					&handle_force_delete, &enable_god_customer_service, NULL, KEY_DELETE, MASK_SHIFT | MASK_ALT | MASK_CONTROL));
-		sub->append(new LLMenuItemCallGL( "Lock", 
-					&handle_object_lock, &enable_god_customer_service, NULL, 'L', MASK_SHIFT | MASK_ALT | MASK_CONTROL));
-		sub->append(new LLMenuItemCallGL( "Get Asset IDs", 
-					&handle_object_asset_ids, &enable_god_customer_service, NULL, 'I', MASK_SHIFT | MASK_ALT | MASK_CONTROL));
-		sub->createJumpKeys();
-	}
-	{
-		LLMenuGL* sub = new LLMenuGL("Parcel");
-		menu->appendMenu(sub);
-
-		sub->append(new LLMenuItemCallGL("Owner To Me",
-										 &handle_force_parcel_owner_to_me,
-										 &enable_god_customer_service, NULL));
-		sub->append(new LLMenuItemCallGL("Set to Linden Content",
-										 &handle_force_parcel_to_content,
-										 &enable_god_customer_service, NULL,
-										 'C', MASK_SHIFT | MASK_ALT | MASK_CONTROL));
-		sub->appendSeparator();
-		sub->append(new LLMenuItemCallGL("Claim Public Land",
-										 &handle_claim_public_land, &enable_god_customer_service));
-
-		sub->createJumpKeys();
-	}
-	{
-		LLMenuGL* sub = new LLMenuGL("Region");
-		menu->appendMenu(sub);
-		sub->append(new LLMenuItemCallGL("Dump Temp Asset Data",
-			&handle_region_dump_temp_asset_data,
-			&enable_god_customer_service, NULL));
-		sub->createJumpKeys();
-	}	
-	menu->append(new LLMenuItemCallGL( "God Tools...", 
-		&LLFloaterGodTools::show, &enable_god_basic, NULL));
-
-	menu->appendSeparator();
-
-	menu->append(new LLMenuItemCallGL("Save Region State", 
-		&LLPanelRegionTools::onSaveState, &enable_god_customer_service, NULL));
-
-//	menu->append(new LLMenuItemCallGL("Force Join Group", handle_force_join_group));
+//void init_server_menu(LLMenuGL* menu)
+//{
+//	{
+//		LLMenuGL* sub = new LLMenuGL("Object");
+//		menu->appendMenu(sub);
+//
+//		sub->append(new LLMenuItemCallGL( "Take Copy",
+//										  &force_take_copy, &enable_god_customer_service, NULL,
+//										  'O', MASK_SHIFT | MASK_ALT | MASK_CONTROL));
+//#ifdef _CORY_TESTING
+//		sub->append(new LLMenuItemCallGL( "Export Copy",
+//										   &force_export_copy, NULL, NULL));
+//		sub->append(new LLMenuItemCallGL( "Import Geometry",
+//										   &force_import_geometry, NULL, NULL));
+//#endif
+//		//sub->append(new LLMenuItemCallGL( "Force Public", 
+//		//			&handle_object_owner_none, NULL, NULL));
+//		//sub->append(new LLMenuItemCallGL( "Force Ownership/Permissive", 
+//		//			&handle_object_owner_self_and_permissive, NULL, NULL, 'K', MASK_SHIFT | MASK_ALT | MASK_CONTROL));
+//		sub->append(new LLMenuItemCallGL( "Force Owner To Me", 
+//					&handle_object_owner_self, &enable_god_customer_service));
+//		sub->append(new LLMenuItemCallGL( "Force Owner Permissive", 
+//					&handle_object_owner_permissive, &enable_god_customer_service));
+//		//sub->append(new LLMenuItemCallGL( "Force Totally Permissive", 
+//		//			&handle_object_permissive));
+//		sub->append(new LLMenuItemCallGL( "Delete", 
+//					&handle_force_delete, &enable_god_customer_service, NULL, KEY_DELETE, MASK_SHIFT | MASK_ALT | MASK_CONTROL));
+//		sub->append(new LLMenuItemCallGL( "Lock", 
+//					&handle_object_lock, &enable_god_customer_service, NULL, 'L', MASK_SHIFT | MASK_ALT | MASK_CONTROL));
+//		sub->append(new LLMenuItemCallGL( "Get Asset IDs", 
+//					&handle_object_asset_ids, &enable_god_customer_service, NULL, 'I', MASK_SHIFT | MASK_ALT | MASK_CONTROL));
+//		sub->createJumpKeys();
+//	}
+//	{
+//		LLMenuGL* sub = new LLMenuGL("Parcel");
+//		menu->appendMenu(sub);
+//
+//		sub->append(new LLMenuItemCallGL("Owner To Me",
+//										 &handle_force_parcel_owner_to_me,
+//										 &enable_god_customer_service, NULL));
+//		sub->append(new LLMenuItemCallGL("Set to Linden Content",
+//										 &handle_force_parcel_to_content,
+//										 &enable_god_customer_service, NULL,
+//										 'C', MASK_SHIFT | MASK_ALT | MASK_CONTROL));
+//		sub->appendSeparator();
+//		sub->append(new LLMenuItemCallGL("Claim Public Land",
+//										 &handle_claim_public_land, &enable_god_customer_service));
+//
+//		sub->createJumpKeys();
+//	}
+//	{
+//		LLMenuGL* sub = new LLMenuGL("Region");
+//		menu->appendMenu(sub);
+//		sub->append(new LLMenuItemCallGL("Dump Temp Asset Data",
+//			&handle_region_dump_temp_asset_data,
+//			&enable_god_customer_service, NULL));
+//		sub->createJumpKeys();
+//	}	
+//	menu->append(new LLMenuItemCallGL( "God Tools...", 
+//		&LLFloaterGodTools::show, &enable_god_basic, NULL));
 //
 //	menu->appendSeparator();
 //
-//	menu->append(new LLMenuItemCallGL( "OverlayTitle",
-//		&handle_show_overlay_title, &enable_god_customer_service, NULL));
-	menu->createJumpKeys();
-}
+//	menu->append(new LLMenuItemCallGL("Save Region State", 
+//		&LLPanelRegionTools::onSaveState, &enable_god_customer_service, NULL));
+//
+////	menu->append(new LLMenuItemCallGL("Force Join Group", handle_force_join_group));
+////
+////	menu->appendSeparator();
+////
+////	menu->append(new LLMenuItemCallGL( "OverlayTitle",
+////		&handle_show_overlay_title, &enable_god_customer_service, NULL));
+//	menu->createJumpKeys();
+//}
 
 static std::vector<LLPointer<view_listener_t> > sMenus;
 
@@ -9912,155 +9912,155 @@ void initialize_menus()
 
 
 	// Advanced (top level menu)
-	addMenu(new LLAdvancedToggleConsole(), "Advanced.ToggleConsole");
-	addMenu(new LLAdvancedCheckConsole(), "Advanced.CheckConsole");
-	addMenu(new LLAdvancedDumpInfoToConsole(), "Advanced.DumpInfoToConsole");
-	addMenu(new LLAdvancedReloadSettingsOverrides(), "Advanced.ReloadSettingsOverrides");
+	//addMenu(new LLAdvancedToggleConsole(), "Advanced.ToggleConsole");
+	//addMenu(new LLAdvancedCheckConsole(), "Advanced.CheckConsole");
+	//addMenu(new LLAdvancedDumpInfoToConsole(), "Advanced.DumpInfoToConsole");
+	//addMenu(new LLAdvancedReloadSettingsOverrides(), "Advanced.ReloadSettingsOverrides");
 
-	// Advanced > HUD Info
-	addMenu(new LLAdvancedToggleHUDInfo(), "Advanced.ToggleHUDInfo");
-	addMenu(new LLAdvancedCheckHUDInfo(), "Advanced.CheckHUDInfo");
+	//// Advanced > HUD Info
+	//addMenu(new LLAdvancedToggleHUDInfo(), "Advanced.ToggleHUDInfo");
+	//addMenu(new LLAdvancedCheckHUDInfo(), "Advanced.CheckHUDInfo");
 
-	addMenu(new LLAdvancedClearGroupCache(), "Advanced.ClearGroupCache");
+	//addMenu(new LLAdvancedClearGroupCache(), "Advanced.ClearGroupCache");
 
-	// Advanced > Render > Types
-	addMenu(new LLAdvancedToggleRenderType(), "Advanced.ToggleRenderType");
-	addMenu(new LLAdvancedCheckRenderType(), "Advanced.CheckRenderType");
+	//// Advanced > Render > Types
+	//addMenu(new LLAdvancedToggleRenderType(), "Advanced.ToggleRenderType");
+	//addMenu(new LLAdvancedCheckRenderType(), "Advanced.CheckRenderType");
 
-	// Advanced > Render > Features
-	addMenu(new LLAdvancedToggleFeature(), "Advanced.ToggleFeature");
-	addMenu(new LLAdvancedCheckFeature(), "Advanced.CheckFeature");
+	//// Advanced > Render > Features
+	//addMenu(new LLAdvancedToggleFeature(), "Advanced.ToggleFeature");
+	//addMenu(new LLAdvancedCheckFeature(), "Advanced.CheckFeature");
 
-	// Advanced > Render > Info Displays
-	addMenu(new LLAdvancedToggleInfoDisplay(), "Advanced.ToggleInfoDisplay");
-	addMenu(new LLAdvancedCheckInfoDisplay(), "Advanced.CheckInfoDisplay");
-	addMenu(new LLAdvancedToggleSelectBuffer(), "Advanced.ToggleSelectBuffer");
-	addMenu(new LLAdvancedCheckSelectBuffer(), "Advanced.CheckSelectBuffer");
-	addMenu(new LLAdvancedToggleRandomizeFramerate(), "Advanced.ToggleRandomizeFramerate");
-	addMenu(new LLAdvancedCheckRandomizeFramerate(), "Advanced.CheckRandomizeFramerate");
-	addMenu(new LLAdvancedTogglePeriodicSlowFrame(), "Advanced.TogglePeriodicSlowFrame");
-	addMenu(new LLAdvancedCheckPeriodicSlowFrame(), "Advanced.CheckPeriodicSlowFrame");
-	addMenu(new LLAdvancedToggleFrameTest(), "Advanced.ToggleFrameTest");
-	addMenu(new LLAdvancedCheckFrameTest(), "Advanced.CheckFrameTest");
-	addMenu(new LLAdvancedToggleHideSelectedObjects(), "Advanced.ToggleHideSelectedObjects");
-	addMenu(new LLAdvancedCheckHideSelectedObjects(), "Advanced.CheckHideSelectedObjects");
-	addMenu(new LLAdvancedSelectedTextureInfo(), "Advanced.SelectedTextureInfo");
-	addMenu(new LLAdvancedToggleWireframe(), "Advanced.ToggleWireframe");
-	addMenu(new LLAdvancedCheckWireframe(), "Advanced.CheckWireframe");
-	addMenu(new LLAdvancedToggleDisableTextures(), "Advanced.ToggleDisableTextures");
-	addMenu(new LLAdvancedCheckDisableTextures(), "Advanced.CheckDisableTextures");
+	//// Advanced > Render > Info Displays
+	//addMenu(new LLAdvancedToggleInfoDisplay(), "Advanced.ToggleInfoDisplay");
+	//addMenu(new LLAdvancedCheckInfoDisplay(), "Advanced.CheckInfoDisplay");
+	//addMenu(new LLAdvancedToggleSelectBuffer(), "Advanced.ToggleSelectBuffer");
+	//addMenu(new LLAdvancedCheckSelectBuffer(), "Advanced.CheckSelectBuffer");
+	//addMenu(new LLAdvancedToggleRandomizeFramerate(), "Advanced.ToggleRandomizeFramerate");
+	//addMenu(new LLAdvancedCheckRandomizeFramerate(), "Advanced.CheckRandomizeFramerate");
+	//addMenu(new LLAdvancedTogglePeriodicSlowFrame(), "Advanced.TogglePeriodicSlowFrame");
+	//addMenu(new LLAdvancedCheckPeriodicSlowFrame(), "Advanced.CheckPeriodicSlowFrame");
+	//addMenu(new LLAdvancedToggleFrameTest(), "Advanced.ToggleFrameTest");
+	//addMenu(new LLAdvancedCheckFrameTest(), "Advanced.CheckFrameTest");
+	//addMenu(new LLAdvancedToggleHideSelectedObjects(), "Advanced.ToggleHideSelectedObjects");
+	//addMenu(new LLAdvancedCheckHideSelectedObjects(), "Advanced.CheckHideSelectedObjects");
+	//addMenu(new LLAdvancedSelectedTextureInfo(), "Advanced.SelectedTextureInfo");
+	//addMenu(new LLAdvancedToggleWireframe(), "Advanced.ToggleWireframe");
+	//addMenu(new LLAdvancedCheckWireframe(), "Advanced.CheckWireframe");
+	//addMenu(new LLAdvancedToggleDisableTextures(), "Advanced.ToggleDisableTextures");
+	//addMenu(new LLAdvancedCheckDisableTextures(), "Advanced.CheckDisableTextures");
 
-	// Advanced > Render (top level menu)
-	addMenu(new LLToggleRenderAttachedLights(), "ToggleRenderAttachedLights");
-	addMenu(new LLToggleRenderAttachedParticles(), "ToggleRenderAttachedParticles");
+	//// Advanced > Render (top level menu)
+	//addMenu(new LLToggleRenderAttachedLights(), "ToggleRenderAttachedLights");
+	//addMenu(new LLToggleRenderAttachedParticles(), "ToggleRenderAttachedParticles");
 
-	// Advanced > World
-	addMenu(new LLAdvancedDumpScriptedCamera(), "Advanced.DumpScriptedCamera");
-	addMenu(new LLAdvancedDumpRegionObjectCache(), "Advanced.DumpRegionObjectCache");
+	//// Advanced > World
+	//addMenu(new LLAdvancedDumpScriptedCamera(), "Advanced.DumpScriptedCamera");
+	//addMenu(new LLAdvancedDumpRegionObjectCache(), "Advanced.DumpRegionObjectCache");
 
 	// Advanced > UI
-	addMenu(new LLAdvancedSLURLTest(), "Advanced.SLURLTest");
-	addMenu(new LLAdvancedToggleEditableUI(), "Advanced.ToggleEditableUI");
-	//addMenu(new LLAdvancedCheckEditableUI(), "Advanced.CheckEditableUI");
-	addMenu(new LLAdvancedToggleAsyncKeystrokes(), "Advanced.ToggleAsyncKeystrokes");
-	addMenu(new LLAdvancedCheckAsyncKeystrokes(), "Advanced.CheckAsyncKeystrokes");
-	addMenu(new LLAdvancedDumpSelectMgr(), "Advanced.DumpSelectMgr");
-	addMenu(new LLAdvancedDumpInventory(), "Advanced.DumpInventory");
-	addMenu(new LLAdvancedDumpFocusHolder(), "Advanced.DumpFocusHolder");
-	addMenu(new LLAdvancedPrintSelectedObjectInfo(), "Advanced.PrintSelectedObjectInfo");
-	addMenu(new LLAdvancedPrintAgentInfo(), "Advanced.PrintAgentInfo");
-	addMenu(new LLAdvancedPrintTextureMemoryStats(), "Advanced.PrintTextureMemoryStats");
-	addMenu(new LLAdvancedToggleDebugSelectMgr(), "Advanced.ToggleDebugSelectMgr");
-	addMenu(new LLAdvancedCheckDebugSelectMgr(), "Advanced.CheckDebugSelectMgr");
-	addMenu(new LLAdvancedToggleDebugClicks(), "Advanced.ToggleDebugClicks");
-	addMenu(new LLAdvancedCheckDebugClicks(), "Advanced.CheckDebugClicks");
-	addMenu(new LLAdvancedCheckDebugViews(), "Advanced.CheckDebugViews");
-	addMenu(new LLAdvancedToggleDebugViews(), "Advanced.ToggleDebugViews");
-	addMenu(new LLAdvancedToggleXUINameTooltips(), "Advanced.ToggleXUINameTooltips");
-	addMenu(new LLAdvancedCheckXUINameTooltips(), "Advanced.CheckXUINameTooltips");
-	addMenu(new LLAdvancedToggleDebugMouseEvents(), "Advanced.ToggleDebugMouseEvents");
-	addMenu(new LLAdvancedCheckDebugMouseEvents(), "Advanced.CheckDebugMouseEvents");
-	addMenu(new LLAdvancedToggleDebugKeys(), "Advanced.ToggleDebugKeys");
-	addMenu(new LLAdvancedCheckDebugKeys(), "Advanced.CheckDebugKeys");
-	addMenu(new LLAdvancedToggleDebugWindowProc(), "Advanced.ToggleDebugWindowProc");
-	addMenu(new LLAdvancedCheckDebugWindowProc(), "Advanced.CheckDebugWindowProc");
-	addMenu(new LLAdvancedToggleDebugTextEditorTips(), "Advanced.ToggleDebugTextEditorTips");
-	addMenu(new LLAdvancedCheckDebugTextEditorTips(), "Advanced.CheckDebugTextEditorTips");
+	//addMenu(new LLAdvancedSLURLTest(), "Advanced.SLURLTest");
+	//addMenu(new LLAdvancedToggleEditableUI(), "Advanced.ToggleEditableUI");
+	////addMenu(new LLAdvancedCheckEditableUI(), "Advanced.CheckEditableUI");
+	//addMenu(new LLAdvancedToggleAsyncKeystrokes(), "Advanced.ToggleAsyncKeystrokes");
+	//addMenu(new LLAdvancedCheckAsyncKeystrokes(), "Advanced.CheckAsyncKeystrokes");
+	//addMenu(new LLAdvancedDumpSelectMgr(), "Advanced.DumpSelectMgr");
+	//addMenu(new LLAdvancedDumpInventory(), "Advanced.DumpInventory");
+	//addMenu(new LLAdvancedDumpFocusHolder(), "Advanced.DumpFocusHolder");
+	//addMenu(new LLAdvancedPrintSelectedObjectInfo(), "Advanced.PrintSelectedObjectInfo");
+	//addMenu(new LLAdvancedPrintAgentInfo(), "Advanced.PrintAgentInfo");
+	//addMenu(new LLAdvancedPrintTextureMemoryStats(), "Advanced.PrintTextureMemoryStats");
+	//addMenu(new LLAdvancedToggleDebugSelectMgr(), "Advanced.ToggleDebugSelectMgr");
+	//addMenu(new LLAdvancedCheckDebugSelectMgr(), "Advanced.CheckDebugSelectMgr");
+	//addMenu(new LLAdvancedToggleDebugClicks(), "Advanced.ToggleDebugClicks");
+	//addMenu(new LLAdvancedCheckDebugClicks(), "Advanced.CheckDebugClicks");
+	//addMenu(new LLAdvancedCheckDebugViews(), "Advanced.CheckDebugViews");
+	//addMenu(new LLAdvancedToggleDebugViews(), "Advanced.ToggleDebugViews");
+	//addMenu(new LLAdvancedToggleXUINameTooltips(), "Advanced.ToggleXUINameTooltips");
+	//addMenu(new LLAdvancedCheckXUINameTooltips(), "Advanced.CheckXUINameTooltips");
+	//addMenu(new LLAdvancedToggleDebugMouseEvents(), "Advanced.ToggleDebugMouseEvents");
+	//addMenu(new LLAdvancedCheckDebugMouseEvents(), "Advanced.CheckDebugMouseEvents");
+	//addMenu(new LLAdvancedToggleDebugKeys(), "Advanced.ToggleDebugKeys");
+	//addMenu(new LLAdvancedCheckDebugKeys(), "Advanced.CheckDebugKeys");
+	//addMenu(new LLAdvancedToggleDebugWindowProc(), "Advanced.ToggleDebugWindowProc");
+	//addMenu(new LLAdvancedCheckDebugWindowProc(), "Advanced.CheckDebugWindowProc");
+	//addMenu(new LLAdvancedToggleDebugTextEditorTips(), "Advanced.ToggleDebugTextEditorTips");
+	//addMenu(new LLAdvancedCheckDebugTextEditorTips(), "Advanced.CheckDebugTextEditorTips");
 
 	// Advanced > XUI
-	addMenu(new LLAdvancedShowFloaterTest(), "Advanced.ShowFloaterTest");
-	addMenu(new LLAdvancedExportMenusToXML(), "Advanced.ExportMenusToXML");
-	addMenu(new LLAdvancedEditUI(), "Advanced.EditUI");
-	addMenu(new LLAdvancedLoadUIFromXML(), "Advanced.LoadUIFromXML");
-	addMenu(new LLAdvancedSaveUIToXML(), "Advanced.SaveUIToXML");
-	addMenu(new LLAdvancedToggleXUINames(), "Advanced.ToggleXUINames");
-	addMenu(new LLAdvancedCheckXUINames(), "Advanced.CheckXUINames");
-
-	// Advanced > Character > Grab Baked Texture
-	addMenu(new LLAdvancedGrabBakedTexture(), "Advanced.GrabBakedTexture");
-	addMenu(new LLAdvancedEnableGrabBakedTexture(), "Advanced.EnableGrabBakedTexture");
-
-	// Advanced > Character > Character Tests
-	addMenu(new LLAdvancedToggleAllowIdleAFK(), "Advanced.ToggleAllowIdleAFK");
-	addMenu(new LLAdvancedCheckAllowIdleAFK(), "Advanced.CheckAllowIdleAFK");
-	addMenu(new LLAdvancedAppearanceToXML(), "Advanced.AppearanceToXML");
-	addMenu(new LLAdvancedToggleCharacterGeometry(), "Advanced.ToggleCharacterGeometry");
-	addMenu(new LLAdvancedTestMale(), "Advanced.TestMale");
-	addMenu(new LLAdvancedTestFemale(), "Advanced.TestFemale");
-	addMenu(new LLAdvancedTogglePG(), "Advanced.TogglePG");
-	addMenu(new LLAdvancedToggleAllowSelectAvatar(), "Advanced.ToggleAllowSelectAvatar");
-	addMenu(new LLAdvancedCheckAllowSelectAvatar(), "Advanced.CheckAllowSelectAvatar");
-
-	// Advanced > Character (toplevel)
-	addMenu(new LLAdvancedToggleAllowTapTapHoldRun(), "Advanced.ToggleAllowTapTapHoldRun");
-	addMenu(new LLAdvancedCheckAllowTapTapHoldRun(), "Advanced.CheckAllowTapTapHoldRun");
-	addMenu(new LLAdvancedForceParamsToDefault(), "Advanced.ForceParamsToDefault");
-	addMenu(new LLAdvancedReloadVertexShader(), "Advanced.ReloadVertexShader");
-	addMenu(new LLAdvancedToggleAnimationInfo(), "Advanced.ToggleAnimationInfo");
-	addMenu(new LLAdvancedCheckAnimationInfo(), "Advanced.CheckAnimationInfo");
-	addMenu(new LLAdvancedToggleSlowMotionAnimations(), "Advanced.ToggleSlowMotionAnimations");
-	//addMenu(new LLAdvancedCheckSlowMotionAnimations(), "Advanced.CheckSlowMotionAnimations");
-	addMenu(new LLAdvancedToggleShowLookAt(), "Advanced.ToggleShowLookAt");
-	addMenu(new LLAdvancedCheckShowLookAt(), "Advanced.CheckShowLookAt");
-	addMenu(new LLAdvancedToggleShowPointAt(), "Advanced.ToggleShowPointAt");
-	addMenu(new LLAdvancedCheckShowPointAt(), "Advanced.CheckShowPointAt");
-	addMenu(new LLAdvancedToggleDebugJointUpdates(), "Advanced.ToggleDebugJointUpdates");
-	addMenu(new LLAdvancedCheckDebugJointUpdates(), "Advanced.CheckDebugJointUpdates");
-	addMenu(new LLAdvancedToggleDisableLOD(), "Advanced.ToggleDisableLOD");
-	addMenu(new LLAdvancedCheckDisableLOD(), "Advanced.CheckDisableLOD");
-	addMenu(new LLAdvancedToggleDebugCharacterVis(), "Advanced.ToggleDebugCharacterVis");
-	addMenu(new LLAdvancedCheckDebugCharacterVis(), "Advanced.CheckDebugCharacterVis");
-// 	addMenu(new LLAdvancedToggleShowCollisionPlane(), "Advanced.ToggleShowCollisionPlane");
-// 	addMenu(new LLAdvancedCheckShowCollisionPlane(), "Advanced.CheckShowCollisionPlane");
-	addMenu(new LLAdvancedToggleShowCollisionSkeleton(), "Advanced.ToggleShowCollisionSkeleton");
-	addMenu(new LLAdvancedCheckShowCollisionSkeleton(), "Advanced.CheckShowCollisionSkeleton");
-	addMenu(new LLAdvancedToggleDisplayAgentTarget(), "Advanced.ToggleDisplayAgentTarget");
-	addMenu(new LLAdvancedCheckDisplayAgentTarget(), "Advanced.CheckDisplayAgentTarget");
-	addMenu(new LLAdvancedToggleDebugAvatarRotation(), "Advanced.ToggleDebugAvatarRotation");
-	addMenu(new LLAdvancedCheckDebugAvatarRotation(), "Advanced.CheckDebugAvatarRotation");
-	addMenu(new LLAdvancedDumpAttachments(), "Advanced.DumpAttachments");
-	addMenu(new LLAdvancedDebugAvatarTextures(), "Advanced.DebugAvatarTextures");
-	addMenu(new LLAdvancedDumpAvatarLocalTextures(), "Advanced.DumpAvatarLocalTextures");
-
-	// Advanced > Network
-	addMenu(new LLAdvancedEnableMessageLog(), "Advanced.EnableMessageLog");
-	addMenu(new LLAdvancedDisableMessageLog(), "Advanced.DisableMessageLog");
-	addMenu(new LLAdvancedDropPacket(), "Advanced.DropPacket");
-
-	// Advanced > Recorder
-	addMenu(new LLAdvancedFrameStatsLogging(), "Advanced.FrameStatsLogging");
-	addMenu(new LLAdvancedAgentPilot(), "Advanced.AgentPilot");
-	addMenu(new LLAdvancedToggleAgentPilotLoop(), "Advanced.ToggleAgentPilotLoop");
-	addMenu(new LLAdvancedCheckAgentPilotLoop(), "Advanced.CheckAgentPilotLoop");
-
-	// Advanced (toplevel)
-	addMenu(new LLAdvancedToggleShowObjectUpdates(), "Advanced.ToggleShowObjectUpdates");
-	addMenu(new LLAdvancedCheckShowObjectUpdates(), "Advanced.CheckShowObjectUpdates");
-	addMenu(new LLAdvancedCompressImage(), "Advanced.CompressImage");
-	addMenu(new LLAdvancedToggleClothingFloater(), "Advanced.ToggleClothingFloater");
-	addMenu(new LLAdvancedShowDebugSettings(), "Advanced.ShowDebugSettings");
-	addMenu(new LLAdvancedToggleViewAdminOptions(), "Advanced.ToggleViewAdminOptions");
-	addMenu(new LLAdvancedCheckViewAdminOptions(), "Advanced.CheckViewAdminOptions");
-	addMenu(new LLAdvancedRequestAdminStatus(), "Advanced.RequestAdminStatus");
-	addMenu(new LLAdvancedLeaveAdminStatus(), "Advanced.LeaveAdminStatus");
+//	addMenu(new LLAdvancedShowFloaterTest(), "Advanced.ShowFloaterTest");
+//	addMenu(new LLAdvancedExportMenusToXML(), "Advanced.ExportMenusToXML");
+//	addMenu(new LLAdvancedEditUI(), "Advanced.EditUI");
+//	addMenu(new LLAdvancedLoadUIFromXML(), "Advanced.LoadUIFromXML");
+//	addMenu(new LLAdvancedSaveUIToXML(), "Advanced.SaveUIToXML");
+//	addMenu(new LLAdvancedToggleXUINames(), "Advanced.ToggleXUINames");
+//	addMenu(new LLAdvancedCheckXUINames(), "Advanced.CheckXUINames");
+//
+//	// Advanced > Character > Grab Baked Texture
+//	addMenu(new LLAdvancedGrabBakedTexture(), "Advanced.GrabBakedTexture");
+//	addMenu(new LLAdvancedEnableGrabBakedTexture(), "Advanced.EnableGrabBakedTexture");
+//
+//	// Advanced > Character > Character Tests
+//	addMenu(new LLAdvancedToggleAllowIdleAFK(), "Advanced.ToggleAllowIdleAFK");
+//	addMenu(new LLAdvancedCheckAllowIdleAFK(), "Advanced.CheckAllowIdleAFK");
+//	addMenu(new LLAdvancedAppearanceToXML(), "Advanced.AppearanceToXML");
+//	addMenu(new LLAdvancedToggleCharacterGeometry(), "Advanced.ToggleCharacterGeometry");
+//	addMenu(new LLAdvancedTestMale(), "Advanced.TestMale");
+//	addMenu(new LLAdvancedTestFemale(), "Advanced.TestFemale");
+//	addMenu(new LLAdvancedTogglePG(), "Advanced.TogglePG");
+//	addMenu(new LLAdvancedToggleAllowSelectAvatar(), "Advanced.ToggleAllowSelectAvatar");
+//	addMenu(new LLAdvancedCheckAllowSelectAvatar(), "Advanced.CheckAllowSelectAvatar");
+//
+//	// Advanced > Character (toplevel)
+//	addMenu(new LLAdvancedToggleAllowTapTapHoldRun(), "Advanced.ToggleAllowTapTapHoldRun");
+//	addMenu(new LLAdvancedCheckAllowTapTapHoldRun(), "Advanced.CheckAllowTapTapHoldRun");
+//	addMenu(new LLAdvancedForceParamsToDefault(), "Advanced.ForceParamsToDefault");
+//	addMenu(new LLAdvancedReloadVertexShader(), "Advanced.ReloadVertexShader");
+//	addMenu(new LLAdvancedToggleAnimationInfo(), "Advanced.ToggleAnimationInfo");
+//	addMenu(new LLAdvancedCheckAnimationInfo(), "Advanced.CheckAnimationInfo");
+//	addMenu(new LLAdvancedToggleSlowMotionAnimations(), "Advanced.ToggleSlowMotionAnimations");
+//	//addMenu(new LLAdvancedCheckSlowMotionAnimations(), "Advanced.CheckSlowMotionAnimations");
+//	addMenu(new LLAdvancedToggleShowLookAt(), "Advanced.ToggleShowLookAt");
+//	addMenu(new LLAdvancedCheckShowLookAt(), "Advanced.CheckShowLookAt");
+//	addMenu(new LLAdvancedToggleShowPointAt(), "Advanced.ToggleShowPointAt");
+//	addMenu(new LLAdvancedCheckShowPointAt(), "Advanced.CheckShowPointAt");
+//	addMenu(new LLAdvancedToggleDebugJointUpdates(), "Advanced.ToggleDebugJointUpdates");
+//	addMenu(new LLAdvancedCheckDebugJointUpdates(), "Advanced.CheckDebugJointUpdates");
+//	addMenu(new LLAdvancedToggleDisableLOD(), "Advanced.ToggleDisableLOD");
+//	addMenu(new LLAdvancedCheckDisableLOD(), "Advanced.CheckDisableLOD");
+//	addMenu(new LLAdvancedToggleDebugCharacterVis(), "Advanced.ToggleDebugCharacterVis");
+//	addMenu(new LLAdvancedCheckDebugCharacterVis(), "Advanced.CheckDebugCharacterVis");
+//// 	addMenu(new LLAdvancedToggleShowCollisionPlane(), "Advanced.ToggleShowCollisionPlane");
+//// 	addMenu(new LLAdvancedCheckShowCollisionPlane(), "Advanced.CheckShowCollisionPlane");
+//	addMenu(new LLAdvancedToggleShowCollisionSkeleton(), "Advanced.ToggleShowCollisionSkeleton");
+//	addMenu(new LLAdvancedCheckShowCollisionSkeleton(), "Advanced.CheckShowCollisionSkeleton");
+//	addMenu(new LLAdvancedToggleDisplayAgentTarget(), "Advanced.ToggleDisplayAgentTarget");
+//	addMenu(new LLAdvancedCheckDisplayAgentTarget(), "Advanced.CheckDisplayAgentTarget");
+//	addMenu(new LLAdvancedToggleDebugAvatarRotation(), "Advanced.ToggleDebugAvatarRotation");
+//	addMenu(new LLAdvancedCheckDebugAvatarRotation(), "Advanced.CheckDebugAvatarRotation");
+//	addMenu(new LLAdvancedDumpAttachments(), "Advanced.DumpAttachments");
+//	addMenu(new LLAdvancedDebugAvatarTextures(), "Advanced.DebugAvatarTextures");
+//	addMenu(new LLAdvancedDumpAvatarLocalTextures(), "Advanced.DumpAvatarLocalTextures");
+//
+//	// Advanced > Network
+//	addMenu(new LLAdvancedEnableMessageLog(), "Advanced.EnableMessageLog");
+//	addMenu(new LLAdvancedDisableMessageLog(), "Advanced.DisableMessageLog");
+//	addMenu(new LLAdvancedDropPacket(), "Advanced.DropPacket");
+//
+//	// Advanced > Recorder
+//	addMenu(new LLAdvancedFrameStatsLogging(), "Advanced.FrameStatsLogging");
+//	addMenu(new LLAdvancedAgentPilot(), "Advanced.AgentPilot");
+//	addMenu(new LLAdvancedToggleAgentPilotLoop(), "Advanced.ToggleAgentPilotLoop");
+//	addMenu(new LLAdvancedCheckAgentPilotLoop(), "Advanced.CheckAgentPilotLoop");
+//
+//	// Advanced (toplevel)
+//	addMenu(new LLAdvancedToggleShowObjectUpdates(), "Advanced.ToggleShowObjectUpdates");
+//	addMenu(new LLAdvancedCheckShowObjectUpdates(), "Advanced.CheckShowObjectUpdates");
+//	addMenu(new LLAdvancedCompressImage(), "Advanced.CompressImage");
+//	addMenu(new LLAdvancedToggleClothingFloater(), "Advanced.ToggleClothingFloater");
+//	addMenu(new LLAdvancedShowDebugSettings(), "Advanced.ShowDebugSettings");
+//	addMenu(new LLAdvancedToggleViewAdminOptions(), "Advanced.ToggleViewAdminOptions");
+//	addMenu(new LLAdvancedCheckViewAdminOptions(), "Advanced.CheckViewAdminOptions");
+//	addMenu(new LLAdvancedRequestAdminStatus(), "Advanced.RequestAdminStatus");
+//	addMenu(new LLAdvancedLeaveAdminStatus(), "Advanced.LeaveAdminStatus");
 }
