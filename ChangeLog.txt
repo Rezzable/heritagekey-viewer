@@ -1,3 +1,9 @@
+2009-04-28  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/llcommon/llversionviewer.h
+	Changed version to 0.1.0 beta.
+	
+
 2009-04-22  McCabe Maxsted  <hakushakukun@gmail.com>
 
 
@@ -813,6 +819,26 @@
 
 	* linden/install.xml:
 	Mac viewer uses Thomas Shikami's OpenAL libs.
+
+
+2009-04-28  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/cmake/CopyWinLibs.cmake:
+	Updated copy_win_libs for 1.1 RC3.
+
+
+2009-04-17  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	GST_PLUGIN_PATH should only search plugin directories for Windows.
+	
+	
+	* linden/install.xml:
+	Removed 'https' from install.xml.
+	Updated Windows GStreamer plugin url.
+	Updated Windows GLib url.
+	Updated Windows GStreamer url.
+	Updated Windows libpng url.
 
 
 2009-04-10  Jacek Antonelli  <jacek.antonelli@gmail.com>
