@@ -1,6 +1,10 @@
 2009-05-02  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/viewer_manifest.py:
+	Linux script will be called heritage_key, not heritagekey.
+
+
+	* linden/indra/newview/viewer_manifest.py:
 	Using heritage_key_icon.png on Linux.
 
 

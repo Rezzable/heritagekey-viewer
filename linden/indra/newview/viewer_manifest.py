@@ -674,7 +674,7 @@ class LinuxManifest(ViewerManifest):
         if self.prefix("linux_tools", dst=""):
             #self.path("client-readme.txt","README-linux.txt")
             #self.path("client-readme-voice.txt","README-linux-voice.txt")
-            self.path("wrapper.sh","heritagekey")
+            self.path("wrapper.sh","heritage_key")
             self.path("handle_secondlifeprotocol.sh")
             self.path("register_secondlifeprotocol.sh")
             self.end_prefix("linux_tools")
