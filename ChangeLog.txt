@@ -1,3 +1,11 @@
+2009-05-01  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Updated HK viewer name and version for Mac.
+	* linden/indra/newview/Info-HeritageKey.plist: 
+	Ditto.
+
+
 2009-04-28  McCabe Maxsted  <hakushakukun@gmail.com>
 
 	* linden/indra/llcommon/llversionviewer.h
