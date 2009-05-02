@@ -801,6 +801,12 @@
 =-                   \/ Imprudence \/                     -=
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+2009-05-02  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/viewer_manifest.py:
+	Added libgstqtwrapper.so to Mac manifest.
+
+
 2009-04-20  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/llaudio/audioengine_openal.cpp:
@@ -825,6 +831,23 @@
 
 	* linden/indra/cmake/CopyWinLibs.cmake:
 	Updated copy_win_libs for 1.1 RC3.
+
+
+2009-04-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/llmedia/llmediaimplgstreamer.h:
+	LLMediaImplGStreamer::startPlay() is protected, LLGstPlayThread friend.
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	Removed redundant play() from LLMediaImplGStreamer::navigateTo().
+
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	LLMediaImplGStreamer::play() is no-op if already playing.
+
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	Removed some useless code from LLMediaImplGStreamer::startPlay().
 
 
 2009-04-17  McCabe Maxsted  <hakushakukun@gmail.com>
