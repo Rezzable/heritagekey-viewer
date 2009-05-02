@@ -1,5 +1,10 @@
 2009-05-02  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/viewer_manifest.py:
+	Made manifest more specific about fonts/*.txt files.
+	To avoid accidently packaging up inappropriate license files.
+
+
 	* linden/scripts/build_version.py:
 	Made build_version.py read HK version, not Imp.
 	Used by Linux packaging scripts.
