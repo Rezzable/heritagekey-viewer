@@ -1,5 +1,9 @@
 2009-05-02  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/viewer_manifest.py:
+	Using heritage_key_icon.png on Linux.
+
+
 	* linden/indra/newview/linux_tools/wrapper.sh:
 	Got rid of Linux gridargs.dat, it needlessly messes with channel.
 	* linden/indra/newview/viewer_manifest.py:

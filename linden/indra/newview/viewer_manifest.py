@@ -670,7 +670,7 @@ class LinuxManifest(ViewerManifest):
     def construct(self):
         super(LinuxManifest, self).construct()
 
-        self.path("res/imprudence_icon.png","imprudence_icon.png")
+        self.path("res/heritage_key_icon.png","heritage_key_icon.png")
         if self.prefix("linux_tools", dst=""):
             #self.path("client-readme.txt","README-linux.txt")
             #self.path("client-readme-voice.txt","README-linux-voice.txt")
