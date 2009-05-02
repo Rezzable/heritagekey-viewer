@@ -686,9 +686,6 @@ class LinuxManifest(ViewerManifest):
             self.path("LICENSE-libraries-linux.txt")
             self.end_prefix("../..")
 
-        # Create an appropriate gridargs.dat for this package, denoting required grid.
-        self.put_in_file(self.flags_list(), 'gridargs.dat')
-
 
     def package_finish(self):
         # stripping all the libs removes a few megabytes from the end-user package
