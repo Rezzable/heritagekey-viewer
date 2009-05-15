@@ -1,3 +1,10 @@
+2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/llpanellogin.cpp:
+	Login page grid selector is hidden by default.
+	Ctrl-Shift-G will toggle it, for debugging purposes.
+
+
 2009-05-02  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/viewer_manifest.py:
