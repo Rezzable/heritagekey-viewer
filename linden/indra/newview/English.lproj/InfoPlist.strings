@@ -1,6 +1,6 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleName = "Heritage Key";
-CFBundleShortVersionString = "Heritage Key viewer 0.1.0";
-CFBundleGetInfoString = "Heritage Key viewer 0.1.0, Rezzable Productions Ltd.";
+CFBundleShortVersionString = "Heritage Key viewer 0.9.0";
+CFBundleGetInfoString = "Heritage Key viewer 0.9.0, Rezzable Productions Ltd.";
 

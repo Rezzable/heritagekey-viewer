@@ -249,12 +249,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Rezzable Productions Ltd."
             VALUE "FileDescription", "Heritage Key viewer"
-            VALUE "FileVersion", "1.0.0"
+            VALUE "FileVersion", "0.9.0"
             VALUE "InternalName", "Heritage Key"
             VALUE "LegalCopyright", "GPLv2"
             VALUE "OriginalFilename", "heritagekey.exe"
             VALUE "ProductName", "Heritage Key"
-            VALUE "ProductVersion", "1.0.0"
+            VALUE "ProductVersion", "0.9.0"
         END
     END
     BLOCK "VarFileInfo"
