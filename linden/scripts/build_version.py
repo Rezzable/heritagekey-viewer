@@ -20,13 +20,13 @@ def get_version(filename):
     fp.close()
 
     vals = {}
-    m = re.search('const S32 IMP_VERSION_MAJOR = (\d+);', data)
+    m = re.search('const S32 HK_VERSION_MAJOR = (\d+);', data)
     vals['major'] = m.group(1)
-    m = re.search('const S32 IMP_VERSION_MINOR = (\d+);', data)
+    m = re.search('const S32 HK_VERSION_MINOR = (\d+);', data)
     vals['minor'] = m.group(1)
-    m = re.search('const S32 IMP_VERSION_PATCH = (\d+);', data)
+    m = re.search('const S32 HK_VERSION_PATCH = (\d+);', data)
     vals['patch'] = m.group(1)
-    m = re.search('const char \* const IMP_VERSION_TEST = "(.+)";', data)
+    m = re.search('const char \* const HK_VERSION_TEST = "(.+)";', data)
     vals['test'] = m.group(1)
 
     return "%(major)s.%(minor)s.%(patch)s-%(test)s" % vals

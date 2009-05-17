@@ -1,3 +1,44 @@
+2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/llpanellogin.cpp:
+	Login page grid selector is hidden by default.
+	Ctrl-Shift-G will toggle it, for debugging purposes.
+
+
+2009-05-02  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/viewer_manifest.py:
+	Made manifest more specific about fonts/*.txt files.
+	To avoid accidently packaging up inappropriate license files.
+
+
+	* linden/scripts/build_version.py:
+	Made build_version.py read HK version, not Imp.
+	Used by Linux packaging scripts.
+
+
+	* linden/indra/newview/viewer_manifest.py:
+	Linux script will be called heritage_key, not heritagekey.
+
+
+	* linden/indra/newview/viewer_manifest.py:
+	Using heritage_key_icon.png on Linux.
+
+
+	* linden/indra/newview/linux_tools/wrapper.sh:
+	Got rid of Linux gridargs.dat, it needlessly messes with channel.
+	* linden/indra/newview/viewer_manifest.py:
+	Ditto.
+
+
+2009-05-01  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Updated HK viewer name and version for Mac.
+	* linden/indra/newview/Info-HeritageKey.plist: 
+	Ditto.
+
+
 2009-04-28  McCabe Maxsted  <hakushakukun@gmail.com>
 
 	* linden/indra/llcommon/llversionviewer.h
@@ -13,6 +54,20 @@
 	
 	* linden/indra/newview/skins/default/html/en-us/loading/loading.html:
 	Removed linden-branded loading hand.
+
+
+2009-04-07  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/Info-HeritageKey.plist:
+	Mac viewer advertises as handling genesis:// URLs.
+
+
+	* linden/indra/newview/Info-HeritageKey.plist:
+	Renamed Info-Imprudence.plist -> Info-HeritageKey.plist.
+
+
+	* linden/indra/newview/viewer_manifest.py:
+	Mac manifest rebranding fixes. (Imprudence -> Heritage Key).
 
 
 2009-03-05  McCabe Maxsted  <hakushakukun@gmail.com>
@@ -787,10 +842,53 @@
 =-                   \/ Imprudence \/                     -=
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+2009-05-02  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/viewer_manifest.py:
+	Added libgstqtwrapper.so to Mac manifest.
+
+
+2009-04-20  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/llaudio/audioengine_openal.cpp:
+	Imported GreenLife Emerald Viewer's OpenAL code. It works!
+	* linden/indra/llaudio/audioengine_openal.h:
+	Ditto.
+
+
+	* linden/indra/newview/viewer_manifest.py:
+	We'll use libopenal.1.dylib after all (yet again).
+
+
+	* linden/indra/cmake/OPENAL.cmake:
+	Help (force) Mac find the right OpenAL lib and header dir.
+
+
+	* linden/install.xml:
+	Mac viewer uses Thomas Shikami's OpenAL libs.
+
+
 2009-04-28  McCabe Maxsted  <hakushakukun@gmail.com>
 
 	* linden/indra/cmake/CopyWinLibs.cmake:
 	Updated copy_win_libs for 1.1 RC3.
+
+
+2009-04-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/llmedia/llmediaimplgstreamer.h:
+	LLMediaImplGStreamer::startPlay() is protected, LLGstPlayThread friend.
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	Removed redundant play() from LLMediaImplGStreamer::navigateTo().
+
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	LLMediaImplGStreamer::play() is no-op if already playing.
+
+
+	* linden/indra/llmedia/llmediaimplgstreamer.cpp:
+	Removed some useless code from LLMediaImplGStreamer::startPlay().
 
 
 2009-04-17  McCabe Maxsted  <hakushakukun@gmail.com>
@@ -805,6 +903,25 @@
 	Updated Windows GLib url.
 	Updated Windows GStreamer url.
 	Updated Windows libpng url.
+
+
+2009-04-10  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/viewer_manifest.py:
+	Added libneon to Mac manifest.
+
+
+	* linden/indra/cmake/OPENAL.cmake:
+	Help Mac find the right libalut.0.dylib.
+
+
+	* linden/indra/cmake/GStreamer.cmake:
+	Help Mac find the right libxml2.2.dylib.
+
+
+	* linden/indra/newview/viewer_manifest.py:
+	Tweaked Mac lib manifest.
+	Removed pango, commented out libopenal, added libxml2.
 
 
 2009-04-06  Jacek Antonelli  <jacek.antonelli@gmail.com>
@@ -2687,13 +2804,6 @@
 
 
 2008-11-29  Jacek Antonelli  <jacek.antonelli@gmail.com>
-
-	* linden/indra/newview/llpanellogin.cpp:
-	Remove preprocessor condition for grid selector.
-	The grid selector on the login screen will always show,
-	instead of only showing when the viewer was compiled
-	as LL_RELEASE_FOR_DOWNLOAD.
-
 
 	* linden/indra/newview/llappviewer.cpp:
 	Stop console window from always showing up.
