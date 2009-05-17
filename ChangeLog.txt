@@ -1,3 +1,9 @@
+2009-05-17  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Updated viewer name/version and company name for Mac package.
+
+
 2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/llpanellogin.cpp:
