@@ -84,7 +84,7 @@ in a few minutes.
 			Arriving...
 		</message>
 		<message name="requesting">
-			Requesting Teleport...
-		</message>
+      Teleportation in process...
+    </message>
 	</message_set>
 </teleport_messages>

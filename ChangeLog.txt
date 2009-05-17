@@ -9,6 +9,10 @@
 	* linden/indra/newview/skins/silver/xui/en-us/panel_toolbar.xml
 	Ditto.
 	
+	
+	* linden/indra/newview/skins/default/xui/en-us/teleport_strings.xml:
+	Changed 'Requesting teleport' to 'Teleportation in process.'
+	
 
 2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
