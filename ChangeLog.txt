@@ -13,6 +13,12 @@
 	* linden/indra/newview/skins/default/xui/en-us/teleport_strings.xml:
 	Changed 'Requesting teleport' to 'Teleportation in process.'
 	
+	
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Rezzable Productions Inc. to Rezzable Productions Ltd.
+	* linden/indra/newview/res/viewerRes.rc:
+	Ditto.
+	
 
 2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
