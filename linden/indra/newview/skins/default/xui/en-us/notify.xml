@@ -901,10 +901,10 @@ until the flexible checkbox is unchecked.
 	</notify>
 	<notify name="FirstDebugMenus" tip="false">
 		<message name="message">
-			You have enabled the Advanced menu. 
-This menu contains features useful for developers debugging Heritage Key.
-To toggle this menu on Windows press Ctrl-Alt-D. On Mac press Cmd-Opt-Shift-D.
-		</message>
+      You have enabled the Advanced menu.
+      This menu contains features useful for developers debugging Heritage Key VX Viewer.
+      To toggle this menu on Windows press Ctrl-Alt-D. On Mac press Cmd-Opt-Shift-D.
+    </message>
 	</notify>
 	<notify name="FirstSculptedPrim" tip="false">
 		<message name="message">

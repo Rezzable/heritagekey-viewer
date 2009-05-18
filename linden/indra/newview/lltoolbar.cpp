@@ -148,6 +148,9 @@ BOOL LLToolBar::postBuild()
 	childSetAction("radar_btn", onClickRadar, this);
 	childSetControlName("radar_btn", "ShowMiniMap");
 
+	childSetAction("home_btn", onClickHome, this);
+	childSetControlName("home_btn", "");
+
 	childSetAction("map_btn", onClickMap, this);
 	childSetControlName("map_btn", "ShowWorldMap");
 
@@ -511,6 +514,13 @@ void LLToolBar::onClickBuild(void*)
 void LLToolBar::onClickRadar(void*)
 {
 	handle_mini_map(NULL);
+}
+
+
+// static
+void LLToolBar::onClickHome(void*)
+{
+	gAgent.teleportHome();
 }
 
 

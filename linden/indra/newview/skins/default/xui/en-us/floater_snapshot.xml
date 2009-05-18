@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <floater bottom="-300" can_close="true" can_drag_on_left="false" can_minimize="false"
-     can_resize="false" follows="left|top" height="526" name="Snapshot"
+     can_resize="false" follows="left|top" height="462" name="Snapshot"
      rect_control="FloaterSnapshotRect" title="Snapshot Preview" width="215">
-	<text bottom_delta="-40" follows="top|left" height="15" left="10" name="type_label"
+  <text bottom_delta="-36" follows="top|left" height="15" left="10" name="type_label"
 	     width="195">
-    Snapshot destination
+    Save snapshot to your hard drive
   </text>
-	<radio_group bottom_delta="-46" follows="left|top" height="41" label="Snapshot type"
-	     left="10" name="snapshot_type_radio" width="195">
-		<radio_item bottom="-19" height="16" name="postcard">
-			Send via email
-		</radio_item>
-		<radio_item bottom="-38" height="16" name="local">
-			Save to your hard drive
-		</radio_item>
-	</radio_group>
-	<text bottom_delta="-30" follows="left|top" height="25" left="10" name="file_size_label"
+	<text bottom_delta="-130" follows="left|top" height="25" left="10" name="file_size_label"
 	     width="195">
 		File size: [SIZE] KB
 	</text>
-	<button bottom="-227" follows="left|top" height="20" label="Refresh Snapshot" left="10"
+	<button bottom="-180" follows="left|top" height="20" label="Refresh Snapshot" left="10"
 	     name="new_snapshot_btn" width="195" />
 	<button bottom_delta="-22" follows="left|top" height="20" label="Send" left="10"
 	     name="send_btn" width="105" />
@@ -33,7 +24,7 @@
   </flyout_button>
 	<button bottom_delta="0" follows="left|top" height="20" label="Cancel" left="120"
 	     name="discard_btn" width="85" />
-	<button bottom="-271" follows="left|top" font="SansSerifSmall" halign="center"
+	<button bottom="-224" follows="left|top" font="SansSerifSmall" halign="center"
 	     height="20" label="More &gt;&gt;" left="10"
 	     mouse_opaque="true" name="more_btn" scale_image="TRUE"
 	     tool_tip="Advanced Options" width="80" />

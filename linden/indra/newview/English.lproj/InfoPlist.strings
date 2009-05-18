@@ -1,6 +1,6 @@
 /* Localized versions of Info.plist keys */
 
-CFBundleName = "Heritage Key";
-CFBundleShortVersionString = "Heritage Key VX Viewer v0.9";
-CFBundleGetInfoString = "Heritage Key VX Viewer v0.9, Rezzable Productions Ltd.";
+CFBundleName = "Heritage Key VX Viewer";
+CFBundleShortVersionString = "Heritage Key VX Viewer 0.9.0";
+CFBundleGetInfoString = "Heritage Key VX Viewer 0.9.0, Rezzable Productions Ltd.";
 

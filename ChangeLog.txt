@@ -3,6 +3,71 @@
 	* linden/indra/newview/English.lproj/InfoPlist.strings:
 	Updated viewer name/version and company name for Mac package.
 
+2009-05-17  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/newview/lltoolbar.cpp:
+	Added Teleport Home button to toolbar.
+	* linden/indra/newview/lltoolbar.h:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/panel_toolbar.xml
+	Ditto.
+	* linden/indra/newview/skins/silver/xui/en-us/panel_toolbar.xml
+	Ditto.
+	
+	
+	* linden/indra/newview/skins/default/xui/en-us/teleport_strings.xml:
+	Changed 'Requesting teleport' to 'Teleportation in process.'
+	
+	
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Rezzable Productions Inc. to Rezzable Productions Ltd.
+	* linden/indra/newview/res/viewerRes.rc:
+	Ditto.
+	
+	
+	* linden/indra/llcommon/llversionviewer.h:
+	Changed version to 0.9.0.
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Ditto.
+	* linden/indra/newview/Info-HeritageKey.plist:
+	Ditto.
+	* linden/indra/newview/res/viewerRes.rc:
+	Ditto.
+	
+	
+	* linden/indra/llcommon/llversionviewer.h:
+	Changed Heritage Key to Heritage Key VX Viewer.
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Ditto.
+	* linden/indra/newview/Info-HeritageKey.plist:
+	Ditto.
+	* linden/indra/newview/llappviewer.cpp:
+	Ditto.
+	* linden/indra/newview/res/viewerRes.rc:
+	Ditto.
+	
+	
+	* linden/indra/newview/llnotify.cpp:
+	Heritage Key to Heritage Key VX Viewer in alerts and notifications.
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/notify.xml:
+	Ditto.
+	* linden/indra/llui/llalertdialog.cpp:
+	Ditto.
+	
+	
+	* linden/indra/newview/app_settings/settings.xml:
+	Removed send snapshot to email.
+	* linden/indra/newview/llfloatersnapshot.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_snapshot.xml:
+	Ditto.
+	
+	
+	* linden/indra/newview/llfloatersnapshot.cpp:
+	Fixed high res snapshot checkbox not hiding.
+	
 
 2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
 

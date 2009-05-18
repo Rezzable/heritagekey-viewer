@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>Heritage Key</string>
+	<string>Heritage Key VX Viewer</string>
 	<key>CFBundleIconFile</key>
 	<string>viewer.icns</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Heritage Key</string>
+	<string>Heritage Key VX Viewer</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleSignature</key>
@@ -32,7 +32,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>0.1.0 beta</string>
+	<string>0.9.0</string>
 	<key>CSResourcesFileMapped</key>
 	<true/>
 </dict>

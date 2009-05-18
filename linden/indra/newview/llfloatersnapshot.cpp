@@ -78,7 +78,7 @@
 ///----------------------------------------------------------------------------
 /// Local function declarations, constants, enums, and typedefs
 ///----------------------------------------------------------------------------
-S32 LLFloaterSnapshot::sUIWinHeightLong = 526 ;
+S32 LLFloaterSnapshot::sUIWinHeightLong = 462 ;
 S32 LLFloaterSnapshot::sUIWinHeightShort = LLFloaterSnapshot::sUIWinHeightLong - 230 ;
 S32 LLFloaterSnapshot::sUIWinWidth = 215 ;
 
@@ -1061,15 +1061,8 @@ LLSnapshotLivePreview* LLFloaterSnapshot::Impl::getPreviewView(LLFloaterSnapshot
 // static
 LLSnapshotLivePreview::ESnapshotType LLFloaterSnapshot::Impl::getTypeIndex(LLFloaterSnapshot* floater)
 {
-	LLSnapshotLivePreview::ESnapshotType index = LLSnapshotLivePreview::SNAPSHOT_POSTCARD;
-	LLSD value = floater->childGetValue("snapshot_type_radio");
-	const std::string id = value.asString();
-	if (id == "postcard")
-		index = LLSnapshotLivePreview::SNAPSHOT_POSTCARD;
-	else if (id == "texture")
-		index = LLSnapshotLivePreview::SNAPSHOT_TEXTURE;
-	else if (id == "local")
-		index = LLSnapshotLivePreview::SNAPSHOT_LOCAL;
+	// Snapshots are only saved to disk for now -- McCabe
+	LLSnapshotLivePreview::ESnapshotType index = LLSnapshotLivePreview::SNAPSHOT_LOCAL;
 	return index;
 }
 
@@ -1210,8 +1203,8 @@ void LLFloaterSnapshot::Impl::updateLayout(LLFloaterSnapshot* floaterp)
 // static
 void LLFloaterSnapshot::Impl::updateControls(LLFloaterSnapshot* floater)
 {
-	LLRadioGroup* snapshot_type_radio = floater->getChild<LLRadioGroup>("snapshot_type_radio");
-	snapshot_type_radio->setSelectedIndex(gSavedSettings.getS32("LastSnapshotType"));
+	/*LLRadioGroup* snapshot_type_radio = floater->getChild<LLRadioGroup>("snapshot_type_radio");*/
+	/*snapshot_type_radio->setSelectedIndex(gSavedSettings.getS32("LastSnapshotType"));*/
 	LLSnapshotLivePreview::ESnapshotType shot_type = getTypeIndex(floater);
 	ESnapshotFormat shot_format = (ESnapshotFormat)gSavedSettings.getS32("SnapshotFormat"); //getFormatIndex(floater);	LLViewerWindow::ESnapshotType layer_type = getLayerType(floater);
 	LLViewerWindow::ESnapshotType layer_type = getLayerType(floater);
@@ -1927,7 +1920,7 @@ LLFloaterSnapshot::~LLFloaterSnapshot()
 
 BOOL LLFloaterSnapshot::postBuild()
 {
-	childSetCommitCallback("snapshot_type_radio", Impl::onCommitSnapshotType, this);
+	//childSetCommitCallback("snapshot_type_radio", Impl::onCommitSnapshotType, this);
 	childSetCommitCallback("local_format_combo", Impl::onCommitSnapshotFormat, this);
 	
 	childSetAction("new_snapshot_btn", Impl::onClickNewSnapshot, this);
@@ -2066,7 +2059,6 @@ void LLFloaterSnapshot::draw()
 		if(previewp->getSnapshotType() != LLSnapshotLivePreview::SNAPSHOT_LOCAL)
 		{
 			childSetEnabled("high_res_check",FALSE);
-			childSetVisible("high_res_check",FALSE);
 			childSetEnabled("ui_check",TRUE);
 			if (ui_in_snapshot)
 			{
@@ -2075,7 +2067,6 @@ void LLFloaterSnapshot::draw()
 		}
 		else
 		{
-			childSetVisible("high_res_check",TRUE);
 			if (high_res_snapshot)
 			{
 				childSetEnabled("high_res_check",TRUE);
@@ -2105,7 +2096,7 @@ void LLFloaterSnapshot::draw()
 		if(previewp->getThumbnailImage())
 		{
 			S32 offset_x = (getRect().getWidth() - previewp->getThumbnailWidth()) / 2 ;
-			S32 offset_y = getRect().getHeight() - 205 + (90 - previewp->getThumbnailHeight()) / 2 ;
+			S32 offset_y = getRect().getHeight() - 130 + (90 - previewp->getThumbnailHeight()) / 2 ;
 
 			glMatrixMode(GL_MODELVIEW);
 			gl_draw_scaled_image(offset_x, offset_y, 

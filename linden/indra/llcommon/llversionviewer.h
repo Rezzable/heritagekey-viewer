@@ -32,7 +32,7 @@
 #ifndef LL_LLVERSIONVIEWER_H
 #define LL_LLVERSIONVIEWER_H
 
-const char * const LL_CHANNEL = "Heritage Key";
+const char * const LL_CHANNEL = "Heritage Key VX Viewer";
 
 const char * const LL_VIEWER_NAME = "Second Life";
 const S32 LL_VERSION_MAJOR = 1;
@@ -46,10 +46,10 @@ const S32 IMP_VERSION_MINOR = 1;
 const S32 IMP_VERSION_PATCH = 0;
 const char * const IMP_VERSION_TEST = "RC2";
 
-const char * const HK_VIEWER_NAME = "Heritage Key";
+const char * const HK_VIEWER_NAME = "Heritage Key VX Viewer";
 const S32 HK_VERSION_MAJOR = 0;
-const S32 HK_VERSION_MINOR = 1;
+const S32 HK_VERSION_MINOR = 9;
 const S32 HK_VERSION_PATCH = 0;
-const char * const HK_VERSION_TEST = "beta";
+const char * const HK_VERSION_TEST = "";
 
 #endif
