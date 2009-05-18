@@ -51,6 +51,14 @@
 	* linden/indra/llui/llalertdialog.cpp:
 	Ditto.
 	
+	
+	* linden/indra/newview/app_settings/settings.xml:
+	Removed send snapshot to email.
+	* linden/indra/newview/llfloatersnapshot.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_snapshot.xml:
+	Ditto.
+	
 
 2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
