@@ -48,6 +48,8 @@
 	Ditto.
 	* linden/indra/newview/skins/default/xui/en-us/notify.xml:
 	Ditto.
+	* linden/indra/llui/llalertdialog.cpp:
+	Ditto.
 	
 
 2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
