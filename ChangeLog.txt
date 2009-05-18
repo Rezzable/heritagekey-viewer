@@ -1,3 +1,9 @@
+2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/scripts/build_version.py:
+	Fixed a bad regex which wouldn't match an empty viewer channel string.
+
+
 2009-05-17  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/English.lproj/InfoPlist.strings:
