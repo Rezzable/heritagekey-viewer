@@ -59,6 +59,10 @@
 	* linden/indra/newview/skins/default/xui/en-us/floater_snapshot.xml:
 	Ditto.
 	
+	
+	* linden/indra/newview/llfloatersnapshot.cpp:
+	Fixed high res snapshot checkbox not hiding.
+	
 
 2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
