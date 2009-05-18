@@ -1096,18 +1096,18 @@ because you have specified the -safe option.
 	</alert>
 	<alert modal="true" name="UnsupportedGLRequirements">
 		<message name="message">
-			You do not appear to have the proper hardware requirements for Heritage Key. Heritage Key requires an OpenGL graphics card that has multitexture support. If this is the case, you may want to make sure that you have the latest drivers for your graphics card, and service packs and patches for your operating system.
+      You do not appear to have the proper hardware requirements for Heritage Key VX Viewer. Heritage Key VX Viewer requires an OpenGL graphics card that has multitexture support. If this is the case, you may want to make sure that you have the latest drivers for your graphics card, and service packs and patches for your operating system.
 
-If you continue to have problems, please visit: http://www.secondlife.com/support
-		</message>
+      If you continue to have problems, please visit: http://www.secondlife.com/support
+    </message>
 	</alert>
 	<alert modal="true" name="UnsupportedHardware">
 		<message name="message">
-			Warning: Your system does not meet Heritage Key&apos;s minimum system requirements. If you continue using Heritage Key, you may experience poor performance. Unfortunately, we cannot provide technical support for unsupported system configurations. 
+      Warning: Your system does not meet Heritage Key VX Viewer&apos;s minimum system requirements. If you continue using Heritage Key VX Viewer, you may experience poor performance. Unfortunately, we cannot provide technical support for unsupported system configurations.
 
-MINSPECS
-Do you wish to visit [_URL] for more information?
-		</message>
+      MINSPECS
+      Do you wish to visit [_URL] for more information?
+    </message>
 		<ignore name="ignore">
 			When detecting unsupported hardware
 		</ignore>
@@ -1149,12 +1149,12 @@ Do you wish to visit [_URL] for more information?
 
 	<alert modal="true" name="UnknownGPU">
 		<message name="message">
-Your system contains a graphics card that is unknown to us at this time.  
-This is often the case with new hardware we haven't had a chance to 
-test.  Heritage Key will most likely run properly, but you may need to 
-adjust your graphics settings to something more appropriate.
-(Edit menu > Preferences > Graphics).
-		</message>
+      Your system contains a graphics card that is unknown to us at this time.
+      This is often the case with new hardware we haven't had a chance to
+      test.  Heritage Key VX Viewer VX Viewer will most likely run properly, but you may need to
+      adjust your graphics settings to something more appropriate.
+      (Edit menu > Preferences > Graphics).
+    </message>
 		<ignore name="ignore">
 			When detecting an unknown graphics card
 		</ignore>
@@ -1857,9 +1857,9 @@ Cannot find the region this land is in.
 	</alert>
 	<alert modal="true" name="CannotCloseFloaterBuyLand">
 		<message name="message">
-			You cannot close the Buy Land window until Heritage Key
-estimates the price of this transaction.
-		</message>
+      You cannot close the Buy Land window until Heritage Key VX Viewer
+      estimates the price of this transaction.
+    </message>
 	</alert>
 	<alert modal="true" name="CannotDeedLandNothingSelected">
 		<message name="message">
@@ -4066,8 +4066,8 @@ Default: off
 	</alert>
 	<alert modal="true" name="VoiceVersionMismatch" title="Voice Version Mismatch">
 		<message name="message">
-			This version of Heritage Key is not compatible with the Voice Chat feature in this region. In order for Voice Chat to function correctly you will need to update Heritage Key.
-		</message>
+      This version of Heritage Key VX Viewer is not compatible with the Voice Chat feature in this region. In order for Voice Chat to function correctly you will need to update Heritage Key VX Viewer.
+    </message>
 	</alert>
 	<alert modal="true" name="HelpEstateCovenant" title="Estate Covenant">
 		<message name="message">
@@ -4350,8 +4350,8 @@ will only work if a script is added with a money() event.
 			Are you sure you want to quit?
 		</message>
 		<ignore name="ignore">
-			When Quitting Heritage Key.
-		</ignore>
+      When Quitting Heritage Key VX Viewer.
+    </ignore>
 		<option name="Quit">
 			Quit
 		</option>
@@ -4691,7 +4691,7 @@ Click &quot;Advanced Water&quot; to bring up an editor with more advanced settin
 	</alert>
 	<alert modal="true" name="HelpDayCycle">
 		<message name="message">
-			The Day Cycle Editor gives you control over the sky during Heritage Key&apos;s day/night cycle. This is the cycle that is used by the Basic Environment Editor&apos;s Time of Day slider.
+      The Day Cycle Editor gives you control over the sky during Heritage Key VX Viewer&apos;s day/night cycle. This is the cycle that is used by the Basic Environment Editor&apos;s Time of Day slider.
 
 The Day Cycle Editor works by setting keyframes. These are nodes (represented by the gray blips on the time graph) that have Sky Presets associated with them. As the Time of Day progresses, the WindLight sky &quot;animates&quot; as it interpolates between these keyframes. 
 
@@ -4836,7 +4836,7 @@ with the the D slider.
 	</alert>
 	<alert modal="true" name="HelpClassicClouds">
 		<message name="message">
-			Check this box to enable rendering of Heritage Key&apos;s older classic clouds in addition to WindLight&apos;s clouds.
+      Check this box to enable rendering of Heritage Key VX Viewer&apos;s older classic clouds in addition to WindLight&apos;s clouds.
 		</message>
 	</alert>
 	<alert modal="true" name="HelpWaterFogColor">
@@ -5005,7 +5005,7 @@ they are part of an attachment.
 	</alert>
 	<alert modal="true" name="BadURL">
 		<message name="message">
-			Heritage Key doesn&apos;t know how to handle the link:
+      Heritage Key VX Viewer doesn&apos;t know how to handle the link:
  [SLURL]
 Most links are similar to this:
 

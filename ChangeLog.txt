@@ -41,6 +41,14 @@
 	* linden/indra/newview/res/viewerRes.rc:
 	Ditto.
 	
+	
+	* linden/indra/newview/llnotify.cpp:
+	Heritage Key to Heritage Key VX Viewer in alerts and notifications.
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/notify.xml:
+	Ditto.
+	
 
 2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
