@@ -29,6 +29,18 @@
 	* linden/indra/newview/res/viewerRes.rc:
 	Ditto.
 	
+	
+	* linden/indra/llcommon/llversionviewer.h:
+	Changed Heritage Key to Heritage Key VX Viewer.
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Ditto.
+	* linden/indra/newview/Info-HeritageKey.plist:
+	Ditto.
+	* linden/indra/newview/llappviewer.cpp:
+	Ditto.
+	* linden/indra/newview/res/viewerRes.rc:
+	Ditto.
+	
 
 2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
