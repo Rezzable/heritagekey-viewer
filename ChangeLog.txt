@@ -1,3 +1,9 @@
+2009-05-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/skins/default/textures/progress_background.png:
+	Imported progress screen background image.
+
+
 2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/app_settings/settings.xml:
