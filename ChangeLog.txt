@@ -25,6 +25,9 @@
 	Imported progress screen background image.
 	
 	
+	
+	McCabe Maxsted  <hakushakukun@gmail.com>
+	
 	* linden/indra/newview/res/heritage_key_icon.ico:
 	Updated Heritage Key windows icon files (todo: sort out which files are really needed).
 	* linden/indra/newview/res/heritage_key_icon.png:
@@ -37,6 +40,10 @@
 	Ditto.
 	* linden/indra/newview/res/imprudence_icon.png:
 	Ditto.
+	
+	
+	* linden/indra/newview/heritage-key.url:
+	Added shortcut to heritage-key.com (used in Windows installer).
 
 
 2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
