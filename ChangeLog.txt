@@ -1,4 +1,51 @@
-2009-05-18  McCabe Maxsted  <hakushakukun@gmail.com>
+2009-05-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/scripts/build_version.py:
+	Improved formatting of version numbers with empty test version.
+
+
+	* linden/indra/newview/llprogressview.cpp:
+	Moved the progress bar stuff down a bit.
+	So it doesn't overlap the important part of the background.
+
+
+	* linden/indra/newview/llprogressview.cpp:
+	Removed redundant viewer name text from the progress screen.
+
+
+	* linden/indra/newview/skins/default/textures/textures.xml:
+	Preload the progress screen background image.
+
+
+	* linden/indra/newview/llprogressview.cpp:
+	Progress screen shows the new background, stretched to fit.
+
+
+	* linden/indra/newview/skins/default/textures/progress_background.png:
+	Imported progress screen background image.
+
+
+2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Grid choice now defaults to Heritage Key.
+
+
+	* linden/indra/newview/Info-HeritageKey.plist:
+	Fixed Mac executable name in Info-HeritageKey.plist.
+	It's not user-visible, but must match the internal name.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Fixed "Heritage Key VX Viewer VX Viewer" (double) in alerts.xml.
+
+
+	* linden/scripts/build_version.py:
+	Fixed a bad regex which wouldn't match an empty viewer channel string.
+	
+	
+	
+	McCabe Maxsted  <hakushakukun@gmail.com>
 
 	* linden/indra/newview/app_settings/cmd_line.xml:
 	Added support for genesis urls using --genesis <url> command line parameter.
@@ -24,9 +71,9 @@
 	Added Teleport Home button to toolbar.
 	* linden/indra/newview/lltoolbar.h:
 	Ditto.
-	* linden/indra/newview/skins/default/xui/en-us/panel_toolbar.xml
+	* linden/indra/newview/skins/default/xui/en-us/panel_toolbar.xml:
 	Ditto.
-	* linden/indra/newview/skins/silver/xui/en-us/panel_toolbar.xml
+	* linden/indra/newview/skins/silver/xui/en-us/panel_toolbar.xml:
 	Ditto.
 	
 	
@@ -82,6 +129,13 @@
 	
 	* linden/indra/newview/llfloatersnapshot.cpp:
 	Fixed high res snapshot checkbox not hiding.
+	
+	
+	
+	Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Updated viewer name/version and company name for Mac package.
 	
 
 2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
@@ -927,6 +981,27 @@
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 =-                   \/ Imprudence \/                     -=
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/viewer_manifest.py:
+	Changed the list of installed Mac gstreamer plugins.
+
+	Commented out libgstqtwrapper.so, since it causes issues with
+	MP3s (and perhaps other types).
+
+	Added:
+	    libgstfilter.so
+	    libgstmultifile.so
+	    libgststereo.so
+	    libgstvideobalance.so
+	    libgstvideobox.so
+	    libgstvideocrop.so
+	    libgstvideoflip.so
+	    libgstvideomixer.so
+	    libgstvideorate.so
+	    libgstvideosignal.so
+
 
 2009-05-02  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
