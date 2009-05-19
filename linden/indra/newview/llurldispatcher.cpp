@@ -291,11 +291,13 @@ bool LLURLDispatcherImpl::dispatchGenesisURL(const std::string& url)
 	gSavedSettings.setValue("CmdLineLoginURI", new_login_uri);
 
 	// Check if slurl exists
-	if (vector_size == 5)
+	if (vector_size >= 5)
 	{
 		std::string slurl = 
 			"secondlife://" + genesis_token[2] + "/" + genesis_token[3] + 
-			"/" + genesis_token[4] + "/" + genesis_token[5];
+			"/" + genesis_token[4];
+			if (vector_size == 6)
+				slurl = slurl + "/" + genesis_token[5];
 		if(LLURLDispatcher::isSLURL(slurl))
 		{
 			if (LLURLDispatcher::isSLURLCommand(slurl))

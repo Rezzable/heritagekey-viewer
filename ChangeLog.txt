@@ -77,6 +77,10 @@
 	
 	* linden/indra/newview/heritage-key.url:
 	Added shortcut to heritage-key.com (used in Windows installer).
+	
+	
+	* linden/indra/newview/llurldispatcher.cpp:
+	Fixed bug in genesis slurl handling.
 
 
 2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
