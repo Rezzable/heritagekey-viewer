@@ -1904,6 +1904,7 @@ bool LLAppViewer::initConfiguration()
 				}
 			}
 		}
+		gSavedSettings.setBOOL("AutoLogin", TRUE);
 	}
 
     const LLControlVariable* skinfolder = gSavedSettings.getControl("SkinCurrent");
