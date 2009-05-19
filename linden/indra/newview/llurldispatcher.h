@@ -56,8 +56,6 @@ public:
 
 	static bool dispatchFromTextEditor(const std::string& url);
 
-	static bool dispatchGenesisURL(const std::string& url);
-
 	static std::string buildSLURL(const std::string& regionname, S32 x, S32 y, S32 z);
 		//   builds: http://slurl.com/secondlife/RegionName/x/y/z/
 };

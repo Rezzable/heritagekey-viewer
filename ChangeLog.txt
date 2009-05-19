@@ -1,5 +1,13 @@
 2009-05-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/llappviewer.cpp:
+	Cleaned up Genesis URL handling a bit.
+	* linden/indra/newview/llurldispatcher.cpp:
+	Ditto.
+	* linden/indra/newview/llurldispatcher.h:
+	Ditto.
+
+
 	* linden/indra/newview/linux_tools/handle_genesisprotocol.sh:
 	Updated Linux URL handler scripts to handle genesis URLs.
 	* linden/indra/newview/linux_tools/register_genesisprotocol.sh: 

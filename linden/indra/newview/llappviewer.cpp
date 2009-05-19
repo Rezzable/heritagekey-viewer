@@ -1857,7 +1857,7 @@ bool LLAppViewer::initConfiguration()
 	else if (clp.hasOption("genesis"))
 	{
 		std::string genesis_raw = clp.getOption("genesis")[0];
-		LLURLDispatcher::dispatchGenesisURL(genesis_raw);
+		LLURLDispatcher::dispatch(genesis_raw, true);
 	}
 
     const LLControlVariable* skinfolder = gSavedSettings.getControl("SkinCurrent");
