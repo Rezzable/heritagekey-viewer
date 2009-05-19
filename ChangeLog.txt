@@ -1,5 +1,9 @@
 2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/app_settings/settings.xml:
+	Grid choice now defaults to Heritage Key.
+
+
 	* linden/indra/newview/Info-HeritageKey.plist:
 	Fixed Mac executable name in Info-HeritageKey.plist.
 	It's not user-visible, but must match the internal name.
