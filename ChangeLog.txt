@@ -56,6 +56,27 @@
 
 	* linden/indra/newview/skins/default/textures/progress_background.png:
 	Imported progress screen background image.
+	
+	
+	
+	McCabe Maxsted  <hakushakukun@gmail.com>
+	
+	* linden/indra/newview/res/heritage_key_icon.ico:
+	Updated Heritage Key windows icon files (todo: sort out which files are really needed).
+	* linden/indra/newview/res/heritage_key_icon.png:
+	Ditto.
+	* linden/indra/newview/res/ll_icon.bmp:
+	Ditto.
+	* linden/indra/newview/res/heritage_key_icon1.ico:
+	Ditto.
+	* linden/indra/newview/res/heritage_key_install_icon.ico:
+	Ditto.
+	* linden/indra/newview/res/imprudence_icon.png:
+	Ditto.
+	
+	
+	* linden/indra/newview/heritage-key.url:
+	Added shortcut to heritage-key.com (used in Windows installer).
 
 
 2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
@@ -109,9 +130,9 @@
 	Added Teleport Home button to toolbar.
 	* linden/indra/newview/lltoolbar.h:
 	Ditto.
-	* linden/indra/newview/skins/default/xui/en-us/panel_toolbar.xml
+	* linden/indra/newview/skins/default/xui/en-us/panel_toolbar.xml:
 	Ditto.
-	* linden/indra/newview/skins/silver/xui/en-us/panel_toolbar.xml
+	* linden/indra/newview/skins/silver/xui/en-us/panel_toolbar.xml:
 	Ditto.
 	
 	
@@ -167,6 +188,13 @@
 	
 	* linden/indra/newview/llfloatersnapshot.cpp:
 	Fixed high res snapshot checkbox not hiding.
+	
+	
+	
+	Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Updated viewer name/version and company name for Mac package.
 	
 
 2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
