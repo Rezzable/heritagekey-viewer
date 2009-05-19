@@ -44,10 +44,31 @@
 	Fixed a bad regex which wouldn't match an empty viewer channel string.
 
 
+2009-05-18  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/newview/app_settings/cmd_line.xml:
+	Added support for genesis urls using --genesis <url> command line parameter.
+	* linden/indra/newview/llappviewer.cpp:
+	Ditto.
+	
+	
+	* linden/indra/newview/llpanellogin.h:
+	AutoLogin freeze bug fixed.
+	* linden/indra/newview/llstartup.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Ditto.
+	
+	
+	* linden/indra/newview/llappviewer.cpp:
+	genesis urls now autologin.
+	
+
 2009-05-17  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/English.lproj/InfoPlist.strings:
 	Updated viewer name/version and company name for Mac package.
+
 
 2009-05-17  McCabe Maxsted  <hakushakukun@gmail.com>
 
