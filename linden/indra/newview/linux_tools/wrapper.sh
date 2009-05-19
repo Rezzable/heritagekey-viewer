@@ -77,7 +77,7 @@ echo "Running from ${RUN_PATH}"
 cd "${RUN_PATH}"
 
 # Re-register the secondlife:// protocol handler every launch, for now.
-./register_secondlifeprotocol.sh
+./register_genesisprotocol.sh
 ## Before we mess with LD_LIBRARY_PATH, save the old one to restore for
 ##  subprocesses that care.
 if [ "${LD_LIBRARY_PATH+isset}" = "isset" ]; then

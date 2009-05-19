@@ -1,5 +1,15 @@
 2009-05-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/linux_tools/handle_secondlifeprotocol.sh:
+	Renamed to handle_genesisprotocol.sh.
+	* linden/indra/newview/linux_tools/register_secondlifeprotocol.sh:
+	Renamed to register_genesisprotocol.sh.
+	* linden/indra/newview/linux_tools/wrapper.sh:
+	Updated to use new register script name.
+	* linden/indra/newview/viewer_manifest.py:
+	New URL handler script names.
+
+
 	* linden/indra/newview/llappviewer.cpp:
 	Partially moved Genesis URL handling to LLURLDispatcher.
 	Could used some cleanup, though.
