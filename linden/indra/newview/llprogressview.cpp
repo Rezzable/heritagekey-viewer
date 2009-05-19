@@ -203,36 +203,13 @@ void LLProgressView::draw()
 		reshape( width, height );
 	}
 
-	// Paint bitmap if we've got one
-	glPushMatrix();
-	if (gStartImageGL)
-	{
-		LLGLSUIDefault gls_ui;
-		LLViewerImage::bindTexture(gStartImageGL);
-		gGL.color4f(1.f, 1.f, 1.f, mFadeTimer.getStarted() ? clamp_rescale(mFadeTimer.getElapsedTimeF32(), 0.f, FADE_IN_TIME, 1.f, 0.f) : 1.f);
-		F32 image_aspect = (F32)gStartImageWidth / (F32)gStartImageHeight;
-		F32 view_aspect = (F32)width / (F32)height;
-		// stretch image to maintain aspect ratio
-		if (image_aspect > view_aspect)
-		{
-			glTranslatef(-0.5f * (image_aspect / view_aspect - 1.f) * width, 0.f, 0.f);
-			glScalef(image_aspect / view_aspect, 1.f, 1.f);
-		}
-		else
-		{
-			glTranslatef(0.f, -0.5f * (view_aspect / image_aspect - 1.f) * height, 0.f);
-			glScalef(1.f, view_aspect / image_aspect, 1.f);
-		}
-		gl_rect_2d_simple_tex( getRect().getWidth(), getRect().getHeight() );
-		gStartImageGL->unbindTexture(0, GL_TEXTURE_2D);
-	}
-	else
-	{
-		LLGLSNoTexture gls_no_texture;
-		gGL.color4f(0.f, 0.f, 0.f, 1.f);
-		gl_rect_2d(getRect());
-	}
-	glPopMatrix();
+
+	LLUIImagePtr background = LLUI::getUIImage("progress_background.png");
+
+	GLfloat fade_alpha = mFadeTimer.getStarted() ? clamp_rescale(mFadeTimer.getElapsedTimeF32(), 0.f, FADE_IN_TIME, 1.f, 0.f) : 1.f;
+
+	background->draw(0,0, width,height, LLColor4(1.f, 1.f, 1.f, fade_alpha));
+
 
 	// Handle fade-in animation
 	if (mFadeTimer.getStarted())
