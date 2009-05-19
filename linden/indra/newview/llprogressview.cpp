@@ -240,8 +240,6 @@ void LLProgressView::draw()
 	F32 alpha = 0.5f + 0.5f*0.5f*(1.f + (F32)sin(3.f*timer.getElapsedTimeF32()));
 	// background_color.mV[3] = background_color.mV[3]*alpha;
 
-	std::string top_line = LLAppViewer::instance()->getSecondLifeTitle();
-
 	S32 bar_bottom = line_two_y - 30;
 	S32 bar_height = 18;
 	S32 bar_width = getRect().getWidth() * 2 / 3;
@@ -279,12 +277,6 @@ void LLProgressView::draw()
 		mOutlineRect.set( 0, 0, 0, 0 );
 
 	// draw loading bar
-	font->renderUTF8(top_line, 0,
-		line_x, line_one_y,
-		//LLColor4::white,
-		gColors.getColor("LoginProgressBoxTextColor"),
-		LLFontGL::HCENTER, LLFontGL::BASELINE,
-		LLFontGL::DROP_SHADOW);
 	font->renderUTF8(mText, 0,
 		line_x, line_two_y,
 		//LLColor4::white,

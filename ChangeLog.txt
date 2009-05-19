@@ -1,5 +1,9 @@
 2009-05-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/llprogressview.cpp:
+	Removed redundant viewer name text from the progress screen.
+
+
 	* linden/indra/newview/skins/default/textures/textures.xml:
 	Preload the progress screen background image.
 
