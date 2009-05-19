@@ -795,7 +795,7 @@ The outfit folder contains no clothing, body parts, or attachments.
 	</alert>
 	<alert modal="true" name="MustHaveAccountToLogInNoLinks">
 		<message name="message">
-			You must have an account to connect to [HERITAGE_KEY].
+			You must have an account to use [HERITAGE_KEY].
 		</message>
 		<option name="OK">
 			Close
@@ -806,7 +806,7 @@ The outfit folder contains no clothing, body parts, or attachments.
 Oops! Something was left blank.
 You need to enter both the First and Last name of your avatar.
 
-You need an account to enter [HERITAGE_KEY]. Would you like to create one now?
+You need an account to use [HERITAGE_KEY]. Would you like to create one now?
 </message>
 		<option name="OK">
 			Create a new account

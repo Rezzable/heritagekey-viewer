@@ -5,6 +5,14 @@
 	* linden/indra/newview/llappviewer.cpp:
 	Ditto.
 	
+	
+	* linden/indra/newview/llpanellogin.h:
+	AutoLogin freeze bug fixed.
+	* linden/indra/newview/llstartup.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Ditto.
+	
 
 2009-05-17  McCabe Maxsted  <hakushakukun@gmail.com>
 
