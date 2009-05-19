@@ -267,6 +267,17 @@
       <!-- Special case. Not mapped to a setting. -->
     </map>
 
+    <key>genesis</key>
+    <map>
+      <key>desc</key>
+      <string>Genesis url protocol handler</string>
+      <key>count</key>
+      <integer>1</integer>
+      <key>last_option</key>
+      <boolean>true</boolean>
+      <!-- Special case. Not mapped to a setting. -->
+    </map>
+
     <key>ignorepixeldepth</key>
     <map>
       <key>desc</key>

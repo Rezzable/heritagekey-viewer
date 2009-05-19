@@ -1,3 +1,11 @@
+2009-05-18  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/newview/app_settings/cmd_line.xml:
+	Added support for genesis urls using --genesis <url> command line parameter.
+	* linden/indra/newview/llappviewer.cpp:
+	Ditto.
+	
+
 2009-05-17  McCabe Maxsted  <hakushakukun@gmail.com>
 
 	* linden/indra/newview/lltoolbar.cpp:
