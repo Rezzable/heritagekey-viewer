@@ -1,5 +1,11 @@
 2009-05-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/linux_tools/handle_genesisprotocol.sh:
+	Updated Linux URL handler scripts to handle genesis URLs.
+	* linden/indra/newview/linux_tools/register_genesisprotocol.sh: 
+	Ditto.
+
+
 	* linden/indra/newview/linux_tools/handle_secondlifeprotocol.sh:
 	Renamed to handle_genesisprotocol.sh.
 	* linden/indra/newview/linux_tools/register_secondlifeprotocol.sh:
