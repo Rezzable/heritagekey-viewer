@@ -1,5 +1,10 @@
 2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/Info-HeritageKey.plist:
+	Fixed Mac executable name in Info-HeritageKey.plist.
+	It's not user-visible, but must match the internal name.
+
+
 	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
 	Fixed "Heritage Key VX Viewer VX Viewer" (double) in alerts.xml.
 
