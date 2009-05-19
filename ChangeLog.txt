@@ -23,6 +23,20 @@
 
 	* linden/indra/newview/skins/default/textures/progress_background.png:
 	Imported progress screen background image.
+	
+	
+	* linden/indra/newview/res/heritage_key_icon.ico:
+	Updated Heritage Key windows icon files (todo: sort out which files are really needed).
+	* linden/indra/newview/res/heritage_key_icon.png:
+	Ditto.
+	* linden/indra/newview/res/ll_icon.bmp:
+	Ditto.
+	* linden/indra/newview/res/heritage_key_icon1.ico:
+	Ditto.
+	* linden/indra/newview/res/heritage_key_install_icon.ico:
+	Ditto.
+	* linden/indra/newview/res/imprudence_icon.png:
+	Ditto.
 
 
 2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
