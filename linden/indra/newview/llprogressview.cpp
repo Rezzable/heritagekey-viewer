@@ -225,7 +225,7 @@ void LLProgressView::draw()
 	}
 
 	S32 line_x = getRect().getWidth() / 2;
-	S32 line_one_y = getRect().getHeight() / 2 + 64;
+	S32 line_one_y = getRect().getHeight() / 2;
 	const S32 LINE_SPACING = 25;
 	S32 line_two_y = line_one_y - LINE_SPACING;
 	const LLFontGL* font = LLFontGL::sSansSerif;
@@ -247,9 +247,9 @@ void LLProgressView::draw()
 
 	// translucent outline box
 	S32 background_box_left = ( ( ( getRect().getWidth() / 2 ) - ( bar_width / 2 ) ) / 4 ) * 3;
-	S32 background_box_top = ( getRect().getHeight() / 2 ) + LINE_SPACING * 5;
+	S32 background_box_top = ( getRect().getHeight() / 2 ) + LINE_SPACING * 5 - 64;
 	S32 background_box_right = getRect().getWidth() - background_box_left;
-	S32 background_box_bottom = ( getRect().getHeight() / 2 ) - LINE_SPACING * 5;
+	S32 background_box_bottom = ( getRect().getHeight() / 2 ) - LINE_SPACING * 5 - 64;
 	S32 background_box_width = background_box_right - background_box_left + 1;
 	S32 background_box_height = background_box_top - background_box_bottom + 1;
 
