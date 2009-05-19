@@ -1,5 +1,9 @@
 2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Fixed "Heritage Key VX Viewer VX Viewer" (double) in alerts.xml.
+
+
 	* linden/scripts/build_version.py:
 	Fixed a bad regex which wouldn't match an empty viewer channel string.
 

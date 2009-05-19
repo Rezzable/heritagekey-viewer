@@ -1151,7 +1151,7 @@ because you have specified the -safe option.
 		<message name="message">
       Your system contains a graphics card that is unknown to us at this time.
       This is often the case with new hardware we haven't had a chance to
-      test.  Heritage Key VX Viewer VX Viewer will most likely run properly, but you may need to
+      test.  Heritage Key VX Viewer will most likely run properly, but you may need to
       adjust your graphics settings to something more appropriate.
       (Edit menu > Preferences > Graphics).
     </message>
