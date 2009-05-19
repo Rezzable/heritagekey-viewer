@@ -1,5 +1,9 @@
 2009-05-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/skins/default/textures/textures.xml:
+	Preload the progress screen background image.
+
+
 	* linden/indra/newview/llprogressview.cpp:
 	Progress screen shows the new background, stretched to fit.
 
