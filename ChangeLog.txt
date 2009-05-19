@@ -1,5 +1,9 @@
 2009-05-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/scripts/build_version.py:
+	Improved formatting of version numbers with empty test version.
+
+
 	* linden/indra/newview/llprogressview.cpp:
 	Moved the progress bar stuff down a bit.
 	So it doesn't overlap the important part of the background.
