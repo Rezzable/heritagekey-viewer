@@ -1854,57 +1854,10 @@ bool LLAppViewer::initConfiguration()
             }
         }
     }
-	else if (clp.hasOption("genesis")) //UGLY genesis url support
+	else if (clp.hasOption("genesis"))
 	{
 		std::string genesis_raw = clp.getOption("genesis")[0];
-		
-		// Fix the port's colon if it's not formatted correctly
-		std::string colon_raw = "%3A";
-		int colon_pos = genesis_raw.find(colon_raw);
-		if (colon_pos!= std::string::npos)
-			genesis_raw.replace(colon_pos, colon_raw.size(), ":");
-
-		// Trim off the beginning genesis://
-		std::string genesis_clean = genesis_raw.substr(10, genesis_raw.length()-10);
-
-		std::vector <std::string> genesis_token;
-		std::string temp;
-		int vector_size = 0;
-
-		while (genesis_clean.find("/", 0) != std::string::npos)
-		{
-			size_t pos = genesis_clean.find("/", 0);
-			temp = genesis_clean.substr(0, pos);
-			genesis_clean.erase(0, pos + 1);
-			genesis_token.push_back(temp);
-			vector_size++;
-		}
-		genesis_token.push_back(genesis_clean);
-		vector_size++;
-
-		// Set new LoginURI
-		std::string new_login_uri = "http://" + genesis_token[0] + "/?token=" + genesis_token[1];
-		gSavedSettings.setValue("CmdLineLoginURI", new_login_uri);
-
-		// Check if slurl exists
-		if (vector_size == 5)
-		{
-			std::string slurl = 
-				"secondlife://" + genesis_token[2] + "/" + genesis_token[3] + 
-				"/" + genesis_token[4] + "/" + genesis_token[5];
-			if(LLURLDispatcher::isSLURL(slurl))
-			{
-				if (LLURLDispatcher::isSLURLCommand(slurl))
-				{
-					LLStartUp::sSLURLCommand = slurl;
-				}
-				else
-				{
-					LLURLSimString::setString(slurl);
-				}
-			}
-		}
-		gSavedSettings.setBOOL("AutoLogin", TRUE);
+		LLURLDispatcher::dispatchGenesisURL(genesis_raw);
 	}
 
     const LLControlVariable* skinfolder = gSavedSettings.getControl("SkinCurrent");

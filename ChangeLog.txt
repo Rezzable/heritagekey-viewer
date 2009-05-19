@@ -1,5 +1,14 @@
 2009-05-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* linden/indra/newview/llappviewer.cpp:
+	Partially moved Genesis URL handling to LLURLDispatcher.
+	Could used some cleanup, though.
+	* linden/indra/newview/llurldispatcher.cpp:
+	Ditto.
+	* linden/indra/newview/llurldispatcher.h: 
+	Ditto.
+
+	
 	* linden/scripts/build_version.py:
 	Improved formatting of version numbers with empty test version.
 
