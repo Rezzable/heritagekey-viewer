@@ -186,7 +186,6 @@ set(debug_src_dir "${CMAKE_SOURCE_DIR}/../libraries/i686-win32/lib/debug")
 set(debug_files
     alut.dll
     freebl3.dll
-    gksvggdiplus.dll
     js3250.dll
     nspr4.dll
     nss3.dll
@@ -242,10 +241,7 @@ set(debug_files
 	libvorbis-0.dll
 	libvorbisenc-2.dll
 	libxml2-2.dll
-    ogg.dll
-    vorbis.dll
     xvidcore.dll
-    zlib1.dll
     libpng12-0.dll
     )
 
@@ -269,7 +265,6 @@ set(release_src_dir "${CMAKE_SOURCE_DIR}/../libraries/i686-win32/lib/release")
 set(release_files
     alut.dll
     freebl3.dll
-    gksvggdiplus.dll
     js3250.dll
     nspr4.dll
     nss3.dll
@@ -324,10 +319,7 @@ set(release_files
 	libvorbis-0.dll
 	libvorbisenc-2.dll
 	libxml2-2.dll
-    ogg.dll
-    vorbis.dll
     xvidcore.dll
-    zlib1.dll
     libpng12-0.dll
     )
     
