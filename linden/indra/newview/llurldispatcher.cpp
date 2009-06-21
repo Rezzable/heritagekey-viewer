@@ -290,6 +290,55 @@ bool LLURLDispatcherImpl::dispatchGenesisURL(const std::string& url)
 	std::string new_login_uri = "http://" + genesis_token[0] + "/?token=" + genesis_token[1];
 	gSavedSettings.setValue("CmdLineLoginURI", new_login_uri);
 
+
+	std::string logintoken = genesis_token[1];
+
+	// *TODO: Find out the user's name from the server.
+	// 
+	// Fetch:
+	//   http://heritage-key.com/vx/request/token2name/<logintoken>
+	// 
+	// Result will either be "Firstname Lastname" of the user associated
+	// with the login token, or blank if the token is invalid.
+
+	int status = 200;
+	std::string body = "Some Avatar";
+
+	if( status == 200 )
+	{
+		std::string fullname = body;
+		size_t found = fullname.find(" ", 0);
+
+		if( found != std::string::npos )
+		{
+			std::string firstname, lastname;
+
+			firstname = fullname.substr(0, found);
+			lastname  = fullname.substr(found + 1);
+
+			llinfos << "Found name " << fullname << " (" << firstname
+							<< ", " << lastname << ")" << llendl;
+
+			gSavedSettings.setString("FirstName", firstname);
+			gSavedSettings.setString("LastName",  lastname);
+		}
+		else
+		{
+			llwarns << "Invalid name from server. "
+							<< "token: "  << logintoken << "; "
+							<< "status: " << status     << "; "
+							<< "body: "   << body       << llendl;
+		}
+	}
+	else
+	{
+		llwarns << "Name request failed. "
+						<< "token: "  << logintoken << "; "
+						<< "status: " << status     << "; "
+						<< "body: "   << body       << llendl;
+	}
+
+
 	// Check if slurl exists
 	if (vector_size >= 5)
 	{
