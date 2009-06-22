@@ -58,8 +58,7 @@
 
 	* linden/indra/newview/skins/default/textures/progress_background.png:
 	Imported progress screen background image.
-	
-	
+
 	
 	McCabe Maxsted  <hakushakukun@gmail.com>
 	
@@ -1054,15 +1053,6 @@
 		modified:   linden/indra/cmake/CopyWinLibs.cmake
 		modified:   linden/install.xml
 		
-	* Fixed VC++ error C2864: 'LLAudioEngine_OpenAL::WIND_BUFFER_SIZE_SEC' : 
-		only static const integral data members can be initialized within a class.
-		
-		modified:   linden/indra/llaudio/audioengine_openal.cpp
-		modified:   linden/indra/llaudio/audioengine_openal.h
-		
-	* Fixed VC++ warning C4305: '=' : truncation from 'double' to 'float' for mVolume.
-		
-		modified:   linden/indra/llmedia/llmediaimplgstreamer.cpp
 		
 	* Removed bad entries from copy_win_libs.
 		
@@ -1078,6 +1068,12 @@
 		
 		modified:   linden/indra/cmake/CopyWinLibs.cmake
 		modified:   linden/install.xml
+		
+		
+	* Removed bad entries from copy_win_libs.
+	* Restored zlib1.dll (not a bad entry).
+		
+		modified:   linden/indra/cmake/CopyWinLibs.cmake
 
 
 2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>

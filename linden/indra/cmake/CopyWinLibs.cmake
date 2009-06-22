@@ -6,185 +6,6 @@
 
 include(CMakeCopyIfDifferent)
 
-<<<<<<< HEAD:linden/indra/cmake/CopyWinLibs.cmake
-set(gst_plugin_release_dir "${CMAKE_SOURCE_DIR}/../libraries/i686-win32/lib/release/lib/gstreamer-plugins")
-set(gst_plugin_release_files
-	libgstaacparse.dll
-	libgstadder.dll
-	libgstaiffparse.dll
-	libgstalaw.dll
-	libgstalpha.dll
-	libgstasfdemux.dll
-	libgstaudioconvert.dll
-	libgstaudiofx.dll
-	libgstaudiorate.dll
-	libgstaudioresample.dll
-	libgstauparse.dll
-	libgstautoconvert.dll
-	libgstautodetect.dll
-	libgstavi.dll
-	libgstcoreelements.dll
-	libgstcutter.dll
-	libgstdecodebin.dll
-	libgstdecodebin2.dll
-	libgstdshowdecwrapper.dll
-	libgstdshowsrcwrapper.dll
-	libgstdshowvideosink.dll
-	libgstffmpeg.dll
-	libgstffmpegcolorspace.dll
-	libgstflv.dll
-	libgstgdp.dll
-	libgstgio.dll
-	libgsth264parse.dll
-	libgsticydemux.dll
-	libgstid3demux.dll
-	libgstinterleave.dll
-	libgstjpeg.dll
-	libgstmpeg4videoparse.dll
-	libgstmpegaudioparse.dll
-	libgstmpegdemux.dll
-	libgstmpegstream.dll
-	libgstmpegtsmux.dll
-	libgstmpegvideoparse.dll
-	libgstmulaw.dll
-	libgstmultifile.dll
-	libgstneon.dll
-	libgstplaybin.dll
-	libgstpng.dll
-	libgstqtdemux.dll
-	libgstqtmux.dll
-	libgstqueue2.dll
-	libgstreal.dll
-	libgstrealmedia.dll
-	libgstrtpmanager.dll
-	libgstrtpmux.dll
-	libgstrtp_good.dll
-	libgstrtsp_good.dll
-	libgstselector.dll
-	libgstsmpte.dll
-	libgsttheora.dll
-	libgsttypefindfunctions.dll
-	libgstudp.dll
-	libgstvideobox.dll
-	libgstvideocrop.dll
-	libgstvideofilterbalance.dll
-	libgstvideofiltergamma.dll
-	libgstvideomixer.dll
-	libgstvideorate.dll
-	libgstvideoscale.dll
-	libgstvideosignal.dll
-	libgstvolume.dll
-	libgstwasapi.dll
-	libgstwaveform.dll
-	libgstwavparse.dll
-	libgstwininet.dll
-	libgstwinks.dll
-	libgstx264.dll
-    )
-
-copy_if_different(
-    ${gst_plugin_release_dir} 
-    "${CMAKE_CURRENT_BINARY_DIR}/Release/lib/gstreamer-plugins"
-    out_targets 
-    ${gst_plugin_release_files}
-    )
-set(all_targets ${all_targets} ${out_targets})
-
-set(gst_plugin_debug_dir "${CMAKE_SOURCE_DIR}/../libraries/i686-win32/lib/debug/lib/gstreamer-plugins")
-set(gst_plugin_debug_files
-	libgstaacparse.dll
-	libgstadder.dll
-	libgstaiffparse.dll
-	libgstalaw.dll
-	libgstalpha.dll
-	libgstasfdemux.dll
-	libgstaudioconvert.dll
-	libgstaudiofx.dll
-	libgstaudiorate.dll
-	libgstaudioresample.dll
-	libgstauparse.dll
-	libgstautoconvert.dll
-	libgstautodetect.dll
-	libgstavi.dll
-	libgstcoreelements.dll
-	libgstcutter.dll
-	libgstdecodebin.dll
-	libgstdecodebin2.dll
-	libgstdshowdecwrapper.dll
-	libgstdshowsrcwrapper.dll
-	libgstdshowvideosink.dll
-	libgstffmpeg.dll
-	libgstffmpegcolorspace.dll
-	libgstflv.dll
-	libgstgdp.dll
-	libgstgio.dll
-	libgsth264parse.dll
-	libgsticydemux.dll
-	libgstid3demux.dll
-	libgstinterleave.dll
-	libgstjpeg.dll
-	libgstmpeg4videoparse.dll
-	libgstmpegaudioparse.dll
-	libgstmpegdemux.dll
-	libgstmpegstream.dll
-	libgstmpegtsmux.dll
-	libgstmpegvideoparse.dll
-	libgstmulaw.dll
-	libgstmultifile.dll
-	libgstneon.dll
-	libgstplaybin.dll
-	libgstpng.dll
-	libgstqtdemux.dll
-	libgstqtmux.dll
-	libgstqueue2.dll
-	libgstreal.dll
-	libgstrealmedia.dll
-	libgstrtpmanager.dll
-	libgstrtpmux.dll
-	libgstrtp_good.dll
-	libgstrtsp_good.dll
-	libgstselector.dll
-	libgstsmpte.dll
-	libgsttheora.dll
-	libgsttypefindfunctions.dll
-	libgstudp.dll
-	libgstvideobox.dll
-	libgstvideocrop.dll
-	libgstvideofilterbalance.dll
-	libgstvideofiltergamma.dll
-	libgstvideomixer.dll
-	libgstvideorate.dll
-	libgstvideoscale.dll
-	libgstvideosignal.dll
-	libgstvolume.dll
-	libgstwasapi.dll
-	libgstwaveform.dll
-	libgstwavparse.dll
-	libgstwininet.dll
-	libgstwinks.dll
-	libgstx264.dll
-    )
-
-copy_if_different(
-    ${gst_plugin_debug_dir} 
-    "${CMAKE_CURRENT_BINARY_DIR}/Debug/lib/gstreamer-plugins"
-    out_targets 
-    ${gst_plugin_debug_files}
-    )
-set(all_targets ${all_targets} ${out_targets})
-
-set(vivox_src_dir "${CMAKE_SOURCE_DIR}/newview/vivox-runtime/i686-win32")
-set(vivox_files
-    tntk.dll
-    libeay32.dll
-    ssleay32.dll
-    srtp.dll
-    ortp.dll
-    wrap_oal.dll
-    )
-
-=======
->>>>>>> 3a4a8e4... Placed the gstreamer plugins in newview where they belong:linden/indra/cmake/CopyWinLibs.cmake
 set(debug_src_dir "${CMAKE_SOURCE_DIR}/../libraries/i686-win32/lib/debug")
 set(debug_files
     alut.dll
@@ -238,6 +59,7 @@ set(debug_files
 	libogg-0.dll
 	liboil-0.3-0.dll
 	libopenjpeg-2.dll
+    libpng12-0.dll
 	libschroedinger-1.0-0.dll
 	libspeex-1.dll
 	libtheora-0.dll
@@ -245,7 +67,7 @@ set(debug_files
 	libvorbisenc-2.dll
 	libxml2-2.dll
     xvidcore.dll
-    libpng12-0.dll
+    zlib1.dll
     )
 
 copy_if_different(
@@ -253,14 +75,6 @@ copy_if_different(
     "${CMAKE_CURRENT_BINARY_DIR}/Debug"
     out_targets 
     ${debug_files}
-    )
-set(all_targets ${all_targets} ${out_targets})
-
-copy_if_different(
-    ${vivox_src_dir} 
-    "${CMAKE_CURRENT_BINARY_DIR}/Debug"
-    out_targets 
-    ${vivox_files}
     )
 set(all_targets ${all_targets} ${out_targets})
 
@@ -316,6 +130,7 @@ set(release_files
 	libogg-0.dll
 	liboil-0.3-0.dll
 	libopenjpeg-2.dll
+    libpng12-0.dll
 	libschroedinger-1.0-0.dll
 	libspeex-1.dll
 	libtheora-0.dll
@@ -323,7 +138,7 @@ set(release_files
 	libvorbisenc-2.dll
 	libxml2-2.dll
     xvidcore.dll
-    libpng12-0.dll
+    zlib1.dll
     )
     
 copy_if_different(
@@ -335,26 +150,10 @@ copy_if_different(
 set(all_targets ${all_targets} ${out_targets})
 
 copy_if_different(
-    ${vivox_src_dir} 
-    "${CMAKE_CURRENT_BINARY_DIR}/Release"
-    out_targets 
-    ${vivox_files}
-    )
-set(all_targets ${all_targets} ${out_targets})
-
-copy_if_different(
     ${release_src_dir} 
     "${CMAKE_CURRENT_BINARY_DIR}/RelWithDebInfo"
     out_targets 
     ${release_files}
-    )
-set(all_targets ${all_targets} ${out_targets})
-
-copy_if_different(
-    ${vivox_src_dir} 
-    "${CMAKE_CURRENT_BINARY_DIR}/RelWithDebInfo"
-    out_targets 
-    ${vivox_files}
     )
 set(all_targets ${all_targets} ${out_targets})
 
