@@ -62,6 +62,11 @@
 		modified:   linden/indra/cmake/CopyWinLibs.cmake
 		
 	* Removed old linden glib entry that was interfering.
+<<<<<<< HEAD:ChangeLog.txt
+=======
+	* Updated windows zlib archive.
+	* Updated windows iconv archive.
+>>>>>>> b45b816... Updated windows iconv archive:ChangeLog.txt
 		
 		modified:   linden/install.xml
 >>>>>>> 4b67773... Removed old linden glib entry that was interfering:ChangeLog.txt
