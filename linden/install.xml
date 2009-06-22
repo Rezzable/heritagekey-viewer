@@ -468,12 +468,21 @@
             <key>url</key>
             <uri>http://s3.amazonaws.com/viewer-source-downloads/install_pkgs/gtk-atk-pango-glib-linux-20080616.tar.bz</uri>
           </map>
+<<<<<<< HEAD:linden/install.xml
           <key>windows</key>
           <map>
             <key>md5sum</key>
             <string>d963750bcd333a108b3697d220c87d09</string>
             <key>url</key>
             <uri>http://s3.amazonaws.com/viewer-source-downloads/install_pkgs/gtk-atk-pango-glib-windows-20080613.tar.bz2</uri>
+=======
+          <key>linux32</key>
+          <map>
+            <key>md5sum</key>
+            <string>21c16a74f8fc9a62e3ab944a6eb7403d</string>
+            <key>url</key>
+            <uri>http://s3.amazonaws.com/viewer-source-downloads/install_pkgs/gtk-atk-pango-glib-linux-20080616.tar.bz</uri>
+>>>>>>> 4b67773... Removed old linden glib entry that was interfering:linden/install.xml
           </map>
         </map>
       </map>
