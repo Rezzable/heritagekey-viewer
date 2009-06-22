@@ -1,3 +1,9 @@
+2009-06-21  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/llurldispatcher.cpp:
+	Genesis URL handler looks up user name from the server.
+
+
 2009-05-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/llappviewer.cpp:

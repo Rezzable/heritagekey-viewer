@@ -252,6 +252,31 @@ bool LLURLDispatcherImpl::dispatchRegion(const std::string& url, BOOL right_mous
 
 
 
+// A simple class for managing data returned from a curl http request.
+class LLHTTPBuffer
+{
+public:
+	LLHTTPBuffer() { }
+
+	static size_t curl_write( void *ptr, size_t size, size_t nmemb, void *user_data)
+	{
+		LLHTTPBuffer* self = (LLHTTPBuffer*)user_data;
+		
+		size_t bytes = (size * nmemb);
+		self->mBuffer.append((char*)ptr,bytes);
+		return nmemb;
+	}
+
+	std::string asString()
+	{
+		return mBuffer;
+	}
+
+private:
+	std::string mBuffer;
+};
+
+
 // static
 bool LLURLDispatcherImpl::dispatchGenesisURL(const std::string& url)
 {
@@ -293,18 +318,45 @@ bool LLURLDispatcherImpl::dispatchGenesisURL(const std::string& url)
 
 	std::string logintoken = genesis_token[1];
 
-	// *TODO: Find out the user's name from the server.
+
+	// Find out the user's name from the server.
 	// 
 	// Fetch:
 	//   http://heritage-key.com/vx/request/token2name/<logintoken>
 	// 
 	// Result will either be "Firstname Lastname" of the user associated
-	// with the login token, or blank if the token is invalid.
+	// with the login token, or blank if the token is invalid or expired.
 
-	int status = 200;
-	std::string body = "Some Avatar";
+	std::string request_url = 
+		"http://heritage-key.com/vx/request/token2name/"+logintoken;
 
-	if( status == 200 )
+	char curl_error_buffer[CURL_ERROR_SIZE];
+	CURL* curlp = curl_easy_init();
+
+	LLHTTPBuffer http_buffer;
+
+	curl_easy_setopt(curlp, CURLOPT_NOSIGNAL, 1);	// don't use SIGALRM for timeouts
+	curl_easy_setopt(curlp, CURLOPT_TIMEOUT, 5);	// seconds
+
+	curl_easy_setopt(curlp, CURLOPT_WRITEFUNCTION, LLHTTPBuffer::curl_write);
+	curl_easy_setopt(curlp, CURLOPT_WRITEDATA, &http_buffer);
+	curl_easy_setopt(curlp, CURLOPT_URL, request_url.c_str());
+	curl_easy_setopt(curlp, CURLOPT_ERRORBUFFER, curl_error_buffer);
+	curl_easy_setopt(curlp, CURLOPT_FAILONERROR, 1);
+
+	S32 curl_success = curl_easy_perform(curlp);
+
+	S32 status = 499;
+
+	curl_easy_getinfo(curlp, CURLINFO_RESPONSE_CODE, &status);
+
+	std::string body = http_buffer.asString();
+
+	curl_easy_cleanup(curlp);
+
+
+
+	if( status == 200 && curl_success == 0 )
 	{
 		std::string fullname = body;
 		size_t found = fullname.find(" ", 0);
