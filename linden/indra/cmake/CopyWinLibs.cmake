@@ -6,6 +6,7 @@
 
 include(CMakeCopyIfDifferent)
 
+<<<<<<< HEAD:linden/indra/cmake/CopyWinLibs.cmake
 set(gst_plugin_release_dir "${CMAKE_SOURCE_DIR}/../libraries/i686-win32/lib/release/lib/gstreamer-plugins")
 set(gst_plugin_release_files
 	libgstaacparse.dll
@@ -182,6 +183,8 @@ set(vivox_files
     wrap_oal.dll
     )
 
+=======
+>>>>>>> 3a4a8e4... Placed the gstreamer plugins in newview where they belong:linden/indra/cmake/CopyWinLibs.cmake
 set(debug_src_dir "${CMAKE_SOURCE_DIR}/../libraries/i686-win32/lib/debug")
 set(debug_files
     alut.dll
