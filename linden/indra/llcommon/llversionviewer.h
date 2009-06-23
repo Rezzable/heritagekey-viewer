@@ -49,7 +49,7 @@ const char * const IMP_VERSION_TEST = "RC2";
 const char * const HK_VIEWER_NAME = "Heritage Key VX Viewer";
 const S32 HK_VERSION_MAJOR = 0;
 const S32 HK_VERSION_MINOR = 9;
-const S32 HK_VERSION_PATCH = 0;
+const S32 HK_VERSION_PATCH = 1;
 const char * const HK_VERSION_TEST = "";
 
 #endif
