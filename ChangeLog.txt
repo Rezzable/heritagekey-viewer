@@ -1,5 +1,11 @@
 2009-06-23  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* Updated the URL for the F1 help page.
+	  New URL: http://heritage-key.com/virtual-experience-info
+
+	  M linden/indra/newview/app_settings/settings.xml
+
+
 	* Changed credits text some more.
 
 	  M  linden/indra/newview/skins/default/xui/en-us/floater_about.xml
