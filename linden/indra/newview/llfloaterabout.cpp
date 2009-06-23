@@ -255,6 +255,14 @@ LLFloaterAbout::LLFloaterAbout()
 
 	center();
 
+
+	// Replace [ARGS] in the credits section.
+	LLStringUtil::format_map_t targs;
+	targs["[HK_VIEWER_NAME]"] = HK_VIEWER_NAME;
+	std::string credits = credits_widget->getText();
+	LLStringUtil::format(credits, targs);
+	credits_widget->setText( LLStringExplicit(credits) );
+	
 	sInstance = this;
 }
 

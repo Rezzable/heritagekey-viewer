@@ -1,3 +1,16 @@
+2009-06-22  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* Changed credits text in floater_about.xml.
+	
+	  M  linden/indra/newview/llfloaterabout.cpp
+	  M  linden/indra/newview/skins/default/xui/de/floater_about.xml
+	  M  linden/indra/newview/skins/default/xui/en-us/floater_about.xml
+	  M  linden/indra/newview/skins/default/xui/fr/floater_about.xml
+	  M  linden/indra/newview/skins/default/xui/ja/floater_about.xml
+	  M  linden/indra/newview/skins/default/xui/ko/floater_about.xml
+	  M  linden/indra/newview/skins/default/xui/zh/floater_about.xml
+
+
 2009-06-21  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* linden/indra/newview/llurldispatcher.cpp:
