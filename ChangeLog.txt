@@ -2,6 +2,13 @@
 
 	* linden/indra/newview/llurldispatcher.cpp:
 	Genesis URL handler looks up user name from the server.
+	
+	
+  McCabe Maxsted  <hakushakukun@gmail.com>
+  
+	* Updated installer url.
+	
+		modified:   linden/indra/newview/heritage-key.url
 
 
 2009-05-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
