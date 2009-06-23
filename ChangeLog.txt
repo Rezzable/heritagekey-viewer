@@ -3,6 +3,8 @@
 	* Bumped the viewer version. 0.9.0 -> 0.9.1
 
 	  M  linden/indra/llcommon/llversionviewer.h
+	  M  linden/indra/newview/Info-HeritageKey.plist
+	  M  linden/indra/newview/English.lproj/InfoPlist.strings
 
 
 	* Updated the part about licensing in the credits text.
