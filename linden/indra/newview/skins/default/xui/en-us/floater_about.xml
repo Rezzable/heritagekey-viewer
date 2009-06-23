@@ -11,7 +11,7 @@
 [HK_VIEWER_NAME] provided by Rezzable Productions Ltd.
 
 Based on the Imprudence Viewer (imprudenceviewer.org)
-  and the Second Life Viewer (www.secondlife.com).
+and the Second Life Viewer (www.secondlife.com).
 
 Imprudence Viewer Copyright (C) 2008-2009
   Jacek Antonelli, McCabe Maxsted, et al.
@@ -34,7 +34,9 @@ SSLeay Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
 xmlrpc-epi Copyright (C) 2000 Epinions, Inc.
 zlib Copyright (C) 1995-2002 Jean-loup Gailly and Mark Adler.
 
-All rights reserved.  See licenses.txt for details.
+All rights reserved. This software is licensed under the
+GNU General Public License version 2 plus a special exception.
+See doc/LICENSE-source.txt for details.
 
 </text_editor>
 

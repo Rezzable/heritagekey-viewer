@@ -1,5 +1,10 @@
 2009-06-22  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
+	* Updated the part about licensing in the credits text.
+	
+	  M  linden/indra/newview/skins/default/xui/en-us/floater_about.xml
+
+
 	* Changed credits text in floater_about.xml.
 	
 	  M  linden/indra/newview/llfloaterabout.cpp
