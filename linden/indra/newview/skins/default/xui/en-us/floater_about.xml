@@ -7,10 +7,18 @@
 	     follows="left|top|right|bottom" font="SansSerifSmall" height="168" left="6"
   max_length="65536" mouse_opaque="true" name="credits_editor" width="458"
   word_wrap="true">
+Heritage Key is brought to you by Rezzable Productions Ltd, London
+( http://rezzable.com/rezzable-team ). Join us to unlock the
+wonders of the ancient world.
 
-[HK_VIEWER_NAME] provided by Rezzable Productions Ltd.
+Special thanks to many people out there (in no particular order):
+Light Waves, Jacek, McCabe, Darren, Foolish, Ordinal, Pavig, LT, Vint,
+Sandro, Stephen, Meral, My, Bea, Al, Rebecca, Scott, RC and SL
+visionaries Phil, Cory and Mitch who paved some of the way and made
+some foundations upon which we have built.
 
-Based on the Imprudence Viewer (imprudenceviewer.org)
+
+[HK_VIEWER_NAME] is based on the Imprudence Viewer (imprudenceviewer.org)
 and the Second Life Viewer (www.secondlife.com).
 
 Imprudence Viewer Copyright (C) 2008-2009
@@ -38,6 +46,10 @@ All rights reserved. This software is licensed under the
 GNU General Public License version 2 plus a special exception.
 See doc/LICENSE-source.txt for details.
 
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 </text_editor>
 
 	<text_editor bottom_delta="174" embedded_items="false"
