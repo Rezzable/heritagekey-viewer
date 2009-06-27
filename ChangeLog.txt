@@ -1,3 +1,11 @@
+2009-06-26  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* Fixed HK viewer using the wrong value for GST_PLUGIN_PATH when loaded from a browser
+	  (checks registry first)
+	
+		modified:   linden/indra/llmedia/llmediaimplgstreamer.cpp
+
+
 2009-06-23  Jacek Antonelli  <jacek.antonelli@gmail.com>
 
 	* Updated the URL for the F1 help page.

@@ -49,6 +49,7 @@ extern "C" {
 
 #if LL_WINDOWS
 	#pragma warning(default : 4244)
+#include <windows.h>
 #include <direct.h>
 #include <stdlib.h>
 #endif
@@ -234,11 +235,50 @@ void LLMediaImplGStreamer::set_gst_plugin_path()
 
 	// Get the current working directory: 
 #if LL_WINDOWS
-	char* raw_dir;
-	raw_dir = _getcwd(NULL,0);
-	if( raw_dir != NULL )
+	/*
+	Registry install path is set by the installer. 
+	Kinda unsafe, feels stupid, but it'll work for now -- McCabe 
+	*/
+	HKEY hKey = 0;
+	TCHAR buf[MAX_PATH];
+	DWORD dwType = REG_SZ;
+	DWORD dwBufSize = sizeof(buf);
+	std::wstring subkey_str = L"Software\\Rezzable\\HeritageKey";
+	std::wstring defaultkey_str = L"";
+
+	LPCWSTR subkey = subkey_str.c_str();
+	LPCWSTR defaultkey = defaultkey_str.c_str();
+	
+	if( RegOpenKey(HKEY_LOCAL_MACHINE, subkey, &hKey) == ERROR_SUCCESS)
 	{
-		imp_dir = std::string( raw_dir );
+		if( RegQueryValueEx(hKey, defaultkey, 0, &dwType, (LPBYTE)buf, &dwBufSize) == ERROR_SUCCESS)
+		{
+			//TODO: Just make imp_dir unicode
+			std::wstring wstr = buf; // Temporary buffer is required
+			std::string str(wstr.length(),' ');
+			copy(wstr.begin(),wstr.end(),str.begin());			
+			imp_dir = str;
+		}
+		else 
+		{
+			LL_WARNS("MediaImpl") << "Default value at HKEY_LOCAL_MACHINE\\Software\\Rezzable\\HeritageKey not found" << LL_ENDL;
+		}
+		RegCloseKey(hKey);
+	}
+	else
+	{
+		LL_WARNS("MediaImpl") << "Registry key HKEY_LOCAL_MACHINE\\Software\\Rezzable\\HeritageKey not found" << LL_ENDL;
+	}
+	
+	if (imp_dir == "")
+	{
+		LL_INFOS("MediaImpl") << "Trying to find application directory without registry" << LL_ENDL;
+		char* raw_dir;
+		raw_dir = _getcwd(NULL,0);
+		if( raw_dir != NULL )
+		{
+			imp_dir = std::string( raw_dir );
+		}
 	}
 #elif LL_DARWIN
 	CFBundleRef main_bundle = CFBundleGetMainBundle();
