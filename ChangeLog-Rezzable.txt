@@ -1,0 +1,1136 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-                  Heritage Key 0.9.2                    -=
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+2009-08-29  McCabe Maxsted  <hakushakukun@gmail.com>
+
+     * Merged Imprudence 1.2 into HK 0.9.1
+
+
+     * Updated CMAke:
+	
+	modified:   linden/indra/cmake/00-Common.cmake
+	modified:   linden/indra/cmake/UnixInstall.cmake
+	modified:   linden/indra/cmake/Variables.cmake
+	modified:   linden/indra/newview/CMakeLists.txt
+	modified:   linden/indra/newview/ViewerInstall.cmake
+
+     * Split change logs between HK and Imprudence:
+
+	added:	ChangeLog-Imprudence.txt
+	added:	ChangeLog-Rezzable.txt
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-                  Heritage Key 0.9.1                    -=
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+2009-06-26  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* Fixed HK viewer using the wrong value for GST_PLUGIN_PATH when loaded from a browser
+	  (checks registry first)
+	
+		modified:   linden/indra/llmedia/llmediaimplgstreamer.cpp
+
+
+2009-06-23  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* Updated the URL for the F1 help page.
+	  New URL: http://heritage-key.com/virtual-experience-info
+
+	  M linden/indra/newview/app_settings/settings.xml
+
+
+	* Changed credits text some more.
+
+	  M  linden/indra/newview/skins/default/xui/en-us/floater_about.xml
+
+
+2009-06-22  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* Bumped the viewer version. 0.9.0 -> 0.9.1
+
+	  M  linden/indra/llcommon/llversionviewer.h
+	  M  linden/indra/newview/Info-HeritageKey.plist
+	  M  linden/indra/newview/English.lproj/InfoPlist.strings
+
+
+	* Updated the part about licensing in the credits text.
+	
+	  M  linden/indra/newview/skins/default/xui/en-us/floater_about.xml
+
+
+	* Changed credits text in floater_about.xml.
+	
+	  M  linden/indra/newview/llfloaterabout.cpp
+	  M  linden/indra/newview/skins/default/xui/de/floater_about.xml
+	  M  linden/indra/newview/skins/default/xui/en-us/floater_about.xml
+	  M  linden/indra/newview/skins/default/xui/fr/floater_about.xml
+	  M  linden/indra/newview/skins/default/xui/ja/floater_about.xml
+	  M  linden/indra/newview/skins/default/xui/ko/floater_about.xml
+	  M  linden/indra/newview/skins/default/xui/zh/floater_about.xml
+
+
+2009-06-21  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/llurldispatcher.cpp:
+	Genesis URL handler looks up user name from the server.
+	
+	
+  McCabe Maxsted  <hakushakukun@gmail.com>
+  
+	* Updated installer url.
+	
+		modified:   linden/indra/newview/heritage-key.url
+
+
+2009-05-19  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/llappviewer.cpp:
+	Cleaned up Genesis URL handling a bit.
+	* linden/indra/newview/llurldispatcher.cpp:
+	Ditto.
+	* linden/indra/newview/llurldispatcher.h:
+	Ditto.
+
+
+	* linden/indra/newview/linux_tools/handle_genesisprotocol.sh:
+	Updated Linux URL handler scripts to handle genesis URLs.
+	* linden/indra/newview/linux_tools/register_genesisprotocol.sh: 
+	Ditto.
+
+
+	* linden/indra/newview/linux_tools/handle_secondlifeprotocol.sh:
+	Renamed to handle_genesisprotocol.sh.
+	* linden/indra/newview/linux_tools/register_secondlifeprotocol.sh:
+	Renamed to register_genesisprotocol.sh.
+	* linden/indra/newview/linux_tools/wrapper.sh:
+	Updated to use new register script name.
+	* linden/indra/newview/viewer_manifest.py:
+	New URL handler script names.
+
+
+	* linden/indra/newview/llappviewer.cpp:
+	Partially moved Genesis URL handling to LLURLDispatcher.
+	Could used some cleanup, though.
+	* linden/indra/newview/llurldispatcher.cpp:
+	Ditto.
+	* linden/indra/newview/llurldispatcher.h: 
+	Ditto.
+
+
+	* linden/indra/newview/llprogressview.cpp:
+	Moved the progress bar stuff down a bit.
+	So it doesn't overlap the important part of the background.
+
+
+	* linden/indra/newview/llprogressview.cpp:
+	Removed redundant viewer name text from the progress screen.
+
+
+	* linden/indra/newview/skins/default/textures/textures.xml:
+	Preload the progress screen background image.
+
+
+	* linden/indra/newview/llprogressview.cpp:
+	Progress screen shows the new background, stretched to fit.
+
+
+	* linden/indra/newview/skins/default/textures/progress_background.png:
+	Imported progress screen background image.
+
+	
+	McCabe Maxsted  <hakushakukun@gmail.com>
+	
+	* linden/indra/newview/res/heritage_key_icon.ico:
+	Updated Heritage Key windows icon files (todo: sort out which files are really needed).
+	* linden/indra/newview/res/heritage_key_icon.png:
+	Ditto.
+	* linden/indra/newview/res/ll_icon.bmp:
+	Ditto.
+	* linden/indra/newview/res/heritage_key_icon1.ico:
+	Ditto.
+	* linden/indra/newview/res/heritage_key_install_icon.ico:
+	Ditto.
+	* linden/indra/newview/res/imprudence_icon.png:
+	Ditto.
+	
+	
+	* linden/indra/newview/heritage-key.url:
+	Added shortcut to heritage-key.com (used in Windows installer).
+	
+	
+	* linden/indra/newview/llurldispatcher.cpp:
+	Fixed bug in genesis slurl handling.
+
+
+2009-05-18  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Grid choice now defaults to Heritage Key.
+
+
+	* linden/indra/newview/Info-HeritageKey.plist:
+	Fixed Mac executable name in Info-HeritageKey.plist.
+	It's not user-visible, but must match the internal name.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Fixed "Heritage Key VX Viewer VX Viewer" (double) in alerts.xml.
+
+
+	* linden/scripts/build_version.py:
+	Fixed a bad regex which wouldn't match an empty viewer channel string.
+
+
+2009-05-18  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/newview/app_settings/cmd_line.xml:
+	Added support for genesis urls using --genesis <url> command line parameter.
+	* linden/indra/newview/llappviewer.cpp:
+	Ditto.
+	
+	
+	* linden/indra/newview/llpanellogin.h:
+	AutoLogin freeze bug fixed.
+	* linden/indra/newview/llstartup.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Ditto.
+	
+	
+	* linden/indra/newview/llappviewer.cpp:
+	genesis urls now autologin.
+	
+
+2009-05-17  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Updated viewer name/version and company name for Mac package.
+
+
+2009-05-17  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/newview/lltoolbar.cpp:
+	Added Teleport Home button to toolbar.
+	* linden/indra/newview/lltoolbar.h:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/panel_toolbar.xml:
+	Ditto.
+	* linden/indra/newview/skins/silver/xui/en-us/panel_toolbar.xml:
+	Ditto.
+	
+	
+	* linden/indra/newview/skins/default/xui/en-us/teleport_strings.xml:
+	Changed 'Requesting teleport' to 'Teleportation in process.'
+	
+	
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Rezzable Productions Inc. to Rezzable Productions Ltd.
+	* linden/indra/newview/res/viewerRes.rc:
+	Ditto.
+	
+	
+	* linden/indra/llcommon/llversionviewer.h:
+	Changed version to 0.9.0.
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Ditto.
+	* linden/indra/newview/Info-HeritageKey.plist:
+	Ditto.
+	* linden/indra/newview/res/viewerRes.rc:
+	Ditto.
+	
+	
+	* linden/indra/llcommon/llversionviewer.h:
+	Changed Heritage Key to Heritage Key VX Viewer.
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Ditto.
+	* linden/indra/newview/Info-HeritageKey.plist:
+	Ditto.
+	* linden/indra/newview/llappviewer.cpp:
+	Ditto.
+	* linden/indra/newview/res/viewerRes.rc:
+	Ditto.
+	
+	
+	* linden/indra/newview/llnotify.cpp:
+	Heritage Key to Heritage Key VX Viewer in alerts and notifications.
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/notify.xml:
+	Ditto.
+	* linden/indra/llui/llalertdialog.cpp:
+	Ditto.
+	
+	
+	* linden/indra/newview/app_settings/settings.xml:
+	Removed send snapshot to email.
+	* linden/indra/newview/llfloatersnapshot.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_snapshot.xml:
+	Ditto.
+	
+	
+	* linden/indra/newview/llfloatersnapshot.cpp:
+	Fixed high res snapshot checkbox not hiding.
+	
+	
+
+	Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Updated viewer name/version and company name for Mac package.
+	
+
+2009-05-15  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/llpanellogin.cpp:
+	Login page grid selector is hidden by default.
+	Ctrl-Shift-G will toggle it, for debugging purposes.
+
+
+2009-05-02  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/viewer_manifest.py:
+	Made manifest more specific about fonts/*.txt files.
+	To avoid accidently packaging up inappropriate license files.
+
+
+	* linden/scripts/build_version.py:
+	Made build_version.py read HK version, not Imp.
+	Used by Linux packaging scripts.
+
+
+	* linden/indra/newview/viewer_manifest.py:
+	Linux script will be called heritage_key, not heritagekey.
+
+
+	* linden/indra/newview/viewer_manifest.py:
+	Using heritage_key_icon.png on Linux.
+
+
+	* linden/indra/newview/linux_tools/wrapper.sh:
+	Got rid of Linux gridargs.dat, it needlessly messes with channel.
+	* linden/indra/newview/viewer_manifest.py:
+	Ditto.
+
+
+2009-05-01  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Updated HK viewer name and version for Mac.
+	* linden/indra/newview/Info-HeritageKey.plist: 
+	Ditto.
+
+
+2009-04-28  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/llcommon/llversionviewer.h
+	Changed version to 0.1.0 beta.
+
+2009-04-28  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/cmake/CopyWinLibs.cmake:
+	Updated copy_win_libs for 1.1 RC3.
+
+
+2009-04-26  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/newview/llfloaterbuyland.cpp: 
+	Backported L$/sq meter info from 1.23.
+	* linden/indra/newview/llfloaterland.cpp: 
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_about_land.xml: 
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_buy_land.xml: 
+	Ditto.
+
+
+2009-04-22  McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_snapshot.xml:
+	Removed "Upload Snapshot" option.
+
+
+	* linden/indra/newview/skins/default/html/en-us/loading/loading.html:
+	Removed linden-branded loading hand.
+
+
+2009-04-07  Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/Info-HeritageKey.plist:
+	Mac viewer advertises as handling genesis:// URLs.
+
+
+	* linden/indra/newview/Info-HeritageKey.plist:
+	Renamed Info-Imprudence.plist -> Info-HeritageKey.plist.
+
+
+	* linden/indra/newview/viewer_manifest.py:
+	Mac manifest rebranding fixes. (Imprudence -> Heritage Key).
+
+
+2009-03-05  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/llviewermenu.cpp:
+	Fixed stack heap corruption error in llmenugl.cpp.
+
+
+2009-03-05  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Removed streaming prompts.
+	* linden/indra/newview/llviewerparcelmedia.cpp:
+	Ditto.
+	* linden/indra/newview/llviewerparcelmgr.cpp:
+	Ditto.
+
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Parcel music now autoplays along with media.
+	* linden/indra/newview/llviewerparcelmediaautoplay.cpp:
+	Ditto.
+	* linden/indra/newview/llviewerparcelmediaautoplay.h:
+	Ditto.
+	* linden/indra/newview/llviewerparcelmgr.cpp:
+	Ditto.
+	* linden/indra/newview/llviewerparcelmgr.h:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/panel_preferences_audio.xml:
+	Ditto.
+
+
+	* linden/indra/newview/llviewermenu.cpp:
+	Removed Advanced menu.
+	* linden/indra/newview/llviewerwindow.cpp:
+	Ditto.
+
+
+2009-03-04  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_map_image.xml:
+	Updated map url.
+
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Updated help url.
+
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Profile now opens in a browser window.
+	* linden/indra/newview/llagent.cpp:
+	Ditto.
+	* linden/indra/newview/llfloateravatarinfo.cpp:
+	Ditto.
+	* linden/indra/newview/llfloateravatarinfo.h:
+	Ditto.
+	* linden/indra/newview/llpanelavatar.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_profile.xml:
+	Ditto.
+
+
+	* linden/indra/newview/app_settings/cmd_line.xml:
+	Removed God command line option.
+
+
+2009-03-25  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/llpanellogin.cpp:
+	Menu background color now stays constant regardless of grid.
+	* linden/indra/newview/llviewermenu.cpp:
+	Ditto.
+	* linden/indra/newview/llviewerwindow.cpp:
+	Ditto.
+	* linden/indra/newview/llviewerwindow.h:
+	Ditto.
+
+
+	* linden/indra/newview/llstatusbar.cpp:
+	Parcel info no longer clickable.
+	* linden/indra/newview/skins/default/xui/en-us/panel_status_bar.xml:
+	Ditto.
+	* linden/indra/newview/skins/silver/xui/en-us/panel_status_bar.xml:
+	Ditto.
+
+
+2009-03-22  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/llappviewer.cpp:
+	Removed slviewer-0-v12160-LostConnectionOnLogin.patch.
+
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Removed slviewer-0-v12160-RememberStatsPosAndSize.patch.
+	* linden/indra/newview/lldebugview.cpp:
+	Ditto.
+	* linden/indra/newview/llfloaterstats.cpp:
+	Ditto.
+
+
+	* linden/indra/newview/llfloaterurldisplay.cpp:
+	Removed slviewer-0-v12160-VisitedLandmarks.patch.
+	* linden/indra/newview/llinventorybridge.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelinventory.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelplace.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelplace.h:
+	Ditto.
+	* linden/indra/newview/llpreviewlandmark.cpp:
+	Ditto.
+	* linden/indra/newview/llviewermessage.cpp:
+	Ditto.
+
+
+2009-03-19  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/skins/default/xui/en-us/panel_friends.xml:
+	Removed pay button from friends list.
+
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Map now loads in its own unique floater.
+	* linden/indra/newview/llfloaterhud.cpp:
+	Ditto.
+	* linden/indra/newview/llfloaterhud.h:
+	Ditto.
+	* linden/indra/newview/llmenucommands.cpp:
+	Ditto.
+	* linden/indra/newview/llviewermenu.cpp:
+	Ditto.
+	* linden/indra/newview/llviewerwindow.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_viewer.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_map_image.xml:
+	Ditto.
+	* linden/indra/newview/CMakeLists.txt:
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/menu_viewer.xml:
+	Removed tutorial menu option.
+
+
+
+	Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/viewer_manifest.py:
+	Updated Linux manifest and wrapper script to new executable name.
+	* linden/indra/newview/linux_tools/wrapper.sh:
+	Ditto.
+
+
+2009-03-18  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/llviewernetwork.cpp:
+	Added Heritage Key's grid to grid pulldown for testing purposes.
+	* linden/indra/newview/llviewernetwork.h:
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_attachment.xml:
+	Removed 'Abuse' from the pie menu, finalized pies.
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_avatar.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_land.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_object.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_self.xml:
+	Ditto.
+
+
+	* linden/indra/llcommon/llsecondlifeurls.cpp:
+	Added HK urls for help, register account, etc.
+	* linden/indra/newview/app_settings/settings.xml:
+	Ditto.
+	* linden/indra/newview/llfloaterabout.cpp:
+	Ditto.
+	* linden/indra/newview/llpanellogin.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_viewer.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/panel_login.xml:
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/panel_preferences_im.xml:
+	Removed group reference from en-us preferences
+	(not sure about the other langs).
+
+
+	* linden/indra/newview/skins/default/xui/en-us/panel_toolbar.xml:
+	Removed build and search from toolbar.
+	* linden/indra/newview/skins/silver/xui/en-us/panel_toolbar.xml:
+	Ditto.
+
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Truncated tools to just edit.
+	* linden/indra/newview/llfloatertools.cpp:
+	Ditto.
+	* linden/indra/newview/llfloatertools.h:
+	Ditto.
+	* linden/indra/newview/llviewermenu.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_tools.xml:
+	Ditto.
+
+
+
+
+	Jacek Antonelli  <jacek.antonelli@gmail.com>
+
+	* linden/indra/newview/llinventorybridge.cpp:
+	Removed create actions (except folder) from inv context menu.
+	* linden/indra/newview/skins/default/xui/en-us/menu_inventory.xml:
+	Ditto.
+
+
+	* linden/indra/newview/llinventorybridge.cpp:
+	Removed New Script from inventory context menu.
+	* linden/indra/newview/skins/default/xui/en-us/menu_inventory.xml: 
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_tools.xml:
+	Removed "New Script" button from object contents tab.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_inventory.xml:
+	Removed inventory window Create menu entirely.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_inventory.xml:
+	Removed Create > New Script from inventory window menu.
+
+
+	* linden/indra/newview/llinventoryview.cpp:
+	Quick Filter shows "All" not "Custom" for the default.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_inventory.xml:
+	Removed cards, scripts, and sounds from Quick Filter list.
+	* linden/indra/newview/llinventoryview.cpp:
+	Ditto.
+
+
+	* linden/indra/newview/llfolderview.cpp:
+	Hide Calling Cards, Scripts, and Sounds folders.
+
+
+	* linden/indra/newview/llfolderview.cpp:
+	Made inventory filter check code more readable.
+
+
+	* linden/indra/llinventory/llinventorytype.h:
+	Defined and using NIT_DEFAULT for simplicity/adaptability.
+	Currently set to all types except cards, scripts, and sounds.
+	* linden/indra/newview/llfolderview.cpp:
+	Ditto.
+	* linden/indra/newview/llinventoryview.cpp:
+	Ditto.
+
+
+	* linden/indra/newview/llfolderview.cpp:
+	Removed cards, scripts, and sounds from inv window titler.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_inventory_view_finder.xml:
+	Removed Show Filter checkboxes for cards, scripts, and sounds.
+
+
+	* linden/indra/newview/llinventoryview.cpp:
+	Removed refs to card, script, and sound filter checkboxes.
+
+
+	* linden/indra/newview/llinventoryview.cpp:
+	Cards, scripts, and sounds disabled when rebuilding filter.
+
+
+	* linden/indra/newview/llfolderview.cpp:
+	Hide calling cards, scripts, and sounds by default.
+
+
+2009-03-17  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/llstatusbar.cpp:
+	Removed unnecessary options from status bar.
+	* linden/indra/newview/skins/default/xui/en-us/panel_status_bar.xml:
+	Ditto.
+	* linden/indra/newview/skins/silver/xui/en-us/panel_status_bar.xml:
+	Ditto.
+
+
+	* linden/indra/newview/llfloaterbump.cpp:
+	All HK timestamps now display in UTC.
+	* linden/indra/newview/lllogchat.cpp:
+	Ditto.
+	* linden/indra/newview/llstatusbar.cpp:
+	Ditto.
+	* linden/indra/newview/app_settings/settings.xml:
+	Ditto.
+	* linden/indra/newview/llviewertexteditor.cpp:
+	Ditto.
+
+
+	* linden/indra/llcommon/lltimer.cpp:
+	Date and timestamps can now displayed in international formats.
+	* linden/indra/llcommon/lltimer.h:
+	Ditto.
+	* linden/indra/newview/app_settings/settings.xml:
+	Ditto.
+	* linden/indra/newview/lleventinfo.cpp:
+	Ditto.
+	* linden/indra/newview/lleventnotifier.cpp:
+	Ditto.
+	* linden/indra/newview/llfloaterinspect.cpp:
+	Ditto.
+	* linden/indra/newview/llfloaterproperties.cpp:
+	Ditto.
+	* linden/indra/newview/llgroupmgr.cpp:
+	Ditto.
+	* linden/indra/newview/llgroupnotify.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelavatar.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelclassified.cpp:
+	Ditto.
+	* linden/indra/newview/llpaneldirbrowser.cpp:
+	Ditto.
+	* linden/indra/newview/llpaneldirevents.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelgroupnotices.cpp:
+	Ditto.
+	* linden/indra/newview/llpanelgroupvoting.cpp:
+	Ditto.
+	* linden/indra/newview/llstatusbar.cpp:
+	Ditto.
+	* linden/indra/newview/llviewermessage.cpp:
+	Ditto.
+	* linden/indra/newview/llviewertexteditor.cpp:
+	Ditto.
+
+
+2009-03-16  McCabe Maxsted  <hakushakukun@gmail.com>
+
+ 
+	* linden/indra/newview/CMakeLists.txt:
+	Fixed linker branding error.
+
+
+	* linden/indra/CMakeLists.txt:
+	Develop.py generates correct VS solution file.
+	* linden/indra/develop.py:
+	Ditto.
+	* linden/indra/newview/CMakeLists.txt:
+	Ditto.
+
+ 
+	* linden/indra/copy_win_scripts/start-client.py:
+	Branded start-client.py.
+
+
+	* linden/indra/newview/llappviewer.cpp:
+	Updated the branding in llappviewer.cpp.
+
+
+	* linden/indra/llmessage/llinstantmessage.cpp:
+	System message should now be branded 'Heritage Key'.
+
+ 
+	* linden/indra/develop.py:
+	Branded develop.py.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/menu_login.xml:
+	Fixed en-us and ja menu files.
+	* linden/indra/newview/skins/default/xui/en-us/menu_viewer.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/menu_login.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/menu_viewer.xml:
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/de/need_to_translate.xml:
+	Branded two missed fileso.
+	* linden/indra/newview/skins/default/xui/en-us/panel_voice_enable.xml:
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/de/menu_viewer.xml:
+	Branded non en-us viewer menu.
+	* linden/indra/newview/skins/default/xui/es/menu_viewer.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/menu_viewer.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/menu_viewer.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/menu_viewer.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/pt/menu_viewer.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/zh/menu_viewer.xml:
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/de/menu_login.xml:
+	Branded non en-us login menu.
+	* linden/indra/newview/skins/default/xui/fr/menu_login.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/menu_login.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/menu_login.xml:
+	Ditto.
+
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Branded xml file UI strings.
+	* linden/indra/newview/skins/default/xui/de/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/de/floater_inspect.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/de/floater_postcard.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/de/floater_tos.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/de/need_to_update.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/de/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/de/panel_preferences_graphics1.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/de/panel_preferences_web.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/de/panel_voice_enable.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_postcard.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_tos.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/panel_preferences_graphics1.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/panel_preferences_web.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/es/floater_postcard.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/es/floater_tos.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/es/panel_preferences_general.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/floater_instant_message.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/floater_instant_message_ad_hoc.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/floater_instant_message_group.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/floater_postcard.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/floater_tos.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/panel_preferences_general.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/panel_preferences_graphics1.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/panel_preferences_web.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/panel_voice_enable.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/floater_postcard.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/need_to_translate.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/need_to_update.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/panel_preferences_general.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/panel_preferences_graphics1.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/panel_preferences_web.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/panel_voice_enable.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/floater_postcard.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/need_to_translate.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/need_to_update.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/panel_voice_enable.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/pt/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/pt/floater_instant_message.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/pt/floater_instant_message_ad_hoc.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/pt/floater_tos.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/pt/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/pt/teleport_strings.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/zh/need_to_translate.xml:
+	Ditto.
+
+ 
+	* linden/indra/newview/skins/default/xui/en-us/menu_login.xml:
+	Login help menu had wrong label.
+
+
+	* linden/indra/llui/llalertdialog.cpp:
+	Branded alert and notify files.
+	* linden/indra/newview/app_settings/settings.xml:
+	Ditto.
+	* linden/indra/newview/llnotify.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/de/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/de/need_to_update.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/de/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_login.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_viewer.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/es/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/es/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/need_to_update.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/need_to_update.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/pt/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/pt/notify.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/zh/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/zh/need_to_translate.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/zh/notify.xml:
+	Ditto.
+
+
+	* linden/indra/llcommon/llversionviewer.h:
+	Changed the way the version numbers display.
+	* linden/indra/newview/llappviewer.cpp:
+	Ditto.
+	* linden/indra/newview/llfloaterabout.cpp:
+	Ditto.
+	* linden/indra/newview/llpanellogin.cpp:
+	Ditto.
+
+
+	* linden/indra/linux_crash_logger/llcrashloggerlinux.cpp:
+	Branded source files (still need heritage key urls for
+	things like release notes etc).
+	* linden/indra/llcommon/llversionviewer.h:
+	Ditto.
+	* linden/indra/llcrashlogger/llcrashlogger.cpp:
+	Ditto.
+	* linden/indra/llvfs/lldir.cpp:
+	Ditto.
+	* linden/indra/llvfs/lldir_mac.cpp:
+	Ditto.
+	* linden/indra/llwindow/llwindowsdl.cpp:
+	Ditto.
+	* linden/indra/mac_updater/mac_updater.cpp:
+	Ditto.
+	* linden/indra/newview/llappviewer.cpp:
+	Ditto.
+	* linden/indra/newview/llwindebug.cpp:
+	Ditto.
+	* linden/indra/win_updater/updater.cpp:
+	Ditto.
+
+
+	* linden/indra/llcommon/llversionviewer.h:
+	Changed version to Heritage Key 1.0.0 alpha.
+	* linden/indra/newview/English.lproj/InfoPlist.strings:
+	Ditto.
+	* linden/indra/newview/Info-SecondLife.plist:
+	Ditto.
+	* linden/indra/newview/res/viewerRes.rc:
+	Ditto.
+
+
+2009-03-12  McCabe Maxsted  <hakushakukun@gmail.com>
+
+
+	* linden/indra/newview/skins/default/xui/en-us/menu_viewer.xml:
+	removed extra menu separator.
+
+
+	* linden/indra/newview/llfloaterpreference.cpp:
+	Removed voice from preferences.
+	* linden/indra/newview/llfloaterpreference.h:
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/de/panel_audio.xml:
+	Removed voice options from toolbar.
+	* linden/indra/newview/skins/default/xui/de/panel_preferences_audio.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/panel_audio.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/panel_media_remote_expanded.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/panel_overlaybar.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/panel_preferences_audio.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/es/panel_preferences_audio.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/panel_audio.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/panel_preferences_audio.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/panel_audio.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/panel_preferences_audio.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/panel_audio.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/panel_preferences_audio.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/pt/panel_preferences_audio.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/zh/panel_preferences_audio.xml:
+	Ditto.
+
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Disable voice by default.
+	* linden/indra/newview/skins/default/xui/de/floater_my_friends.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_my_friends.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/es/panel_preferences_general.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/floater_my_friends.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/panel_preferences_general.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/floater_my_friends.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/floater_my_friends.xml:
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/de/floater_my_friends.xml:
+	Removed group title options from all languages.
+	* linden/indra/newview/skins/default/xui/de/panel_preferences_general.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_my_friends.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/es/panel_preferences_general.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/floater_my_friends.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/fr/panel_preferences_general.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/floater_my_friends.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ja/panel_preferences_general.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/floater_my_friends.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/ko/panel_preferences_general.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/pt/panel_preferences_general.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/zh/panel_preferences_general.xml:
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/floater_my_friends.xml:
+	Removed groups from contact list.
+
+
+	* linden/indra/newview/app_settings/settings.xml:
+	Removed group title options.
+	* linden/indra/newview/llvoavatar.cpp:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/floater_my_friends.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/panel_preferences_general.xml:
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	'viewer' should not be capital.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_attachment.xml:
+	modified pie menus to match main menus .
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_avatar.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_land.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_object.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_pie_self.xml:
+	Ditto.
+
+
+	* linden/indra/newview/llviewermenu.cpp:
+	menu entries open through urls (don't have official ones yet).
+	* linden/indra/newview/skins/default/xui/en-us/alerts.xml:
+	Ditto.
+	* linden/indra/newview/skins/default/xui/en-us/menu_viewer.xml:
+	Ditto.
+
+
+	* linden/indra/newview/skins/default/xui/en-us/menu_viewer.xml:
+	Commented out unnecessary menu options (will remove after testing).
