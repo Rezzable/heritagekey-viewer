@@ -1295,7 +1295,7 @@ list(APPEND viewer_SOURCE_FILES ${viewer_HEADER_FILES})
 set_source_files_properties(${viewer_HEADER_FILES}
                             PROPERTIES HEADER_FILE_ONLY TRUE)
 
-add_executable(${VIEWER_BINARY_NAME}
+'add_executable(${VIEWER_BINARY_NAME}
     WIN32
     MACOSX_BUNDLE
     ${viewer_SOURCE_FILES}
