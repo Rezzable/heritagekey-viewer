@@ -198,7 +198,7 @@ Age &gt; Age play
 <c_attribute></c_attribute>
 <d_old></d_old>
 <e_new>
-Age &gt; Adult resident on Teen Second Life
+Age &gt; Adult resident on Teen Heritage Key
 </e_new>
 <f_old_trans></f_old_trans>
 <f_translation>
@@ -209,7 +209,7 @@ Age &gt; Adult resident on Teen Second Life
 <c_attribute></c_attribute>
 <d_old></d_old>
 <e_new>
-Age &gt; Underage resident on Adult Second Life
+Age &gt; Underage resident on Adult Heritage Key
 </e_new>
 <f_old_trans></f_old_trans>
 <f_translation>
@@ -297,7 +297,7 @@ Disclosure &gt; Remotely monitoring chat
 <c_attribute></c_attribute>
 <d_old></d_old>
 <e_new>
-Disclosure &gt; Second Life information/chat/IMs
+Disclosure &gt; Heritage Key information/chat/IMs
 </e_new>
 <f_old_trans></f_old_trans>
 <f_translation>

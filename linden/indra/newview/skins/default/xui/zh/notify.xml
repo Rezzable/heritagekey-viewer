@@ -817,7 +817,7 @@ QuickTime网站 (http://www.apple.com/quicktime) 安装 QuickTime Player.
 	</notify>
 	<notify name="FirstBuild">
 		<message name="message">
-			您可以在 [SECOND_LIFE] 的某些区域中创建新物体。
+			您可以在 [HERITAGE_KEY] 的某些区域中创建新物体。
 使用左上角的工具建造，也试一试按下 Ctrl 或者 Alt 键快速地切换工具。
 按 Esc 键停止建造。
 		</message>

@@ -211,14 +211,6 @@
       <string>UserLoginInfo</string>
     </map>
 
-    <key>god</key>
-    <map>
-      <key>desc</key>
-      <string>Log in a god if you have god access.</string>
-      <key>map-to</key>
-      <string>ConnectAsGod</string>
-    </map>
-
     <key>console</key>
     <map>
       <key>count</key>
@@ -270,6 +262,17 @@
       <integer>1</integer>
       <key>positional</key>
       <boolean>true</boolean>
+      <key>last_option</key>
+      <boolean>true</boolean>
+      <!-- Special case. Not mapped to a setting. -->
+    </map>
+
+    <key>genesis</key>
+    <map>
+      <key>desc</key>
+      <string>Genesis url protocol handler</string>
+      <key>count</key>
+      <integer>1</integer>
       <key>last_option</key>
       <boolean>true</boolean>
       <!-- Special case. Not mapped to a setting. -->

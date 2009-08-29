@@ -258,6 +258,8 @@ public:
 	static BOOL isParcelOwnedByAgent(const LLParcel* parcelp, U64 group_proxy_power);
 	static BOOL isParcelModifiableByAgent(const LLParcel* parcelp, U64 group_proxy_power);
 
+	static void updateMusic(LLParcel* parcel);
+
 private:
 	static void releaseAlertCB(S32 option, void *data);
 

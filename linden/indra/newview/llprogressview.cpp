@@ -203,36 +203,13 @@ void LLProgressView::draw()
 		reshape( width, height );
 	}
 
-	// Paint bitmap if we've got one
-	glPushMatrix();
-	if (gStartImageGL)
-	{
-		LLGLSUIDefault gls_ui;
-		gGL.getTexUnit(0)->bind(gStartImageGL);
-		gGL.color4f(1.f, 1.f, 1.f, mFadeTimer.getStarted() ? clamp_rescale(mFadeTimer.getElapsedTimeF32(), 0.f, FADE_IN_TIME, 1.f, 0.f) : 1.f);
-		F32 image_aspect = (F32)gStartImageWidth / (F32)gStartImageHeight;
-		F32 view_aspect = (F32)width / (F32)height;
-		// stretch image to maintain aspect ratio
-		if (image_aspect > view_aspect)
-		{
-			glTranslatef(-0.5f * (image_aspect / view_aspect - 1.f) * width, 0.f, 0.f);
-			glScalef(image_aspect / view_aspect, 1.f, 1.f);
-		}
-		else
-		{
-			glTranslatef(0.f, -0.5f * (view_aspect / image_aspect - 1.f) * height, 0.f);
-			glScalef(1.f, view_aspect / image_aspect, 1.f);
-		}
-		gl_rect_2d_simple_tex( getRect().getWidth(), getRect().getHeight() );
-		gGL.getTexUnit(0)->unbind(LLTexUnit::TT_TEXTURE);
-	}
-	else
-	{
-		gGL.getTexUnit(0)->unbind(LLTexUnit::TT_TEXTURE);
-		gGL.color4f(0.f, 0.f, 0.f, 1.f);
-		gl_rect_2d(getRect());
-	}
-	glPopMatrix();
+
+	LLUIImagePtr background = LLUI::getUIImage("progress_background.png");
+
+	GLfloat fade_alpha = mFadeTimer.getStarted() ? clamp_rescale(mFadeTimer.getElapsedTimeF32(), 0.f, FADE_IN_TIME, 1.f, 0.f) : 1.f;
+
+	background->draw(0,0, width,height, LLColor4(1.f, 1.f, 1.f, fade_alpha));
+
 
 	// Handle fade-in animation
 	if (mFadeTimer.getStarted())
@@ -248,7 +225,7 @@ void LLProgressView::draw()
 	}
 
 	S32 line_x = getRect().getWidth() / 2;
-	S32 line_one_y = getRect().getHeight() / 2 + 64;
+	S32 line_one_y = getRect().getHeight() / 2;
 	const S32 LINE_SPACING = 25;
 	S32 line_two_y = line_one_y - LINE_SPACING;
 	const LLFontGL* font = LLFontGL::sSansSerif;
@@ -263,8 +240,6 @@ void LLProgressView::draw()
 	F32 alpha = 0.5f + 0.5f*0.5f*(1.f + (F32)sin(3.f*timer.getElapsedTimeF32()));
 	// background_color.mV[3] = background_color.mV[3]*alpha;
 
-	std::string top_line = LLAppViewer::instance()->getSecondLifeTitle();
-
 	S32 bar_bottom = line_two_y - 30;
 	S32 bar_height = 18;
 	S32 bar_width = getRect().getWidth() * 2 / 3;
@@ -272,9 +247,9 @@ void LLProgressView::draw()
 
 	// translucent outline box
 	S32 background_box_left = ( ( ( getRect().getWidth() / 2 ) - ( bar_width / 2 ) ) / 4 ) * 3;
-	S32 background_box_top = ( getRect().getHeight() / 2 ) + LINE_SPACING * 5;
+	S32 background_box_top = ( getRect().getHeight() / 2 ) + LINE_SPACING * 5 - 64;
 	S32 background_box_right = getRect().getWidth() - background_box_left;
-	S32 background_box_bottom = ( getRect().getHeight() / 2 ) - LINE_SPACING * 5;
+	S32 background_box_bottom = ( getRect().getHeight() / 2 ) - LINE_SPACING * 5 - 64;
 	S32 background_box_width = background_box_right - background_box_left + 1;
 	S32 background_box_height = background_box_top - background_box_bottom + 1;
 
@@ -302,12 +277,6 @@ void LLProgressView::draw()
 		mOutlineRect.set( 0, 0, 0, 0 );
 
 	// draw loading bar
-	font->renderUTF8(top_line, 0,
-		line_x, line_one_y,
-		//LLColor4::white,
-		gColors.getColor("LoginProgressBoxTextColor"),
-		LLFontGL::HCENTER, LLFontGL::BASELINE,
-		LLFontGL::DROP_SHADOW);
 	font->renderUTF8(mText, 0,
 		line_x, line_two_y,
 		//LLColor4::white,

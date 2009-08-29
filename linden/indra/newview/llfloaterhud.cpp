@@ -47,7 +47,7 @@ LLFloaterHUD* LLFloaterHUD::sInstance = 0;
 ///----------------------------------------------------------------------------
 /// Class LLFloaterHUD
 ///----------------------------------------------------------------------------
-#define super LLFloater	/* superclass */
+//#define super LLFloater	/* superclass */
 
 // Default constructor
 LLFloaterHUD::LLFloaterHUD()
@@ -141,5 +141,102 @@ void LLFloaterHUD::onClose(bool app_quitting)
 {
 	bool stay_visible = app_quitting;
 	gSavedSettings.setBOOL("ShowTutorial", stay_visible);
+	destroy();
+}
+
+
+///----------------------------------------------------------------------------
+/// Class LLFloaterMapImage
+///----------------------------------------------------------------------------
+
+// statics 
+LLFloaterMapImage* LLFloaterMapImage::sInstance2 = 0; 
+
+// Default constructor
+LLFloaterMapImage::LLFloaterMapImage()
+:	LLFloater(std::string("floater_map_image")),
+	mWebBrowser(0)
+{
+	// Create floater from its XML definition
+	LLUICtrlFactory::getInstance()->buildFloater(this, "floater_map_image.xml");
+	
+	// Remember the one instance
+	sInstance2 = this;
+
+	std::string map_image_url = sInstance2->getString("real_url");
+	
+	mWebBrowser = getChild<LLWebBrowserCtrl>("floater_map_image_browser" );
+	if (mWebBrowser)
+	{
+		// Open links in internal browser
+		mWebBrowser->setOpenInExternalBrowser(false);
+
+		// This is a "chrome" floater, so we don't want anything to
+		// take focus
+		mWebBrowser->setTakeFocusOnClick(false);
+
+		mWebBrowser->navigateTo(map_image_url);
+	}
+}
+
+// Get the instance
+LLFloaterMapImage* LLFloaterMapImage::getInstance()
+{
+	if (!sInstance2)
+	{
+		new LLFloaterMapImage();
+	}
+	return sInstance2;
+}
+
+// Destructor
+LLFloaterMapImage::~LLFloaterMapImage()
+{
+	// Save floater position
+	gSavedSettings.setRect("FloaterMapImageRect", getRect() );
+
+	// Clear out the one instance if it's ours
+	if (sInstance2 == this)
+	{
+		sInstance2 = NULL;
+	}
+}
+
+// Show the map
+void LLFloaterMapImage::show()
+{
+	if(sInstance2 && sInstance2->getVisible())
+	{
+		sInstance2->close();
+	}
+	else
+	{
+		// Create the instance if necessary
+		LLFloaterMapImage* map = getInstance();
+
+		LLRect rect = gSavedSettings.getRect("FloaterMapImageRect");
+		map->reshape(rect.getWidth(), rect.getHeight());
+		map->setRect(rect);
+
+		std::string map_image_url = map->getString("real_url");
+
+		// do not build the floater if there the url is empty
+		if (map_image_url.empty())
+		{
+			llwarns << "Cannot open! No map url set!" << llendl;
+			return;
+		}
+		else
+		{
+			map->open();
+			map->center();
+			map->setFrontmost(FALSE);
+		}
+	}
+}
+
+// virtual
+void LLFloaterMapImage::onClose(bool app_quitting)
+{
 	destroy();
 }

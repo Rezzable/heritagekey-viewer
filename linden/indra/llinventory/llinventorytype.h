@@ -157,6 +157,11 @@ public:
 
 		/* Bitwise OR-ing of all the above */
 		NIT_ALL              =  0x3ffffff,
+
+
+    /* All except calling cards, scripts, and sounds */
+    NIT_DEFAULT          =  0x3767fff,
+
 	};
 
 

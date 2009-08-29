@@ -45,6 +45,8 @@
   
   <texture name="progressbar_fill.tga"	preload="true" scale_left="10" scale_top="7" scale_right="65" scale_bottom="7"/>
   <texture name="progressbar_track.tga"	preload="true" scale_left="10" scale_top="7" scale_right="80" scale_bottom="7"/>
+  <texture name="progress_background.png" preload="true"/>
+
   
   <texture name="scrollbutton_down_in_blue.tga"	preload="true"/>
   <texture name="scrollbutton_down_out_blue.tga"	preload="true"/>

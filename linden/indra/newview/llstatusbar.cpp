@@ -103,7 +103,7 @@ const F32 ICON_TIMER_EXPIRY		= 3.f; // How long the balance and health icons sho
 const F32 ICON_FLASH_FREQUENCY	= 2.f;
 const S32 TEXT_HEIGHT = 18;
 
-static void onClickParcelInfo(void*);
+//static void onClickParcelInfo(void*);
 static void onClickBalance(void*);
 static void onClickBuyCurrency(void*);
 static void onClickHealth(void*);
@@ -168,7 +168,7 @@ mSquareMetersCommitted(0)
 	childSetVisible("search_btn", gSavedSettings.getBOOL("ShowSearchBar"));
 	childSetVisible("menubar_search_bevel_bg", gSavedSettings.getBOOL("ShowSearchBar"));
 
-	childSetActionTextbox("ParcelNameText", onClickParcelInfo );
+	/*childSetActionTextbox("ParcelNameText", onClickParcelInfo );*/
 	childSetActionTextbox("BalanceText", onClickBalance );
 
 	// Adding Net Stat Graph
@@ -260,41 +260,17 @@ void LLStatusBar::refresh()
 
 	// There's only one internal tm buffer.
 	struct tm* internal_time;
+	time(&utc_time);
+	internal_time = gmtime(&utc_time);
 
-	// Convert to Pacific, based on server's opinion of whether
-	// it's daylight savings time there.
-	internal_time = utc_to_pacific_time(utc_time, gPacificDaylightTime);
+	std::string t;
+	timeStructToFormattedString(internal_time, gSavedSettings.getString("TimeFormat"), t);
+	t += " UTC";
+	mTextTime->setText(t);
 
-	S32 hour = internal_time->tm_hour;
-	S32 min  = internal_time->tm_min;
-
-	std::string am_pm = "AM";
-	if (hour > 11)
-	{
-		hour -= 12;
-		am_pm = "PM";
-	}
-
-	std::string tz = "PST";
-	if (gPacificDaylightTime)
-	{
-		tz = "PDT";
-	}
-	// Zero hour is 12 AM
-	if (hour == 0) hour = 12;
-	std::ostringstream t;
-	t << std::setfill(' ') << std::setw(2) << hour << ":" 
-		<< std::setfill('0') << std::setw(2) << min 
-		<< " " << am_pm << " " << tz;
-	mTextTime->setText(t.str());
-
-	// Year starts at 1900, set the tooltip to have the date
-	std::ostringstream date;
-	date	<< sDays[internal_time->tm_wday] << ", "
-		<< std::setfill('0') << std::setw(2) << internal_time->tm_mday << " "
-		<< sMonths[internal_time->tm_mon] << " "
-		<< internal_time->tm_year + 1900;
-	mTextTime->setToolTip(date.str());
+	std::string date;
+	timeStructToFormattedString(internal_time, gSavedSettings.getString("LongDateFormat"), date);
+	mTextTime->setToolTip(date);
 
 	LLRect r;
 	const S32 MENU_RIGHT = gMenuBarView->getRightmostMenuEdge();
@@ -611,7 +587,7 @@ void LLStatusBar::refresh()
 
 	childGetRect("TimeText", r);
 	// mTextTime->getTextPixelWidth();
-	r.translate( new_right - r.mRight, 0);
+	r.translate( new_right - r.mRight - 12, 0);
 	childSetRect("TimeText", r);
 	// new_right -= r.getWidth() + MENU_PARCEL_SPACING;
 
@@ -748,12 +724,12 @@ S32 LLStatusBar::getSquareMetersLeft() const
 	return mSquareMetersCredit - mSquareMetersCommitted;
 }
 
-static void onClickParcelInfo(void* data)
-{
-	LLViewerParcelMgr::getInstance()->selectParcelAt(gAgent.getPositionGlobal());
-
-	LLFloaterLand::showInstance();
-}
+//static void onClickParcelInfo(void* data)
+//{
+//	LLViewerParcelMgr::getInstance()->selectParcelAt(gAgent.getPositionGlobal());
+//
+//	LLFloaterLand::showInstance();
+//}
 
 static void onClickBalance(void* data)
 {

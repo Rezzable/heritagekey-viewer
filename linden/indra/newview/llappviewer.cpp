@@ -280,10 +280,10 @@ BOOL gLogoutInProgress = FALSE;
 // Internal globals... that should be removed.
 static std::string gArgs;
 
-const std::string MARKER_FILE_NAME("Imprudence.exec_marker");
-const std::string ERROR_MARKER_FILE_NAME("Imprudence.error_marker");
-const std::string LLERROR_MARKER_FILE_NAME("Imprudence.llerror_marker");
-const std::string LOGOUT_MARKER_FILE_NAME("Imprudence.logout_marker");
+const std::string MARKER_FILE_NAME("HeritageKey.exec_marker");
+const std::string ERROR_MARKER_FILE_NAME("HeritageKey.error_marker");
+const std::string LLERROR_MARKER_FILE_NAME("HeritageKey.llerror_marker");
+const std::string LOGOUT_MARKER_FILE_NAME("HeritageKey.logout_marker");
 static BOOL gDoDisconnect = FALSE;
 static std::string gLaunchFileOnQuit;
 
@@ -295,7 +295,7 @@ const char *VFS_INDEX_FILE_BASE = "index.db2.x.";
 static std::string gSecondLife;
 static std::string gWindowTitle;
 #ifdef LL_WINDOWS
-	static char sWindowClass[] = "Imprudence";
+	static char sWindowClass[] = "Heritage Key VX Viewer";
 #endif
 
 std::string gLoginPage;
@@ -318,7 +318,8 @@ static void ui_audio_callback(const LLUUID& uuid)
 {
 	if (gAudiop)
 	{
-		gAudiop->triggerSound(uuid, gAgent.getID(), 1.0f, LLAudioEngine::AUDIO_TYPE_UI);
+		F32 volume = gSavedSettings.getBOOL("MuteUI") ? 0.f : gSavedSettings.getF32("AudioLevelUI");
+		gAudiop->triggerSound(uuid, gAgent.getID(), volume);
 	}
 }
 
@@ -554,7 +555,7 @@ bool LLAppViewer::init()
 	
 	// Need to do this initialization before we do anything else, since anything
 	// that touches files should really go through the lldir API
-	gDirUtilp->initAppDirs(IMP_VIEWER_NAME);
+	gDirUtilp->initAppDirs(HK_VIEWER_NAME);
 	// set skin search path to default, will be overridden later
 	// this allows simple skinned file lookups to work
 	gDirUtilp->setSkinFolder("default");
@@ -576,17 +577,12 @@ bool LLAppViewer::init()
     writeSystemInfo();
 
 	// Build a string representing the current version number.
-    gCurrentVersion = llformat("%s %d.%d.%d %s / %s %d.%d.%d.%d", 
+    gCurrentVersion = llformat("%s %d.%d.%d %s", 
         gSavedSettings.getString("VersionChannelName").c_str(), 
-        IMP_VERSION_MAJOR, 
-        IMP_VERSION_MINOR, 
-        IMP_VERSION_PATCH,
-		IMP_VERSION_TEST,
-        LL_VIEWER_NAME,
-        LL_VERSION_MAJOR, 
-        LL_VERSION_MINOR, 
-        LL_VERSION_PATCH, 
-        LL_VERSION_BUILD );
+        HK_VERSION_MAJOR, 
+        HK_VERSION_MINOR, 
+        HK_VERSION_PATCH,
+		HK_VERSION_TEST );
 
 	//////////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////
@@ -1491,15 +1487,15 @@ bool LLAppViewer::initLogging()
 	
 	// Remove the last ".old" log file.
 	std::string old_log_file = gDirUtilp->getExpandedFilename(LL_PATH_LOGS,
-							     "Imprudence.old");
+							     "HeritageKey.old");
 	LLFile::remove(old_log_file);
 
 	// Rename current log file to ".old"
 	std::string log_file = gDirUtilp->getExpandedFilename(LL_PATH_LOGS,
-							     "Imprudence.log");
+							     "HeritageKey.log");
 	LLFile::rename(log_file, old_log_file);
 
-	// Set the log file to Imprudence.log
+	// Set the log file to HeritageKey.log
 
 	LLError::logToFile(log_file);
 
@@ -1604,7 +1600,7 @@ bool LLAppViewer::initConfiguration()
 	if(!loadSettingsFromDirectory(LL_PATH_APP_SETTINGS, set_defaults))
 	{
 		std::ostringstream msg;
-		msg << "Second Life could not load its default settings file. \n" 
+		msg << "Heritage Key could not load its default settings file. \n" 
 			<< "The installation may be corrupted. \n";
 
 		OSMessageBox(
@@ -1617,9 +1613,9 @@ bool LLAppViewer::initConfiguration()
 
 	// - set procedural settings 
 	gSavedSettings.setString("ClientSettingsFile", 
-        gDirUtilp->getExpandedFilename(LL_PATH_USER_SETTINGS, "settings_imprudence.xml"));
+        gDirUtilp->getExpandedFilename(LL_PATH_USER_SETTINGS, "settings_heritagekey.xml"));
 
-	gSavedSettings.setString("VersionChannelName", IMP_VIEWER_NAME);
+	gSavedSettings.setString("VersionChannelName", HK_VIEWER_NAME);
 
 #if !LL_DYNAMIC_FONT_DISCOVERY
 	// static font discovery - user settings can override.
@@ -1871,6 +1867,11 @@ bool LLAppViewer::initConfiguration()
             }
         }
     }
+	else if (clp.hasOption("genesis"))
+	{
+		std::string genesis_raw = clp.getOption("genesis")[0];
+		LLURLDispatcher::dispatch(genesis_raw, true);
+	}
 
     const LLControlVariable* skinfolder = gSavedSettings.getControl("SkinCurrent");
     if(skinfolder && LLStringUtil::null != skinfolder->getValue().asString())
@@ -1881,7 +1882,7 @@ bool LLAppViewer::initConfiguration()
     mYieldTime = gSavedSettings.getS32("YieldTime");
              
 	// XUI:translate
-	gSecondLife = IMP_VIEWER_NAME;
+	gSecondLife = HK_VIEWER_NAME;
 
 	// Read skin/branding settings if specified.
 	//if (! gDirUtilp->getSkinDir().empty() )
@@ -2199,6 +2200,10 @@ void LLAppViewer::writeSystemInfo()
 	gDebugInfo["SLLog"] = LLError::logFileName();
 
 	gDebugInfo["ClientInfo"]["Name"] = gSavedSettings.getString("VersionChannelName");
+	gDebugInfo["ClientInfo"]["HeritageKeyMajorVersion"] = HK_VERSION_MAJOR;
+	gDebugInfo["ClientInfo"]["HeritageKeyMinorVersion"] = HK_VERSION_MINOR;
+	gDebugInfo["ClientInfo"]["HeritageKeyPatchVersion"] = HK_VERSION_PATCH;
+	gDebugInfo["ClientInfo"]["HeritageKeyTestVersion"] = HK_VERSION_TEST;
 	gDebugInfo["ClientInfo"]["ImpMajorVersion"] = IMP_VERSION_MAJOR;
 	gDebugInfo["ClientInfo"]["ImpMinorVersion"] = IMP_VERSION_MINOR;
 	gDebugInfo["ClientInfo"]["ImpPatchVersion"] = IMP_VERSION_PATCH;
@@ -2290,6 +2295,10 @@ void LLAppViewer::handleViewerCrash()
 	//to check against no matter what
 	gDebugInfo["ClientInfo"]["Name"] = gSavedSettings.getString("VersionChannelName");
 
+	gDebugInfo["ClientInfo"]["HeritageKeyMajorVersion"] = HK_VERSION_MAJOR;
+	gDebugInfo["ClientInfo"]["HeritageKeyMinorVersion"] = HK_VERSION_MINOR;
+	gDebugInfo["ClientInfo"]["HeritageKeyPatchVersion"] = HK_VERSION_PATCH;
+	gDebugInfo["ClientInfo"]["HeritageKeyTestVersion"] = HK_VERSION_TEST;
 	gDebugInfo["ClientInfo"]["ImpMajorVersion"] = IMP_VERSION_MAJOR;
 	gDebugInfo["ClientInfo"]["ImpMinorVersion"] = IMP_VERSION_MINOR;
 	gDebugInfo["ClientInfo"]["ImpPatchVersion"] = IMP_VERSION_PATCH;
@@ -2453,10 +2462,10 @@ void LLAppViewer::initMarkerFile()
 	LL_DEBUGS("MarkerFile") << "Checking marker file for lock..." << LL_ENDL;
 
 	//We've got 4 things to test for here
-	// - Other Process Running (SecondLife.exec_marker present, locked)
-	// - Freeze (SecondLife.exec_marker present, not locked)
-	// - LLError Crash (SecondLife.llerror_marker present)
-	// - Other Crash (SecondLife.error_marker present)
+	// - Other Process Running (HeritageKey.exec_marker present, locked)
+	// - Freeze (HeritageKey.exec_marker present, not locked)
+	// - LLError Crash (HeritageKey.llerror_marker present)
+	// - Other Crash (HeritageKey.error_marker present)
 	// These checks should also remove these files for the last 2 cases if they currently exist
 
 	//LLError/Error checks. Only one of these should ever happen at a time.
@@ -2949,10 +2958,7 @@ void LLAppViewer::badNetworkHandler()
 		"local installation of " << gSecondLife << ". \n"
 		" \n"
 		"Try uninstalling and reinstalling to see if this resolves \n"
-		"the issue. \n"
-		" \n"
-		"If the problem continues, see the Tech Support FAQ at: \n"
-		"www.secondlife.com/support";
+		"the issue.";
 	forceDisconnect(message.str());
 }
 
@@ -3798,10 +3804,10 @@ void LLAppViewer::handleLoginComplete()
 	// Store some data to DebugInfo in case of a freeze.
 	gDebugInfo["ClientInfo"]["Name"] = gSavedSettings.getString("VersionChannelName");
 
-	gDebugInfo["ClientInfo"]["MajorVersion"] = LL_VERSION_MAJOR;
-	gDebugInfo["ClientInfo"]["MinorVersion"] = LL_VERSION_MINOR;
-	gDebugInfo["ClientInfo"]["PatchVersion"] = LL_VERSION_PATCH;
-	gDebugInfo["ClientInfo"]["BuildVersion"] = LL_VERSION_BUILD;
+	gDebugInfo["ClientInfo"]["MajorVersion"] = HK_VERSION_MAJOR;
+	gDebugInfo["ClientInfo"]["MinorVersion"] = HK_VERSION_MINOR;
+	gDebugInfo["ClientInfo"]["PatchVersion"] = HK_VERSION_PATCH;
+	gDebugInfo["ClientInfo"]["BuildVersion"] = HK_VERSION_BUILD;
 
 	LLParcel* parcel = LLViewerParcelMgr::getInstance()->getAgentParcel();
 	if ( parcel && parcel->getMusicURL()[0])

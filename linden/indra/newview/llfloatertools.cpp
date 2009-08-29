@@ -187,15 +187,15 @@ BOOL	LLFloaterTools::postBuild()
 	getDragHandle()->setEnabled( !gSavedSettings.getBOOL("ToolboxAutoMove") );
 
 	LLRect rect;
-	mBtnFocus = getChild<LLButton>("button focus");//btn;
-	childSetAction("button focus",LLFloaterTools::setEditTool, (void*)LLToolCamera::getInstance());
-	mBtnMove = getChild<LLButton>("button move");
-	childSetAction("button move",LLFloaterTools::setEditTool, (void*)LLToolGrab::getInstance());
+	//mBtnFocus = getChild<LLButton>("button focus");//btn;
+	//childSetAction("button focus",LLFloaterTools::setEditTool, (void*)LLToolCamera::getInstance());
+	//mBtnMove = getChild<LLButton>("button move");
+	//childSetAction("button move",LLFloaterTools::setEditTool, (void*)LLToolGrab::getInstance());
 	mBtnEdit = getChild<LLButton>("button edit");
 	childSetAction("button edit",LLFloaterTools::setEditTool, (void*)LLToolCompTranslate::getInstance());
-	mBtnCreate = getChild<LLButton>("button create");
-	childSetAction("button create",LLFloaterTools::setEditTool, (void*)LLToolCompCreate::getInstance());
-	mBtnLand = getChild<LLButton>("button land" );
+	//mBtnCreate = getChild<LLButton>("button create");
+	//childSetAction("button create",LLFloaterTools::setEditTool, (void*)LLToolCompCreate::getInstance());
+	//mBtnLand = getChild<LLButton>("button land" );
 	childSetAction("button land",LLFloaterTools::setEditTool, (void*)LLToolSelectLand::getInstance());
 	mTextStatus = getChild<LLTextBox>("text status");
 
@@ -220,8 +220,8 @@ BOOL	LLFloaterTools::postBuild()
 	childSetCommitCallback("radio rotate",commit_select_tool,LLToolCompRotate::getInstance());
 	mRadioStretch = getChild<LLCheckBoxCtrl>("radio stretch");
 	childSetCommitCallback("radio stretch",commit_select_tool,LLToolCompScale::getInstance());
-	mRadioSelectFace = getChild<LLCheckBoxCtrl>("radio select face");
-	childSetCommitCallback("radio select face",commit_select_tool,LLToolFace::getInstance());
+	/*mRadioSelectFace = getChild<LLCheckBoxCtrl>("radio select face");
+	childSetCommitCallback("radio select face",commit_select_tool,LLToolFace::getInstance());*/
 	mCheckSelectIndividual = getChild<LLCheckBoxCtrl>("checkbox edit linked parts");
 	childSetValue("checkbox edit linked parts",(BOOL)gSavedSettings.getBOOL("EditLinkedParts"));
 	childSetCommitCallback("checkbox edit linked parts",commit_select_component,this);
@@ -334,11 +334,11 @@ BOOL	LLFloaterTools::postBuild()
 	mTab = getChild<LLTabContainer>("Object Info Tabs");
 	if(mTab)
 	{
-		mTab->setVisible( gSavedSettings.getBOOL("ToolboxShowMore") );
+		mTab->setVisible(false);
 		mTab->setFollows(FOLLOWS_TOP | FOLLOWS_LEFT);
-		mTab->setVisible( gSavedSettings.getBOOL("ToolboxShowMore") );
+		mTab->setVisible(false);
 		mTab->setBorderVisible(FALSE);
-		mTab->selectFirstTab();
+		/*mTab->selectFirstTab();*/
 	}
 
 	mStatusText["rotate"] = getString("status_rotate");
@@ -357,11 +357,11 @@ BOOL	LLFloaterTools::postBuild()
 // during LLViewerWindow's per-frame hover processing.
 LLFloaterTools::LLFloaterTools()
 :	LLFloater(std::string("toolbox floater")),
-	mBtnFocus(NULL),
-	mBtnMove(NULL),
+	/*mBtnFocus(NULL),*/
+	/*mBtnMove(NULL),*/
 	mBtnEdit(NULL),
-	mBtnCreate(NULL),
-	mBtnLand(NULL),
+	/*mBtnCreate(NULL),*/
+	/*mBtnLand(NULL),*/
 	mTextStatus(NULL),
 
 	mRadioOrbit(NULL),
@@ -375,7 +375,7 @@ LLFloaterTools::LLFloaterTools()
 	mRadioPosition(NULL),
 	mRadioRotate(NULL),
 	mRadioStretch(NULL),
-	mRadioSelectFace(NULL),
+	/*mRadioSelectFace(NULL),*/
 	mCheckSelectIndividual(NULL),
 
 	mCheckSnapToGrid(NULL),
@@ -441,14 +441,17 @@ LLFloaterTools::LLFloaterTools()
 	mSmallHeight = mLargeHeight;
 	if (mTab) mSmallHeight -= mTab->getRect().getHeight();
 	
+	reshape( getRect().getWidth(), mSmallHeight, TRUE);
+	translate( 0, mLargeHeight - mSmallHeight );
+
 	// force a toggle initially. seems to be needed to correctly initialize 
 	// both "more" and "less" cases. it also seems to be important to begin
 	// with the user's preference first so that it's initial position will
 	// be correct (SL-51192) -MG
-	BOOL show_more = gSavedSettings.getBOOL("ToolboxShowMore"); // get user's preference
-	gSavedSettings.setBOOL("ToolboxShowMore", show_more); // sets up forced toggle below
-	showMore( !show_more ); // does the toggle
-	showMore(  show_more ); // reset the real user's preference
+	//BOOL show_more = gSavedSettings.getBOOL("ToolboxShowMore"); // get user's preference
+	//gSavedSettings.setBOOL("ToolboxShowMore", show_more); // sets up forced toggle below
+	//showMore( !show_more ); // does the toggle
+	//showMore(  show_more ); // reset the real user's preference
 }
 
 LLFloaterTools::~LLFloaterTools()
@@ -547,9 +550,9 @@ void LLFloaterTools::updatePopup(LLCoordGL center, MASK mask)
 	}
 	
 	// Focus buttons
-	BOOL focus_visible = (	tool == LLToolCamera::getInstance() );
+	BOOL focus_visible = (false);
 
-	mBtnFocus	->setToggleState( focus_visible );
+	//mBtnFocus	->setToggleState( focus_visible );
 
 	mRadioZoom	->setVisible( focus_visible );
 	mRadioOrbit	->setVisible( focus_visible );
@@ -576,9 +579,9 @@ void LLFloaterTools::updatePopup(LLCoordGL center, MASK mask)
 	childSetValue( "slider zoom", gAgent.getCameraZoomFraction() * 0.5f);
 
 	// Move buttons
-	BOOL move_visible = (tool == LLToolGrab::getInstance());
+	BOOL move_visible = (false);
 
-	if (mBtnMove) mBtnMove	->setToggleState( move_visible );
+	//if (mBtnMove) mBtnMove	->setToggleState( move_visible );
 
 	// HACK - highlight buttons for next click
 	if (mRadioMove)
@@ -617,11 +620,11 @@ void LLFloaterTools::updatePopup(LLCoordGL center, MASK mask)
 	mRadioPosition	->setVisible( edit_visible );
 	mRadioRotate	->setVisible( edit_visible );
 	mRadioStretch	->setVisible( edit_visible );
-	if (mRadioSelectFace)
+	/*if (mRadioSelectFace)
 	{
 		mRadioSelectFace->setVisible( edit_visible );
 		mRadioSelectFace->set( tool == LLToolFace::getInstance() );
-	}
+	}*/
 
 	if (mCheckSelectIndividual)
 	{
@@ -709,9 +712,9 @@ void LLFloaterTools::updatePopup(LLCoordGL center, MASK mask)
 
 
 	// Create buttons
-	BOOL create_visible = (tool == LLToolCompCreate::getInstance());
+	BOOL create_visible = (false);
 
-	mBtnCreate	->setToggleState(	tool == LLToolCompCreate::getInstance() );
+	//mBtnCreate	->setToggleState(	tool == LLToolCompCreate::getInstance() );
 
 	updateTreeGrassCombo(create_visible);
 
@@ -749,9 +752,9 @@ void LLFloaterTools::updatePopup(LLCoordGL center, MASK mask)
 	if (mCheckCopyRotates) mCheckCopyRotates->setEnabled( mCheckCopySelection->get() );
 
 	// Land buttons
-	BOOL land_visible = (tool == LLToolBrushLand::getInstance() || tool == LLToolSelectLand::getInstance() );
+	BOOL land_visible = (false);
 
-	if (mBtnLand)	mBtnLand	->setToggleState( land_visible );
+	//if (mBtnLand)	mBtnLand	->setToggleState( land_visible );
 
 	//	mRadioEditLand	->set( tool == LLToolBrushLand::getInstance() );
 	if (mRadioSelectLand)	mRadioSelectLand->set( tool == LLToolSelectLand::getInstance() );
@@ -815,10 +818,10 @@ void LLFloaterTools::updatePopup(LLCoordGL center, MASK mask)
 	//
 	// More panel visibility
 	//
-	BOOL show_more = gSavedSettings.getBOOL("ToolboxShowMore");
+	//BOOL show_more = gSavedSettings.getBOOL("ToolboxShowMore");
 
-	mTab->setVisible(show_more && tool != LLToolBrushLand::getInstance() && tool != LLToolSelectLand::getInstance());
-	mPanelLandInfo->setVisible(show_more && (tool == LLToolBrushLand::getInstance() || tool == LLToolSelectLand::getInstance()));
+	mTab->setVisible(false);
+	mPanelLandInfo->setVisible(false);
 }
 
 
@@ -875,29 +878,29 @@ void LLFloaterTools::onClose(bool app_quitting)
 
 void LLFloaterTools::showMore(BOOL show_more)
 {
-	BOOL showing_more = gSavedSettings.getBOOL("ToolboxShowMore");
-	if (show_more == showing_more)
-	{
-		return;
-	}
-	
-	gSavedSettings.setBOOL("ToolboxShowMore", show_more);
+	//BOOL showing_more = gSavedSettings.getBOOL("ToolboxShowMore");
+	//if (show_more == showing_more)
+	//{
+	//	return;
+	//}
+	//
+	//gSavedSettings.setBOOL("ToolboxShowMore", show_more);
 
-	// Visibility updated next frame - JC
-	// mTab->setVisible(show_more);
+	//// Visibility updated next frame - JC
+	//// mTab->setVisible(show_more);
 
-	if (show_more)
-	{
-		reshape( getRect().getWidth(), mLargeHeight, TRUE);
-		translate( 0, mSmallHeight - mLargeHeight );
-	}
-	else
-	{
-		reshape( getRect().getWidth(), mSmallHeight, TRUE);
-		translate( 0, mLargeHeight - mSmallHeight );
-	}
-	childSetVisible("button less",  show_more);
-	childSetVisible("button more", !show_more);
+	//if (show_more)
+	//{
+	//	reshape( getRect().getWidth(), mLargeHeight, TRUE);
+	//	translate( 0, mSmallHeight - mLargeHeight );
+	//}
+	//else
+	//{
+	//	reshape( getRect().getWidth(), mSmallHeight, TRUE);
+	//	translate( 0, mLargeHeight - mSmallHeight );
+	//}
+	//childSetVisible("button less",  show_more);
+	//childSetVisible("button more", !show_more);
 }
 
 void LLFloaterTools::showPanel(EInfoPanel panel)
@@ -908,9 +911,9 @@ void LLFloaterTools::showPanel(EInfoPanel panel)
 
 void click_show_more(void *userdata)
 {
-	LLFloaterTools *f = (LLFloaterTools *)userdata;
+	/*LLFloaterTools *f = (LLFloaterTools *)userdata;
 	BOOL show_more = !gSavedSettings.getBOOL("ToolboxShowMore");
-	f->showMore( show_more );
+	f->showMore( show_more );*/
 }
 
 void click_popup_info(void*)

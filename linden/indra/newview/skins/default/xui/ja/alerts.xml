@@ -54,7 +54,7 @@
 	</alert>
 	<alert name="ConnectTimeout">
 		<message name="message">
-			[SECOND_LIFE]に接続できません。
+			[HERITAGE_KEY]に接続できません。
 システムがダウンしている可能性があります。
 
 数分後にもう一度試みるか、または[ヘルプ]とシステム・ステータス
@@ -333,7 +333,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	<alert name="ClickPublishHelpGroup">
 		<message name="message">
 			[ウェブサイト上で公開]オプションを選択すると、
-[SECOND_LIFE]ウェブサイト上でグループ名、記章、特権、タイトル、
+[HERITAGE_KEY]ウェブサイト上でグループ名、記章、特権、タイトル、
 創立者を公開できます。上記のコンテンツがコミュニティ・スタンダードにおいて
 成人向けコンテンツと判断されるかどうかについては、
 あなた自身がそれを明記しなければなりません。
@@ -356,7 +356,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	</alert>
 	<alert name="ClickPublishHelpPostcard">
 		<message name="message">
-			[ウェブサイト上で公開]オプションを選択すると、[SECOND_LIFE]ウェブサイト上で、撮影者の[SECOND_LIFE]名、題名、ロケーション、メッセージ、およびスナップショットを公開できます。上記のコンテンツがコミュニティ・スタンダードにおいて
+			[ウェブサイト上で公開]オプションを選択すると、[HERITAGE_KEY]ウェブサイト上で、撮影者の[HERITAGE_KEY]名、題名、ロケーション、メッセージ、およびスナップショットを公開できます。上記のコンテンツがコミュニティ・スタンダードにおいて
 成人向けコンテンツと判断されるかどうかについては、
 あなた自身がそれをスナップショットごとに明記しなければなりません。
 		</message>
@@ -370,7 +370,7 @@ Studio exhibitのウェブ・ページで確認してください。
 	</alert>
 	<alert name="ClickPartnerHelpAvatar">
 		<message name="message">
-			[SECOND_LIFE]のウェブ・サイトから、他の住人へのプロポーズ、パートナー解消ができます。
+			[HERITAGE_KEY]のウェブ・サイトから、他の住人へのプロポーズ、パートナー解消ができます。
 
 ウェブ・サイトに行って パートナーに関する情報を取得しますか？
 		</message>
@@ -510,7 +510,7 @@ L$が不足しているのでこのグループに参加することができま
 	</alert>
 	<alert name="ConfirmLandSaleToAnyoneChange">
 		<message name="message">
-			注:「誰にでも売却する」をクリックすると、あなたの土地は、Second Lifeのコミュニティのどこからでも（この地域にないコミュニティを含む）購入できるようになります。
+			注:「誰にでも売却する」をクリックすると、あなたの土地は、Heritage Keyのコミュニティのどこからでも（この地域にないコミュニティを含む）購入できるようになります。
 
 選択された[LAND_SIZE]平方メートルの土地は、売り出し中に設定されています。
 売却価格L$[SALE_PRICE]で、[NAME]に売却を認可します。
@@ -697,7 +697,7 @@ L$が不足しているのでこのグループに参加することができま
 	</alert>
 	<alert name="MustAgreeToLogIn">
 		<message name="message">
-			[SECOND_LIFE]へのログインを続けるには、利用規約に同意してください。
+			[HERITAGE_KEY]へのログインを続けるには、利用規約に同意してください。
 		</message>
 	</alert>
 	<alert name="CouldNotPutOnOutfit">
@@ -721,7 +721,7 @@ L$が不足しているのでこのグループに参加することができま
 			おっと! 記入漏れがありますよ。
 アバターのファーストネームとラストネームの両方を入力する必要があります。
 
-[SECOND_LIFE]に入るには、アカウントが必要です。 アカウントを作成しますか?
+[HERITAGE_KEY]に入るには、アカウントが必要です。 アカウントを作成しますか?
 		</message>
 		<option name="OK">
 			新しいアカウントを作成
@@ -790,7 +790,7 @@ L$が不足しているのでこのグループに参加することができま
 	<alert name="DisplayChangeRestart">
 		<message name="message">
 			あなたが表示に対して行った変更には、
-[SECOND_LIFE]の即時シャットダウンを必要とするものが
+[HERITAGE_KEY]の即時シャットダウンを必要とするものが
 含まれています。これにより、現在の作業内容が失われる可能性があります。
 
 これらの変更を適用し、終了しますか？
@@ -804,7 +804,7 @@ L$が不足しているのでこのグループに参加することができま
 	</alert>
 	<alert name="PromptGoToEventsPage">
 		<message name="message">
-			[SECOND_LIFE]イベント・ウェブ・ページに移動しますか？
+			[HERITAGE_KEY]イベント・ウェブ・ページに移動しますか？
 		</message>
 		<option name="GotoPage">
 			OK
@@ -857,28 +857,28 @@ L$が不足しているのでこのグループに参加することができま
 	</alert>
 	<alert name="CacheWillClear">
 		<message name="message">
-			[SECOND_LIFE]の再起動後にキャッシュがクリアされます。
+			[HERITAGE_KEY]の再起動後にキャッシュがクリアされます。
 		</message>
 	</alert>
 	<alert name="CacheWillBeMoved">
 		<message name="message">
-			[SECOND_LIFE]の再起動後にキャッシュが移動されます。
+			[HERITAGE_KEY]の再起動後にキャッシュが移動されます。
 メモ：これによりキャッシュがクリアされます。
 		</message>
 	</alert>
 	<alert name="ChangeConnectionPort">
 		<message name="message">
-			ポートの設定は、[SECOND_LIFE]の再起動後に有効になります。
+			ポートの設定は、[HERITAGE_KEY]の再起動後に有効になります。
 		</message>
 	</alert>
 	<alert name="ChangeSkin">
 		<message name="message">
-			新しいスキンは[SECOND_LIFE]を再起動すると現れます
+			新しいスキンは[HERITAGE_KEY]を再起動すると現れます
 		</message>
 	</alert>
 	<alert name="GoToAuctionPage">
 		<message name="message">
-			[SECOND_LIFE]ウェブ・ページに移動し、 入札あるいはオークションの詳細を確認しますか？
+			[HERITAGE_KEY]ウェブ・ページに移動し、 入札あるいはオークションの詳細を確認しますか？
 		</message>
 		<option name="GotoPage">
 			OK
@@ -1010,14 +1010,14 @@ L$が不足しているのでこのグループに参加することができま
 	</alert>
 	<alert name="UnsupportedGLRequirements">
 		<message name="message">
-			Second Life の使用に必要なハードウェアの環境が満たされていないようです。 Second Life ではマルチテクスチャーに対応したOpenGLグラフィック・カードが必要です。 この場合、グラフィック・カードの最新ドライバがインストールされていること、およびオペレーティング・システムにサービス・パックと修正プログラムが適用されていることをご確認ください。
+			Heritage Key の使用に必要なハードウェアの環境が満たされていないようです。 Heritage Key ではマルチテクスチャーに対応したOpenGLグラフィック・カードが必要です。 この場合、グラフィック・カードの最新ドライバがインストールされていること、およびオペレーティング・システムにサービス・パックと修正プログラムが適用されていることをご確認ください。
 
-問題が解決されない場合には、次のサイトにアクセスしてください。 http://www.secondlife.com/support
+問題が解決されない場合には、次のサイトにアクセスしてください。 http://heritage-key.com/virtual-experience-info
 		</message>
 	</alert>
 	<alert name="UnsupportedHardware">
 		<message name="message">
-			警告： あなたのシステムは Second Life を使用するために必要な必須動作環境の条件を満たしていません。 Second Life をこのままご使用になると、不十分なパフォーマンスしか得られないおそれがあります。 また、サポート外のシステム構成でご使用の場合、テクニカルサポートをご利用いただくことができません。 
+			警告： あなたのシステムは Heritage Key を使用するために必要な必須動作環境の条件を満たしていません。 Heritage Key をこのままご使用になると、不十分なパフォーマンスしか得られないおそれがあります。 また、サポート外のシステム構成でご使用の場合、テクニカルサポートをご利用いただくことができません。 
 
  必須動作環境の条件
 [_URL] にアクセスして、さらに詳しい情報をご覧になりますか?
@@ -1032,7 +1032,7 @@ L$が不足しているのでこのグループに参加することができま
 			いいえ
 		</option>
 		<url>
-			http://www.secondlife.com/corporate/sysreqs.php
+			http://heritage-key.com/virtual-experience-info
 		</url>
 	</alert>
 	<alert name="UnsupportedGPU">
@@ -1063,7 +1063,7 @@ L$が不足しているのでこのグループに参加することができま
 	<alert name="UnknownGPU">
 		<message name="message">
 			お使いのシステムには、現時点では不明なグラフィック・カードが搭載されています。  
-これは、当社による動作テストが行われていない新しいハードウェアが使用されている場合がほとんどです。  Second Lifeはほぼ間違いなく正常に動作しますが、必要に応じたグラフィック設定の調整が必要になる場合があります。
+これは、当社による動作テストが行われていない新しいハードウェアが使用されている場合がほとんどです。  Heritage Keyはほぼ間違いなく正常に動作しますが、必要に応じたグラフィック設定の調整が必要になる場合があります。
 ([編集]&gt;[環境設定]&gt;[グラフィック])。
 		</message>
 		<ignore name="ignore">
@@ -1081,7 +1081,7 @@ L$が不足しているのでこのグループに参加することができま
 	</alert>
 	<alert name="DisplaySettingsNoShaders">
 		<message name="message">
-			[SECOND_LIFE] は、グラフィック・ドライバの初期化中にクラッシュしました。
+			[HERITAGE_KEY] は、グラフィック・ドライバの初期化中にクラッシュしました。
 一般的なドライバ・エラーを回避するため、[グラフィックの品質]は[低]に設定されます。
 これにより、いくつかのグラフィックス機能は無効になります。
 グラフィックカード・ドライバのアップデートをお勧めします。
@@ -1117,11 +1117,11 @@ L$が不足しているのでこのグループに参加することができま
 	</alert>
 	<alert name="CannotConnectDNSError">
 		<message name="message">
-			[SECOND_LIFE]に接続できません。
+			[HERITAGE_KEY]に接続できません。
 DNSはホスト名を解決できませんでした。
 
-www.secondlife.comウェブサイトに接続できることを確認してください。接続できてもこのエラーが出る場合は、
-www.secondlife.com/supportに行き、この問題を報告してください。
+www.heritage-key.comウェブサイトに接続できることを確認してください。接続できてもこのエラーが出る場合は、
+http://heritage-key.com/virtual-experience-infoに行き、この問題を報告してください。
 		</message>
 	</alert>
 	<alert name="CannotConnectSecurityError">
@@ -1131,40 +1131,40 @@ www.secondlife.com/supportに行き、この問題を報告してください。
 
 時間と日付が正しく設定されていることを確認してください。
 もしこのエラーが続く場合は、
-www.secondlife.com/support
+http://heritage-key.com/virtual-experience-info
 に行き、この問題を報告してください。
 		</message>
 	</alert>
 	<alert name="CannotConnectVerificationError">
 		<message name="message">
-			[SECOND_LIFE]に接続できません。
+			[HERITAGE_KEY]に接続できません。
 ログインサーバーは、SSLを介してサーバー自身を確認できませんでした。
 
 もしこのエラーが続く場合は、
-www.secondlife.com/support
+http://heritage-key.com/virtual-experience-info
 に行き、この問題を報告してください。
 		</message>
 	</alert>
 	<alert name="CannotConnectUnknownErrorWindows">
 		<message name="message">
-			[SECOND_LIFE]に接続できません。
+			[HERITAGE_KEY]に接続できません。
 最善の努力にも関わらず、予期しない出来事が発生しました。
 
-www.secondlife.com/support
+http://heritage-key.com/virtual-experience-info
 に行き、この問題を報告してください。  可能であれば、
  C:\Documents and Settings\(PCログイン名
-)\Application Data\SecondLife\logsからの、あなたのログファイルを含めて送ってください。
+)\Application Data\[HERITAGE_KEY]\logsからの、あなたのログファイルを含めて送ってください。
 ご協力ありがとうございます。
 		</message>
 	</alert>
 	<alert name="CannotConnectUnknownErrorDarwin">
 		<message name="message">
-			[SECOND_LIFE]に接続できません。
+			[HERITAGE_KEY]に接続できません。
 最善の努力にも関わらず、予期しない出来事が発生しました。
 
-www.secondlife.com/support
+http://heritage-key.com/virtual-experience-info
 に行き、この問題を報告してください。可能であれば、
-~/Library/Application Support/SecondLife/logsからの、あなたのログファイルを含めて送ってください。
+~/Library/Application Support/[HERITAGE_KEY]/logsからの、あなたのログファイルを含めて送ってください。
 ご協力ありがとうございます。
 		</message>
 	</alert>
@@ -1173,7 +1173,7 @@ www.secondlife.com/support
 			ログイン認証の解決に
 問題が発生しました。もう一度ログインしてください。 
 
-もしこのエラーが続く場合は、www.secondlife.com/supportを参照してください。
+もしこのエラーが続く場合は、http://heritage-key.com/virtual-experience-infoを参照してください。
 		</message>
 	</alert>
 	<alert name="CannotConnectNoMessage">
@@ -1211,10 +1211,10 @@ www.secondlife.com/support
 	</alert>
 	<alert name="FirstRunDialog">
 		<message name="message">
-			[SECOND_LIFE]のインストールが完了しました。
+			[HERITAGE_KEY]のインストールが完了しました。
 
-[SECOND_LIFE]の使用が初めての方は、ログイン前にアカウントの作成が必要です。
-www.secondlife.comに戻って、新規アカウントの作成を行いますか？
+[HERITAGE_KEY]の使用が初めての方は、ログイン前にアカウントの作成が必要です。
+http://heritage-key.com/virtual-experience-infoに戻って、新規アカウントの作成を行いますか？
 		</message>
 		<option name="NewAccount...">
 			新規アカウント...
@@ -1226,7 +1226,7 @@ www.secondlife.comに戻って、新規アカウントの作成を行います�
 	<alert name="ClothingStillDownloading">
 		<message name="message">
 			あなたのアバターは、ダウンロード中です。
-[SECOND_LIFE]を正常に使用でき、他の住人があなたを
+[HERITAGE_KEY]を正常に使用でき、他の住人があなたを
 正しく見ることができます。
 		</message>
 	</alert>
@@ -1240,7 +1240,7 @@ www.secondlife.comに戻って、新規アカウントの作成を行います�
 	</alert>
 	<alert name="WelcomeToSecondLife">
 		<message name="message">
-			[SECOND_LIFE]にようこそ! 
+			[HERITAGE_KEY]にようこそ! 
 
 矢印キーを使用して歩きます。
 男性あるいは女性のアバターを選択してください。 
@@ -1255,7 +1255,7 @@ www.secondlife.comに戻って、新規アカウントの作成を行います�
 	</alert>
 	<alert name="WelcomeToSecondLifeSimple">
 		<message name="message">
-			[SECOND_LIFE]にようこそ!
+			[HERITAGE_KEY]にようこそ!
 
 矢印キーを使用して歩きます。
 男性あるいは女性のアバターを選択してください。
@@ -1781,7 +1781,7 @@ www.secondlife.comに戻って、新規アカウントの作成を行います�
 	</alert>
 	<alert name="CannotCloseFloaterBuyLand">
 		<message name="message">
-			Second Lifeによるこの取引の見積りが完了するまで［土地を購入］ウィンドウを閉じることはできません。
+			Heritage Keyによるこの取引の見積りが完了するまで［土地を購入］ウィンドウを閉じることはできません。
 		</message>
 	</alert>
 	<alert name="CannotDeedLandNothingSelected">
@@ -2059,7 +2059,7 @@ L$は贈与されません。
 この問題から正常復帰することができません。 
 
 いったんアンインストールしてから再インストールした後、もう一度試してください。この問題を
-解決できない場合は、Tech SupportFAQ（www.secondlife.com/support）を
+解決できない場合は、Tech SupportFAQ（http://heritage-key.com/virtual-experience-info）を
 参照してください。
 		</message>
 		<option name="Quit">
@@ -2068,9 +2068,9 @@ L$は贈与されません。
 	</alert>
 	<alert name="YouHaveBeenLoggedOut">
 		<message name="message">
-			あなたは[SECOND_LIFE]からログアウトされました。
+			あなたは[HERITAGE_KEY]からログアウトされました。
             [MESSAGE]
-[IMとチャットを表示]をクリックすると、現在あるIMとチャットを確認できます。 確認しない場合は、[終了]をクリックして、すぐに[SECOND_LIFE]を終了してください。
+[IMとチャットを表示]をクリックすると、現在あるIMとチャットを確認できます。 確認しない場合は、[終了]をクリックして、すぐに[HERITAGE_KEY]を終了してください。
 		</message>
 		<option name="Continue">
 			IMとチャットを表示
@@ -2179,7 +2179,7 @@ L$は贈与されません。
 	<alert name="PublishGroupInfoToWeb">
 		<message name="message">
 			[ウェブ上で公開]オプションを選択すると、
-[SECOND_LIFE]ウェブ・サイト上でグループ名、記章、特権、タイトル、および創立者を公開できます。 上記のコンテンツがコミュニティ・スタンダード
+[HERITAGE_KEY]ウェブ・サイト上でグループ名、記章、特権、タイトル、および創立者を公開できます。 上記のコンテンツがコミュニティ・スタンダード
 において成人向けコンテンツと判断されるかどうかについては、
 あなた自身がそれを明記しなければなりません。
 		</message>
@@ -2429,7 +2429,7 @@ L$は贈与されません。
 	</alert>
 	<alert name="SystemMayBeDown">
 		<message name="message">
-			[SECOND_LIFE]に接続できません。
+			[HERITAGE_KEY]に接続できません。
 システムがダウンしている可能性があります。
 
 数分後にもう一度試みるか、または[ヘルプ]とシステム・ステータス
@@ -2467,7 +2467,7 @@ http://www.apple.com/quicktime/で、最新版をダウンロードしてくだ�
 	<alert name="ClothingLoading">
 		<message name="message">
 			あなたの服を、ダウンロード中です。 
-通常どおりに[SECOND_LIFE]を使え、他のユーザーもあなたを正常に見ることができます。
+通常どおりに[HERITAGE_KEY]を使え、他のユーザーもあなたを正常に見ることができます。
 		</message>
 		<ignore name="ignore">
 			服のダウンロードに長い時間がかかる場合
@@ -2475,10 +2475,10 @@ http://www.apple.com/quicktime/で、最新版をダウンロードしてくだ�
 	</alert>
 	<alert name="FirstRun">
 		<message name="message">
-			[SECOND_LIFE]のインストールが完了しました。
+			[HERITAGE_KEY]のインストールが完了しました。
 
-[SECOND_LIFE]の使用が初めての方は、ログイン前にアカウントの作成が必要です。
-www.secondlife.comに戻って、新規アカウントの作成を行いますか？
+[HERITAGE_KEY]の使用が初めての方は、ログイン前にアカウントの作成が必要です。
+http://heritage-key.com/virtual-experience-infoに戻って、新規アカウントの作成を行いますか？
 		</message>
 		<option name="NewAccount...">
 			新規アカウント...
@@ -2497,7 +2497,7 @@ www.secondlife.comに戻って、新規アカウントの作成を行います�
 	</alert>
 	<alert name="LoginPacketNeverReceived">
 		<message name="message">
-			接続に問題が生じています。 あなたのインターネット接続、またはSecond Lifeサーバーに問題がある可能性があります。
+			接続に問題が生じています。 あなたのインターネット接続、またはHeritage Keyサーバーに問題がある可能性があります。
 
 あなたのインターネット接続を確認して数分後にもう一度試みるか、[ヘルプ]をクリックして当社のサポート・サイトに接続してください。または、[テレポート]をクリックしてホームにテレポートしてみてください。
 		</message>
@@ -2516,7 +2516,7 @@ www.secondlife.comに戻って、新規アカウントの作成を行います�
 			まもなくあなたのアバターが表示されます。
 
 矢印キーを使用して歩きます。
-ヘルプが必要なときや[SECOND_LIFE]について知りたいときは、
+ヘルプが必要なときや[HERITAGE_KEY]について知りたいときは、
 F1キーを押してください。
 		</message>
 	</alert>
@@ -2525,7 +2525,7 @@ F1キーを押してください。
 			まもなくあなたのアバターが表示されます。
 
 矢印キーを使用して歩きます。
-ヘルプが必要なときや[SECOND_LIFE]について知りたいときは、
+ヘルプが必要なときや[HERITAGE_KEY]について知りたいときは、
 F1キーを押してください。
 男性あるいは女性のアバターを選択してください。
 あなたの決定は後で変更できます。
@@ -2698,9 +2698,9 @@ F1キーを押してください。
 	</alert>
 	<alert name="DownloadWindowsMandatory">
 		<message name="message">
-			[SECOND_LIFE]の新しいバージョンが利用可能です。
+			[HERITAGE_KEY]の新しいバージョンが利用可能です。
 [MESSAGE]
-[SECOND_LIFE]を使用するために、このアップデートをダウンロードする必要があります。
+[HERITAGE_KEY]を使用するために、このアップデートをダウンロードする必要があります。
 		</message>
 		<option name="Download">
 			ダウンロード
@@ -2711,7 +2711,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="DownloadWindows">
 		<message name="message">
-			[SECOND_LIFE]のアップデート・バージョンが利用可能です。
+			[HERITAGE_KEY]のアップデート・バージョンが利用可能です。
 [MESSAGE]
 このアップデートは必須ではありませんが、パフォーマンスと安定性を向上させるためにインストールすることをお勧めします。
 		</message>
@@ -2724,7 +2724,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="DownloadWindowsReleaseForDownload">
 		<message name="message">
-			[SECOND_LIFE]のアップデート・バージョンが利用可能です。
+			[HERITAGE_KEY]のアップデート・バージョンが利用可能です。
 [MESSAGE]
 このアップデートは必須ではありませんが、パフォーマンスと安定性を向上させるためにインストールすることをお勧めします。
 		</message>
@@ -2737,9 +2737,9 @@ F1キーを押してください。
 	</alert>
 	<alert name="DownloadMacMandatory">
 		<message name="message">
-			[SECOND_LIFE]の新しいバージョンが利用可能です。
+			[HERITAGE_KEY]の新しいバージョンが利用可能です。
 [MESSAGE]
-[SECOND_LIFE]を使用するために、このアップデートをダウンロードする必要があります。
+[HERITAGE_KEY]を使用するために、このアップデートをダウンロードする必要があります。
 
 アプリケーションがあるフォルダにダウンロードしますか？
 		</message>
@@ -2752,7 +2752,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="DownloadMac">
 		<message name="message">
-			[SECOND_LIFE]のアップデート・バージョンが利用可能です。
+			[HERITAGE_KEY]のアップデート・バージョンが利用可能です。
 [MESSAGE]
 このアップデートは必須ではありませんが、パフォーマンスと安定性を向上させるためにインストールすることをお勧めします。
  
@@ -2767,7 +2767,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="DownloadMacReleaseForDownload">
 		<message name="message">
-			[SECOND_LIFE]のアップデート・バージョンが利用可能です。
+			[HERITAGE_KEY]のアップデート・バージョンが利用可能です。
 [MESSAGE]
 このアップデートは必須ではありませんが、パフォーマンスと安定性を向上させるためにインストールすることをお勧めします。
  
@@ -2811,7 +2811,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchJoinNow">
 		<message name="message">
-			www.secondlife.comに移動してアカウントを管理しますか？
+			http://heritage-key.com/virtual-experience-infoに移動してアカウントを管理しますか？
 		</message>
 		<ignore name="ignore">
 			アカウントを管理するため、ウェブ・ブラウザを起動するとき
@@ -2825,7 +2825,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchBugReport101">
 		<message name="message">
-			[SECOND_LIFE]Wikiで、バグを報告する正しい方法をご覧ください。
+			[HERITAGE_KEY]Wikiで、バグを報告する正しい方法をご覧ください。
 		</message>
 		<ignore name="ignore">
 			バグレポート101 Wikiを閲覧するためのブラウザを開くにあたって
@@ -2839,7 +2839,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchSecurityIssues">
 		<message name="message">
-			[SECOND_LIFE]Wikiで、セキュリティ問題を報告する方法をご覧ください。
+			[HERITAGE_KEY]Wikiで、セキュリティ問題を報告する方法をご覧ください。
 		</message>
 		<ignore name="ignore">
 			セキュリティ問題Wikiを閲覧するためにウェブ・ブラウザを起動するにあたって
@@ -2853,7 +2853,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchQAWiki">
 		<message name="message">
-			[SECOND_LIFE] 品質保証関連Wikiをご覧ください。
+			[HERITAGE_KEY] 品質保証関連Wikiをご覧ください。
 		</message>
 		<ignore name="ignore">
 			品質保証関連Wikiを閲覧するためにウェブ・ブラウザを起動するにあたって
@@ -2867,7 +2867,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchPublicIssue">
 		<message name="message">
-			[SECOND_LIFE]のパブリック問題トラッカーで、バグやその他の問題を報告できます。
+			[HERITAGE_KEY]のパブリック問題トラッカーで、バグやその他の問題を報告できます。
 		</message>
 		<ignore name="ignore">
 			パブリック問題トラッカーを閲覧するためにウェブ・ブラウザを起動するにあたって
@@ -2881,7 +2881,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchPublicIssueHelp">
 		<message name="message">
-			[SECOND_LIFE]Wikiで、パブリック問題トラッカーの使用方法をご覧ください。
+			[HERITAGE_KEY]Wikiで、パブリック問題トラッカーの使用方法をご覧ください。
 		</message>
 		<ignore name="ignore">
 			パブリック問題トラッカーWikiを閲覧するためにウェブ・ブラウザを起動するにあたって
@@ -2895,7 +2895,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchForums">
 		<message name="message">
-			最新のヒントおよびトリックについては、[SECOND_LIFE]のナレッジベースを検索してください。
+			最新のヒントおよびトリックについては、[HERITAGE_KEY]のナレッジベースを検索してください。
 		</message>
 		<ignore name="ignore">
 			ナレッジベースを表示するため、ウェブ・ブラウザを起動するとき
@@ -2909,7 +2909,7 @@ F1キーを押してください。
 	</alert>
 	<alert name="WebLaunchSupport">
 		<message name="message">
-			[SECOND_LIFE]サポートにコンタクト
+			[HERITAGE_KEY]サポートにコンタクト
 		</message>
 		<ignore name="ignore">
 			サポートに連絡するため、ウェブ・ブラウザを起動するとき
@@ -3906,7 +3906,7 @@ Linden社所有のメインランドの不動産での太陽の位置に
 		<message name="message">
 			これを有効なメールアドレスに設定すると、そのアドレスにこの不動産において行われた
 嫌がらせの報告が送信されるようになります。 
-設定を行わない場合（空白）、嫌がらせ報告は Linden Lab にのみ
+設定を行わない場合（空白）、嫌がらせ報告は Rezzable にのみ
 送信されます。
 		</message>
 	</alert>
@@ -3927,7 +3927,7 @@ Linden社所有のメインランドの不動産での太陽の位置に
 	</alert>
 	<alert name="VoiceVersionMismatch" title="ボイスバージョンの不一致">
 		<message name="message">
-			このバージョンの Second Life は、この地域のボイスチャット機能に対応していません。ボイスチャットを正しく使用するには、Second Life のアップデートが必要です。
+			このバージョンの Heritage Key は、この地域のボイスチャット機能に対応していません。ボイスチャットを正しく使用するには、Heritage Key のアップデートが必要です。
 		</message>
 	</alert>
 	<alert name="HelpEstateCovenant" title="不動産約款">
@@ -4165,10 +4165,10 @@ Linden社所有のメインランドの不動産での太陽の位置に
 	</alert>
 	<alert name="ClickOpenF1Help">
 		<message name="message">
-			Second Life のサポートウェブサイトを利用しますか？
+			Heritage Key のサポートウェブサイトを利用しますか？
 		</message>
 		<ignore name="ignore">
-			Second Life のサポートウェブサイトを閲覧するにあたって。
+			Heritage Key のサポートウェブサイトを閲覧するにあたって。
 		</ignore>
 		<option name="Gotopage">
 			行く
@@ -4196,7 +4196,7 @@ Linden社所有のメインランドの不動産での太陽の位置に
 			終了しようとしています。操作を続行しますか？
 		</message>
 		<ignore name="ignore">
-			Second Life の終了にあたって。
+			Heritage Key の終了にあたって。
 		</ignore>
 		<option name="Quit">
 			終了
@@ -4209,24 +4209,23 @@ Linden社所有のメインランドの不動産での太陽の位置に
 		<message name="message">
 			利用規約違反とコミュニティースタンダード違反の報告にこのツールをご使用ください。 参照：
 
-http://secondlife.com/corporate/tos.php 
-http://secondlife.com/corporate/cs.php
+http://heritage-key.com/virtual-experience-info 
 
 利用規約違反とコミュニティースタンダード違反に関する全てのレポートは、調査され、解決されます。 
 以下のリンク先のIncident Reportにてその確認をすることができます。
 
-http://secondlife.com/support/incidentreport.php
+http://heritage-key.com/contact
 		</message>
 	</alert>
 	<alert name="HelpReportAbuseEmailEO">
 		<message name="message">
-			重要: このレポートはLinden Lab社ではなく、\あなたが現在いる地域のオーナーに送られます。
+			重要: このレポートはRezzable社ではなく、\あなたが現在いる地域のオーナーに送られます。
 -
-あなたが今いる地域のオーナーは、住人と訪問者への\サービスの一環として、この地域からのレポートをすべて\受け付け、解決することに同意しています。 Linden Lab社が\あなたがここから提出するレポートを調査することはありません。 
+あなたが今いる地域のオーナーは、住人と訪問者への\サービスの一環として、この地域からのレポートをすべて\受け付け、解決することに同意しています。 Rezzable社が\あなたがここから提出するレポートを調査することはありません。 
 地域のオーナーは、不動産約款で指定している\地元の規則を基に、報告された問題を解決します。 
 （[世界]のメニューから[土地情報]を選ぶと、約款を\閲覧できます。）
 -
-このレポートに関する解決策は、この地域にだけ当てはまります。\住人がセカンドライフの他の地域へアクセスする際、\このレポートの結果に影響されることはありません。 Linden Lab社だけが\セカンドライフ全域におけるアクセス制限権を持っています。
+このレポートに関する解決策は、この地域にだけ当てはまります。\住人がセカンドライフの他の地域へアクセスする際、\このレポートの結果に影響されることはありません。 Rezzable社だけが\セカンドライフ全域におけるアクセス制限権を持っています。
 		</message>
 	</alert>
 	<alert name="HelpReportBug">
@@ -4238,7 +4237,7 @@ http://secondlife.com/support/incidentreport.php
 バグレポートは全て調査され解決されます。これによってEメールで返答が送られてくることはありません。
 -
 テクニカルな問題が生じた場合は、次のサポートに連絡してください:  
-http://secondlife.com/community/support.php
+http://heritage-key.com/contact
 -
 注意：未完成の報告は調査されません。
 		</message>
@@ -4301,19 +4300,19 @@ http://secondlife.com/community/support.php
  
 知的財産の侵害に関する報告を行う際には、以下の点に注意してください。
 
-(1) 嫌がらせの報告のプロセス。Second Lifeの権限システムを悪用している住人を見つけたら、嫌がらせの報告を行ってください。
+(1) 嫌がらせの報告のプロセス。Heritage Keyの権限システムを悪用している住人を見つけたら、嫌がらせの報告を行ってください。
 例えばコピーBotの使用、それに似たツールの使用による知的財産権の侵害があります。
-アビューズチームは調査に基づきSecond Lifeのコミュニティースタンダードや利用規約に違反する行為と判断された場合には適切な処置を行っています。
-ただし、コンテンツをSecond Lifeから撤去してほしい、といった要望にはアビューズチームは応えることができません。
+アビューズチームは調査に基づきHeritage Keyのコミュニティースタンダードや利用規約に違反する行為と判断された場合には適切な処置を行っています。
+ただし、コンテンツをHeritage Keyから撤去してほしい、といった要望にはアビューズチームは応えることができません。
 
-(2) DMCA（デジタルミレニアム著作権法）及びコンテンツ撤去プロセス。 Second Lifeからのコンテンツの撤去をリクエストするには、著作権侵害通知の提出を行う必要があります。
+(2) DMCA（デジタルミレニアム著作権法）及びコンテンツ撤去プロセス。 Heritage Keyからのコンテンツの撤去をリクエストするには、著作権侵害通知の提出を行う必要があります。
 参照：http://secondlife.com/corporate/dmca.php
 
 この件に関する嫌がらせの報告を続ける際は、このウィンドウを閉じてください。選択すべきカテゴリは「知的財産の侵害 &gt; コピーBot及び権限の悪用」が適しているかもしれませんのでご確認ください。
 
 Thank you,
  
-Linden Lab
+Rezzable
 		</message>
 	</alert>
 	<alert name="FailedRequirementsCheck">
@@ -4525,7 +4524,7 @@ Linden Lab
 	</alert>
 	<alert name="HelpDayCycle">
 		<message name="message">
-			［デイ・サイクル編集］では Second Life での昼と夜の空の変化を制御できます。 これは［基本環境編集］の［時間帯］スライダーで使用されるサイクルです。
+			［デイ・サイクル編集］では Heritage Key での昼と夜の空の変化を制御できます。 これは［基本環境編集］の［時間帯］スライダーで使用されるサイクルです。
 
 ［デイ・サイクル編集］はキーフレームを設定することで機能します。  各キーフレームにはプリセットされた空の設定が関連付けられています（時間グラフに灰色の節として表示されます）。 ウィンドライト（ WindLight ）はキーフレーム間をデータ補間し、時間の経過とともに空の自然なアニメーションを作り出します。 
 
@@ -4656,7 +4655,7 @@ Linden Lab
 	</alert>
 	<alert name="HelpClassicClouds">
 		<message name="message">
-			このボックスを有効にすると、WindLight の雲に加えて、Second Life の従来の雲もレンダリングできるようになります。
+			このボックスを有効にすると、WindLight の雲に加えて、Heritage Key の従来の雲もレンダリングできるようになります。
 		</message>
 	</alert>
 	<alert name="HelpWaterFogColor">
@@ -4824,7 +4823,7 @@ Linden Lab
 	</alert>
 	<alert name="BadURL">
 		<message name="message">
-			Second Life がリンク（[SLURL]）を処理できません。
+			Heritage Key がリンク（[SLURL]）を処理できません。
 ほとんどのリンクは、次のような形式です。
 
 secondlife:///app/agent/0e346d8b-4433-4d66-a6b0-
@@ -4836,7 +4835,7 @@ fd37083abc4c/about
 	<alert name="NotAgeVerified">
 		<message name="message">
 			この区画にアクセスするためには、年齢確認を行う必要があります。
-Second Lifeのウェブサイトにアクセスして、年齢確認を行いますか？
+Heritage Keyのウェブサイトにアクセスして、年齢確認を行いますか？
 
 [_URL]
 		</message>
@@ -4850,13 +4849,13 @@ Second Lifeのウェブサイトにアクセスして、年齢確認を行いま
 			いいえ
 		</option>
 		<url>
-			https://secondlife.com/account/verification.php
+			http://heritage-key.com/virtual-experience-info
 		</url>
 	</alert>
 	<alert name="Cannot enter parcel: no payment info on file">
 		<message name="message">
 			この区画にアクセスするには、支払い情報が事前に登録されている必要があります。
-Second Lifeのウェブサイトにアクセスして、設定しますか？
+Heritage Keyのウェブサイトにアクセスして、設定しますか？
 
 [_URL]
 		</message>
@@ -4870,7 +4869,7 @@ Second Lifeのウェブサイトにアクセスして、設定しますか？
 			いいえ
 		</option>
 		<url>
-			https://secondlife.com/account/
+			http://heritage-key.com/virtual-experience-info
 		</url>
 	</alert>
 	<alert name="MissingString">

@@ -33,10 +33,10 @@
             <string>Color4</string>
         <key>Value</key>
             <array>
-                <real>1.0</real>
-                <real>1.0</real>
-                <real>1.0</real>
-                <real>1.0</real>
+                <real>0.0196078431372</real>
+                <real>0.6862745098039</real>
+                <real>0.9803921568627</real>
+                <real>1</real>
             </array>
         </map>
     <key>AgentChatColor</key>
@@ -673,7 +673,7 @@
       <key>Type</key>
       <string>String</string>
       <key>Value</key>
-      <string>http://www.imprudenceviewer.org</string>
+      <string>http://www.heritage-key.com/</string>
     </map>
     <key>BrowserLastVisited</key>
     <map>
@@ -2369,7 +2369,7 @@
       <key>Type</key>
       <string>Boolean</string>
       <key>Value</key>
-      <integer>1</integer>
+      <integer>0</integer>
     </map>
     <key>EnergyFromTop</key>
     <map>
@@ -2547,6 +2547,50 @@
       <key>Value</key>
       <integer>0</integer>
     </map>
+    <key>LongDateFormat</key>
+    <map>
+      <key>Comment</key>
+      <string>Long date format to use</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>String</string>
+      <key>Value</key>
+      <string>%A %Y-%m-%d</string>
+    </map>
+    <key>ShortDateFormat</key>
+    <map>
+      <key>Comment</key>
+      <string>Short date format to use</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>String</string>
+      <key>Value</key>
+      <string>%Y-%m-%d</string>
+    </map>
+    <key>TimeFormat</key>
+    <map>
+      <key>Comment</key>
+      <string>Time format to use</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>String</string>
+      <key>Value</key>
+      <string>%H:%M</string>
+    </map>
+    <key>TimestampFormat</key>
+    <map>
+      <key>Comment</key>
+      <string>Timestamp format to use</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>String</string>
+      <key>Value</key>
+      <string>%Y-%m-%dT%H:%M:%SZ</string>
+    </map>
     <key>FloaterAboutRect</key>
     <map>
       <key>Comment</key>
@@ -2588,7 +2632,7 @@
       <key>Type</key>
       <string>Boolean</string>
       <key>Value</key>
-      <integer>1</integer>
+      <integer>0</integer>
     </map>
     <key>FloaterActiveSpeakersSortColumn</key>
     <map>
@@ -3020,6 +3064,22 @@
         <integer>0</integer>
       </array>
     </map>
+    <key>FloaterMapImageRect</key>
+    <map>
+      <key>Comment</key>
+      <string>Rectangle for inworld map image</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>Rect</string>
+      <key>Value</key>
+      <array>
+        <integer>0</integer>
+        <integer>350</integer>
+        <integer>350</integer>
+        <integer>0</integer>
+      </array>
+    </map>
     <key>FloaterMediaRect</key>
     <map>
       <key>Comment</key>
@@ -3116,6 +3176,22 @@
         <integer>0</integer>
       </array>
     </map>
+	  <key>FloaterProfileRect</key>
+	  <map>
+		  <key>Comment</key>
+		  <string>Rectangle for profile window</string>
+		  <key>Persist</key>
+		  <integer>1</integer>
+		  <key>Type</key>
+		  <string>Rect</string>
+		  <key>Value</key>
+		  <array>
+			  <integer>0</integer>
+			  <integer>350</integer>
+			  <integer>350</integer>
+			  <integer>0</integer>
+		  </array>
+	  </map>
     <key>FloaterRegionInfo</key>
     <map>
       <key>Comment</key>
@@ -3823,7 +3899,7 @@
       <key>Type</key>
       <string>String</string>
       <key>Value</key>
-    <string>http://support.secondlife.com</string>
+    <string>http://heritage-key.com/virtual-experience-info</string>
   </map>
     <key>HighResSnapshot</key>
     <map>
@@ -4564,7 +4640,7 @@
       <key>Type</key>
       <string>String</string>
       <key>Value</key>
-      <string>http://imprudenceviewer.org/splash/</string>
+      <string>http://splash.heritage-key.com/index.html</string>
     </map>
     <key>LosslessJ2CUpload</key>
     <map>
@@ -5189,7 +5265,7 @@
     <key>NumSessions</key>
     <map>
       <key>Comment</key>
-      <string>Number of successful logins to Second Life</string>
+      <string>Number of successful logins to Heritage Key</string>
       <key>Persist</key>
       <integer>1</integer>
       <key>Type</key>
@@ -5348,7 +5424,18 @@
       <key>Type</key>
       <string>Boolean</string>
       <key>Value</key>
-      <integer>0</integer>
+      <integer>1</integer>
+    </map>
+    <key>ParcelMusicAutoPlayEnable</key>
+    <map>
+      <key>Comment</key>
+      <string>Auto play parcel music when available</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>Boolean</string>
+      <key>Value</key>
+      <integer>1</integer>
     </map>
     <key>PerAccountSettingsFile</key>
     <map>
@@ -6274,7 +6361,7 @@
       <key>Type</key>
       <string>Boolean</string>
       <key>Value</key>
-      <integer>0</integer>
+      <integer>1</integer>
     </map>
     <key>RenderHideGroupTitleAll</key>
     <map>
@@ -6285,7 +6372,7 @@
       <key>Type</key>
       <string>Boolean</string>
       <key>Value</key>
-      <integer>0</integer>
+      <integer>1</integer>
     </map>
     <key>RenderInitError</key>
     <map>
@@ -6961,7 +7048,7 @@
       <key>Type</key>
       <string>S32</string>
       <key>Value</key>
-      <integer>0</integer>
+      <integer>1</integer>
     </map>
     <key>ShowActiveSpeakers</key>
     <map>
@@ -7513,7 +7600,7 @@
     <key>SkyUseClassicClouds</key>
     <map>
       <key>Comment</key>
-      <string>Whether to use the old Second Life particle clouds or not</string>
+      <string>Whether to use the old particle clouds or not</string>
       <key>Persist</key>
       <integer>1</integer>
       <key>Type</key>
@@ -7972,7 +8059,7 @@
       <key>Type</key>
       <string>Boolean</string>
       <key>Value</key>
-      <integer>1</integer>
+      <integer>0</integer>
     </map>
     <key>TrackFocusObject</key>
     <map>
@@ -9721,7 +9808,7 @@
       <key>Type</key>
       <string>String</string>
       <key>Value</key>
-      <string>Imprudence</string>
+      <string>Heritage Key</string>
     </map>
     <key>VertexShaderEnable</key>
     <map>
@@ -10205,7 +10292,7 @@
       <key>Type</key>
       <string>Boolean</string>
       <key>Value</key>
-      <integer>1</integer>
+      <integer>0</integer>
     </map>
     <key>WarnNewClassified</key>
     <map>

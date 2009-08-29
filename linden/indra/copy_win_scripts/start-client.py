@@ -32,7 +32,7 @@ def start_client(grid, slurl, build_config, my_args):
     f = open("start-client.log", "w")
     print >>f, "Viewer startup arguments:"
     llstart.start("viewer", "../../newview", 
-        "%s/newview/%s/imprudence-bin.exe" % (build_path, build_config),
+        "%s/newview/%s/heritagekey-bin.exe" % (build_path, build_config),
         viewer_args, f)
     f.close()
 

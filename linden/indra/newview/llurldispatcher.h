@@ -4,7 +4,10 @@
  *
  * $LicenseInfo:firstyear=2007&license=viewergpl$
  * 
- * Copyright (c) 2007-2009, Linden Research, Inc.
+ * Copyright (c) 2007-2008, Linden Research, Inc.
+ *
+ * Copyright (c) 2009, Jacek Antonelli, McCabe Maxsted
+ *   Added support for Genesis URLs.
  * 
  * Second Life Viewer Source Code
  * The source code in this file ("Source Code") is provided by Linden Lab

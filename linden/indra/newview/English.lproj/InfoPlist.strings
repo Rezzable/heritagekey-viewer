@@ -1,5 +1,6 @@
 /* Localized versions of Info.plist keys */
 
-CFBundleName = "Imprudence";
-CFBundleShortVersionString = "Imprudence version 1.1.0";
-CFBundleGetInfoString = "Imprudence version 1.1.0";
+CFBundleName = "Heritage Key VX Viewer";
+CFBundleShortVersionString = "Heritage Key VX Viewer 0.9.1";
+CFBundleGetInfoString = "Heritage Key VX Viewer 0.9.1, Rezzable Productions Ltd.";
+

@@ -179,17 +179,23 @@
 		<menu_item_call label="Skripte in Auswahl so einstellen, dass sie nicht ausgeführt werden" name="Set Scripts to Not Running in Selection"/>
 	</menu>
 	<menu label="Hilfe" name="Help">
-		<menu_item_call label="Hilfe zu Second Life" name="Second Life Help"/>
-		<menu_item_call label="Tutorial" name="Tutorial"/>
-		<menu_item_separator label="-----------" name="separator"/>
-		<menu_item_call label="Offizielles Linden-Blog..." name="Official Linden Blog..."/>
-		<menu_item_separator label="-----------" name="separator2"/>
-		<menu_item_call label="Scripting-Portal..." name="Scripting Portal..."/>
-		<menu_item_separator label="-----------" name="separator3"/>
-		<menu_item_call label="Missbrauch melden..." name="Report Abuse..."/>
-		<menu_item_call label="Rempler, Stöße und Schläge..." name="Bumps, Pushes &amp;amp; Hits..."/>
-		<menu_item_call label="Lag-Anzeige" name="Lag Meter"/>
-		<menu_item_separator label="-----------" name="separator7"/>
+		<menu_item_call label="Hilfe" name="Help" />
+		<menu_item_call label="In-Welt-Hilfe" name="In-World Help" />
+		<menu_item_call label="Weitere Hilfe" name="Additional Help" />
+		<menu_item_call label="Tutorial" name="Tutorial" />
+		<menu_item_separator label="-----------" name="separator" />
+		<menu_item_call label="Offizielles Linden-Blog..." name="Official Linden Blog..." />
+		<menu_item_separator label="-----------" name="separator2" />
+		<menu_item_call label="Scripting-Anleitung..." name="Scripting Guide..." />
+		<menu_item_call label="Scripting-Portal..." name="Scripting Portal..." />
+		<menu_item_separator label="-----------" name="separator3" />
+		<menu_item_call label="Meldung des Tages..." name="Message of the Day..." />
+		<menu_item_separator label="-----------" name="separator4" />
+		<menu_item_call label="Missbrauch melden..." name="Report Abuse..." />
+		<menu_item_call label="Rempler, Stöße und Schläge..." name="Bumps, Pushes &amp;amp; Hits..." />
+		<menu_item_call label="Lag-Anzeige" name="Lag Meter" />
+		<menu_item_separator label=" -----------" name="separator7" />
+		<menu_item_separator label="-----------" name="separator5" />
 		<menu label="Fehlermeldungen" name="Bug Reporting">
 			<menu_item_call label="Allgemeiner Probleme-Tracker..." name="Public Issue Tracker..."/>
 			<menu_item_call label="Hilfe zum Allgemeinen Probleme-Tracker..." name="Publc Issue Tracker Help..."/>
@@ -205,6 +211,8 @@
 			<menu_item_separator label="-----------" name="separator9"/>
 			<menu_item_call label="Fehler melden..." name="Report Bug..."/>
 		</menu>
-		<menu_item_call label="Über Second Life..." name="About Second Life..."/>
+		<menu_item_call label="Versionshinweise..." name="Release Notes..." />
+		<menu_item_separator label="-----------" name="separator6" />
+		<menu_item_call label="Über Heritage Key..." name="About Heritage Key..." />
 	</menu>
 </menu_bar>

@@ -830,7 +830,7 @@ Utilisez les contrôles à droite pour trouver des choses et afficher différent
 	</notify>
 	<notify name="FirstBuild">
 		<message name="message">
-			Vous pouvez construire des objets dans certaines zones de [SECOND_LIFE].
+			Vous pouvez construire des objets dans certaines zones de [HERITAGE_KEY].
 Utilisez les outils en haut à gauche pour construire, et gardez la touche Ctrl ou Alt enfoncée pour passer rapidement d&apos;un outil à l&apos;autre.
 Appuyez sur la touche Esc pour arrêter de construire.
 		</message>
@@ -890,7 +890,7 @@ Les objets flexibles ne peuvent pas avoir de propriétés physiques et doivent r
 	<notify name="FirstDebugMenus">
 		<message name="message">
 			Vous avez activé le menu Avancé. 
-Ce menu contient des fonctionnalités utiles pour les développeurs qui travaillent sur Second Life.
+Ce menu contient des fonctionnalités utiles pour les développeurs qui travaillent sur Heritage Key.
 Pour activer/désactiver ce menu sous Windows, appuyez sur Ctrl-Alt-D. Sur un Mac, appuyez sur Cmd-Opt-Maj-D
 		</message>
 	</notify>

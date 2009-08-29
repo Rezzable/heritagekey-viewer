@@ -42,7 +42,7 @@
 	</notify>
 	<notify name="UploadingAuctionSnapshot">
 		<message name="message">
-			Fazendo upload da imagem no Second Life para o website
+			Fazendo upload da imagem no Heritage Key para o website
 		</message>
 	</notify>
 	<notify name="UploadPayment">
@@ -738,7 +738,7 @@ Autorizar este pedido?
 	</notify>
 	<notify name="FirstBuild">
 		<message name="message">
-			Você pode construir novos objetos no [SECOND_LIFE].Use as ferramentas corretas e aperte ESC por qualquer eventualdade.
+			Você pode construir novos objetos no [HERITAGE_KEY].Use as ferramentas corretas e aperte ESC por qualquer eventualdade.
 		</message>
 	</notify>
 	<notify name="FirstLeftClickNoHit">
@@ -780,7 +780,7 @@ Siga a flecha vermelha até o farol, ou clique nela para apagar o farol.
 	</notify>
 	<notify name="FirstDebugMenus">
 		<message name="message">
-			Você ativou o menu Avançado. Este menu contém funcionalidades úteis para desenvolvedores debugarem o Second Life. Para mostrar esse menu no Windows pressione Ctrl-Alt-D. No Mac pressione Cmd-Opt-Shift-D.
+			Você ativou o menu Avançado. Este menu contém funcionalidades úteis para desenvolvedores debugarem o Heritage Key. Para mostrar esse menu no Windows pressione Ctrl-Alt-D. No Mac pressione Cmd-Opt-Shift-D.
 		</message>
 	</notify>
 	<notify name="FirstSculptedPrim">

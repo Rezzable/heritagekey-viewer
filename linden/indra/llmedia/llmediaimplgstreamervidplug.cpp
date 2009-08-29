@@ -33,9 +33,11 @@
 
 #include "linden_common.h"
 
+extern "C" {
 #include <gst/gst.h>
 #include <gst/video/video.h>
 #include <gst/video/gstvideosink.h>
+}
 
 #include "llthread.h"
 

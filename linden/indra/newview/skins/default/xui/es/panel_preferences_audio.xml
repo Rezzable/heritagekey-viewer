@@ -24,8 +24,6 @@
 	<text type="string" length="1" name="ui_volume_text">
 		Volumen de la interface:
 	</text>
-	<spinner label="Umbral de mudanza L$" name="L$ Change Threshold" />
-	<spinner label="Umbral de mudanza de salud" name="Health Change Threshold" />
 	<text type="string" length="1" name="doppler_effect_text">
 		Efecto Doppler:
 	</text>

@@ -3,11 +3,11 @@
 	<message_set name="errors">
 		<message name="invalid_tport">
 			Problema encontrado ao processar seu pedido de Teleporte. Você pode tentar reiniciar  antes de tentar teleportar. Se você continuar a receber essa mensagem, por favor cheque a FAQ do Suporte Técnico em: 
-www.secondlife.com/support
+http://heritage-key.com/virtual-experience-info
 		</message>
 		<message name="invalid_region_handoff">
 			Problema encontrado ao processar a passage de regiões. Você pode tentar reiniciar antes de tentar atravessar regiões novamente. Se você continuar a receber essa mensagem, por favor cheque a FAQ do Suporte Técnico em: 
-www.secondlife.com/support
+http://heritage-key.com/virtual-experience-info
 		</message>
 		<message name="blocked_tport">
 			Desculpe, Teleportes estão atualmente bloqueados. Tente novamente dentro de alguns instantes. Se você continuar com problemas de teleporte, por favor tente deslogar e relogar para resolver o problema.

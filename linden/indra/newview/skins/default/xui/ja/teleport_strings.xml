@@ -4,13 +4,13 @@
 		<message name="invalid_tport">
 			テレポート・リクエストの処理中に問題が発生しました。テレポートするには、
 再度ログインする必要があります。このメッセージが
-引き続き表示される場合は、技術サポートFAQ（www.secondlife.com/support）
+引き続き表示される場合は、技術サポートFAQ（http://heritage-key.com/virtual-experience-info ）
 を参照してください。
 		</message>
 		<message name="invalid_region_handoff">
 			地域間の移動の処理中に問題が発生しました。地域間を
 移動するには、再度ログインする必要があります。このメッセージが
-引き続き表示される場合は、技術サポートFAQ（www.secondlife.com/support）
+引き続き表示される場合は、技術サポートFAQ（http://heritage-key.com/virtual-experience-info ）
 を参照してください。
 		</message>
 		<message name="blocked_tport">

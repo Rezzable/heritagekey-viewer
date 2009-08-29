@@ -55,7 +55,7 @@
 	</alert>
 	<alert name="ConnectTimeout">
 		<message name="message">
-			Connexion à [SECOND_LIFE] impossible.
+			Connexion à [HERITAGE_KEY] impossible.
 le service est peut-être interrompu.
 
 Veuillez réessayer dans quelques minutes, ou cliquez sur Aide pour obtenir des conseils et un lien vers la page web d&apos;état du service.
@@ -325,7 +325,7 @@ Ajouter ce pouvoir à « [ROLE_NAME] » ?
 		<message name="message">
 			L&apos;option &quot;Publier sur le Web&quot; nous permet de publier
 le nom du groupe, son logo, sa charte, ses titres, et ses fondateurs sur le
-site [SECOND_LIFE]. Il est de votre responsabilité d&apos;indiquer si 
+site [HERITAGE_KEY]. Il est de votre responsabilité d&apos;indiquer si 
 tout ou partie du contenu ci-dessus est considéré comme Adulte selon les règles de base de la Communauté.
 		</message>
 	</alert>
@@ -346,8 +346,8 @@ En cochant cette case, votre parcelle apparaîtra :
 	<alert name="ClickPublishHelpPostcard">
 		<message name="message">
 			L&apos;option Publier sur le Web nous permet de publier
-le nom du photographe dans [SECOND_LIFE], le sujet, le lieu, le message et
-la photo sur le site [SECOND_LIFE]. Vous devez indiquer indiquer si 
+le nom du photographe dans [HERITAGE_KEY], le sujet, le lieu, le message et
+la photo sur le site [HERITAGE_KEY]. Vous devez indiquer indiquer si 
 les photos ci-dessus contiennent du contenu pour Adultes, conformément aux 
 règles de base de la Communauté.
 		</message>
@@ -361,9 +361,8 @@ règles de base de la Communauté.
 	</alert>
 	<alert name="ClickPartnerHelpAvatar">
 		<message name="message">
-			Vous pouvez proposer à un autre résident de devenir votre partenaire ou dissoudre un partenariat existant à partir du site de [SECOND_LIFE].
+			Vous pouvez proposer à un autre résident de devenir votre partenaire ou dissoudre un partenariat existant à partir du site de [HERITAGE_KEY].
 
-Aller sur le site de Second Life pour avoir plus d&apos;informations sur les partenariats ?
 		</message>
 		<option name="GotoPage">
 			Aller sur cette page
@@ -502,7 +501,7 @@ Votre prix de vente sera de [SALE_PRICE] L$ et la vente sera disponible à [NAME
 	<alert name="ConfirmLandSaleToAnyoneChange">
 		<message name="message">
 			Attention : en cliquant sur Vendre à n&apos;importe qui, vous rendez votre
-terrain disponible à toute la communauté de Second Life, même aux personnes qui ne sont pas dans
+terrain disponible à toute la communauté de Heritage Key, même aux personnes qui ne sont pas dans
 cette région.
 
 Le terrain sélectionné, de [LAND_SIZE] m², est mis en vente.
@@ -678,7 +677,7 @@ Pour que les armes fonctionnent, les scripts doivent être autorisés.
 	</alert>
 	<alert name="MustAgreeToLogIn">
 		<message name="message">
-			Pour vous connecter à [SECOND_LIFE], vous devez accepter les Conditions d&apos;utilisation.
+			Pour vous connecter à [HERITAGE_KEY], vous devez accepter les Conditions d&apos;utilisation.
 		</message>
 	</alert>
 	<alert name="CouldNotPutOnOutfit">
@@ -702,7 +701,7 @@ Ce dossier ne contient pas d&apos;habits, de parties du corps ni de pièces join
 			Oups! Vous avez oublié de fournir certaines informations.
 Vous devez saisir le nom et le prénom de votre avatar.
 
-Pour entrer dans [SECOND_LIFE], vous devez avoir un compte. Voulez-vous en créer un maintenant ?
+Pour entrer dans [HERITAGE_KEY], vous devez avoir un compte. Voulez-vous en créer un maintenant ?
 		</message>
 		<option name="OK">
 			Créer un compte
@@ -768,7 +767,7 @@ Une fois payés, les frais ne sont pas remboursables.
 	<alert name="DisplayChangeRestart">
 		<message name="message">
 			Certaines modifications d&apos;affichage effectuées
-nécessitent la fermeture immédiate de [SECOND_LIFE].
+nécessitent la fermeture immédiate de [HERITAGE_KEY].
 Tout travail en cours sera perdu.
  
 Veuillez appliquer vos modifications et quitter
@@ -782,7 +781,7 @@ Veuillez appliquer vos modifications et quitter
 	</alert>
 	<alert name="PromptGoToEventsPage">
 		<message name="message">
-			Aller à la page web de [SECOND_LIFE] réservée aux événements ?
+			Aller à la page web de [HERITAGE_KEY] réservée aux événements ?
 		</message>
 		<option name="GotoPage">
 			OK
@@ -835,28 +834,28 @@ Veuillez appliquer vos modifications et quitter
 	</alert>
 	<alert name="CacheWillClear">
 		<message name="message">
-			Le cache sera vidé après le redémarrage de [SECOND_LIFE].
+			Le cache sera vidé après le redémarrage de [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="CacheWillBeMoved">
 		<message name="message">
-			Le cache sera déplacé après le redémarrage de [SECOND_LIFE].
+			Le cache sera déplacé après le redémarrage de [HERITAGE_KEY].
 Remarque : cela videra le cache.
 		</message>
 	</alert>
 	<alert name="ChangeConnectionPort">
 		<message name="message">
-			Les paramètres du port prendront effet après le redémarrage de [SECOND_LIFE].
+			Les paramètres du port prendront effet après le redémarrage de [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="ChangeSkin">
 		<message name="message">
-			Le nouveau thème apparaîtra après le redémarrage de [SECOND_LIFE].
+			Le nouveau thème apparaîtra après le redémarrage de [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="GoToAuctionPage">
 		<message name="message">
-			Aller à la page web de [SECOND_LIFE] pour voir le détail des enchères ou enchérir ?
+			Aller à la page web de [HERITAGE_KEY] pour voir le détail des enchères ou enchérir ?
 		</message>
 		<option name="GotoPage">
 			OK
@@ -988,14 +987,14 @@ car vous avez activé le mode sans échec.
 	</alert>
 	<alert name="UnsupportedGLRequirements">
 		<message name="message">
-			Vous semblez ne pas avoir le matériel requis pour utiliser Second Life. Second Life requiert une carte graphique OpenGL avec une prise en charge du multitexturing. Si vous avez une telle carte, assurez-vous que vous avez aussi les drivers les plus récents pour la carte, ainsi que les service packs et les patchs pour votre système d&apos;exploitation.
+			Vous semblez ne pas avoir le matériel requis pour utiliser Heritage Key. Heritage Key requiert une carte graphique OpenGL avec une prise en charge du multitexturing. Si vous avez une telle carte, assurez-vous que vous avez aussi les drivers les plus récents pour la carte, ainsi que les service packs et les patchs pour votre système d&apos;exploitation.
 
-Si vous avez toujours des problèmes, veuillez consulter la page suivante : http://www.secondlife.com/support
+Si vous avez toujours des problèmes, veuillez consulter la page suivante : http://www.heritage-key.com
 		</message>
 	</alert>
 	<alert name="UnsupportedHardware">
 		<message name="message">
-			Avertissement : vous n&apos;avez pas la configuration système requise pour utiliser Second Life. Si vous continuez à utiliser Second Life, votre performance risque d&apos;être moindre. Malheureusement, nous n&apos;offrons aucune assistance pour les problèmes de configuration système. 
+			Avertissement : vous n&apos;avez pas la configuration système requise pour utiliser Heritage Key. Si vous continuez à utiliser Heritage Key, votre performance risque d&apos;être moindre. Malheureusement, nous n&apos;offrons aucune assistance pour les problèmes de configuration système. 
 
 MINSPECS
 Voulez-vous visiter [_URL] pour plus d&apos;informations ?
@@ -1039,7 +1038,7 @@ Voulez-vous visiter [_URL] pour plus d&apos;informations ?
 		<message name="message">
 			Votre système contient une carte graphique que nous ne connaissons pas actuellement. 
 Cela est souvent le cas avec le nouveau materiel qui n&apos;a pas encore été testé.
-Vous pourrez probablement utiliser Second Life sans problème, mais vous devrez peut-être ajuster les paramètres de vos graphiques.
+Vous pourrez probablement utiliser Heritage Key sans problème, mais vous devrez peut-être ajuster les paramètres de vos graphiques.
 (Menu Édition &gt; Préférences &gt; Graphiques).
 		</message>
 		<ignore name="ignore">
@@ -1057,7 +1056,7 @@ d&apos;après votre configuration matérielle.
 	</alert>
 	<alert name="DisplaySettingsNoShaders">
 		<message name="message">
-			[SECOND_LIFE] a planté lors de l&apos;initialisation des drivers graphiques.
+			[HERITAGE_KEY] a planté lors de l&apos;initialisation des drivers graphiques.
 La qualité des graphiques sera paramétrée sur Faible pour éviter certaines erreurs de driver fréquentes.
 Certaines fonctionnalités graphiques seront donc désactivées.
 Nous vous recommandons de mettre à jour les drivers de votre carte graphique.
@@ -1094,10 +1093,10 @@ Connexion impossible à [SERVER]
 	</alert>
 	<alert name="CannotConnectDNSError">
 		<message name="message">
-			Connexion impossible à [SECOND_LIFE].
+			Connexion impossible à [HERITAGE_KEY].
 Une erreur DNS s&apos;est produite.
 Veuillez vérifier que vous parvenez à vous connecter au site
-www.secondlife.com. Si c&apos;est le cas, et que vous continuez à recevoir ce message d&apos;erreur,
+www.heritage-key.com. Si c&apos;est le cas, et que vous continuez à recevoir ce message d&apos;erreur,
 veuillez vous rendre à la rubrique Support du site pour signaler ce problème.
 		</message>
 	</alert>
@@ -1109,36 +1108,36 @@ Veuillez ouvrir le Panneau de Configuration et vous assurer que la date et l&apo
 sont correctement définis.
  
 Si vous continuez à recevoir ce message d&apos;erreur, veuillez vous rendre
-à la section Support du site SecondLife.com 
+à la section Support du site heritage-key.com 
 afin de signaler le problème.
 		</message>
 	</alert>
 	<alert name="CannotConnectVerificationError">
 		<message name="message">
-			Connexion à [SECOND_LIFE] impossible.
+			Connexion à [HERITAGE_KEY] impossible.
 Le serveur d&apos;identification a rencontré une erreur de connexion SSL.
 Si vous continuez à recevoir ce message d&apos;erreur, veuillez vous rendre
-à la rubrique Support de SecondLife.com pour
+à la rubrique Support de heritage-key.com pour
 signaler ce problème.
 		</message>
 	</alert>
 	<alert name="CannotConnectUnknownErrorWindows">
 		<message name="message">
-			Connexion à [SECOND_LIFE] impossible.
+			Connexion à [HERITAGE_KEY] impossible.
 Malgré nos efforts, une erreur inattendue s&apos;est produite.
-Veuillez vous rendre à la rubrique Support du site SecondLife.com
-pour signaler ce problème. Si possible, joignez votre fichier SecondLife.log
-qui se trouve à l&apos;emplacement suivant : C:\Documents and Settings\(nom)\Application Data\SecondLife\logs
+Veuillez vous rendre à la rubrique Support du site heritage-key.com
+pour signaler ce problème. Si possible, joignez votre fichier HeritageKey.log
+qui se trouve à l&apos;emplacement suivant : C:\Documents and Settings\(nom)\Application Data\HeritageKey\logs
 Merci.
 		</message>
 	</alert>
 	<alert name="CannotConnectUnknownErrorDarwin">
 		<message name="message">
-			Connexion à [SECOND_LIFE] impossible.
+			Connexion à [HERITAGE_KEY] impossible.
 Malgré nos efforts, une erreur inattendue s&apos;est produite.
-Veuillez vous rendre à la rubrique Support du site SecondLife.com
-pour signaler ce problème. Si possible, joignez votre fichier SecondLife.log
-qui se trouve à l&apos;emplacement suivant : ~/Library/Application Support/SecondLife/logs
+Veuillez vous rendre à la rubrique Support du site heritage-key.com
+pour signaler ce problème. Si possible, joignez votre fichier HeritageKey.log
+qui se trouve à l&apos;emplacement suivant : ~/Library/Application Support/HeritageKey/logs
 Merci.
 		</message>
 	</alert>
@@ -1147,7 +1146,7 @@ Merci.
 			Un problème est survenu lors de la résolution
 de votre authentification. Veuillez réessayer
 de vous connecter. Si vous continuez à recevoir ce message d&apos;erreur,
-veuillez vous rendre à la rubrique Support du site SecondLife.com.
+veuillez vous rendre à la rubrique Support du site heritage-key.com.
 		</message>
 	</alert>
 	<alert name="CannotConnectNoMessage">
@@ -1186,12 +1185,12 @@ pour des conseils et un lien vers la page web d&apos;état du service.
 	</alert>
 	<alert name="FirstRunDialog">
 		<message name="message">
-			L&apos;installation de [SECOND_LIFE] est terminée.
+			L&apos;installation de [HERITAGE_KEY] est terminée.
  
-Si vous utilisez [SECOND_LIFE] pour la première fois, vous devez ouvrir un compte
+Si vous utilisez [HERITAGE_KEY] pour la première fois, vous devez ouvrir un compte
 avant de pouvoir vous connecter. 
  
-Retourner sur www.secondlife.com pour ouvrir un nouveau compte ?
+Retourner sur www.heritage-key.com pour ouvrir un nouveau compte ?
 		</message>
 		<option name="NewAccount...">
 			Nouveau Compte...
@@ -1216,7 +1215,7 @@ Veuillez vérifier votre connexion.
 	</alert>
 	<alert name="WelcomeToSecondLife">
 		<message name="message">
-			Bienvenue sur [SECOND_LIFE] ! 
+			Bienvenue sur [HERITAGE_KEY] ! 
  
 Utilisez les touches de direction pour vous déplacer.
  
@@ -1232,7 +1231,7 @@ Vous pourrez changer d&apos;avis plus tard.
 	</alert>
 	<alert name="WelcomeToSecondLifeSimple">
 		<message name="message">
-			Bienvenue dans [SECOND_LIFE] ! 
+			Bienvenue dans [HERITAGE_KEY] ! 
  
 Utilisez les touches de direction pour vous déplacer.
  
@@ -1744,7 +1743,7 @@ la région dans laquelle il est situé est introuvable.
 	</alert>
 	<alert name="CannotCloseFloaterBuyLand">
 		<message name="message">
-			Vous ne pouvez pas fermer la fenêtre Acheter le terrain avant que Second Life n&apos;estime le montant de cette transaction.
+			Vous ne pouvez pas fermer la fenêtre Acheter le terrain avant que Heritage Key n&apos;estime le montant de cette transaction.
 		</message>
 	</alert>
 	<alert name="CannotDeedLandNothingSelected">
@@ -2013,9 +2012,9 @@ Si le problème persiste, veuillez cliquer sur Aide | Signaler un bug dans le me
 			[MESSAGE]
  
 Nous ne pouvons résoudre ce problème. Veuillez
-désinstaller et réinstaller Second Life avant de réessayer.
+désinstaller et réinstaller Heritage Key avant de réessayer.
 Si le problème persiste, consultez la FAQ du support technique :
-www.secondlife.com/support.
+www.heritage-key.com.
 		</message>
 		<option name="Quit">
 			Quitter
@@ -2023,9 +2022,9 @@ www.secondlife.com/support.
 	</alert>
 	<alert name="YouHaveBeenLoggedOut">
 		<message name="message">
-			Vous avez été déconnecté(e) de [SECOND_LIFE] :
+			Vous avez été déconnecté(e) de [HERITAGE_KEY] :
             [MESSAGE]
-Vous pouvez afficher vos messages instantanés et votre chat en cliquant sur Afficher IM et chat. Sinon, cliquez sur Quitter pour quitter immédiatement [SECOND_LIFE].
+Vous pouvez afficher vos messages instantanés et votre chat en cliquant sur Afficher IM et chat. Sinon, cliquez sur Quitter pour quitter immédiatement [HERITAGE_KEY].
 		</message>
 		<option name="Continue">
 			Afficher IM et chat
@@ -2128,7 +2127,7 @@ Proposer à [NAME] de devenir votre ami(e) ?
 		<message name="message">
 			L&apos;option &quot;Publier sur le Web&quot; nous permet de publier
 le nom du groupe, son logo, sa charte, ses titres et ses fondateurs sur le
-site [SECOND_LIFE]. Il est de votre responsabilité d&apos;indiquer si 
+site [HERITAGE_KEY]. Il est de votre responsabilité d&apos;indiquer si 
 tout ou partie du contenu ci-dessus est considéré comme Adulte selon
 les règles de base de la Communauté.
 		</message>
@@ -2367,7 +2366,7 @@ Connexion impossible à [IP_ADDRESS]
 	</alert>
 	<alert name="SystemMayBeDown">
 		<message name="message">
-			Connexion à [SECOND_LIFE] impossible
+			Connexion à [HERITAGE_KEY] impossible
 Le service est peut-être interrompu.
 Veuillez réessayer d&apos;ici quelques minutes, ou cliquez sur Aide
 pour des conseils et un lien vers la page web d&apos;état du service.
@@ -2393,7 +2392,7 @@ Vous avez été déplacé dans une région voisine.
 	<alert name="ClothingLoading">
 		<message name="message">
 			Vos habits sont toujours en train d&apos;être téléchargés. 
-Vous pouvez utiliser [SECOND_LIFE] sans problème, les autres résidents vous voient normalement.
+Vous pouvez utiliser [HERITAGE_KEY] sans problème, les autres résidents vous voient normalement.
 		</message>
 		<ignore name="ignore">
 			Lorsque les habits prennent longtemps à télécharger
@@ -2401,10 +2400,10 @@ Vous pouvez utiliser [SECOND_LIFE] sans problème, les autres résidents vous vo
 	</alert>
 	<alert name="FirstRun">
 		<message name="message">
-			L&apos;installation de [SECOND_LIFE] est terminée.
+			L&apos;installation de [HERITAGE_KEY] est terminée.
 
-S&apos;il s&apos;agit de la première fois que vous utilisez [SECOND_LIFE], vous devrez créer un compte avant de pouvoir vous connecter.
-Retourner sur www.secondlife.com pour créer un nouveau compte ?
+S&apos;il s&apos;agit de la première fois que vous utilisez [HERITAGE_KEY], vous devrez créer un compte avant de pouvoir vous connecter.
+Retourner sur www.heritage-key.com pour créer un nouveau compte ?
 		</message>
 		<option name="NewAccount...">
 			Nouveau compte...
@@ -2422,7 +2421,7 @@ Veuillez vérifier votre connexion.
 	</alert>
 	<alert name="LoginPacketNeverReceived">
 		<message name="message">
-			Vous avez des problèmes à vous connecter. Il peut s&apos;agir d&apos;un problème avec votre connexion internet ou les serveurs de Second Life.
+			Vous avez des problèmes à vous connecter. Il peut s&apos;agir d&apos;un problème avec votre connexion internet ou les serveurs de Heritage Key.
 
 Nous vous conseillons de vérifier votre connexion Internet et de réessayer dans quelques minutes, de cliquer sur Aide, ou bien de cliquer sur Téléporter pour être téléporté vers votre domicile.
 		</message>
@@ -2441,7 +2440,7 @@ Nous vous conseillons de vérifier votre connexion Internet et de réessayer dan
 			Votre personnage va apparaître dans un moment.
 
 Pour marcher, utilisez les flèches de direction.
-Appuyez sur F1 pour obtenir de l&apos;aide ou en savoir plus sur [SECOND_LIFE].
+Appuyez sur F1 pour obtenir de l&apos;aide ou en savoir plus sur [HERITAGE_KEY].
 		</message>
 	</alert>
 	<alert name="WelcomeChooseSex">
@@ -2449,7 +2448,7 @@ Appuyez sur F1 pour obtenir de l&apos;aide ou en savoir plus sur [SECOND_LIFE].
 			Votre personnage va apparaître dans un moment.
 
 Pour marcher, utilisez les flèches de direction.
-Appuyez sur F1 pour obtenir de l&apos;aide ou en savoir plus sur [SECOND_LIFE].
+Appuyez sur F1 pour obtenir de l&apos;aide ou en savoir plus sur [HERITAGE_KEY].
 Choisissez un avatar homme ou femme.
 Vous pourrez revenir sur votre décision plus tard.
 		</message>
@@ -2618,9 +2617,9 @@ Veuillez choisir un objet à vendre et réessayer.
 	</alert>
 	<alert name="DownloadWindowsMandatory">
 		<message name="message">
-			Une nouvelle version de [SECOND_LIFE] est disponible.
+			Une nouvelle version de [HERITAGE_KEY] est disponible.
 [MESSAGE]
-Pour utiliser [SECOND_LIFE] vous devez télécharger cette mise à jour.
+Pour utiliser [HERITAGE_KEY] vous devez télécharger cette mise à jour.
 		</message>
 		<option name="Download">
 			Télécharger
@@ -2631,7 +2630,7 @@ Pour utiliser [SECOND_LIFE] vous devez télécharger cette mise à jour.
 	</alert>
 	<alert name="DownloadWindows">
 		<message name="message">
-			Une mise à jour de [SECOND_LIFE] est disponible.
+			Une mise à jour de [HERITAGE_KEY] est disponible.
 [MESSAGE]
 Cette mise à jour n&apos;est pas requise mais si vous voulez une meilleure performance et plus de stabilité, nous vous recommandons de l&apos;installer.
 		</message>
@@ -2644,7 +2643,7 @@ Cette mise à jour n&apos;est pas requise mais si vous voulez une meilleure perf
 	</alert>
 	<alert name="DownloadWindowsReleaseForDownload">
 		<message name="message">
-			Une mise à jour de [SECOND_LIFE] est disponible.
+			Une mise à jour de [HERITAGE_KEY] est disponible.
 [MESSAGE]
 Cette mise à jour n&apos;est pas requise mais si vous voulez une meilleure performance et plus de stabilité, nous vous recommandons de l&apos;installer.
 		</message>
@@ -2657,9 +2656,9 @@ Cette mise à jour n&apos;est pas requise mais si vous voulez une meilleure perf
 	</alert>
 	<alert name="DownloadMacMandatory">
 		<message name="message">
-			Une nouvelle version de [SECOND_LIFE] est disponible.
+			Une nouvelle version de [HERITAGE_KEY] est disponible.
 [MESSAGE]
-Pour utiliser [SECOND_LIFE] vous devez télécharger cette mise à jour.
+Pour utiliser [HERITAGE_KEY] vous devez télécharger cette mise à jour.
 
 Télécharger vers le dossier Applications ?
 		</message>
@@ -2672,7 +2671,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="DownloadMac">
 		<message name="message">
-			Une mise à jour de [SECOND_LIFE] est disponible.
+			Une mise à jour de [HERITAGE_KEY] est disponible.
 [MESSAGE]
 Cette mise à jour n&apos;est pas requise mais si vous voulez une meilleure performance et plus de stabilité, nous vous recommandons de l&apos;installer.
  
@@ -2687,7 +2686,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="DownloadMacReleaseForDownload">
 		<message name="message">
-			Une mise à jour de [SECOND_LIFE] est disponible.
+			Une mise à jour de [HERITAGE_KEY] est disponible.
 [MESSAGE]
 Cette mise à jour n&apos;est pas requise mais si vous voulez une meilleure performance et plus de stabilité, nous vous recommandons de l&apos;installer.
  
@@ -2731,7 +2730,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="WebLaunchJoinNow">
 		<message name="message">
-			Aller sur www.secondlife.com pour gérer votre compte ?
+			Aller sur www.heritage-key.com pour gérer votre compte ?
 		</message>
 		<ignore name="ignore">
 			Lors de l&apos;ouverture du navigateur web pour gérer votre compte
@@ -2745,7 +2744,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="WebLaunchBugReport101">
 		<message name="message">
-			Pour apprendre à signaler correctement des bugs, consultez le Wiki de [SECOND_LIFE].
+			Pour apprendre à signaler correctement des bugs, consultez le Wiki de [HERITAGE_KEY].
 		</message>
 		<ignore name="ignore">
 			Lors de l&apos;ouverture du navigateur web pour consulter le Wiki et apprendre à signaler des bugs
@@ -2759,7 +2758,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="WebLaunchSecurityIssues">
 		<message name="message">
-			Pour apprendre à signaler un problème de sécurité, consultez le Wiki de [SECOND_LIFE].
+			Pour apprendre à signaler un problème de sécurité, consultez le Wiki de [HERITAGE_KEY].
 		</message>
 		<ignore name="ignore">
 			Lors de l&apos;ouverture du navigateur web pour consulter la page Wiki sur les problèmes de sécurité.
@@ -2773,7 +2772,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="WebLaunchQAWiki">
 		<message name="message">
-			Consultez le Wiki sur l&apos;Assurance Qualité de [SECOND_LIFE].
+			Consultez le Wiki sur l&apos;Assurance Qualité de [HERITAGE_KEY].
 		</message>
 		<ignore name="ignore">
 			Lors de l&apos;ouverture du navigateur web pour consulter la page Wiki sur l&apos;Assurance Qualité.
@@ -2787,7 +2786,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="WebLaunchPublicIssue">
 		<message name="message">
-			Pour signaler des bugs et autres problèmes, utilisez le JIRA de [SECOND_LIFE].
+			Pour signaler des bugs et autres problèmes, utilisez le JIRA de [HERITAGE_KEY].
 		</message>
 		<ignore name="ignore">
 			Lors de l&apos;ouverture du navigateur web pour consulter le JIRA
@@ -2801,7 +2800,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="WebLaunchPublicIssueHelp">
 		<message name="message">
-			Pour apprendre à utiliser JIRA, consultez le Wiki de [SECOND_LIFE].
+			Pour apprendre à utiliser JIRA, consultez le Wiki de [HERITAGE_KEY].
 		</message>
 		<ignore name="ignore">
 			Lors de l&apos;ouverture du navigateur web pour consulter la page Wiki sur le JIRA
@@ -2815,7 +2814,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="WebLaunchForums">
 		<message name="message">
-			Consultez la base de connaissances de [SECOND_LIFE] pour les derniers trucs &amp; astuces.
+			Consultez la base de connaissances de [HERITAGE_KEY] pour les derniers trucs &amp; astuces.
 		</message>
 		<ignore name="ignore">
 			Lors de l&apos;ouverture du navigateur web pour consulter la Base de connaissances
@@ -2829,7 +2828,7 @@ Télécharger vers le dossier Applications ?
 	</alert>
 	<alert name="WebLaunchSupport">
 		<message name="message">
-			Contactez le Service clientèle de [SECOND_LIFE].
+			Contactez le Service clientèle de [HERITAGE_KEY].
 		</message>
 		<ignore name="ignore">
 			Lors de l&apos;ouverture du navigateur web pour contacter le Service clientèle
@@ -3724,7 +3723,7 @@ Cette option n&apos;est disponible que lorsque la case Accès public est décoch
 	<alert name="HelpEstateAbuseEmailAddress" title="Adresse e-mail où signaler une infraction">
 		<message name="message">
 			Si vous utilisez une adresse e-mail valide, les rapports d&apos;infraction de ce domaine iront à cette adresse. 
-Si vous laissez ce champ vide, les rapports d&apos;infraction seront envoyés à Linden Lab uniquement.
+Si vous laissez ce champ vide, les rapports d&apos;infraction seront envoyés à Rezzable uniquement.
 		</message>
 	</alert>
 	<alert name="HelpEstateBanResident" title="Refuser l&apos;accès">
@@ -3741,7 +3740,7 @@ Défaut : désactivé
 	</alert>
 	<alert name="VoiceVersionMismatch" title="Versions de voix non compatibles">
 		<message name="message">
-			Cette version de Second Life n&apos;est pas compatible avec la fonctionnalité de chat vocal dans cette région. Vous devez mettre à jour Second Life pour que le chat vocal fonctionne correctement.
+			Cette version de Heritage Key n&apos;est pas compatible avec la fonctionnalité de chat vocal dans cette région. Vous devez mettre à jour Heritage Key pour que le chat vocal fonctionne correctement.
 		</message>
 	</alert>
 	<alert name="HelpEstateCovenant" title="Règlement du domaine">
@@ -3963,7 +3962,7 @@ Déplacer les objets de l&apos;inventaire ?
 	</alert>
 	<alert name="WebLaunchAccountHistory">
 		<message name="message">
-			Aller sur le site de Second Life pour consulter l&apos;historique de votre compte ?
+			Aller sur le site de Heritage Key pour consulter l&apos;historique de votre compte ?
 		</message>
 		<ignore name="ignore">
 			Lors du chargement de la page web contenant l&apos;historique de votre compte
@@ -3977,10 +3976,10 @@ Déplacer les objets de l&apos;inventaire ?
 	</alert>
 	<alert name="ClickOpenF1Help">
 		<message name="message">
-			Visiter les pages d&apos;aide de Second Life ?
+			Visiter les pages d&apos;aide de Heritage Key ?
 		</message>
 		<ignore name="ignore">
-			Lors de la visite des pages d&apos;aide de Second Life
+			Lors de la visite des pages d&apos;aide de Heritage Key
 		</ignore>
 		<option name="Gotopage">
 			Aller
@@ -4008,7 +4007,7 @@ Déplacer les objets de l&apos;inventaire ?
 			Êtes-vous certain de vouloir quitter ?
 		</message>
 		<ignore name="ignore">
-			Lorsque vous quittez Second Life
+			Lorsque vous quittez Heritage Key
 		</ignore>
 		<option name="Quit">
 			Quitter
@@ -4026,17 +4025,17 @@ http://secondlife.com/corporate/cs.php
 
 Lorsqu&apos;elles sont signalées, toutes les infractions aux Conditions d&apos;utilisation et aux Règles de la communauté font l&apos;objet d&apos;une enquête et sont résolues. Pour accéder aux détails de la résolution d&apos;un incident, allez sur :
 
-http://secondlife.com/support/incidentreport.php
+http://heritage-key.com/virtual-experience-info
 		</message>
 	</alert>
 	<alert name="HelpReportAbuseEmailEO">
 		<message name="message">
 			Important : ce rapport ira au propriétaire de la 
-région dans laquelle vous êtes et non à Linden Lab.
+région dans laquelle vous êtes et non à Rezzable.
 
 Pour aider les résidents et les visiteurs, le propriétaire de 
 la région dans laquelle vous êtes a choisi de recevoir et de s&apos;occuper de 
-tous les rapports envoyés à partir de cette région. Linden Lab 
+tous les rapports envoyés à partir de cette région. Rezzable 
 n&apos;enquêtera pas sur les rapports que vous envoyez à partir de cet endroit.
 
 Le propriétaire de la région traitera les rapports en fonction 
@@ -4045,9 +4044,9 @@ des règles de cette région, comme indiqué dans le réglement du domaine.
 À propos du terrain.)
 
 La résolution de ce rapport ne s&apos;applique qu&apos;à cette région ; 
-L&apos;accès aux autres endroits de Second Life 
-ne sera pas affecté par les résultats de cette enquête. Seul Linden Lab peut 
-interdire l&apos;accès à l&apos;ensemble de Second Life.
+L&apos;accès aux autres endroits de Heritage Key 
+ne sera pas affecté par les résultats de cette enquête. Seul Rezzable peut 
+interdire l&apos;accès à l&apos;ensemble de Heritage Key.
 		</message>
 	</alert>
 	<alert name="HelpReportBug">
@@ -4059,7 +4058,7 @@ Tous les bugs signalés sont reproduits et évalués. Aucune réponse ne sera en
 
 Si vous avez un problème technique, veuillez contacter le service clientèle à : 
 
-http://secondlife.com/community/support.php
+http://heritage-key.com/virtual-experience-info
 
 Remarque : les rapports incomplets ne feront pas l&apos;objet d&apos;une enquête.
 		</message>
@@ -4120,15 +4119,15 @@ Les descriptions précises nous permettent de résoudre les bugs plus rapidement
  
 Il semble que vous souhaitiez reporter une infraction à des droits de propriété intellectuelle. Pour signaler correctement cette infraction :
 
-(1) Remplissez un rapport d&apos;infraction. Vous pouvez soumettre un rapport d&apos;infraction si vous pensez qu&apos;un résident exploite le système de permissions de Second Life, par exemple en utilisant un CopyBot ou des outils similaires pour enfreindre des droits de propriété intellectuelle. Notre équipe chargée des infractions mènera une enquête et prendra les mesures nécessaires à l&apos;encontre du résident non respectueux des Conditions d&apos;utilisation ou des règles de la communauté. Sachez toutefois que l&apos;équipe chargée des infractions ne supprimera pas de contenu à l&apos;intérieur de Second Life.
+(1) Remplissez un rapport d&apos;infraction. Vous pouvez soumettre un rapport d&apos;infraction si vous pensez qu&apos;un résident exploite le système de permissions de Heritage Key, par exemple en utilisant un CopyBot ou des outils similaires pour enfreindre des droits de propriété intellectuelle. Notre équipe chargée des infractions mènera une enquête et prendra les mesures nécessaires à l&apos;encontre du résident non respectueux des Conditions d&apos;utilisation ou des règles de la communauté. Sachez toutefois que l&apos;équipe chargée des infractions ne supprimera pas de contenu à l&apos;intérieur de Heritage Key.
 
-(2) Demandez à ce que du contenu à l&apos;intérieur de Second Life soit supprimé. Pour demander à ce que du contenu soit supprimé de Second Life, vous devez soumettre un rapport d&apos;infraction valide, tel que fourni dans notre Règlement contre les violations des droit d&apos;auteurs (DMCA), à http://secondlife.com/corporate/dmca.php.
+(2) Demandez à ce que du contenu à l&apos;intérieur de Heritage Key soit supprimé. Pour demander à ce que du contenu soit supprimé de Heritage Key, vous devez soumettre un rapport d&apos;infraction valide, tel que fourni dans notre Règlement contre les violations des droit d&apos;auteurs (DMCA), à http://secondlife.com/corporate/dmca.php.
 
 Si vous souhaitez toujours reporter cette infraction, veuillez fermer cette fenêtre et soumettre votre rapport.  Vous devrez peut-être sélectionner la catégorie CopyBot ou exploitation abusive des permissions.
 
 Merci,
  
-Linden Lab
+Rezzable
 		</message>
 	</alert>
 	<alert name="FailedRequirementsCheck">
@@ -4337,7 +4336,7 @@ En cliquant sur le bouton Eau Avancée, vous aurez accès à tous les réglages 
 	</alert>
 	<alert name="HelpDayCycle">
 		<message name="message">
-			L&apos;éditeur du cycle du jour vous permet de contrôler le ciel au cours du cycle jour/nuit de second Life. C&apos;est ce même cycle qui est contrôlé par le curseur Heure de la journée dans l&apos;éditeur d&apos;environnement basique.
+			L&apos;éditeur du cycle du jour vous permet de contrôler le ciel au cours du cycle jour/nuit de Heritage Key. C&apos;est ce même cycle qui est contrôlé par le curseur Heure de la journée dans l&apos;éditeur d&apos;environnement basique.
 
 L&apos;éditeur du jour fonctionne grâce au réglage d&apos;images-clés. Ces images-clés sont représentées par les marques grises sur la ligne du temps et ont des préréglages qui leurs sont associées. Au cours de la journée et de la nuit, le ciel WindLight s&apos;anime en passant d&apos;une clé à l&apos;autre. 
 
@@ -4463,7 +4462,7 @@ Même chose que l&apos;azimut.
 	</alert>
 	<alert name="HelpClassicClouds">
 		<message name="message">
-			Cochez cette option pour utiliser les anciens nuages de Second Life en plus des nuages WindLight.
+			Cochez cette option pour utiliser les anciens nuages de Heritage Key en plus des nuages WindLight.
 		</message>
 	</alert>
 	<alert name="HelpWaterFogColor">
@@ -4631,7 +4630,7 @@ Même chose que l&apos;azimut.
 	<alert name="NotAgeVerified">
 		<message name="message">
 			Pour que vous puissiez accéder à cette parcelle, votre âge doit être vérifié.
-Voulez-vous aller sur le site de Second Life pour vérifier votre âge ?
+Voulez-vous aller sur le site de Heritage Key pour vérifier votre âge ?
 
 [_URL]
 		</message>
@@ -4648,7 +4647,7 @@ Voulez-vous aller sur le site de Second Life pour vérifier votre âge ?
 	<alert name="Cannot enter parcel: no payment info on file">
 		<message name="message">
 			Avant de pouvoir pénétrer sur cette parcelle, vous devez enregistrer vos informations de paiement.
-Voulez-vous aller sur le site de Second Life pour enregistrer ces informations ?
+Voulez-vous aller sur le site de Heritage Key pour enregistrer ces informations ?
 
 [_URL]
 		</message>

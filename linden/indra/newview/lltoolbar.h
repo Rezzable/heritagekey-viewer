@@ -80,6 +80,7 @@ public:
 	static void onClickDirectory(void* data);
 	static void onClickBuild(void* data);
 	static void onClickRadar(void* data);
+	static void onClickHome(void* data);
 	static void onClickMap(void* data);
 	static void onClickInventory(void* data);
 

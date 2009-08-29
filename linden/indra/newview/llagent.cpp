@@ -5254,22 +5254,24 @@ void LLAgent::initOriginGlobal(const LLVector3d &origin_global)
 
 void update_group_floaters(const LLUUID& group_id)
 {
-	LLFloaterGroupInfo::refreshGroup(group_id);
+	// Not needed -- McCabe
+
+	//LLFloaterGroupInfo::refreshGroup(group_id);
 
 	// update avatar info
-	LLFloaterAvatarInfo* fa = LLFloaterAvatarInfo::getInstance(gAgent.getID());
-	if(fa)
-	{
-		fa->resetGroupList();
-	}
+	//LLFloaterAvatarInfo* fa = LLFloaterAvatarInfo::getInstance(gAgent.getID());
+	//if(fa)
+	//{
+	//	fa->resetGroupList();
+	//}
 
-	if (gIMMgr)
-	{
-		// update the talk view
-		gIMMgr->refresh();
-	}
+	//if (gIMMgr)
+	//{
+	//	// update the talk view
+	//	gIMMgr->refresh();
+	//}
 
-	gAgent.fireEvent(new LLEvent(&gAgent, "new group"), "");
+	//gAgent.fireEvent(new LLEvent(&gAgent, "new group"), "");
 }
 
 // static

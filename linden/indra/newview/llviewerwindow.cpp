@@ -1786,6 +1786,8 @@ void LLViewerWindow::adjustRectanglesForFirstUse(const LLRect& window)
 
 	adjust_rect_top_left("FloaterBuildOptionsRect", window);
 
+	adjust_rect_top_left("FloaterMapImageRect", window);
+
 	// bottom-right
 	r = gSavedSettings.getRect("FloaterInventoryRect");
 	if (r.mLeft == 0 && r.mBottom == 0)
@@ -2123,8 +2125,7 @@ void LLViewerWindow::setNormalControlsVisible( BOOL visible )
 		gMenuBarView->setEnabled( visible );
 
 		// ...and set the menu color appropriately.
-		setMenuBackgroundColor(gAgent.getGodLevel() > GOD_NOT, 
-			LLViewerLogin::getInstance()->isInProductionGrid());
+		setMenuBackgroundColor(gAgent.getGodLevel() > GOD_NOT);
 	}
         
 	if ( gStatusBar )
@@ -2134,22 +2135,14 @@ void LLViewerWindow::setNormalControlsVisible( BOOL visible )
 	}
 }
 
-void LLViewerWindow::setMenuBackgroundColor(bool god_mode, bool dev_grid)
+void LLViewerWindow::setMenuBackgroundColor(bool god_mode)
 {
    	LLStringUtil::format_map_t args;
     LLColor4 new_bg_color;
 
-    if(god_mode && LLViewerLogin::getInstance()->isInProductionGrid())
+    if(god_mode)
     {
         new_bg_color = gColors.getColor( "MenuBarGodBgColor" );
-    }
-    else if(god_mode && !LLViewerLogin::getInstance()->isInProductionGrid())
-    {
-        new_bg_color = gColors.getColor( "MenuNonProductionGodBgColor" );
-    }
-    else if(!god_mode && !LLViewerLogin::getInstance()->isInProductionGrid())
-    {
-        new_bg_color = gColors.getColor( "MenuNonProductionBgColor" );
     }
     else 
     {
@@ -2356,7 +2349,15 @@ BOOL LLViewerWindow::handleKey(KEY key, MASK mask)
 		gHoverView->setTyping(TRUE);
 	}
 
-	// Explicit hack for debug menu.
+	// Advanced menu removed -- McCabe
+	/*if ((MASK_ALT & mask) &&
+		(MASK_CONTROL & mask) &&
+		('D' == key || 'd' == key))
+	{
+		toggle_debug_menus(NULL);
+	}*/
+
+		// Explicit hack for debug menu.
 	if ((mask == (MASK_SHIFT | MASK_CONTROL)) &&
 		('G' == key || 'g' == key))
 	{

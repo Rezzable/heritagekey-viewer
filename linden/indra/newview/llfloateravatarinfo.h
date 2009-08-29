@@ -39,65 +39,34 @@
 #define LL_LLFLOATERAVATARINFO_H
 
 #include "llfloater.h"
-#include "llpreview.h"
 #include "lluuid.h"
+#include "llpreview.h"
 #include "llpanelavatar.h"
 
-class LLButton;
-class LLCheckBoxCtrl;
-class LLDropTarget;
-class LLInventoryItem;
-class LLLineEditor;
-class LLMessageSystem;
-class LLScrollListCtrl;
-class LLTabContainer;
-class LLTextBox;
-class LLTextEditor;
-class LLTextureCtrl;
-class LLUICtrl;
-class LLViewerImage;
-class LLViewerObject;
+class LLWebBrowserCtrl;
 
-class LLFloaterAvatarInfo
-:	public LLPreview
+class LLFloaterAvatarInfo : public LLFloater
 {
 public:
-	static	void*	createPanelAvatar(void*	data);
+	static LLFloaterAvatarInfo* show(const LLUUID& avatar_id); ///< show the profile
 
-	virtual	BOOL	postBuild();
+	// Save our visibility state during close
+	/*virtual*/ void onClose(bool app_quitting);
 
-	LLFloaterAvatarInfo(const std::string& name, const LLRect &rect, const LLUUID &avatar_id );
-	/*virtual*/ ~LLFloaterAvatarInfo();
-
-	/*virtual*/ void draw();
-
-	/*virtual*/ BOOL canClose();
-
-	/*virtual*/ void loadAsset();
-	/*virtual*/ EAssetStatus getAssetStatus();
-
-	static LLFloaterAvatarInfo* show(const LLUUID& avatar_id);
-		// Core method, doesn't do anything funny with online status or 
-		// tab selection.
-
+	// Profile buttons in the UI
 	static void showFromObject(const LLUUID &avatar_id, std::string tab_name = std::string());
-
 	static void showFromDirectory(const LLUUID &avatar_id);
-
 	static void showFromFriend(const LLUUID &agent_id, BOOL online);
-
 	static void showFromProfile(const LLUUID &avatar_id, LLRect rect);
 
-	static LLFloaterAvatarInfo* getInstance(const LLUUID &id);
-	static void showProfileCallback(S32 option, void *userdata);
-	static void callbackLoadAvatarName(const LLUUID& id,
-		const std::string& first, const std::string& last, BOOL is_group, void* data);
-	void resetGroupList();
+private:
+	// Handles its own construction and destruction, so private.
+	LLFloaterAvatarInfo(const LLUUID &avatar_id);
+	/*virtual*/ ~LLFloaterAvatarInfo();
 
 private:
-	LLUUID			mAvatarID;			// for which avatar is this window?
-	LLPanelAvatar*	mPanelAvatarp;
-	EOnlineStatus	mSuggestedOnlineStatus;
+	LLWebBrowserCtrl* mWebBrowser; ///< the actual web browser control
+	LLUUID mAvatarID;
 };
 
 

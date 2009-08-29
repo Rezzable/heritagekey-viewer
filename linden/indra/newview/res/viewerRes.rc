@@ -61,9 +61,9 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_LL_ICON             ICON                    "ll_icon.ico"
-IDI_INSTALL_ICON        ICON                    "install_icon.ico"
-IDI_LCD_LL_ICON         ICON                    "icon1.ico"
+IDI_LL_ICON             ICON                    "heritage_key_icon.ico"
+IDI_INSTALL_ICON        ICON                    "heritage_key_install_icon.ico"
+IDI_LCD_LL_ICON         ICON                    "heritage_key_icon1.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -247,14 +247,14 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "CompanyName", "Imprudence Viewer Project"
-            VALUE "FileDescription", "Imprudence"
-            VALUE "FileVersion", "1.0.0"
-            VALUE "InternalName", "Imprudence"
-            VALUE "LegalCopyright", "Copyright © 2001-2008, Linden Research, Inc."
-            VALUE "OriginalFilename", "Imprudence.exe"
-            VALUE "ProductName", "Imprudence"
-            VALUE "ProductVersion", "1.0.0"
+            VALUE "CompanyName", "Rezzable Productions Ltd."
+            VALUE "FileDescription", "Heritage Key VX Viewer"
+            VALUE "FileVersion", "0.9.0"
+            VALUE "InternalName", "Heritage Key VX Viewer"
+            VALUE "LegalCopyright", "GPLv2"
+            VALUE "OriginalFilename", "heritagekey.exe"
+            VALUE "ProductName", "Heritage Key VX Viewer"
+            VALUE "ProductVersion", "0.9.0"
         END
     END
     BLOCK "VarFileInfo"

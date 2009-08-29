@@ -46,6 +46,7 @@
 
 // viewer project includes
 #include "llagent.h"
+#include "llappviewer.h"	// for gPacificDaylightTime
 #include "llbutton.h"
 #include "llcheckboxctrl.h"
 #include "llcombobox.h"
@@ -643,7 +644,7 @@ void LLPanelDirBrowser::processDirEventsReply(LLMessageSystem* msg, void**)
 		msg->getUUID("QueryReplies", "OwnerID", owner_id, i);
 		msg->getString("QueryReplies", "Name", name, i);
 		msg->getU32("QueryReplies", "EventID", event_id, i);
-		msg->getString("QueryReplies", "Date", date, i);
+//		msg->getString("QueryReplies", "Date", date, i);
 		msg->getU32("QueryReplies", "UnixTime", unix_time, i);
 		msg->getU32("QueryReplies", "EventFlags", event_flags, i);
 	
@@ -689,6 +690,11 @@ void LLPanelDirBrowser::processDirEventsReply(LLMessageSystem* msg, void**)
 		row["columns"][1]["column"] = "name";
 		row["columns"][1]["value"] = name;
 		row["columns"][1]["font"] = "SANSSERIF";
+
+		struct tm* t = utc_to_pacific_time(unix_time, gPacificDaylightTime);
+		std::string format = "%m-%d ";
+		format += gSavedSettings.getString("TimeFormat");
+		timeStructToFormattedString(t, format, date);
 
 		row["columns"][2]["column"] = "date";
 		row["columns"][2]["value"] = date;

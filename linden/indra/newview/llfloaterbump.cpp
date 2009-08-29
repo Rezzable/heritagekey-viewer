@@ -38,6 +38,7 @@
 
 #include "lluictrlfactory.h"
 #include "llviewermessage.h"
+#include "llviewercontrol.h"
 #include "llappviewer.h"		// gPacificDaylightTime
 
 ///----------------------------------------------------------------------------
@@ -115,14 +116,18 @@ void LLFloaterBump::add(LLScrollListCtrl* list, LLMeanCollisionData* mcd)
 		return;
 	}
 
+	// Get current UTC time, adjusted for the user's clock
+	// being off.
+	time_t utc_time;
+	utc_time = time_corrected();
+
 	// There's only one internal tm buffer.
-	struct tm* timep;
-	
-	// Convert to Pacific, based on server's opinion of whether
-	// it's daylight savings time there.
-	timep = utc_to_pacific_time(mcd->mTime, gPacificDaylightTime);
-	
-	std::string time = llformat("[%d:%02d]", timep->tm_hour, timep->tm_min);
+	struct tm* internal_time;
+	time(&utc_time);
+	internal_time = gmtime(&utc_time);
+
+	std::string time;
+	timeStructToFormattedString(internal_time, gSavedSettings.getString("TimeFormat"), time);
 
 	std::string action;
 	switch(mcd->mType)

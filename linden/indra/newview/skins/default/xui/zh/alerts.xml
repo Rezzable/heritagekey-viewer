@@ -55,7 +55,7 @@
 	</alert>
 	<alert name="ConnectTimeout">
 		<message name="message">
-			无法连接到 [SECOND_LIFE].
+			无法连接到 [HERITAGE_KEY].
 系统可能出现故障。
 
 请稍候再试, 或点击帮助
@@ -328,7 +328,7 @@
 	</alert>
 	<alert name="ClickPublishHelpGroup">
 		<message name="message">
-			选择 &quot;在网络上发布&quot;选项将允许我们发布社团的名称，徽章，规章制度，头衔和创始人至[SECOND_LIFE]网站。如果你发布的内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
+			选择 &quot;在网络上发布&quot;选项将允许我们发布社团的名称，徽章，规章制度，头衔和创始人至[HERITAGE_KEY]网站。如果你发布的内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
 		</message>
 	</alert>
 	<alert name="ClickPublishHelpLand">
@@ -347,7 +347,7 @@
 	</alert>
 	<alert name="ClickPublishHelpPostcard">
 		<message name="message">
-			选择 &quot;在网络上发布&quot;选项将允许我们发布摄影师在[SECOND_LIFE]的名字、主题、地点、信息和快照至[SECOND_LIFE]网站。如果你发布的任何快照内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
+			选择 &quot;在网络上发布&quot;选项将允许我们发布摄影师在[HERITAGE_KEY]的名字、主题、地点、信息和快照至[HERITAGE_KEY]网站。如果你发布的任何快照内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
 		</message>
 	</alert>
 	<alert name="ClickPublishHelpAvatar">
@@ -359,9 +359,9 @@
 	</alert>
 	<alert name="ClickPartnerHelpAvatar">
 		<message name="message">
-			你可以通过[SECOND_LIFE] 网站邀请另一位居民成为你的搭档，或者解除现存的关系。
+			你可以通过[HERITAGE_KEY] 网站邀请另一位居民成为你的搭档，或者解除现存的关系。
 
-到[SECOND_LIFE]网站查询关于搭档的信息吗？
+到[HERITAGE_KEY]网站查询关于搭档的信息吗？
 		</message>
 		<option name="GotoPage">
 			打开网页
@@ -684,7 +684,7 @@
 	</alert>
 	<alert name="MustAgreeToLogIn">
 		<message name="message">
-			你必须同意服务协议才能继续登陆至 [SECOND_LIFE]。
+			你必须同意服务协议才能继续登陆至 [HERITAGE_KEY]。
 		</message>
 	</alert>
 	<alert name="CouldNotPutOnOutfit">
@@ -708,7 +708,7 @@
 			哎呀！有什么地方没填上。
 您必须输入您的化身的名和姓。
 
-您需要一个帐户才能进入[SECOND_LIFE]。您希望现在创建一个吗？
+您需要一个帐户才能进入[HERITAGE_KEY]。您希望现在创建一个吗？
 		</message>
 		<option name="OK">
 			创建新帐户
@@ -775,7 +775,7 @@
 	<alert name="DisplayChangeRestart">
 		<message name="message">
 			有一些你执行的显示设置的改变
-需要 [SECOND_LIFE] 立即关闭，
+需要 [HERITAGE_KEY] 立即关闭，
 这会导致进行中的所有工作丢失。
  
 应用更改并退出？
@@ -789,7 +789,7 @@
 	</alert>
 	<alert name="PromptGoToEventsPage">
 		<message name="message">
-			是否转到 [SECOND_LIFE] 事件网页?
+			是否转到 [HERITAGE_KEY] 事件网页?
 		</message>
 		<option name="GotoPage">
 			打开网页
@@ -842,28 +842,28 @@
 	</alert>
 	<alert name="CacheWillClear">
 		<message name="message">
-			缓存将在重新启动 [SECOND_LIFE] 后清除。
+			缓存将在重新启动 [HERITAGE_KEY] 后清除。
 		</message>
 	</alert>
 	<alert name="CacheWillBeMoved">
 		<message name="message">
-			缓存将在重新启动 [SECOND_LIFE] 后移动。
+			缓存将在重新启动 [HERITAGE_KEY] 后移动。
 注意: 这样将会清除缓存。
 		</message>
 	</alert>
 	<alert name="ChangeConnectionPort">
 		<message name="message">
-			端口设定将在重新启动 [SECOND_LIFE] 后生效。
+			端口设定将在重新启动 [HERITAGE_KEY] 后生效。
 		</message>
 	</alert>
 	<alert name="ChangeSkin">
 		<message name="message">
-			新皮肤将在 [SECOND_LIFE] 重新启动后应用。
+			新皮肤将在 [HERITAGE_KEY] 重新启动后应用。
 		</message>
 	</alert>
 	<alert name="GoToAuctionPage">
 		<message name="message">
-			是否跳至[SECOND_LIFE]网页查看拍卖信息
+			是否跳至[HERITAGE_KEY]网页查看拍卖信息
 或者参与投标?
 		</message>
 		<option name="GotoPage">
@@ -999,7 +999,7 @@
 的 OpenGL 显示卡。如果您满足这个条件的话，也许您需要确认已经
 安装了您的显示卡的最新驱动程序、以及操作系统的 Service Pack 和补丁。
 
-如果您还是遇到问题，请访问: http://www.secondlife.com/support
+如果您还是遇到问题，请访问: http://heritage-key.com/virtual-experience-info
 		</message>
 	</alert>
 	<alert name="UnsupportedHardware">
@@ -1056,7 +1056,7 @@ MINSPECS
 	</alert>
 	<alert name="DisplaySettingsNoShaders">
 		<message name="message">
-			[SECOND_LIFE] 在初始化图形驱动程序时崩溃了。
+			[HERITAGE_KEY] 在初始化图形驱动程序时崩溃了。
 图形质量将被设为“低”以避免常见的驱动程序错误。
 这将禁用某些图形特性。
 我们建议更新您的显示卡驱动程序。
@@ -1093,12 +1093,12 @@ MINSPECS
 	</alert>
 	<alert name="CannotConnectDNSError">
 		<message name="message">
-			无法连接到[SECOND_LIFE].
+			无法连接到[HERITAGE_KEY].
 域名服务器无法解析主机名称。
 
-请确定可以连接主页 www.secondlife.com。
+请确定可以连接主页 www.heritage-key.com/。
 如果可以，但一直收到该错误信息，
-请到 www.secondlife.com/support 报告此项错误。
+请到 http://heritage-key.com/virtual-experience-info 报告此项错误。
 		</message>
 	</alert>
 	<alert name="CannotConnectSecurityError">
@@ -1108,39 +1108,39 @@ MINSPECS
 
 请确定时间和日期设定正确。 
 如果仍然收到这个错误信息，请到 
-www.secondlife.com/support 
+http://heritage-key.com/virtual-experience-info 
 报告此项错误。
 		</message>
 	</alert>
 	<alert name="CannotConnectVerificationError">
 		<message name="message">
-			无法连接到 [SECOND_LIFE]。
+			无法连接到 [HERITAGE_KEY]。
 登陆服务器无法识别自身。
 
 如果一直收到这个错误信息，请到 
-www.secondlife.com/support 
+http://heritage-key.com/virtual-experience-info 
 报告此项错误。
 		</message>
 	</alert>
 	<alert name="CannotConnectUnknownErrorWindows">
 		<message name="message">
-			无法连接至[SECOND_LIFE].
+			无法连接至[HERITAGE_KEY].
 尽管我们尽了最大努力, 一些不可知的错误导致了
-这次连接失败。请尝试登陆SecondLife.com网站的
+这次连接失败。请尝试登陆heritage-key.com/网站的
 技术支持部门，并报告问题，如果可能，请附上你的
-SecondLife.log文件，文件路径为: 
-C:\Documents and Settings\(用户名)\Application Data\SecondLife\logs
+HeritageKey.log文件，文件路径为: 
+C:\Documents and Settings\(用户名)\Application Data\[HERITAGE_KEY]\logs
 非常感谢.
 		</message>
 	</alert>
 	<alert name="CannotConnectUnknownErrorDarwin">
 		<message name="message">
-			无法连接到 [SECOND_LIFE]。
+			无法连接到 [HERITAGE_KEY]。
 尽管我们尽了最大努力, 一些不可知的错误导致了
-这次连接失败。请尝试登陆SecondLife.com网站的
+这次连接失败。请尝试登陆http://heritage-key.com/网站的
 技术支持部门，并报告问题，如果可能，请附上你的
-SecondLife.log文件，文件路径为: 
-~/Library/Application Support/SecondLife/logs 
+HeritageKey.log文件，文件路径为: 
+~/Library/Application Support/[HERITAGE_KEY]/logs 
 谢谢。
 		</message>
 	</alert>
@@ -1150,7 +1150,7 @@ SecondLife.log文件，文件路径为:
 请尝试重新登陆一遍。
 
 如果持续收到这个错误，
-请登陆 www.secondlife.com/support .
+请登陆 http://heritage-key.com/virtual-experience-info .
 		</message>
 	</alert>
 	<alert name="CannotConnectNoMessage">
@@ -1189,12 +1189,12 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="FirstRunDialog">
 		<message name="message">
-			[SECOND_LIFE] 安装已完成。
+			[HERITAGE_KEY] 安装已完成。
  
-如果这是你第一次使用[SECOND_LIFE], 登陆前你
+如果这是你第一次使用[HERITAGE_KEY], 登陆前你
 需要创建一个新帐户。
  
-返回 www.secondlife.com 创建账户?
+返回 www.heritage-key.com/ 创建账户?
 		</message>
 		<option name="NewAccount...">
 			新帐户...
@@ -1206,7 +1206,7 @@ SecondLife.log文件，文件路径为:
 	<alert name="ClothingStillDownloading">
 		<message name="message">
 			你的化身仍在下载中。
-你现在可以正常地使用 [SECOND_LIFE]，
+你现在可以正常地使用 [HERITAGE_KEY]，
 其他用户也可以正常地看见你。
 		</message>
 	</alert>
@@ -1220,7 +1220,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="WelcomeToSecondLife">
 		<message name="message">
-			欢迎来到[SECOND_LIFE]! 
+			欢迎来到[HERITAGE_KEY]! 
  
 使用方向键来行走。
  
@@ -1236,7 +1236,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="WelcomeToSecondLifeSimple">
 		<message name="message">
-			欢迎来到[SECOND_LIFE]! 
+			欢迎来到[HERITAGE_KEY]! 
  
 使用方向键来行走。
  
@@ -2017,7 +2017,7 @@ SecondLife.log文件，文件路径为:
 我们无法修复该错误。
 
 请卸载并重新安装，然后再次尝试。如果错误仍存在，
-请登陆www.secondlife.com/support 
+请登陆http://heritage-key.com/virtual-experience-info 
 寻求技术支持。
 		</message>
 		<option name="Quit">
@@ -2026,12 +2026,12 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="YouHaveBeenLoggedOut">
 		<message name="message">
-			你已经退出[SECOND_LIFE]:
+			你已经退出[HERITAGE_KEY]:
  
 [MESSAGE]
  
 您仍可以查看历史即时通记录和聊天记录。
-否则点击退出将立即关闭 [SECOND_LIFE]。
+否则点击退出将立即关闭 [HERITAGE_KEY]。
 		</message>
 		<option name="Continue">
 			查看聊天记录
@@ -2144,7 +2144,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="PublishGroupInfoToWeb">
 		<message name="message">
-			选择 &quot;在网络上发布&quot;选项将允许我们发布社团的名称，徽章，规章制度，头衔和创始人至 [SECOND_LIFE] 网站。如果你发布的内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
+			选择 &quot;在网络上发布&quot;选项将允许我们发布社团的名称，徽章，规章制度，头衔和创始人至 [HERITAGE_KEY] 网站。如果你发布的内容，根据社区标准规定，涉及到成人内容，你有责任对此作出声明。
 		</message>
 	</alert>
 	<alert name="ErrorEncodingSnapshot">
@@ -2398,7 +2398,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="SystemMayBeDown">
 		<message name="message">
-			无法连接到[SECOND_LIFE]
+			无法连接到[HERITAGE_KEY]
 可能是系统故障。
 请几分钟后再试,或者点击帮助
 获得建议和到系统状态网页的链接。
@@ -2444,12 +2444,12 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="FirstRun">
 		<message name="message">
-			[SECOND_LIFE] 安装已完成。
+			[HERITAGE_KEY] 安装已完成。
  
-如果这是你第一次使用[SECOND_LIFE], 登陆前你
+如果这是你第一次使用[HERITAGE_KEY], 登陆前你
 需要创建一个新帐户。
  
-返回 www.secondlife.com 创建账户?
+返回 www.heritage-key.com/ 创建账户?
 		</message>
 		<option name="NewAccount...">
 			新帐户...
@@ -2487,7 +2487,7 @@ SecondLife.log文件，文件路径为:
 			你的角色将在数秒后出现。
 			
 使用方向键来行走。
-任何时候都可以按 F1 键，来获取帮助或学习更多关于 [SECOND_LIFE] 的信息.
+任何时候都可以按 F1 键，来获取帮助或学习更多关于 [HERITAGE_KEY] 的信息.
 		</message>
 	</alert>
 	<alert name="WelcomeChooseSex">
@@ -2495,7 +2495,7 @@ SecondLife.log文件，文件路径为:
 			你的角色将在数秒后出现。
  
 使用方向键来行走。
-任何时候都可以按 F1 键，来获取帮助或学习更多关于 [SECOND_LIFE] 的信息。
+任何时候都可以按 F1 键，来获取帮助或学习更多关于 [HERITAGE_KEY] 的信息。
 请选择男性或女性角色。
 以后还是可以改变主意的。
 		</message>
@@ -2666,10 +2666,10 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="DownloadWindowsMandatory">
 		<message name="message">
-			[SECOND_LIFE] 有新版本可用。
+			[HERITAGE_KEY] 有新版本可用。
 [MESSAGE]
  
-你必须下载此更新才能使用 [SECOND_LIFE]。
+你必须下载此更新才能使用 [HERITAGE_KEY]。
 		</message>
 		<option name="Download">
 			下载
@@ -2680,7 +2680,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="DownloadWindows">
 		<message name="message">
-			[SECOND_LIFE] 有新版本可用。
+			[HERITAGE_KEY] 有新版本可用。
 [MESSAGE]
  
 这个更新不是必须的，但我们建议下载并安装此更新，以改善性能和稳定性。
@@ -2694,7 +2694,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="DownloadWindowsReleaseForDownload">
 		<message name="message">
-			[SECOND_LIFE] 有新版本可用。
+			[HERITAGE_KEY] 有新版本可用。
 [MESSAGE]
  
 这个更新不是必须的，但我们建议下载并安装此更新，以改善性能和稳定性。
@@ -2708,10 +2708,10 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="DownloadMacMandatory">
 		<message name="message">
-			[SECOND_LIFE]有新版本可用。
+			[HERITAGE_KEY]有新版本可用。
 [MESSAGE]
  
-你必须下载此更新才能使用 [SECOND_LIFE]。
+你必须下载此更新才能使用 [HERITAGE_KEY]。
 是否下载更新至应用程序文件夹?
 		</message>
 		<option name="Download">
@@ -2723,7 +2723,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="DownloadMac">
 		<message name="message">
-			[SECOND_LIFE]有新版本可用。
+			[HERITAGE_KEY]有新版本可用。
 [MESSAGE]
  
 这个更新不是必须的，但我们建议下载并安装此更新，以改善性能和稳定性。
@@ -2739,7 +2739,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="DownloadMacReleaseForDownload">
 		<message name="message">
-			[SECOND_LIFE]有新版本可用。
+			[HERITAGE_KEY]有新版本可用。
 [MESSAGE]
  
 这个更新不是必须的，但我们建议下载并安装此更新，以改善性能和稳定性。
@@ -2784,7 +2784,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="WebLaunchJoinNow">
 		<message name="message">
-			是否转至 www.secondlife.com 管理帐户?
+			是否转至 www.heritage-key.com/ 管理帐户?
 		</message>
 		<option name="OK">
 			确定
@@ -2798,7 +2798,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="WebLaunchBugReport101">
 		<message name="message">
-			访问 [SECOND_LIFE] Wiki 学习怎样正确地报告错误。
+			访问 [HERITAGE_KEY] Wiki 学习怎样正确地报告错误。
 		</message>
 		<ignore name="ignore">
 			打开浏览器查看错误报告基础 Wiki
@@ -2812,7 +2812,8 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="WebLaunchSecurityIssues">
 		<message name="message">
-			访问 [SECOND_LIFE] Wiki 学习如何正确地报告安全事件。
+			访问 [HERITAGE_KEY] Wiki 学习如何正确地报告安全事件。
+你愿意登陆[HERITAGE_KEY]驱动程序网页吗?
 		</message>
 		<ignore name="ignore">
 			打开浏览器查看安全事件 Wiki
@@ -2826,7 +2827,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="WebLaunchQAWiki">
 		<message name="message">
-			访问 [SECOND_LIFE] 质量保证 Wiki.
+			访问 [HERITAGE_KEY] 质量保证 Wiki.
 		</message>
 		<ignore name="ignore">
 			打开浏览器查看质量保证 Wiki
@@ -2840,7 +2841,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="WebLaunchPublicIssue">
 		<message name="message">
-			访问 [SECOND_LIFE] 公开事件跟踪器，你可以在那里报告程序错误和其他事件。
+			访问 [HERITAGE_KEY] 公开事件跟踪器，你可以在那里报告程序错误和其他事件。
 		</message>
 		<ignore name="ignore">
 			打开浏览器查看公开事件跟踪器
@@ -2854,7 +2855,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="WebLaunchPublicIssueHelp">
 		<message name="message">
-			访问 [SECOND_LIFE] Wiki 了解如何使用公开事件跟踪器。
+			访问 [HERITAGE_KEY] Wiki 了解如何使用公开事件跟踪器。
 		</message>
 		<ignore name="ignore">
 			打开浏览器查看公开事件跟踪器 Wiki
@@ -2868,7 +2869,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="WebLaunchForums">
 		<message name="message">
-			在 [SECOND_LIFE] 知识库中查找最新的提示和技巧。
+			在 [HERITAGE_KEY] 知识库中查找最新的提示和技巧。
 		</message>
 		<ignore name="ignore">
 			打开浏览器查看知识库
@@ -2882,7 +2883,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="WebLaunchSupport">
 		<message name="message">
-			联系 [SECOND_LIFE] 支持中心。
+			联系 [HERITAGE_KEY] 支持中心。
 		</message>
 		<ignore name="ignore">
 			打开浏览器联系支持中心
@@ -2964,7 +2965,7 @@ SecondLife.log文件，文件路径为:
 	</alert>
 	<alert name="WebLaunchReleaseNotes">
 		<message name="message">
-			是否查看 [SECOND_LIFE]  发布通告？
+			是否查看 [HERITAGE_KEY]  发布通告？
 		</message>
 		<ignore name="ignore">
 			打开浏览器查看发布通告时
@@ -4199,7 +4200,7 @@ http://secondlife.com/corporate/cs.php
 收到一封邮件提示你解决的进展情况。同时，你可以在线查看事
 件报告，及时获得事件的解决情况。在线秩序本的地址是:
 - 
-http://secondlife.com/support/incidentreport.php
+http://heritage-key.com/virtual-experience-info/
 		</message>
 	</alert>
 	<alert name="HelpReportAbuseEmailEO">
@@ -4228,7 +4229,7 @@ http://secondlife.com/support/incidentreport.php
 
 如果你遇到了技术障碍，请与支持取得联系：
 
-http://secondlife.com/community/support.php
+http://heritage-key.com/virtual-experience-info
 
 注意：不完整的报告将不会被调查。
 		</message>

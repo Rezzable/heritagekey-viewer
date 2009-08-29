@@ -6,6 +6,9 @@
  * 
  * Copyright (c) 2007-2009, Linden Research, Inc.
  * 
+ * Copyright (c) 2009, Jacek Antonelli, McCabe Maxsted
+ *   Added support for Genesis URLs.
+ * 
  * Second Life Viewer Source Code
  * The source code in this file ("Source Code") is provided by Linden Lab
  * to you under the terms of the GNU General Public License, version 2.0
@@ -42,6 +45,7 @@
 #include "llpanellogin.h"
 #include "llstartup.h"			// gStartupState
 #include "llurlsimstring.h"
+#include "llviewercontrol.h" // gSavedSettings
 #include "llviewerwindow.h"		// alertXml()
 #include "llweb.h"
 #include "llworldmap.h"
@@ -56,12 +60,16 @@ const std::string SLURL_SLURL_PREFIX		= "http://slurl.com/secondlife/";
 
 const std::string SLURL_APP_TOKEN = "app/";
 
+const std::string GENESIS_PREFIX = "genesis://";
+
 class LLURLDispatcherImpl
 {
 public:
 	static bool isSLURL(const std::string& url);
 
 	static bool isSLURLCommand(const std::string& url);
+
+	static bool isGenesisURL(const std::string& url);
 
 	static bool dispatch(const std::string& url, bool from_external_browser);
 		// returns true if handled or explicitly blocked.
@@ -85,6 +93,8 @@ private:
 	static bool dispatchRegion(const std::string& url, BOOL right_mouse);
 		// handles secondlife://Ahern/123/45/67/
 		// Returns true if handled.
+
+	static bool dispatchGenesisURL(const std::string& url);
 
 	static void regionHandleCallback(U64 handle, const std::string& url,
 		const LLUUID& snapshot_id, bool teleport);
@@ -126,12 +136,20 @@ bool LLURLDispatcherImpl::isSLURLCommand(const std::string& url)
 }
 
 // static
+bool LLURLDispatcherImpl::isGenesisURL(const std::string& url)
+{
+	if (matchPrefix(url, GENESIS_PREFIX)) return true;
+	return false;
+}
+
+// static
 bool LLURLDispatcherImpl::dispatchCore(const std::string& url, bool from_external_browser, bool right_mouse)
 {
 	if (url.empty()) return false;
 	if (dispatchHelp(url, right_mouse)) return true;
 	if (dispatchApp(url, from_external_browser, right_mouse)) return true;
 	if (dispatchRegion(url, right_mouse)) return true;
+	if (dispatchGenesisURL(url)) return true;
 
 	/*
 	// Inform the user we can't handle this
@@ -231,6 +249,173 @@ bool LLURLDispatcherImpl::dispatchRegion(const std::string& url, BOOL right_mous
 									  false);	// don't teleport
 	return true;
 }
+
+
+
+// A simple class for managing data returned from a curl http request.
+class LLHTTPBuffer
+{
+public:
+	LLHTTPBuffer() { }
+
+	static size_t curl_write( void *ptr, size_t size, size_t nmemb, void *user_data)
+	{
+		LLHTTPBuffer* self = (LLHTTPBuffer*)user_data;
+		
+		size_t bytes = (size * nmemb);
+		self->mBuffer.append((char*)ptr,bytes);
+		return nmemb;
+	}
+
+	std::string asString()
+	{
+		return mBuffer;
+	}
+
+private:
+	std::string mBuffer;
+};
+
+
+// static
+bool LLURLDispatcherImpl::dispatchGenesisURL(const std::string& url)
+{
+	if (!isGenesisURL(url))
+	{
+		return false;
+	}
+
+	std::string genesis_raw = url;
+
+	// Fix the port's colon if it's not formatted correctly
+	std::string colon_raw = "%3A";
+	int colon_pos = genesis_raw.find(colon_raw);
+	if (colon_pos!= std::string::npos)
+		genesis_raw.replace(colon_pos, colon_raw.size(), ":");
+
+	// Trim off the beginning genesis://
+	std::string genesis_clean = genesis_raw.substr(10, genesis_raw.length()-10);
+
+	std::vector <std::string> genesis_token;
+	std::string temp;
+	int vector_size = 0;
+
+	while (genesis_clean.find("/", 0) != std::string::npos)
+	{
+		size_t pos = genesis_clean.find("/", 0);
+		temp = genesis_clean.substr(0, pos);
+		genesis_clean.erase(0, pos + 1);
+		genesis_token.push_back(temp);
+		vector_size++;
+	}
+	genesis_token.push_back(genesis_clean);
+	vector_size++;
+
+	// Set new LoginURI
+	std::string new_login_uri = "http://" + genesis_token[0] + "/?token=" + genesis_token[1];
+	gSavedSettings.setValue("CmdLineLoginURI", new_login_uri);
+
+
+	std::string logintoken = genesis_token[1];
+
+
+	// Find out the user's name from the server.
+	// 
+	// Fetch:
+	//   http://heritage-key.com/vx/request/token2name/<logintoken>
+	// 
+	// Result will either be "Firstname Lastname" of the user associated
+	// with the login token, or blank if the token is invalid or expired.
+
+	std::string request_url = 
+		"http://heritage-key.com/vx/request/token2name/"+logintoken;
+
+	char curl_error_buffer[CURL_ERROR_SIZE];
+	CURL* curlp = curl_easy_init();
+
+	LLHTTPBuffer http_buffer;
+
+	curl_easy_setopt(curlp, CURLOPT_NOSIGNAL, 1);	// don't use SIGALRM for timeouts
+	curl_easy_setopt(curlp, CURLOPT_TIMEOUT, 5);	// seconds
+
+	curl_easy_setopt(curlp, CURLOPT_WRITEFUNCTION, LLHTTPBuffer::curl_write);
+	curl_easy_setopt(curlp, CURLOPT_WRITEDATA, &http_buffer);
+	curl_easy_setopt(curlp, CURLOPT_URL, request_url.c_str());
+	curl_easy_setopt(curlp, CURLOPT_ERRORBUFFER, curl_error_buffer);
+	curl_easy_setopt(curlp, CURLOPT_FAILONERROR, 1);
+
+	S32 curl_success = curl_easy_perform(curlp);
+
+	S32 status = 499;
+
+	curl_easy_getinfo(curlp, CURLINFO_RESPONSE_CODE, &status);
+
+	std::string body = http_buffer.asString();
+
+	curl_easy_cleanup(curlp);
+
+
+
+	if( status == 200 && curl_success == 0 )
+	{
+		std::string fullname = body;
+		size_t found = fullname.find(" ", 0);
+
+		if( found != std::string::npos )
+		{
+			std::string firstname, lastname;
+
+			firstname = fullname.substr(0, found);
+			lastname  = fullname.substr(found + 1);
+
+			llinfos << "Found name " << fullname << " (" << firstname
+							<< ", " << lastname << ")" << llendl;
+
+			gSavedSettings.setString("FirstName", firstname);
+			gSavedSettings.setString("LastName",  lastname);
+		}
+		else
+		{
+			llwarns << "Invalid name from server. "
+							<< "token: "  << logintoken << "; "
+							<< "status: " << status     << "; "
+							<< "body: "   << body       << llendl;
+		}
+	}
+	else
+	{
+		llwarns << "Name request failed. "
+						<< "token: "  << logintoken << "; "
+						<< "status: " << status     << "; "
+						<< "body: "   << body       << llendl;
+	}
+
+
+	// Check if slurl exists
+	if (vector_size >= 5)
+	{
+		std::string slurl = 
+			"secondlife://" + genesis_token[2] + "/" + genesis_token[3] + 
+			"/" + genesis_token[4];
+			if (vector_size == 6)
+				slurl = slurl + "/" + genesis_token[5];
+		if(LLURLDispatcher::isSLURL(slurl))
+		{
+			if (LLURLDispatcher::isSLURLCommand(slurl))
+			{
+				LLStartUp::sSLURLCommand = slurl;
+			}
+			else
+			{
+				LLURLSimString::setString(slurl);
+			}
+		}
+	}
+	gSavedSettings.setBOOL("AutoLogin", TRUE);
+
+	return true;
+}
+
 
 /*static*/
 void LLURLDispatcherImpl::regionNameCallback(U64 region_handle, const std::string& url, const LLUUID& snapshot_id, bool teleport)

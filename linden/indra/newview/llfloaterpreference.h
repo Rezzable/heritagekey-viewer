@@ -51,7 +51,6 @@ class LLPanelNetwork;
 class LLPanelWeb;
 class LLMessageSystem;
 class LLPrefsChat;
-class LLPrefsVoice;
 class LLPrefsIM;
 class LLPanelMsgs;
 class LLPanelSkins;
@@ -86,7 +85,6 @@ private:
 	LLPanelAudioPrefs		*mAudioPanel;
 //	LLPanelDebug			*mDebugPanel;
 	LLPrefsChat				*mPrefsChat;
-	LLPrefsVoice			*mPrefsVoice;
 	LLPrefsIM				*mPrefsIM;
 	LLPanelWeb				*mWebPanel;
 	LLPanelMsgs				*mMsgPanel;

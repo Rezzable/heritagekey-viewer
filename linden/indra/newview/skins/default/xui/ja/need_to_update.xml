@@ -82,7 +82,7 @@ Selecting "Show in Search" will show:
 <c_attribute/>
 <d_old>
 
-			You must have an account to connect to [SECOND_LIFE].
+			You must have an account to connect to [HERITAGE_KEY].
 Go to www.secondlife.com to create an account?
 		
 </d_old>
@@ -91,18 +91,18 @@ Go to www.secondlife.com to create an account?
 Oops! Something was left blank.
 You need to enter both the First and Last name of your avatar.
 
-You need an account to enter [SECOND_LIFE]. Would you like to create one now?
+You need an account to enter [HERITAGE_KEY]. Would you like to create one now?
 </e_new>
 <f_translation>
 
 おっと! 記入漏れがありますよ。
 アバターのファーストネームとラストネームの両方を入力する必要があります。
 
-[SECOND_LIFE]に入るには、アカウントが必要です。 アカウントを作成しますか?
+[HERITAGE_KEY]に入るには、アカウントが必要です。 アカウントを作成しますか?
 </f_translation>
 <f_old_trans>
 
-			[SECOND_LIFE]に接続するにはアカウントが必要です。
+			[HERITAGE_KEY]に接続するにはアカウントが必要です。
 アカウントを作成するためにwww.secondlife.comを開きますか？
 		
 </f_old_trans>
@@ -147,19 +147,19 @@ You need an account to enter [SECOND_LIFE]. Would you like to create one now?
 <c_attribute/>
 <d_old>
 
-      New skin will appear after you restart [SECOND_LIFE].
+      New skin will appear after you restart [HERITAGE_KEY].
     
 </d_old>
 <e_new>
 
-      The new skin will appear after you restart [SECOND_LIFE].
+      The new skin will appear after you restart [HERITAGE_KEY].
     
 </e_new>
 <f_translation>
-      新しいスキンは[SECOND_LIFE]を再起動すると現れます
+      新しいスキンは[HERITAGE_KEY]を再起動すると現れます
     </f_translation>
 <f_old_trans>
-			新しいスキンは[SECOND_LIFE]を再起動すると現れます
+			新しいスキンは[HERITAGE_KEY]を再起動すると現れます
 		</f_old_trans>
 </string>
 <string>
@@ -218,34 +218,34 @@ Cannot find the region this land is in.
 <c_attribute/>
 <d_old>
 
-			You have been logged out of [SECOND_LIFE]:
+			You have been logged out of [HERITAGE_KEY]:
 [MESSAGE]
 
 Click Continue to look at existing IM and chat.
 You will not be able to perform any other operations.
-Click Quit to exit [SECOND_LIFE] immediately.
+Click Quit to exit [HERITAGE_KEY] immediately.
 		
 </d_old>
 <e_new>
-You have been logged out of [SECOND_LIFE]:
+You have been logged out of [HERITAGE_KEY]:
             [MESSAGE]
-You can still look at existing IM and chat by clicking &apos;View IM &amp; Chat&apos;. Otherwise, click &apos;Quit&apos; to exit [SECOND_LIFE] immediately.
+You can still look at existing IM and chat by clicking &apos;View IM &amp; Chat&apos;. Otherwise, click &apos;Quit&apos; to exit [HERITAGE_KEY] immediately.
     </e_new>
 <f_translation>
 
-あなたは[SECOND_LIFE]からログアウトされました。
+あなたは[HERITAGE_KEY]からログアウトされました。
             [MESSAGE]
-[IMとチャットを表示]をクリックすると、現在あるIMとチャットを確認できます。 確認しない場合は、[終了]をクリックして、すぐに[SECOND_LIFE]を終了してください。
+[IMとチャットを表示]をクリックすると、現在あるIMとチャットを確認できます。 確認しない場合は、[終了]をクリックして、すぐに[HERITAGE_KEY]を終了してください。
     
 </f_translation>
 <f_old_trans>
 
-			あなたは[SECOND_LIFE]からログアウトされました：
+			あなたは[HERITAGE_KEY]からログアウトされました：
 [MESSAGE]
 
 [続行]をクリックすると現在あるIMとチャットを確認できます。
 これ以外の操作はできません。
-[終了]をクリックして、すぐに[SECOND_LIFE]を終了してください。
+[終了]をクリックして、すぐに[HERITAGE_KEY]を終了してください。
 		
 </f_old_trans>
 </string>
@@ -716,8 +716,8 @@ Follow the red arrow to the beacon, or click the arrow to dismiss the beacon.
 <b_path>/panel_login/connect_btn</b_path>
 <c_attribute>label</c_attribute>
 <d_old>Connect</d_old>
-<e_new>Enter Second Life</e_new>
-<f_translation>Second Lifeに入る</f_translation>
+<e_new>Enter Heritage Key</e_new>
+<f_translation>Heritage Keyに入る</f_translation>
 <f_old_trans>接続</f_old_trans>
 </string>
 <string>

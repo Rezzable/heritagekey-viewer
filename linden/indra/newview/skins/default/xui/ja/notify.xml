@@ -825,7 +825,7 @@
 	</notify>
 	<notify name="FirstBuild">
 		<message name="message">
-			[SECOND_LIFE]には、新しいオブジェクトを作ることができる地域があります。
+			[HERITAGE_KEY]には、新しいオブジェクトを作ることができる地域があります。
 作成には画面上部左のツールが使え、Ctrl キーや 
  Alt キーを押したままにすれば素早くツールを切り替えられます。
  Escキーを押すと、作成は終了します。
@@ -888,7 +888,7 @@ Mキーを押して変更します。
 	<notify name="FirstDebugMenus">
 		<message name="message">
 			高度な設定を有効にしました。 
-このメニューには、Second Life をデバッグするデベロッパーにとって有用な機能があります。
+このメニューには、Heritage Key をデバッグするデベロッパーにとって有用な機能があります。
 このメニューを切り替えるには、Windows では Ctrl-Alt-Dを押します。Macの場合は、Cmd-Opt-Shift-Dを押してください。.
 		</message>
 	</notify>

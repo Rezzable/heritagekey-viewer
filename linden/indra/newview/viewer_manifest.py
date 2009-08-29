@@ -67,10 +67,12 @@ class ViewerManifest(LLManifest):
 
         # Include our fonts
         if self.prefix(src="fonts"):
+            self.path("GPL.txt")
+            self.path("Liberation-License.txt")
             self.path("LiberationSans-Bold.ttf")
             self.path("LiberationSans-Regular.ttf")
+            self.path("Vera-License.txt")
             self.path("VeraMono.ttf")
-            self.path("*.txt")
             self.end_prefix("fonts")
 
         # skins
@@ -421,14 +423,14 @@ class WindowsManifest(ViewerManifest):
 class DarwinManifest(ViewerManifest):
     def construct(self):
         # copy over the build result (this is a no-op if run within the xcode script)
-        self.path(self.args['configuration'] + "/Imprudence.app", dst="")
+        self.path(self.args['configuration'] + "/Heritage Key.app", dst="")
 
         if self.prefix(src="", dst="Contents"):  # everything goes in Contents
             # Expand the tar file containing the assorted mozilla bits into
             #  <bundle>/Contents/MacOS/
             self.contents_of_tar(self.args['source']+'/mozilla-universal-darwin.tgz', 'MacOS')
 
-            self.path("Info-Imprudence.plist", dst="Info.plist")
+            self.path("Info-HeritageKey.plist", dst="Info.plist")
 
             # copy additional libs in <bundle>/Contents/MacOS/
             if self.prefix(src="../../libraries/universal-darwin/lib_release", dst="MacOS/"):
@@ -702,13 +704,13 @@ class LinuxManifest(ViewerManifest):
     def construct(self):
         super(LinuxManifest, self).construct()
 
-        self.path("res/imprudence_icon.png","imprudence_icon.png")
+        self.path("res/heritage_key_icon.png","heritage_key_icon.png")
         if self.prefix("linux_tools", dst=""):
             #self.path("client-readme.txt","README-linux.txt")
             #self.path("client-readme-voice.txt","README-linux-voice.txt")
-            self.path("wrapper.sh","imprudence")
-            self.path("handle_secondlifeprotocol.sh")
-            self.path("register_secondlifeprotocol.sh")
+            self.path("wrapper.sh","heritage_key")
+            self.path("handle_genesisprotocol.sh")
+            self.path("register_genesisprotocol.sh")
             self.end_prefix("linux_tools")
 
         self.gather_documents()
@@ -717,9 +719,6 @@ class LinuxManifest(ViewerManifest):
         if self.prefix("../..", dst="doc"):
             self.path("LICENSE-libraries-linux.txt")
             self.end_prefix("../..")
-
-        # Create an appropriate gridargs.dat for this package, denoting required grid.
-        self.put_in_file(self.flags_list(), 'gridargs.dat')
 
 
     def package_finish(self):
@@ -771,7 +770,7 @@ class LinuxManifest(ViewerManifest):
 class Linux_i686Manifest(LinuxManifest):
     def construct(self):
         super(Linux_i686Manifest, self).construct()
-        self.path("imprudence-stripped","bin/do-not-directly-run-imprudence-bin")
+        self.path("heritagekey-stripped","bin/do-not-directly-run-heritagekey-bin")
 #        self.path("../linux_crash_logger/linux-crash-logger-stripped","linux-crash-logger.bin")
         self.path("linux_tools/launch_url.sh","launch_url.sh")
         if self.prefix("res-sdl"):

@@ -361,7 +361,14 @@ LLPanelLogin::LLPanelLogin(const LLRect &rect,
 
 	// childSetAction("quit_btn", onClickQuit, this);
 
-	std::string imp_channel = gSavedSettings.getString("VersionChannelName");
+	std::string hk_channel = gSavedSettings.getString("VersionChannelName");
+	std::string hk_version = llformat("%d.%d.%d %s",
+		HK_VERSION_MAJOR,
+		HK_VERSION_MINOR,
+		HK_VERSION_PATCH,
+		HK_VERSION_TEST );
+
+	/*std::string imp_channel = gSavedSettings.getString("VersionChannelName");
 	std::string imp_version = llformat("%d.%d.%d %s",
 		IMP_VERSION_MAJOR,
 		IMP_VERSION_MINOR,
@@ -373,13 +380,15 @@ LLPanelLogin::LLPanelLogin(const LLRect &rect,
 		LL_VERSION_MAJOR,
 		LL_VERSION_MINOR,
 		LL_VERSION_PATCH,
-		LL_VIEWER_BUILD );
+		LL_VIEWER_BUILD );*/
 
 	LLTextBox* channel_text = getChild<LLTextBox>("channel_text");
-	channel_text->setTextArg("[CHANNEL]", imp_channel);
-	channel_text->setTextArg("[VERSION]", imp_version);
+	channel_text->setTextArg("[CHANNEL]", hk_channel);
+	channel_text->setTextArg("[VERSION]", hk_version);
+	/*channel_text->setTextArg("[IMP_CHANNEL]", imp_channel);
+	channel_text->setTextArg("[IMP_VERSION]", imp_version);
 	channel_text->setTextArg("[ALT_CHANNEL]", ll_channel);
-	channel_text->setTextArg("[ALT_VERSION]", ll_version);
+	channel_text->setTextArg("[ALT_VERSION]", ll_version);*/
 	channel_text->setClickedCallback(onClickVersion);
 	channel_text->setCallbackUserData(this);
 	
@@ -800,7 +809,8 @@ void LLPanelLogin::refreshLocation( bool force_visible )
 	sInstance->childSetVisible("start_location_combo", show_start);
 	sInstance->childSetVisible("start_location_text", show_start);
 
-	sInstance->childSetVisible("server_combo", TRUE);
+	BOOL show_server = gSavedSettings.getBOOL("ForceShowGrid");
+	sInstance->childSetVisible("server_combo", show_server);
 
 #endif
 }
@@ -847,43 +857,45 @@ void LLPanelLogin::loadLoginPage()
 	}
 	oStr << login_page;
 	
-	// Use the right delimeter depending on how LLURI parses the URL
-	LLURI login_page_uri = LLURI(login_page);
-	std::string first_query_delimiter = "&";
-	if (login_page_uri.queryMap().size() == 0)
-	{
-		first_query_delimiter = "?";
-	}
+	// We won't be needing any of these -- McCabe
+
+	//// Use the right delimeter depending on how LLURI parses the URL
+	//LLURI login_page_uri = LLURI(login_page);
+	//std::string first_query_delimiter = "&";
+	//if (login_page_uri.queryMap().size() == 0)
+	//{
+	//	first_query_delimiter = "?";
+	//}
 
 	// Language
 	std::string language = LLUI::getLanguage();
 	oStr << first_query_delimiter<<"lang=" << language;
 	
-	// First Login?
-	if (gSavedSettings.getBOOL("FirstLoginThisInstall"))
-	{
-		oStr << "&firstlogin=TRUE";
-	}
+	//// First Login?
+	//if (gSavedSettings.getBOOL("FirstLoginThisInstall"))
+	//{
+	//	oStr << "&firstlogin=TRUE";
+	//}
 
-	// Channel and Version
-	std::string version = llformat("%d.%d.%d (%d)",
-						LL_VERSION_MAJOR, LL_VERSION_MINOR, LL_VERSION_PATCH, LL_VIEWER_BUILD);
+	//// Channel and Version
+	//std::string version = llformat("%d.%d.%d (%d)",
+	//					LL_VERSION_MAJOR, LL_VERSION_MINOR, LL_VERSION_PATCH, LL_VIEWER_BUILD);
 
-	char* curl_channel = curl_escape(gSavedSettings.getString("VersionChannelName").c_str(), 0);
-	char* curl_version = curl_escape(version.c_str(), 0);
+	//char* curl_channel = curl_escape(gSavedSettings.getString("VersionChannelName").c_str(), 0);
+	//char* curl_version = curl_escape(version.c_str(), 0);
 
-	oStr << "&channel=" << curl_channel;
-	oStr << "&version=" << curl_version;
+	//oStr << "&channel=" << curl_channel;
+	//oStr << "&version=" << curl_version;
 
-	curl_free(curl_channel);
-	curl_free(curl_version);
+	//curl_free(curl_channel);
+	//curl_free(curl_version);
 
-	// Grid
-	char* curl_grid = curl_escape(LLViewerLogin::getInstance()->getGridCodeName().c_str(), 0);
-	oStr << "&grid=" << curl_grid;
-	curl_free(curl_grid);
+	//// Grid
+	//char* curl_grid = curl_escape(LLViewerLogin::getInstance()->getGridCodeName().c_str(), 0);
+	//oStr << "&grid=" << curl_grid;
+	//curl_free(curl_grid);
 
-	gViewerWindow->setMenuBackgroundColor(false, !LLViewerLogin::getInstance()->isInProductionGrid());
+	gViewerWindow->setMenuBackgroundColor(false);
 	gLoginMenuBarView->setBackgroundColor(gMenuBarView->getBackgroundColor());
 
 

@@ -35,8 +35,6 @@
 	<slider label="Dopplereffekt" name="Doppler Effect" />
 	<slider label="Distanzfaktor" name="Distance Factor" />
 	<slider label="Rolloff-Faktor" name="Rolloff Factor" />
-	<spinner label="L$ Änderungs-Grenzwert" name="L$ Change Threshold" />
-	<spinner label="Gesundheitsschwellwert" name="Health Change Threshold" />
 	<text type="string" length="1" name="doppler_effect_text">
 		Audio-Einstellungen:
 	</text>

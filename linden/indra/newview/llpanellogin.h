@@ -105,10 +105,11 @@ public:
 	static void setAlwaysRefresh(bool refresh); 
 	static void mungePassword(LLUICtrl* caller, void* user_data);
 	
+	static void newAccountAlertCallback(S32 option, void*);
+	
 private:
 	static void onClickConnect(void*);
 	static void onClickNewAccount(void*);
-	static void newAccountAlertCallback(S32 option, void*);
 	static void onClickQuit(void*);
 	static void onClickVersion(void*);
 	virtual void onNavigateComplete( const EventType& eventIn );

@@ -838,136 +838,145 @@ bool idle_startup()
 
 			LL_INFOS("AppInit") << "Attempting login as: " << firstname << " " << lastname << LL_ENDL;
 			gDebugInfo["LoginName"] = firstname + " " + lastname;	
-		}
 
-		// create necessary directories
-		// *FIX: these mkdir's should error check
-		gDirUtilp->setLindenUserDir(firstname, lastname);
-    	LLFile::mkdir(gDirUtilp->getLindenUserDir());
+			// create necessary directories
+			// *FIX: these mkdir's should error check
+			gDirUtilp->setLindenUserDir(firstname, lastname);
+    		LLFile::mkdir(gDirUtilp->getLindenUserDir());
 
-        // Set PerAccountSettingsFile to the default value.
-		gSavedSettings.setString("PerAccountSettingsFile",
-			gDirUtilp->getExpandedFilename(LL_PATH_PER_SL_ACCOUNT, 
-				LLAppViewer::instance()->getSettingsFileName("PerAccount")
-				)
-			);
+			// Set PerAccountSettingsFile to the default value.
+			gSavedSettings.setString("PerAccountSettingsFile",
+				gDirUtilp->getExpandedFilename(LL_PATH_PER_SL_ACCOUNT, 
+					LLAppViewer::instance()->getSettingsFileName("PerAccount")
+					)
+				);
 
-		// Overwrite default user settings with user settings								 
-		LLAppViewer::instance()->loadSettingsFromDirectory(LL_PATH_PER_SL_ACCOUNT);
+			// Overwrite default user settings with user settings								 
+			LLAppViewer::instance()->loadSettingsFromDirectory(LL_PATH_PER_SL_ACCOUNT);
 
-		// Need to set the LastLogoff time here if we don't have one.  LastLogoff is used for "Recent Items" calculation
-		// and startup time is close enough if we don't have a real value.
-		if (gSavedPerAccountSettings.getU32("LastLogoff") == 0)
-		{
-			gSavedPerAccountSettings.setU32("LastLogoff", time_corrected());
-		}
-
-		//Default the path if one isn't set.
-		if (gSavedPerAccountSettings.getString("InstantMessageLogPath").empty())
-		{
-			gDirUtilp->setChatLogsDir(gDirUtilp->getOSUserAppDir());
-			gSavedPerAccountSettings.setString("InstantMessageLogPath",gDirUtilp->getChatLogsDir());
-		}
-		else
-		{
-			gDirUtilp->setChatLogsDir(gSavedPerAccountSettings.getString("InstantMessageLogPath"));		
-		}
-		
-		gDirUtilp->setPerAccountChatLogsDir(firstname, lastname);
-
-		LLFile::mkdir(gDirUtilp->getChatLogsDir());
-		LLFile::mkdir(gDirUtilp->getPerAccountChatLogsDir());
-
-		//good as place as any to create user windlight directories
-		std::string user_windlight_path_name(gDirUtilp->getExpandedFilename( LL_PATH_USER_SETTINGS , "windlight", ""));
-		LLFile::mkdir(user_windlight_path_name.c_str());		
-
-		std::string user_windlight_skies_path_name(gDirUtilp->getExpandedFilename( LL_PATH_USER_SETTINGS , "windlight/skies", ""));
-		LLFile::mkdir(user_windlight_skies_path_name.c_str());
-
-		std::string user_windlight_water_path_name(gDirUtilp->getExpandedFilename( LL_PATH_USER_SETTINGS , "windlight/water", ""));
-		LLFile::mkdir(user_windlight_water_path_name.c_str());
-
-		std::string user_windlight_days_path_name(gDirUtilp->getExpandedFilename( LL_PATH_USER_SETTINGS , "windlight/days", ""));
-		LLFile::mkdir(user_windlight_days_path_name.c_str());
-
-
-		if (show_connect_box)
-		{
-			if ( LLPanelLogin::isGridComboDirty() )
+			// Need to set the LastLogoff time here if we don't have one.  LastLogoff is used for "Recent Items" calculation
+			// and startup time is close enough if we don't have a real value.
+			if (gSavedPerAccountSettings.getU32("LastLogoff") == 0)
 			{
-				// User picked a grid from the popup, so clear the 
-				// stored uris and they will be reacquired from the grid choice.
-				sAuthUris.clear();
+				gSavedPerAccountSettings.setU32("LastLogoff", time_corrected());
+			}
+
+			//Default the path if one isn't set.
+			if (gSavedPerAccountSettings.getString("InstantMessageLogPath").empty())
+			{
+				gDirUtilp->setChatLogsDir(gDirUtilp->getOSUserAppDir());
+				gSavedPerAccountSettings.setString("InstantMessageLogPath",gDirUtilp->getChatLogsDir());
+			}
+			else
+			{
+				gDirUtilp->setChatLogsDir(gSavedPerAccountSettings.getString("InstantMessageLogPath"));		
 			}
 			
-			std::string location;
-			LLPanelLogin::getLocation( location );
-			LLURLSimString::setString( location );
+			gDirUtilp->setPerAccountChatLogsDir(firstname, lastname);
 
-			// END TODO
-			LLPanelLogin::close();
+			LLFile::mkdir(gDirUtilp->getChatLogsDir());
+			LLFile::mkdir(gDirUtilp->getPerAccountChatLogsDir());
+
+			//good as place as any to create user windlight directories
+			std::string user_windlight_path_name(gDirUtilp->getExpandedFilename( LL_PATH_USER_SETTINGS , "windlight", ""));
+			LLFile::mkdir(user_windlight_path_name.c_str());		
+
+			std::string user_windlight_skies_path_name(gDirUtilp->getExpandedFilename( LL_PATH_USER_SETTINGS , "windlight/skies", ""));
+			LLFile::mkdir(user_windlight_skies_path_name.c_str());
+
+			std::string user_windlight_water_path_name(gDirUtilp->getExpandedFilename( LL_PATH_USER_SETTINGS , "windlight/water", ""));
+			LLFile::mkdir(user_windlight_water_path_name.c_str());
+
+			std::string user_windlight_days_path_name(gDirUtilp->getExpandedFilename( LL_PATH_USER_SETTINGS , "windlight/days", ""));
+			LLFile::mkdir(user_windlight_days_path_name.c_str());
+
+			if (show_connect_box)
+			{
+				if ( LLPanelLogin::isGridComboDirty() )
+				{
+					// User picked a grid from the popup, so clear the 
+					// stored uris and they will be reacquired from the grid choice.
+					sAuthUris.clear();
+				}
+				
+				std::string location;
+				LLPanelLogin::getLocation( location );
+				LLURLSimString::setString( location );
+
+				// END TODO
+				LLPanelLogin::close();
+			}
+
+			
+			//For HTML parsing in text boxes.
+			LLTextEditor::setLinkColor( gSavedSettings.getColor4("HTMLLinkColor") );
+
+			// Load URL History File
+			LLURLHistory::loadFile("url_history.xml");
+
+			//-------------------------------------------------
+			// Handle startup progress screen
+			//-------------------------------------------------
+
+			// on startup the user can request to go to their home,
+			// their last location, or some URL "-url //sim/x/y[/z]"
+			// All accounts have both a home and a last location, and we don't support
+			// more locations than that.  Choose the appropriate one.  JC
+			if (LLURLSimString::parse())
+			{
+				// a startup URL was specified
+				agent_location_id = START_LOCATION_ID_URL;
+
+				// doesn't really matter what location_which is, since
+				// agent_start_look_at will be overwritten when the
+				// UserLoginLocationReply arrives
+				location_which = START_LOCATION_ID_LAST;
+			}
+			else if (gSavedSettings.getBOOL("LoginLastLocation"))
+			{
+				agent_location_id = START_LOCATION_ID_LAST;	// last location
+				location_which = START_LOCATION_ID_LAST;
+			}
+			else
+			{
+				agent_location_id = START_LOCATION_ID_HOME;	// home
+				location_which = START_LOCATION_ID_HOME;
+			}
+
+			gViewerWindow->getWindow()->setCursor(UI_CURSOR_WAIT);
+
+			if (!gNoRender)
+			{
+				init_start_screen(agent_location_id);
+			}
+
+			// Display the startup progress bar.
+			gViewerWindow->setShowProgress(TRUE);
+			gViewerWindow->setProgressCancelButtonVisible(TRUE, std::string("Quit")); // *TODO: Translate
+
+			// Poke the VFS, which could potentially block for a while if
+			// Windows XP is acting up
+			set_startup_status(0.07f, LLTrans::getString("LoginVerifyingCache"), LLStringUtil::null);
+			display_startup();
+
+			gVFS->pokeFiles();
+
+			// color init must be after saved settings loaded
+			init_colors();
+
+			// skipping over STATE_UPDATE_CHECK because that just waits for input
+			LLStartUp::setStartupState( STATE_LOGIN_AUTH_INIT );
 		}
-
-		
-		//For HTML parsing in text boxes.
-		LLTextEditor::setLinkColor( gSavedSettings.getColor4("HTMLLinkColor") );
-
-		// Load URL History File
-		LLURLHistory::loadFile("url_history.xml");
-
-		//-------------------------------------------------
-		// Handle startup progress screen
-		//-------------------------------------------------
-
-		// on startup the user can request to go to their home,
-		// their last location, or some URL "-url //sim/x/y[/z]"
-		// All accounts have both a home and a last location, and we don't support
-		// more locations than that.  Choose the appropriate one.  JC
-		if (LLURLSimString::parse())
+		else // if firstname and lastname empty, bounce back to login screen
 		{
-			// a startup URL was specified
-			agent_location_id = START_LOCATION_ID_URL;
-
-			// doesn't really matter what location_which is, since
-			// agent_start_look_at will be overwritten when the
-			// UserLoginLocationReply arrives
-			location_which = START_LOCATION_ID_LAST;
+			if(gSavedSettings.getBOOL("AutoLogin"))
+				gSavedSettings.setBOOL("AutoLogin", FALSE);
+			LLStringUtil::format_map_t args;
+			gViewerWindow->alertXml("MustHaveAccountToLogIn",
+										LLPanelLogin::newAccountAlertCallback);
+			reset_login();
+			show_connect_box = true;
 		}
-		else if (gSavedSettings.getBOOL("LoginLastLocation"))
-		{
-			agent_location_id = START_LOCATION_ID_LAST;	// last location
-			location_which = START_LOCATION_ID_LAST;
-		}
-		else
-		{
-			agent_location_id = START_LOCATION_ID_HOME;	// home
-			location_which = START_LOCATION_ID_HOME;
-		}
-
-		gViewerWindow->getWindow()->setCursor(UI_CURSOR_WAIT);
-
-		if (!gNoRender)
-		{
-			init_start_screen(agent_location_id);
-		}
-
-		// Display the startup progress bar.
-		gViewerWindow->setShowProgress(TRUE);
-		gViewerWindow->setProgressCancelButtonVisible(TRUE, std::string("Quit")); // *TODO: Translate
-
-		// Poke the VFS, which could potentially block for a while if
-		// Windows XP is acting up
-		set_startup_status(0.07f, LLTrans::getString("LoginVerifyingCache"), LLStringUtil::null);
-		display_startup();
-
-		gVFS->pokeFiles();
-
-		// color init must be after saved settings loaded
-		init_colors();
-
-		// skipping over STATE_UPDATE_CHECK because that just waits for input
-		LLStartUp::setStartupState( STATE_LOGIN_AUTH_INIT );
 
 		return FALSE;
 	}

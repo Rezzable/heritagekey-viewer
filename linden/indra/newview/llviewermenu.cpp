@@ -627,15 +627,9 @@ void init_menus()
 	color = gColors.getColor( "MenuPopupBgColor" );
 	gPopupMenuView->setBackgroundColor( color );
 
-	// If we are not in production, use a different color to make it apparent.
-	if (LLViewerLogin::getInstance()->isInProductionGrid())
-	{
-		color = gColors.getColor( "MenuBarBgColor" );
-	}
-	else
-	{
-		color = gColors.getColor( "MenuNonProductionBgColor" );
-	}
+	// Always use the production grid menu color
+	color = gColors.getColor( "MenuBarBgColor" );
+
 	gMenuBarView = (LLMenuBarGL*)LLUICtrlFactory::getInstance()->buildMenu("menu_viewer.xml", gMenuHolder);
 	gMenuBarView->setRect(LLRect(0, top, 0, top - MENU_BAR_HEIGHT));
 	gMenuBarView->setBackgroundColor( color );
@@ -649,8 +643,7 @@ void init_menus()
 	// flash when an item is triggered (the flash occurs in the holder)
 	gViewerWindow->getRootView()->addChild(gMenuHolder);
    
-    gViewerWindow->setMenuBackgroundColor(false, 
-        LLViewerLogin::getInstance()->isInProductionGrid());
+    gViewerWindow->setMenuBackgroundColor(false);
 
 	// *TODO:Get the cost info from the server
 	const std::string upload_cost("10");
@@ -665,7 +658,7 @@ void init_menus()
 	gDetachSubMenu = gMenuBarView->getChildMenuByName("Detach Object", TRUE);
 
 	// TomY TODO convert these two
-	LLMenuGL*menu;
+	//LLMenuGL*menu; // Disabled along with the Advanced menu -- McCabe
 
 	// Advanced (Client) menu is XUI now! \o/
 	/*
@@ -675,10 +668,10 @@ void init_menus()
 	menu->updateParent(LLMenuGL::sMenuContainer);
 	*/
 
-	menu = new LLMenuGL(SERVER_MENU_NAME);
+	/*menu = new LLMenuGL(SERVER_MENU_NAME);
 	init_server_menu(menu);
 	gMenuBarView->appendMenu( menu );
-	menu->updateParent(LLMenuGL::sMenuContainer);
+	menu->updateParent(LLMenuGL::sMenuContainer);*/
 
 	gMenuBarView->createJumpKeys();
 
@@ -701,8 +694,8 @@ void init_menus()
 }
 
 
-
-void init_client_menu(LLMenuGL* menu)
+// Advanced menu disabled -- McCabe
+/*void init_client_menu(LLMenuGL* menu)
 {
 	LLMenuGL* sub_menu = NULL;
 
@@ -758,10 +751,10 @@ void init_client_menu(LLMenuGL* menu)
 	}
 	
 	// neither of these works particularly well at the moment
-	/*menu->append(new LLMenuItemCallGL(  "Reload UI XML",	&reload_ui,	
-	  				NULL, NULL) );*/
-	/*menu->append(new LLMenuItemCallGL("Reload settings/colors", 
-					&handle_reload_settings, NULL, NULL));*/
+	//menu->append(new LLMenuItemCallGL(  "Reload UI XML",	&reload_ui,	
+	  				NULL, NULL) );
+	//menu->append(new LLMenuItemCallGL("Reload settings/colors", 
+					&handle_reload_settings, NULL, NULL));
 	menu->append(new LLMenuItemCallGL("Reload personal setting overrides", 
 		&reload_personal_settings_overrides, NULL, NULL, KEY_F2, MASK_CONTROL|MASK_SHIFT));
 
@@ -835,9 +828,9 @@ void init_client_menu(LLMenuGL* menu)
 
 	sub_menu = new LLMenuGL("Character");
 	init_debug_avatar_menu(sub_menu);
-	menu->appendMenu(sub_menu);
+	menu->appendMenu(sub_menu);*/
 
-{
+/*{
 		LLMenuGL* sub = NULL;
 		sub = new LLMenuGL("Network");
 
@@ -959,7 +952,7 @@ void init_client_menu(LLMenuGL* menu)
 		&handle_leave_god_mode, NULL, NULL, 'G', MASK_ALT | MASK_SHIFT | MASK_CONTROL));
 
 	menu->createJumpKeys();
-}
+}*/
 
 void init_debug_world_menu(LLMenuGL* menu)
 {
@@ -1010,7 +1003,7 @@ extern BOOL gDebugWindowProc;
 extern BOOL gDebugTextEditorTips;
 extern BOOL gDebugSelectMgr;
 
-void init_debug_ui_menu(LLMenuGL* menu)
+/*void init_debug_ui_menu(LLMenuGL* menu)
 {
 	menu->append(new LLMenuItemCallGL("SLURL Test", &handle_slurl_test));
 	menu->append(new LLMenuItemCallGL("Editable UI", &edit_ui));
@@ -1039,9 +1032,9 @@ void init_debug_ui_menu(LLMenuGL* menu)
 	menu->append(new LLMenuItemCheckGL("Show Color Under Cursor", menu_toggle_control, NULL, menu_check_control, (void*)"DebugShowColor"));
 	
 	menu->createJumpKeys();
-}
+}*/
 
-void init_debug_xui_menu(LLMenuGL* menu)
+/*void init_debug_xui_menu(LLMenuGL* menu)
 {
 	menu->append(new LLMenuItemCallGL("Floater Test...", LLFloaterTest::show));
 	menu->append(new LLMenuItemCallGL("Export Menus to XML...", handle_export_menus_to_xml));
@@ -1296,11 +1289,11 @@ void init_debug_rendering_menu(LLMenuGL* menu)
 #endif
 	
 	menu->createJumpKeys();
-}
+}*/
 
 extern BOOL gDebugAvatarRotation;
 
-void init_debug_avatar_menu(LLMenuGL* menu)
+/*void init_debug_avatar_menu(LLMenuGL* menu)
 {
 	LLMenuGL* sub_menu = new LLMenuGL("Grab Baked Texture");
 	init_debug_baked_texture_menu(sub_menu);
@@ -1354,9 +1347,9 @@ void init_debug_avatar_menu(LLMenuGL* menu)
 	menu->append(new LLMenuItemCallGL("Dump Local Textures", handle_dump_avatar_local_textures, NULL, NULL, 'M', MASK_SHIFT|MASK_ALT ));	
 #endif
 	menu->createJumpKeys();
-}
+}*/
 
-void init_debug_baked_texture_menu(LLMenuGL* menu)
+/*void init_debug_baked_texture_menu(LLMenuGL* menu)
 {
 	menu->append(new LLMenuItemCallGL("Iris", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_EYES_BAKED));
 	menu->append(new LLMenuItemCallGL("Head", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_HEAD_BAKED));
@@ -1364,9 +1357,9 @@ void init_debug_baked_texture_menu(LLMenuGL* menu)
 	menu->append(new LLMenuItemCallGL("Lower Body", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_LOWER_BAKED));
 	menu->append(new LLMenuItemCallGL("Skirt", handle_grab_texture, enable_grab_texture, (void*) LLVOAvatar::TEX_SKIRT_BAKED));
 	menu->createJumpKeys();
-}
+}*/
 
-void init_server_menu(LLMenuGL* menu)
+/*void init_server_menu(LLMenuGL* menu)
 {
 	{
 		LLMenuGL* sub = new LLMenuGL("Object");
@@ -1439,7 +1432,7 @@ void init_server_menu(LLMenuGL* menu)
 //	menu->append(new LLMenuItemCallGL( "OverlayTitle",
 //		&handle_show_overlay_title, &enable_god_customer_service, NULL));
 	menu->createJumpKeys();
-}
+}*/
 
 static std::vector<LLPointer<view_listener_t> > sMenus;
 
@@ -1847,8 +1840,6 @@ class LLObjectEdit : public view_listener_t
 		LLViewerJoystick::getInstance()->moveObjects(true);
 		LLViewerJoystick::getInstance()->setNeedsReset(true);
 
-		// Could be first use
-		LLFirstUse::useBuild();
 		return true;
 	}
 };
@@ -2712,8 +2703,7 @@ void set_god_level(U8 god_level)
 
     if(gViewerWindow)
     {
-        gViewerWindow->setMenuBackgroundColor(god_level > GOD_NOT,
-            LLViewerLogin::getInstance()->isInProductionGrid());
+        gViewerWindow->setMenuBackgroundColor(god_level > GOD_NOT);
     }
 
     LLStringUtil::format_map_t args;
@@ -4550,7 +4540,8 @@ void print_agent_nvpairs(void*)
 	llinfos << "Camera at " << gAgent.getCameraPositionGlobal() << llendl;
 }
 
-class LLViewToggleAdvanced : public view_listener_t
+// Advanced menu and Admin menu are now always disabled -- McCabe
+/*class LLViewToggleAdvanced : public view_listener_t
 {
 	bool handleEvent(LLPointer<LLEvent> event, const LLSD& userdata)
 	{
@@ -4567,9 +4558,9 @@ class LLViewCheckAdvanced : public view_listener_t
 		gMenuHolder->findControl(userdata["control"].asString())->setValue(new_value);
 		return true;
 	}
-};
+};*/
 
-void show_debug_menus()
+/*void show_debug_menus()
 {
 	// this can get called at login screen where there is no menu so only toggle it if one exists
 	if ( gMenuBarView )
@@ -4601,7 +4592,7 @@ void toggle_debug_menus(void*)
 	BOOL visible = ! gSavedSettings.getBOOL("UseDebugMenus");
 	gSavedSettings.setBOOL("UseDebugMenus", visible);
 	show_debug_menus();
-}
+}*/
 
 
 // LLUUID gExporterRequestID;
@@ -5120,9 +5111,13 @@ class LLShowFloater : public view_listener_t
 		{
 			LLFloaterMove::toggleInstance();
 		}
-		else if (floater_name == "world map")
+		else if (floater_name == "original world map")
 		{
 			LLFloaterWorldMap::toggle(NULL);
+		}
+		else if (floater_name == "world map")
+		{
+			LLFloaterMapImage::show();
 		}
 		else if (floater_name == "mini map")
 		{
@@ -5309,6 +5304,28 @@ class LLPromptShowURL : public view_listener_t
 		{
 			llinfos << "PromptShowURL invalid parameters! Expecting \"ALERT,URL\"." << llendl;
 		}
+		return true;
+	}
+};
+
+class LLShowURL : public view_listener_t
+{
+	bool handleEvent(LLPointer<LLEvent> event, const LLSD& userdata)
+	{
+		std::string url = userdata.asString();
+		llinfos << "LLShowURL: attempting to navigate to " << url << llendl;
+		LLWeb::loadURL(url);
+		return true;
+	}
+};
+
+class LLShowURLInworld : public view_listener_t
+{
+	bool handleEvent(LLPointer<LLEvent> event, const LLSD& userdata)
+	{
+		std::string url = userdata.asString();
+		llinfos << "LLShowURLInworld: attempting to navigate to " << url << llendl;
+		LLFloaterMediaBrowser::showInstance(url);
 		return true;
 	}
 };
@@ -9689,6 +9706,8 @@ void initialize_menus()
 	// Generic actions
 	addMenu(new LLShowFloater(), "ShowFloater");
 	addMenu(new LLPromptShowURL(), "PromptShowURL");
+	addMenu(new LLShowURL(), "ShowURL");
+	addMenu(new LLShowURLInworld(), "ShowURLInworld");
 	addMenu(new LLShowAgentProfile(), "ShowAgentProfile");
 	addMenu(new LLShowAgentGroups(), "ShowAgentGroups");
 	addMenu(new LLToggleControl(), "ToggleControl");
@@ -9707,7 +9726,7 @@ void initialize_menus()
 
 
 	// Advanced (top level menu)
-	addMenu(new LLAdvancedToggleConsole(), "Advanced.ToggleConsole");
+	/*addMenu(new LLAdvancedToggleConsole(), "Advanced.ToggleConsole");
 	addMenu(new LLAdvancedCheckConsole(), "Advanced.CheckConsole");
 	addMenu(new LLAdvancedDumpInfoToConsole(), "Advanced.DumpInfoToConsole");
 	addMenu(new LLAdvancedReloadSettingsOverrides(), "Advanced.ReloadSettingsOverrides");
@@ -9751,10 +9770,10 @@ void initialize_menus()
 
 	// Advanced > World
 	addMenu(new LLAdvancedDumpScriptedCamera(), "Advanced.DumpScriptedCamera");
-	addMenu(new LLAdvancedDumpRegionObjectCache(), "Advanced.DumpRegionObjectCache");
+	addMenu(new LLAdvancedDumpRegionObjectCache(), "Advanced.DumpRegionObjectCache");*/
 
 	// Advanced > UI
-	addMenu(new LLAdvancedSLURLTest(), "Advanced.SLURLTest");
+	/*addMenu(new LLAdvancedSLURLTest(), "Advanced.SLURLTest");
 	addMenu(new LLAdvancedToggleEditableUI(), "Advanced.ToggleEditableUI");
 	//addMenu(new LLAdvancedCheckEditableUI(), "Advanced.CheckEditableUI");
 	addMenu(new LLAdvancedDumpSelectMgr(), "Advanced.DumpSelectMgr");
@@ -9778,10 +9797,10 @@ void initialize_menus()
 	addMenu(new LLAdvancedToggleDebugWindowProc(), "Advanced.ToggleDebugWindowProc");
 	addMenu(new LLAdvancedCheckDebugWindowProc(), "Advanced.CheckDebugWindowProc");
 	addMenu(new LLAdvancedToggleDebugTextEditorTips(), "Advanced.ToggleDebugTextEditorTips");
-	addMenu(new LLAdvancedCheckDebugTextEditorTips(), "Advanced.CheckDebugTextEditorTips");
+	addMenu(new LLAdvancedCheckDebugTextEditorTips(), "Advanced.CheckDebugTextEditorTips");*/
 
 	// Advanced > XUI
-	addMenu(new LLAdvancedShowFloaterTest(), "Advanced.ShowFloaterTest");
+	/*addMenu(new LLAdvancedShowFloaterTest(), "Advanced.ShowFloaterTest");
 	addMenu(new LLAdvancedExportMenusToXML(), "Advanced.ExportMenusToXML");
 	addMenu(new LLAdvancedEditUI(), "Advanced.EditUI");
 	addMenu(new LLAdvancedLoadUIFromXML(), "Advanced.LoadUIFromXML");
@@ -9855,5 +9874,5 @@ void initialize_menus()
 	addMenu(new LLAdvancedToggleViewAdminOptions(), "Advanced.ToggleViewAdminOptions");
 	addMenu(new LLAdvancedCheckViewAdminOptions(), "Advanced.CheckViewAdminOptions");
 	addMenu(new LLAdvancedRequestAdminStatus(), "Advanced.RequestAdminStatus");
-	addMenu(new LLAdvancedLeaveAdminStatus(), "Advanced.LeaveAdminStatus");
+	addMenu(new LLAdvancedLeaveAdminStatus(), "Advanced.LeaveAdminStatus");*/
 }

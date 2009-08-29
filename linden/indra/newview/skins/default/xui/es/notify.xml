@@ -755,7 +755,7 @@ y exhibir diferentes planos de fondo.
 	</notify>
 	<notify name="FirstBuild">
 		<message name="message">
-			Usted puede construir algunos objetos en algunas áreas de [SECOND_LIFE].
+			Usted puede construir algunos objetos en algunas áreas de [HERITAGE_KEY].
 Use las herramientas en el rincón superior izquierdo para construir e intente 
 mantener pulsado Ctrl o Alt para cambiar las herramientas rápidamente.
 Pulse Esc para parar la construcción.

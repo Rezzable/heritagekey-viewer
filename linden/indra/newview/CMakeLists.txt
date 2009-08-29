@@ -433,7 +433,7 @@ set(viewer_SOURCE_FILES
     pipeline.cpp
     )
 
-set(VIEWER_BINARY_NAME "imprudence-bin" CACHE STRING
+set(VIEWER_BINARY_NAME "heritagekey-bin" CACHE STRING
     "The name of the viewer executable to create.")
 
 if (LINUX)
@@ -857,8 +857,8 @@ if (DARWIN)
     viewer.icns
     macview.r
     gpu_table.txt
-    Info-Imprudence.plist
-    Imprudence.nib/
+    Info-HeritageKey.plist
+    HeritageKey.nib/
     # CMake doesn't seem to support Xcode language variants well just yet
     English.lproj/InfoPlist.strings
     English.lproj/language.txt
@@ -926,7 +926,7 @@ if (WINDOWS)
         res/bitmap2.bmp
         res/circleandline.cur
         res/icon1.ico
-        res/imprudence_icon.png
+        res/heritage_key_icon.png
         res/install_icon.BMP
         res/install_icon.ico
         res/llarrow.cur
@@ -1069,6 +1069,7 @@ set(viewer_XUI_FILES
     skins/default/xui/en-us/floater_landmark_ctrl.xml
     skins/default/xui/en-us/floater_live_lsleditor.xml
     skins/default/xui/en-us/floater_lsl_guide.xml
+    skins/default/xui/en-us/floater_map_image.xml
     skins/default/xui/en-us/floater_media_browser.xml
     skins/default/xui/en-us/floater_mini_map.xml
     skins/default/xui/en-us/floater_moveview.xml
@@ -1280,7 +1281,6 @@ if (FMOD)
         PROPERTIES
         BUILD_WITH_INSTALL_RPATH 1
         INSTALL_NAME_DIR "@executable_path/../Resources"
-        LINK_FLAGS "-unexported_symbols_list ../newview/fmod_hidden_symbols.exp"
         )
     endif (DARWIN)
     set(FMODWRAPPER_LIBRARY fmodwrapper)
@@ -1428,13 +1428,13 @@ set(ARTWORK_DIR ${CMAKE_CURRENT_SOURCE_DIR} CACHE PATH
 
 if (LINUX)
   add_custom_command(
-      OUTPUT imprudence-stripped
+      OUTPUT heritagekey-stripped
       COMMAND strip
-      ARGS --strip-debug -o imprudence-stripped ${VIEWER_BINARY_NAME}
-      DEPENDS imprudence-bin
+      ARGS --strip-debug -o heritagekey-stripped ${VIEWER_BINARY_NAME}
+      DEPENDS heritagekey-bin
       )
 
-  set(product Imprudence-${ARCH}-${viewer_VERSION})
+  set(product HeritageKey-${ARCH}-${viewer_VERSION})
 
   add_custom_command(
       OUTPUT ${product}.tar.bz2
@@ -1451,7 +1451,7 @@ if (LINUX)
         --build=${CMAKE_CURRENT_BINARY_DIR}
         --dest=${CMAKE_CURRENT_BINARY_DIR}/packaged
         --touch=${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/.${product}.touched
-      DEPENDS imprudence-stripped ${CMAKE_CURRENT_SOURCE_DIR}/viewer_manifest.py
+      DEPENDS heritagekey-stripped ${CMAKE_CURRENT_SOURCE_DIR}/viewer_manifest.py
       )
 
   if (NOT INSTALL)
@@ -1461,16 +1461,16 @@ if (LINUX)
 endif (LINUX)
 
 if (DARWIN)
-  set(product "Imprudence")
+  set(product "Heritage Key")
   set_target_properties(
     ${VIEWER_BINARY_NAME}
     PROPERTIES
     OUTPUT_NAME "${product}"
     MACOSX_BUNDLE_INFO_STRING "info string - localize me"
     MACOSX_BUNDLE_ICON_FILE "viewer.icns"
-    MACOSX_BUNDLE_GUI_IDENTIFIER "Imprudence"
+    MACOSX_BUNDLE_GUI_IDENTIFIER "Heritage Key"
     MACOSX_BUNDLE_LONG_VERSION_STRING "ververver"
-    MACOSX_BUNDLE_BUNDLE_NAME "Imprudence"
+    MACOSX_BUNDLE_BUNDLE_NAME "Heritage Key"
     MACOSX_BUNDLE_SHORT_VERSION_STRING "asdf"
     MACOSX_BUNDLE_BUNDLE_VERSION "asdf"
     MACOSX_BUNDLE_COPYRIGHT "copyright linden lab 2007 - localize me and run me through a legal wringer"

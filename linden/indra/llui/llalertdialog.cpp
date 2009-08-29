@@ -258,7 +258,7 @@ void LLAlertDialog::format(std::string& msg, const LLStringUtil::format_map_t& a
 {
 	// XUI:translate!
 	LLStringUtil::format_map_t targs = args;
-	targs["[SECOND_LIFE]"] = "Second Life";
+	targs["[HERITAGE_KEY]"] = "Heritage Key VX Viewer";
 	targs["[_URL]"] = mURL;
 	LLStringUtil::format(msg, targs);
 }
