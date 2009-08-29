@@ -11,6 +11,7 @@ if (OPENAL)
   # message(STATUS "Building with OpenAL audio support")
 
   # OPENAL_LIB
+  use_prebuilt_binary(openal)
 
   if (WINDOWS)
     find_library(OPENAL_LIB

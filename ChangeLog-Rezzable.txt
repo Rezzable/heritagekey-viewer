@@ -32,6 +32,11 @@
 	modified:   linden/indra/newview/skins/default/xui/ja/menu_viewer.xml
 	modified:   linden/indra/newview/skins/default/xui/pt/menu_viewer.xml
 
+	
+	 * Fixed CMake errors:
+	 
+	modified:   linden/indra/cmake/OPENAL.cmake
+	modified:   linden/indra/newview/CMakeLists.txt
 
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
