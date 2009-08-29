@@ -8,7 +8,7 @@
      * Merged Imprudence 1.2 into HK 0.9.1
 
 
-     * Updated CMAke:
+     * Updated CMake:
 	
 	modified:   linden/indra/cmake/00-Common.cmake
 	modified:   linden/indra/cmake/UnixInstall.cmake
@@ -16,10 +16,22 @@
 	modified:   linden/indra/newview/CMakeLists.txt
 	modified:   linden/indra/newview/ViewerInstall.cmake
 
+
      * Split change logs between HK and Imprudence:
 
 	added:	ChangeLog-Imprudence.txt
 	added:	ChangeLog-Rezzable.txt
+
+
+     * Fixed Help and About menu options:
+
+	modified:   linden/indra/newview/skins/default/xui/de/menu_viewer.xml
+	modified:   linden/indra/newview/skins/default/xui/en-us/menu_viewer.xml
+	modified:   linden/indra/newview/skins/default/xui/es/menu_viewer.xml
+	modified:   linden/indra/newview/skins/default/xui/fr/menu_viewer.xml
+	modified:   linden/indra/newview/skins/default/xui/ja/menu_viewer.xml
+	modified:   linden/indra/newview/skins/default/xui/pt/menu_viewer.xml
+
 
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

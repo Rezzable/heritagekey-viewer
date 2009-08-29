@@ -210,6 +210,6 @@
 		<menu_item_call label="Help Request..." name="Help Request..." />
 		<menu_item_call label="Liberar notas..." name="Release Notes..." />
 		<menu_item_separator label="-----------" name="separator6" />
-		<menu_item_call label="Sobre Heritage Key..." name="About Heritage Key..." />
+		<menu_item_call label="Sobre Heritage Key VX Viewer..." name="About Heritage Key..." />
 	</menu>
 </menu_bar>

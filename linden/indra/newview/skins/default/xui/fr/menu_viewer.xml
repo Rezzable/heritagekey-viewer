@@ -179,7 +179,7 @@
 		<menu_item_call label="Désactiver les scripts dans la sélection" name="Set Scripts to Not Running in Selection"/>
 	</menu>
 	<menu label="Aide" name="Help">
-		<menu_item_call label="Aide Second Life" name="Second Life Help"/>
+		<menu_item_call label="Aide" name="Help"/>
 		<menu_item_call label="Didacticiel" name="Tutorial"/>
 		<menu_item_separator label="-----------" name="separator"/>
 		<menu_item_call label="Blog officiel..." name="Official Linden Blog..."/>
@@ -202,6 +202,6 @@
 			<menu_item_separator label="-----------" name="separator9"/>
 			<menu_item_call label="Signaler un bug..." name="Report Bug..."/>
 		</menu>
-		<menu_item_call label="À propos de Heritage Key VX Viewer..." name="About Heritage Key VX Viewer..." />
+		<menu_item_call label="À propos de Heritage Key VX Viewer..." name="About Heritage Key..." />
 	</menu>
 </menu_bar>
