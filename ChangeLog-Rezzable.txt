@@ -33,10 +33,15 @@
 	modified:   linden/indra/newview/skins/default/xui/pt/menu_viewer.xml
 
 	
-	 * Fixed CMake errors:
+     * Fixed OpenAL CMake error:
 	 
 	modified:   linden/indra/cmake/OPENAL.cmake
 	modified:   linden/indra/newview/CMakeLists.txt
+
+
+     * Fixed CMake not finding GLib on windows:
+
+	modified:   linden/indra/cmake/GStreamer.cmake
 
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
