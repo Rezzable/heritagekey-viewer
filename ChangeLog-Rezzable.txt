@@ -3,6 +3,14 @@
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
+2009-09-01  McCabe Maxsted  <hakushakukun@gmail.com>
+
+    * Fixed splash page not displaying:
+
+	modified:   linden/indra/newview/llappviewer.cpp
+
+
+
 2009-08-30  McCabe Maxsted  <hakushakukun@gmail.com>
 
     * Fixed compile errors after merge with Imprudence 1.2:
