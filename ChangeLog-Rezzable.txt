@@ -10,6 +10,11 @@
 	modified:   linden/indra/newview/llappviewer.cpp
 
 
+    * Fixed statbar not hiding:
+
+	modified:   linden/indra/newview/llstatusbar.cpp
+
+
 
 2009-08-30  McCabe Maxsted  <hakushakukun@gmail.com>
 

@@ -161,12 +161,12 @@ mSquareMetersCommitted(0)
 	childSetAction("restrictpush", onClickPush, this );
 	childSetAction("status_no_voice", onClickVoice, this );
 
-	childSetCommitCallback("search_editor", onCommitSearch, this);
-	childSetAction("search_btn", onClickSearch, this);
+	/*childSetCommitCallback("search_editor", onCommitSearch, this);
+	childSetAction("search_btn", onClickSearch, this);*/
 
-	childSetVisible("search_editor", gSavedSettings.getBOOL("ShowSearchBar"));
+	/*childSetVisible("search_editor", gSavedSettings.getBOOL("ShowSearchBar"));
 	childSetVisible("search_btn", gSavedSettings.getBOOL("ShowSearchBar"));
-	childSetVisible("menubar_search_bevel_bg", gSavedSettings.getBOOL("ShowSearchBar"));
+	childSetVisible("menubar_search_bevel_bg", gSavedSettings.getBOOL("ShowSearchBar"))*/;
 
 	/*childSetActionTextbox("ParcelNameText", onClickParcelInfo );*/
 	childSetActionTextbox("BalanceText", onClickBalance );
@@ -277,7 +277,7 @@ void LLStatusBar::refresh()
 	S32 x = MENU_RIGHT + MENU_PARCEL_SPACING;
 	S32 y = 0;
 
-	bool search_visible = gSavedSettings.getBOOL("ShowSearchBar");
+	bool search_visible = /*gSavedSettings.getBOOL("ShowSearchBar");*/ true; // Cheap way of getting rid of statbar -- McCabe
 
 	// reshape menu bar to its content's width
 	if (MENU_RIGHT != gMenuBarView->getRect().getWidth())
@@ -556,15 +556,15 @@ void LLStatusBar::refresh()
 	S32 new_right = getRect().getWidth();
 	if (search_visible)
 	{
-		childGetRect("search_btn", r);
-		//r.translate( new_right - r.mRight, 0);
-		//childSetRect("search_btn", r);
-		new_right -= r.getWidth();
+		//childGetRect("search_btn", r);
+		////r.translate( new_right - r.mRight, 0);
+		////childSetRect("search_btn", r);
+		//new_right -= r.getWidth();
 
-		childGetRect("search_editor", r);
-		//r.translate( new_right - r.mRight, 0);
-		//childSetRect("search_editor", r);
-		new_right -= r.getWidth() + 6;
+		//childGetRect("search_editor", r);
+		////r.translate( new_right - r.mRight, 0);
+		////childSetRect("search_editor", r);
+		//new_right -= r.getWidth() + 6;
 	}
 	else
 	{
@@ -600,9 +600,9 @@ void LLStatusBar::refresh()
 	mTextParcelName->setRect(r);
 
 	// Set search bar visibility
-	childSetVisible("search_editor", search_visible);
+	/*childSetVisible("search_editor", search_visible);
 	childSetVisible("search_btn", search_visible);
-	childSetVisible("menubar_search_bevel_bg", search_visible);
+	childSetVisible("menubar_search_bevel_bg", search_visible);*/
 	mSGBandwidth->setVisible(! search_visible);
 	mSGPacketLoss->setVisible(! search_visible);
 	childSetEnabled("stat_btn", ! search_visible);
@@ -613,8 +613,8 @@ void LLStatusBar::setVisibleForMouselook(bool visible)
 	mTextBalance->setVisible(visible);
 	mTextTime->setVisible(visible);
 	childSetVisible("buycurrency", visible);
-	childSetVisible("search_editor", visible);
-	childSetVisible("search_btn", visible);
+	/*childSetVisible("search_editor", visible);
+	childSetVisible("search_btn", visible);*/
 	mSGBandwidth->setVisible(visible);
 	mSGPacketLoss->setVisible(visible);
 	setBackgroundVisible(visible);
