@@ -42,7 +42,7 @@ const S32 LL_VERSION_BUILD = 0;
 
 const char * const IMP_VIEWER_NAME = "Imprudence";
 const S32 IMP_VERSION_MAJOR = 1;
-const S32 IMP_VERSION_MINOR = 1;
+const S32 IMP_VERSION_MINOR = 2;
 const S32 IMP_VERSION_PATCH = 0;
 const char * const IMP_VERSION_TEST = "";
 
