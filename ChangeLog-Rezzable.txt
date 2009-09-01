@@ -3,6 +3,16 @@
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
+2009-08-30  McCabe Maxsted  <hakushakukun@gmail.com>
+
+    * Fixed compile errors after merge with Imprudence 1.2:
+
+	modified:   linden/indra/newview/llappviewer.cpp
+	modified:   linden/indra/newview/llpanellogin.cpp
+	modified:   linden/indra/newview/llviewermenu.cpp
+
+
+
 2009-08-29  McCabe Maxsted  <hakushakukun@gmail.com>
 
      * Merged Imprudence 1.2 into HK 0.9.1

@@ -3807,7 +3807,7 @@ void LLAppViewer::handleLoginComplete()
 	gDebugInfo["ClientInfo"]["MajorVersion"] = HK_VERSION_MAJOR;
 	gDebugInfo["ClientInfo"]["MinorVersion"] = HK_VERSION_MINOR;
 	gDebugInfo["ClientInfo"]["PatchVersion"] = HK_VERSION_PATCH;
-	gDebugInfo["ClientInfo"]["BuildVersion"] = HK_VERSION_BUILD;
+	gDebugInfo["ClientInfo"]["BuildVersion"] = HK_VERSION_TEST;
 
 	LLParcel* parcel = LLViewerParcelMgr::getInstance()->getAgentParcel();
 	if ( parcel && parcel->getMusicURL()[0])

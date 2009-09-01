@@ -681,7 +681,7 @@ void init_menus()
 	//
 	// Debug menu visiblity
 	//
-	show_debug_menus();
+	//show_debug_menus();
 
 	gLoginMenuBarView = (LLMenuBarGL*)LLUICtrlFactory::getInstance()->buildMenu("menu_login.xml", gMenuHolder);
 	LLRect menuBarRect = gLoginMenuBarView->getRect();
@@ -2671,7 +2671,7 @@ void handle_admin_override_toggle(void*)
 	gAgent.setAdminOverride(!gAgent.getAdminOverride());
 
 	// The above may have affected which debug menus are visible
-	show_debug_menus();
+	//show_debug_menus();
 }
 
 void handle_god_mode(void*)
@@ -2720,7 +2720,7 @@ void set_god_level(U8 god_level)
 
 
 	// changing god-level can affect which menus we see
-	show_debug_menus();
+	//show_debug_menus();
 }
 
 #ifdef TOGGLE_HACKED_GODLIKE_VIEWER
@@ -9556,7 +9556,7 @@ void initialize_menus()
 	addMenu(new LLViewZoomIn(), "View.ZoomIn");
 	addMenu(new LLViewZoomDefault(), "View.ZoomDefault");
 	addMenu(new LLViewFullscreen(), "View.Fullscreen");
-	addMenu(new LLViewToggleAdvanced(), "View.ToggleAdvanced");
+	//addMenu(new LLViewToggleAdvanced(), "View.ToggleAdvanced");
 
 
 	addMenu(new LLViewEnableMouselook(), "View.EnableMouselook");
@@ -9568,7 +9568,7 @@ void initialize_menus()
 	addMenu(new LLViewCheckHighlightTransparent(), "View.CheckHighlightTransparent");
 	addMenu(new LLViewCheckRenderType(), "View.CheckRenderType");
 	addMenu(new LLViewCheckHUDAttachments(), "View.CheckHUDAttachments");
-	addMenu(new LLViewCheckAdvanced(), "View.CheckAdvanced");
+	//addMenu(new LLViewCheckAdvanced(), "View.CheckAdvanced");
 
 	// World menu
 	addMenu(new LLWorldChat(), "World.Chat");

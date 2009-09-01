@@ -868,8 +868,8 @@ void LLPanelLogin::loadLoginPage()
 	//}
 
 	// Language
-	std::string language = LLUI::getLanguage();
-	oStr << first_query_delimiter<<"lang=" << language;
+	//std::string language = LLUI::getLanguage();
+	//oStr << first_query_delimiter<<"lang=" << language;
 	
 	//// First Login?
 	//if (gSavedSettings.getBOOL("FirstLoginThisInstall"))
