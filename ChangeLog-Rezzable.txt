@@ -20,6 +20,14 @@
 	modified:   linden/indra/newview/skins/default/xui/en-us/panel_status_bar.xml
 
 
+    * Bumped version to 0.9.2:
+
+	modified:   linden/indra/llcommon/llversionviewer.h
+	modified:   linden/indra/newview/English.lproj/InfoPlist.strings
+	modified:   linden/indra/newview/Info-HeritageKey.plist
+	modified:   linden/indra/newview/res/viewerRes.rc
+
+
 2009-08-30  McCabe Maxsted  <hakushakukun@gmail.com>
 
     * Fixed compile errors after merge with Imprudence 1.2:
