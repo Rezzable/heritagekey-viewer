@@ -2,6 +2,12 @@
 =-                  Heritage Key 0.9.2                    -=
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+2009-09-03  McCabe Maxsted  <hakushakukun@gmail.com>
+
+    * Fixed about HK menu entry in login screen:
+
+	modified:   linden/indra/newview/skins/default/xui/en-us/menu_login.xml
+
 
 2009-09-01  McCabe Maxsted  <hakushakukun@gmail.com>
 
