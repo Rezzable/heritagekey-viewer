@@ -2,6 +2,14 @@
 =-                   Imprudence 1.2.0                     -=
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+
+2009-09-26 McCabe Maxsted  <hakushakukun@gmail.com>
+
+	* Removed overridden /oy compiler option.
+	
+	  modified:   linden/indra/cmake/00-Common.cmake
+	
+
 2009-09-25 McCabe Maxsted  <hakushakukun@gmail.com>
 
 	* Removed problematic /MP flag.
