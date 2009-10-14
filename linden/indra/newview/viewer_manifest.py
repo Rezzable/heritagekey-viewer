@@ -423,14 +423,14 @@ class WindowsManifest(ViewerManifest):
 class DarwinManifest(ViewerManifest):
     def construct(self):
         # copy over the build result (this is a no-op if run within the xcode script)
-        self.path(self.args['configuration'] + "/Heritage Key.app", dst="")
+        self.path(self.args['configuration'] + "/Rezzable.app", dst="")
 
         if self.prefix(src="", dst="Contents"):  # everything goes in Contents
             # Expand the tar file containing the assorted mozilla bits into
             #  <bundle>/Contents/MacOS/
             self.contents_of_tar(self.args['source']+'/mozilla-universal-darwin.tgz', 'MacOS')
 
-            self.path("Info-HeritageKey.plist", dst="Info.plist")
+            self.path("Info-Rezzable.plist", dst="Info.plist")
 
             # copy additional libs in <bundle>/Contents/MacOS/
             if self.prefix(src="../../libraries/universal-darwin/lib_release", dst="MacOS/"):
@@ -708,7 +708,7 @@ class LinuxManifest(ViewerManifest):
         if self.prefix("linux_tools", dst=""):
             #self.path("client-readme.txt","README-linux.txt")
             #self.path("client-readme-voice.txt","README-linux-voice.txt")
-            self.path("wrapper.sh","heritage_key")
+            self.path("wrapper.sh","rezzable")
             self.path("handle_genesisprotocol.sh")
             self.path("register_genesisprotocol.sh")
             self.end_prefix("linux_tools")
@@ -770,7 +770,7 @@ class LinuxManifest(ViewerManifest):
 class Linux_i686Manifest(LinuxManifest):
     def construct(self):
         super(Linux_i686Manifest, self).construct()
-        self.path("heritagekey-stripped","bin/do-not-directly-run-heritagekey-bin")
+        self.path("rezzable-stripped","bin/do-not-directly-run-rezzable-bin")
 #        self.path("../linux_crash_logger/linux-crash-logger-stripped","linux-crash-logger.bin")
         self.path("linux_tools/launch_url.sh","launch_url.sh")
         if self.prefix("res-sdl"):
