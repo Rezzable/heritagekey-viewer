@@ -199,22 +199,22 @@ Alter&gt; Age-Play
 <c_attribute></c_attribute>
 <d_old></d_old>
 <e_new>
-Age &gt; Adult resident on Teen Heritage Key
+Age &gt; Adult resident on Teen Rezzable
 </e_new>
 <f_old_trans></f_old_trans>
 <f_translation>
-Alter&gt; Erwachsener Einwohner in Teen Heritage Key
+Alter&gt; Erwachsener Einwohner in Teen Rezzable
 </f_translation>
 </string><string><a_file>floater_report_abuse.xml</a_file>
 <b_path>/floater_report_abuse/category_combo/Age__Underage_resident_on_Adult_Second_Life</b_path>
 <c_attribute></c_attribute>
 <d_old></d_old>
 <e_new>
-Age &gt; Underage resident on Adult Heritage Key
+Age &gt; Underage resident on Adult Rezzable
 </e_new>
 <f_old_trans></f_old_trans>
 <f_translation>
-Alter &gt; Minderjähriger Einwohner in Adult Heritage Key
+Alter &gt; Minderjähriger Einwohner in Adult Rezzable
 </f_translation>
 </string><string><a_file>floater_report_abuse.xml</a_file>
 <b_path>/floater_report_abuse/category_combo/Assault__Combat_sandbox___unsafe_area</b_path>
@@ -298,11 +298,11 @@ Offenlegung &gt; Abhören eines Chats aus der Ferne
 <c_attribute></c_attribute>
 <d_old></d_old>
 <e_new>
-Disclosure &gt; Heritage Key information/chat/IMs
+Disclosure &gt; Rezzable information/chat/IMs
 </e_new>
 <f_old_trans></f_old_trans>
 <f_translation>
-Offenlegung &gt; Heritage Key-Informationen/Chat/IMs
+Offenlegung &gt; Rezzable-Informationen/Chat/IMs
 </f_translation>
 </string><string><a_file>floater_report_abuse.xml</a_file>
 <b_path>/floater_report_abuse/category_combo/Disturbing_the_peace__Unfair_use_of_region_resources</b_path>

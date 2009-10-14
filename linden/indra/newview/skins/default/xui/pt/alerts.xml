@@ -437,7 +437,7 @@ Você não tem L$ suficientes para associar-se a este grupo.
 	</alert>
 	<alert name="ConfirmLandSaleToAnyoneChange">
 		<message name="message">
-			ATENÇÃO: Ao clicar em &apos;vender para qualquer um&apos; torna a sua terra disponível para toda a comunidade Heritage Key, mesmo aqueles que não estão nesta região.
+			ATENÇÃO: Ao clicar em &apos;vender para qualquer um&apos; torna a sua terra disponível para toda a comunidade Rezzable, mesmo aqueles que não estão nesta região.
 
 A área de [LAND_SIZE] m2 de terra selecionada está posta para venda.
 Seu preço de venda será L$ [SALE_PRICE] e está autorizado para [NAME].
@@ -884,14 +884,14 @@ Nota: Isto limpará o cache.
 	</alert>
 	<alert name="UnsupportedGLRequirements">
 		<message name="message">
-			Você não parece ter requisitos de hardware recomendados para Heritage Key. Heritage Key exige uma placa gráfica OpenGL que tem apoio a multi- texturas. Se este for o caso, você pode se certificar de que tem os drivers mais recentes para sua placa gráfica, e os patches e pacotes de serviços para seu sistema operacional. 
+			Você não parece ter requisitos de hardware recomendados para Rezzable. Rezzable exige uma placa gráfica OpenGL que tem apoio a multi- texturas. Se este for o caso, você pode se certificar de que tem os drivers mais recentes para sua placa gráfica, e os patches e pacotes de serviços para seu sistema operacional. 
 
 Se continuar com problemas, por favor visite: http://heritage-key.com/virtual-experience-info
 		</message>
 	</alert>
 	<alert name="UnsupportedHardware">
 		<message name="message">
-			Aviso: Seu sistema não é compatível com os requisitos mínimos exigidos pelo Heritage Key. Se você continuar usando o Heritage Key pode experimentar uma performance ruim. Infelizmente não podemos oferecer suporte técnico para configurações de sistema não suportado. 
+			Aviso: Seu sistema não é compatível com os requisitos mínimos exigidos pelo Rezzable. Se você continuar usando o Rezzable pode experimentar uma performance ruim. Infelizmente não podemos oferecer suporte técnico para configurações de sistema não suportado. 
 
 MINSPECS
 Você deseja visitar [_URL] para maiores informações?
@@ -934,7 +934,7 @@ Você deseja visitar [_URL] para maiores informações?
 	<alert name="UnknownGPU">
 		<message name="message">
 			Seu sistema possui uma placa gráfica que nos é desconhecido neste momento.
-Freqüentemente neste caso com um novo hardware, não tivemos a chance de testar. Heritage Key vai muito provavelmente executar corretamente, mas talvez seja necessária ajustar suas configurações de gráficos para algo mais apropriado. 
+Freqüentemente neste caso com um novo hardware, não tivemos a chance de testar. Rezzable vai muito provavelmente executar corretamente, mas talvez seja necessária ajustar suas configurações de gráficos para algo mais apropriado. 
 (Menu Editar &gt; Preferências &gt; Gráficos).
 		</message>
 		<ignore name="ignore">
@@ -1521,7 +1521,7 @@ Pesquisava por: [FINALQUERY]
 	</alert>
 	<alert name="CannotCloseFloaterBuyLand">
 		<message name="message">
-			Você não pode fechar a janela de Compra de Terreno até que o Heritage Key calcule o preço dessa transação.
+			Você não pode fechar a janela de Compra de Terreno até que o Rezzable calcule o preço dessa transação.
 		</message>
 	</alert>
 	<alert name="CannotDeedLandNothingSelected">
@@ -2147,7 +2147,7 @@ Retornar a http://heritage-key.com/ para criar uma nova conta?
 	<alert name="LoginPacketNeverReceived">
 		<message name="message">
 			Estamos com problemas de conexão. 
-Pode ser problema com a conexão de sua internet ou com os servidores do Heritage Key. 
+Pode ser problema com a conexão de sua internet ou com os servidores do Rezzable. 
 
 Voce tanto pode checar a conexão de sua internet e tentar novamente em alguns minutos, ou clicar em Teletransporte para tentar teletransportar-se para sua casa.
 		</message>
@@ -3285,7 +3285,7 @@ Padrão: off
 	</alert>
 	<alert name="VoiceVersionMismatch" title="Discordância de Versão de Voz">
 		<message name="message">
-			Esta versão do Heritage Key não é compatível com as características do Canal de Voz desta região. Para que a Conversa por Voz funcione corretamente, você precisará atualizar o Heritage Key.
+			Esta versão do Rezzable não é compatível com as características do Canal de Voz desta região. Para que a Conversa por Voz funcione corretamente, você precisará atualizar o Rezzable.
 		</message>
 	</alert>
 	<alert name="HelpEstateCovenant" title="Corretor do Estado">
@@ -3472,10 +3472,10 @@ Mover para o inventário o(s) iten(s)?
 	</alert>
 	<alert name="ClickOpenF1Help">
 		<message name="message">
-			Visitar o website de Suporte do Heritage Key?
+			Visitar o website de Suporte do Rezzable?
 		</message>
 		<ignore name="ignore">
-			Quando visitando o website de Suporte do Heritage Key
+			Quando visitando o website de Suporte do Rezzable
 		</ignore>
 		<option name="Gotopage">
 			Ir
@@ -3503,7 +3503,7 @@ Mover para o inventário o(s) iten(s)?
 			Deseja sair?
 		</message>
 		<ignore name="ignore">
-			Quando Saindo do Heritage Key.
+			Quando Saindo do Rezzable.
 		</ignore>
 		<option name="Quit">
 			Sair
@@ -3533,8 +3533,8 @@ Como um serviço aos residentes e visitantes, o dono da região em que você se 
 O dono da região resolverá as reportagens baseado nas regras locais desta região, como definido na Declaração da propriedade. 
 (Veja as declarações indo ao menu Mundo e selecionando Sobre a Terra.)
 
-A resolução desta reportagem se aplica apenas a esta região; o acesso de Residentes às outras áreas do Heritage Key não será afetado pelas decisões desta reportagem.
-Apenas a Rezzable pode restringir acesso a todo o Heritage Key.
+A resolução desta reportagem se aplica apenas a esta região; o acesso de Residentes às outras áreas do Rezzable não será afetado pelas decisões desta reportagem.
+Apenas a Rezzable pode restringir acesso a todo o Rezzable.
 		</message>
 	</alert>
 	<alert name="HelpReportBug">
@@ -3607,9 +3607,9 @@ Fazer uma descrição precisa nos ajuda a processar os arquivos e relatórios de
 
 Você parece estar relatando violação de propriedade intelectual. Por favor, certifique-se de que está relatando corretamente:
 
-(1) O Processo de abuso. Você pode apresentar um relatório de abuso se você acredita que um Residente está infringindo o sistema de permissões do Heritage Key, por exemplo, utilizando ferramentas CopyBot para copiar ou similar, para violar os direitos de propriedade intelectual. A Equipe de Abuso investigará os problemas de comportamento adequado a ação disciplinar, que viola o Estatuto da Comunidade Heritage Key ou os Termos de Serviço. No entanto, a mesma não controla e não irá responder aos pedidos para remover o conteúdo do mundo Heritage Key.
+(1) O Processo de abuso. Você pode apresentar um relatório de abuso se você acredita que um Residente está infringindo o sistema de permissões do Rezzable, por exemplo, utilizando ferramentas CopyBot para copiar ou similar, para violar os direitos de propriedade intelectual. A Equipe de Abuso investigará os problemas de comportamento adequado a ação disciplinar, que viola o Estatuto da Comunidade Rezzable ou os Termos de Serviço. No entanto, a mesma não controla e não irá responder aos pedidos para remover o conteúdo do mundo Rezzable.
 
-(2) O processo de remoção de conteúdo ou DMCA. Para solicitar a remoção de conteúdo do Heritage Key, você deve enviar uma notificação válida de infração, conforme previsto em nossa Política de DMCA em http://secondlife.com/corporate/dmca.php.
+(2) O processo de remoção de conteúdo ou DMCA. Para solicitar a remoção de conteúdo do Rezzable, você deve enviar uma notificação válida de infração, conforme previsto em nossa Política de DMCA em http://secondlife.com/corporate/dmca.php.
 
 Se você ainda deseja prosseguir com o processo de abuso, por favor, feche esta janela e termine de enviar seu relatório. Pode ser necessário selecionar a categoria específica &apos;CopyBot Infração de Permissões&apos;.
 
@@ -3820,7 +3820,7 @@ Clique &quot;Água Avançada &quot; para abrir um editor com configurações mai
 	</alert>
 	<alert name="HelpDayCycle">
 		<message name="message">
-			Este editor de dia dá a você o controle sobre o ciclo de dia/noite do Heritage Key. Este é o ciclo usado pelo editor básico de clima do controle gradual da hora do dia. 
+			Este editor de dia dá a você o controle sobre o ciclo de dia/noite do Rezzable. Este é o ciclo usado pelo editor básico de clima do controle gradual da hora do dia. 
 
 O editor do ciclo de dia trabalha configurado por keyframes (quadros-chave). Estes são pontos (representados pelos ícones cinza no gráfico de horário) que possuem o padrão de céu associado a eles.  Conforme o dia passa, o céu de Windlight &quot; anima &quot; a intersecção entre esses keyframes (quadros-chave). 
 
@@ -3942,7 +3942,7 @@ Similar ao azimute.
 	</alert>
 	<alert name="HelpClassicClouds">
 		<message name="message">
-			Marque esta check box para permitir a reprodução das nuvens clássicas mais velhas do Heritage Key, além das nuvens WindLight. 
+			Marque esta check box para permitir a reprodução das nuvens clássicas mais velhas do Rezzable, além das nuvens WindLight. 
 		</message>
 	</alert>
 	<alert name="HelpWaterFogColor">
@@ -4109,7 +4109,7 @@ Similar ao azimute.
 	</alert>
 	<alert name="NotAgeVerified">
 		<message name="message">
-			Você precisa ter a idade verificada para acessar essa parcela. Gostaria de visitar o site do Heritage Key para verificação de idade? 
+			Você precisa ter a idade verificada para acessar essa parcela. Gostaria de visitar o site do Rezzable para verificação de idade? 
 
 [_URL]
 		</message>
@@ -4125,7 +4125,7 @@ Similar ao azimute.
 	</alert>
 	<alert name="Cannot enter parcel: no payment info on file">
 		<message name="message">
-			Esta parcela exige que você tenha informações de pagamento no arquivo antes de poder acessá-la. Gostaria de visitar o site do Heritage Key para configurá-lo? 
+			Esta parcela exige que você tenha informações de pagamento no arquivo antes de poder acessá-la. Gostaria de visitar o site do Rezzable para configurá-lo? 
 
 [_URL]
 		</message>

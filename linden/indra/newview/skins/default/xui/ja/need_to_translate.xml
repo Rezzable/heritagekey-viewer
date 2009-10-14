@@ -245,11 +245,11 @@ Age > Age play
 <c_attribute/>
 <d_old/>
 <e_new>
-Age > Adult resident on Teen Heritage Key
+Age > Adult resident on Teen Rezzable
 </e_new>
 <f_old_trans/>
 <f_translation>
-年齢>成人の住人がTeen Heritage Key上にいる
+年齢>成人の住人がTeen Rezzable上にいる
 </f_translation>
 </string>
 <string>
@@ -258,11 +258,11 @@ Age > Adult resident on Teen Heritage Key
 <c_attribute/>
 <d_old/>
 <e_new>
-Age > Underage resident on Adult Heritage Key
+Age > Underage resident on Adult Rezzable
 </e_new>
 <f_old_trans/>
 <f_translation>
-年齢>未成年の住人がAdult Heritage Key上にいる
+年齢>未成年の住人がAdult Rezzable上にいる
 </f_translation>
 </string>
 <string>
@@ -362,11 +362,11 @@ Disclosure > Remotely monitoring chat
 <c_attribute/>
 <d_old/>
 <e_new>
-Disclosure > Heritage Key information/chat/IMs
+Disclosure > Rezzable information/chat/IMs
 </e_new>
 <f_old_trans/>
 <f_translation>
-開示>Heritage Keyの情報/チャット/IM
+開示>Rezzableの情報/チャット/IM
 </f_translation>
 </string>
 <string>

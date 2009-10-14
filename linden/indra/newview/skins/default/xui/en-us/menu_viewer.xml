@@ -457,8 +457,8 @@
       <on_click function="ShowFloater" userdata="lag meter" />
     </menu_item_call>
     <menu_item_separator />
-    <menu_item_call name="About Heritage Key VX Viewer..."
-                    label="About Heritage Key...">
+    <menu_item_call name="About Rezzable VX Viewer..."
+                    label="About Rezzable...">
       <on_click function="ShowFloater" userdata="about" />
     </menu_item_call>
   </menu>

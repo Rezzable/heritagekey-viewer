@@ -21,7 +21,7 @@
 	     tool_tip="Esta tarjeta posee contenido adulto." />
 	<button label="?" name="publish_help_btn" />
 	<text name="fine_print">
-		Si el destinatario juntarse a Heritage Key, usted ganará un bono de referencia.
+		Si el destinatario juntarse a Rezzable, usted ganará un bono de referencia.
 	</text>
 	<button label="Cancelar" name="cancel_btn" />
 	<button label="Enviar" name="send_btn" />

@@ -5265,7 +5265,7 @@
     <key>NumSessions</key>
     <map>
       <key>Comment</key>
-      <string>Number of successful logins to Heritage Key</string>
+      <string>Number of successful logins to Rezzable</string>
       <key>Persist</key>
       <integer>1</integer>
       <key>Type</key>
@@ -9808,7 +9808,7 @@
       <key>Type</key>
       <string>String</string>
       <key>Value</key>
-      <string>Heritage Key</string>
+      <string>Rezzable</string>
     </map>
     <key>VertexShaderEnable</key>
     <map>

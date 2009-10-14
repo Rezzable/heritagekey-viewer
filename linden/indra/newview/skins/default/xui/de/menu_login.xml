@@ -8,6 +8,6 @@
 	</menu>
 	<menu label="Hilfe" name="Help">
 		<menu_item_call label="Hilfe" name="Help" />
-		<menu_item_call label="Über Heritage Key..." name="About Heritage Key..." />
+		<menu_item_call label="Über Rezzable..." name="About Rezzable..." />
 	</menu>
 </menu_bar>

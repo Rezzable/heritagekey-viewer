@@ -140,7 +140,7 @@ Sie finden es in der Webpage Studio-Ausstellung.
 	</alert>
 	<alert name="GrantModifyRights">
 		<message name="message">
-			Die Gewährung von Änderungsrechten an andere Einwohner ermöglicht es diesen, JEDES BELIEBIGE Objekt zu ändern oder an sich zu nehmen, das Sie in der Heritage Key-Welt besitzen. Seien Sie SEHR vorsichtig beim Erteilen dieser Erlaubnis.
+			Die Gewährung von Änderungsrechten an andere Einwohner ermöglicht es diesen, JEDES BELIEBIGE Objekt zu ändern oder an sich zu nehmen, das Sie in der Rezzable-Welt besitzen. Seien Sie SEHR vorsichtig beim Erteilen dieser Erlaubnis.
 Möchten Sie [FIRST_NAME] [LAST_NAME] Änderungsrechte gewähren?
 		</message>
 		<option name="Yes">
@@ -152,7 +152,7 @@ Möchten Sie [FIRST_NAME] [LAST_NAME] Änderungsrechte gewähren?
 	</alert>
 	<alert name="GrantModifyRightsMultiple">
 		<message name="message">
-			Die Gewährung von Änderungsrechten an andere Einwohner ermöglicht es diesen, JEDES BELIEBIGE Objekt zu ändern, das Sie in der Heritage Key-Welt besitzen. Seien Sie SEHR vorsichtig beim Erteilen dieser Erlaubnis.
+			Die Gewährung von Änderungsrechten an andere Einwohner ermöglicht es diesen, JEDES BELIEBIGE Objekt zu ändern, das Sie in der Rezzable-Welt besitzen. Seien Sie SEHR vorsichtig beim Erteilen dieser Erlaubnis.
 Möchten Sie den ausgewählten Einwohnern Änderungsrechte gewähren?
 		</message>
 		<option name="Yes">
@@ -354,7 +354,7 @@ Dieses Kontrollkästchen zeigt Folgendes an:
 		<message name="message">
 			Auf der [HERITAGE_KEY] Website können Sie anderen Einwohnern eine Partnerschaft vorschlagen und bestehende Partnerschaften lösen.
 
-Die Heritage Key Website für weitere Informationen über Partnerschaften öffnen?
+Die Rezzable Website für weitere Informationen über Partnerschaften öffnen?
 		</message>
 		<option name="GotoPage">
 			Gehe zu Seite
@@ -491,7 +491,7 @@ Der Verkaufspreis beträgt [SALE_PRICE] L$ und wird automatisch für den Verkauf
 	</alert>
 	<alert name="ConfirmLandSaleToAnyoneChange">
 		<message name="message">
-			ACHTUNG: Wenn Sie auf &apos;An jeden verkaufen&apos; klicken, kann jeder in Heritage Key Ihr Land kaufen, auch Einwohner in anderen Regionen.
+			ACHTUNG: Wenn Sie auf &apos;An jeden verkaufen&apos; klicken, kann jeder in Rezzable Ihr Land kaufen, auch Einwohner in anderen Regionen.
 
 Die ausgewählten [LAND_SIZE] qm Land werden zum Verkauf freigegeben.
 Der Verkaufspreis beträgt [SALE_PRICE] L$ und wird automatisch für den Verkauf an [NAME] autorisiert.
@@ -970,14 +970,14 @@ Möchten Sie diese Objekte löschen?
 	</alert>
 	<alert name="UnsupportedGLRequirements">
 		<message name="message">
-			Ihr Computer entspricht nicht den Hardwareanforderungen von Heritage Key. Heritage Key setzt eine OpenGL-Grafikkarte mit Multitextur-Unterstützung voraus. Falls Ihre Grafikkarte diese Funktion unterstützt, installieren Sie die neuesten Treiber sowie die aktuellen Service Packs und Patches für Ihr Betriebssystem.
+			Ihr Computer entspricht nicht den Hardwareanforderungen von Rezzable. Rezzable setzt eine OpenGL-Grafikkarte mit Multitextur-Unterstützung voraus. Falls Ihre Grafikkarte diese Funktion unterstützt, installieren Sie die neuesten Treiber sowie die aktuellen Service Packs und Patches für Ihr Betriebssystem.
 
 Sollte das Problem fortbestehen, finden Sie weitere Hilfestellung unter: http://heritage-key.com/virtual-experience-info 
 		</message>
 	</alert>
 	<alert name="UnsupportedHardware">
 		<message name="message">
-			Achtung: Ihr System erfüllt nicht die Mindestanforderungen von Heritage Key. Dies kann eine schlechte Darstellungsleistung in Heritage Key zur Folge haben. Für nicht unterstützte Systemkonfigurationen bieten wir keinen technischen Support. 
+			Achtung: Ihr System erfüllt nicht die Mindestanforderungen von Rezzable. Dies kann eine schlechte Darstellungsleistung in Rezzable zur Folge haben. Für nicht unterstützte Systemkonfigurationen bieten wir keinen technischen Support. 
 
 MINSPECS
 Die Seite [_URL] für weitere Informationen öffnen?
@@ -1024,7 +1024,7 @@ Die Seite [_URL] für weitere Informationen öffnen?
 		<message name="message">
 			Ihr System verwendet eine uns zurzeit unbekannte Grafikkarte.  
 Dies ist häufig der Fall bei neuer Hardware, die wir noch nicht testen konnten. 
-Heritage Key funktioniert aller Voraussicht nach normal, möglicherweise müssen Sie aber die Grafikeinstellungen anpassen.
+Rezzable funktioniert aller Voraussicht nach normal, möglicherweise müssen Sie aber die Grafikeinstellungen anpassen.
 (Bearbeiten &gt; Einstellungen &gt; Grafik).
 		</message>
 		<ignore name="ignore">
@@ -1713,7 +1713,7 @@ Kann die Region nicht finden, in der sich dieses Land befindet.
 	<alert name="CannotCloseFloaterBuyLand">
 		<message name="message">
 			Das Fenster „Land kaufen“ kann erst geschlossen werden,
-nachdem Heritage Key den Transaktionspreis geschätzt hat.
+nachdem Rezzable den Transaktionspreis geschätzt hat.
 		</message>
 	</alert>
 	<alert name="CannotDeedLandNothingSelected">
@@ -2403,7 +2403,7 @@ Bitte überprüfen Sie Ihre Netzwerkverbindung.
 	</alert>
 	<alert name="LoginPacketNeverReceived">
 		<message name="message">
-			Die Verbindung kann nicht hergestellt werden. Möglicherweise besteht ein Problem mit Ihrer Internetverbindung oder den Heritage Key-Servern.
+			Die Verbindung kann nicht hergestellt werden. Möglicherweise besteht ein Problem mit Ihrer Internetverbindung oder den Rezzable-Servern.
 
 Überprüfen Sie Ihre Internetverbindung und versuchen Sie es dann erneut, oder klicken Sie auf „Hilfe“, um zu unserer Supportseite zu gelangen, oder klicken Sie auf „Teleportieren“, um nach Hause zu teleportieren.
 		</message>
@@ -3696,7 +3696,7 @@ Standard: deaktiviert
 	</alert>
 	<alert name="VoiceVersionMismatch" title="Falsche Voice-Version">
 		<message name="message">
-			Diese Version von Second ist mit dem Voice-Chat-Feature in dieser Region nicht kompatibel. Damit Voice-Chat funktioniert, müssen Sie Heritage Key aktualisieren.
+			Diese Version von Second ist mit dem Voice-Chat-Feature in dieser Region nicht kompatibel. Damit Voice-Chat funktioniert, müssen Sie Rezzable aktualisieren.
 		</message>
 	</alert>
 	<alert name="HelpEstateCovenant" title="Grunstücksvertrag">
@@ -3913,7 +3913,7 @@ Inventarobjekt(e) verschieben?
 	</alert>
 	<alert name="WebLaunchAccountHistory">
 		<message name="message">
-			Zur Heritage Key-Website, um Ihre Kontostatistik anzuzeigen?
+			Zur Rezzable-Website, um Ihre Kontostatistik anzuzeigen?
 		</message>
 		<ignore name="ignore">
 			Beim Laden der Kontostatistik-Website
@@ -3927,10 +3927,10 @@ Inventarobjekt(e) verschieben?
 	</alert>
 	<alert name="ClickOpenF1Help">
 		<message name="message">
-			Die Support-Website von Heritage Key öffnen?
+			Die Support-Website von Rezzable öffnen?
 		</message>
 		<ignore name="ignore">
-			Bei Besuch der Heritage Key Support-Website.
+			Bei Besuch der Rezzable Support-Website.
 		</ignore>
 		<option name="Gotopage">
 			Los
@@ -3958,7 +3958,7 @@ Inventarobjekt(e) verschieben?
 			Wirklich beenden?
 		</message>
 		<ignore name="ignore">
-			Beim Beenden von Heritage Key.
+			Beim Beenden von Rezzable.
 		</ignore>
 		<option name="Quit">
 			Beenden
@@ -3985,7 +3985,7 @@ http://heritage-key.com/virtual-experience-info
 -
 Als besonderen Service für Einwohner und Besucher übernimmt der Eigentümer dieser Region die Bearbeitung aller anfallenden Meldungen. Von diesem Standort aus eingereichte Meldungen werden nicht von Rezzable bearbeitet. Der Eigentümer der Region bearbeitet Meldungen auf Grundlage der Richtlinien, die im für diese Region geltenden Grundstücksvertrag festgelegt sind. (Den Vertrag können Sie unter „Welt“ &gt; „Land-Info“ einsehen.)
 -
-Das Resultat, das sich aus dieser Meldung ergibt, betrifft nur diese Region; der Einwohnerzugang zu anderen Bereichen von Heritage Key ist davon nicht betroffen. Nur Rezzable kann den Zugang zu Heritage Key beschränken.
+Das Resultat, das sich aus dieser Meldung ergibt, betrifft nur diese Region; der Einwohnerzugang zu anderen Bereichen von Rezzable ist davon nicht betroffen. Nur Rezzable kann den Zugang zu Rezzable beschränken.
 		</message>
 	</alert>
 	<alert name="HelpReportBug">
@@ -4053,9 +4053,9 @@ Eine möglichst genaue Beschreibung mit Schritten zur Reproduktion des Fehlers h
  
 Sie melden eine Urheberrechtsverletzung. Sind Sie wirklich sicher, dass Sie eine Verletzung des Urheberrechts melden möchten?
 
-1. Missbrauch melden. Wenn Sie der Meinung sind, ein Einwohner nutzt das Berechtigungssystem von Heritage Key auf unerlaubte Weise zu seinem Vorteil aus, indem er zum Beispiel einen CopyBot oder ähnliche Kopiertools verwendet und damit eine Urheberrechtsverletzung begeht, können Sie diesen Missbrauch melden. Das Missbrauchsteam untersucht etwaige Verstöße gegen die Heritage Key Community Standards oder die Nutzungsbedingungen und verhängt entsprechende Strafen. Das Missbrauchsteam ist jedoch nicht dafür zuständig, Inhalte aus der Heritage Key-Welt zu entfernen und reagiert auch nicht auf entsprechende Anfragen.
+1. Missbrauch melden. Wenn Sie der Meinung sind, ein Einwohner nutzt das Berechtigungssystem von Rezzable auf unerlaubte Weise zu seinem Vorteil aus, indem er zum Beispiel einen CopyBot oder ähnliche Kopiertools verwendet und damit eine Urheberrechtsverletzung begeht, können Sie diesen Missbrauch melden. Das Missbrauchsteam untersucht etwaige Verstöße gegen die Rezzable Community Standards oder die Nutzungsbedingungen und verhängt entsprechende Strafen. Das Missbrauchsteam ist jedoch nicht dafür zuständig, Inhalte aus der Rezzable-Welt zu entfernen und reagiert auch nicht auf entsprechende Anfragen.
 
-2. Der DMCA oder das Entfernen von Inhalten. Sie können das Entfernen von Inhalten aus Heritage Key beantragen. Dazu MÜSSEN Sie eine Urheberrechtsverletzung gemäß den in unserer DMCA-Richtlinie unter http://secondlife.com/corporate/dmca.php dargelegten Anweisungen einreichen.
+2. Der DMCA oder das Entfernen von Inhalten. Sie können das Entfernen von Inhalten aus Rezzable beantragen. Dazu MÜSSEN Sie eine Urheberrechtsverletzung gemäß den in unserer DMCA-Richtlinie unter http://secondlife.com/corporate/dmca.php dargelegten Anweisungen einreichen.
 
 Wenn Sie mit der Missbrauchmeldung jetzt fortfahren möchten, schließen Sie bitte dieses Fenster und senden Sie Ihren Bericht ein.  Möglicherweise müssen Sie Kategorie „CopyBot oder Berechtigungs-Exploit“ auswählen.
 
@@ -4270,7 +4270,7 @@ Klicken Sie auf „Wasser (erweitert)“, um einen Editor mit erweiterten Einste
 	</alert>
 	<alert name="HelpDayCycle">
 		<message name="message">
-			Im Tageszyklus-Editor steuern Sie den Tag-/Nachtzyklus am Heritage Key Himmel. Dabei handelt es sich um den Zyklus, der mit dem Tageszeit-Regler im Umwelt-Basiseditor gesteuert wird.
+			Im Tageszyklus-Editor steuern Sie den Tag-/Nachtzyklus am Rezzable Himmel. Dabei handelt es sich um den Zyklus, der mit dem Tageszeit-Regler im Umwelt-Basiseditor gesteuert wird.
 
 Der Tageszyklus-Editor verwendet sogenannte Keyframes zur Steuerung des Tag-/Nachtablaufs. Dabei handelt es sich um „Schlüsselbilder“ (die grauen Kreise auf der Zeitskala), für die bestimmte Himmelseinstellungen definiert wurden. Bei voranschreitender Tageszeit interpoliert WindLight den Übergang zwischen diesen Keyframes und erzeugt eine entsprechende Himmelsanimation. 
 
@@ -4393,7 +4393,7 @@ Entspricht dem Azimut.
 	</alert>
 	<alert name="HelpClassicClouds">
 		<message name="message">
-			Aktivieren Sie dieses Kontrollkästchen, um die Darstellung der klassischen Heritage Key Wolken zusätzlich zu den WindLight-Wolken zu erzwingen.
+			Aktivieren Sie dieses Kontrollkästchen, um die Darstellung der klassischen Rezzable Wolken zusätzlich zu den WindLight-Wolken zu erzwingen.
 		</message>
 	</alert>
 	<alert name="HelpWaterFogColor">
@@ -4560,7 +4560,7 @@ Entspricht dem Azimut.
 	</alert>
 	<alert name="BadURL">
 		<message name="message">
-			Heritage Key kann den folgenden Link nicht verarbeiten:
+			Rezzable kann den folgenden Link nicht verarbeiten:
  [SLURL]
 Die meisten Links ähneln dem Folgenden:
 
@@ -4572,7 +4572,7 @@ secondlife:///app/agent/0e346d8b-4433-4d66-a6b0-fd37083abc4c/about
 	<alert name="NotAgeVerified">
 		<message name="message">
 			Um Zugang zu dieser Parzelle zu erhalten, müssen Sie sich einer Altersprüfung unterziehen.
-Möchten Sie auf der Heritage Key Website eine Altersüberprüfung durchführen?
+Möchten Sie auf der Rezzable Website eine Altersüberprüfung durchführen?
 
 [_URL]
 		</message>
@@ -4592,7 +4592,7 @@ Möchten Sie auf der Heritage Key Website eine Altersüberprüfung durchführen?
 	<alert name="Cannot enter parcel: no payment info on file">
 		<message name="message">
 			Um Zugang zu dieser Parzelle zu erhalten, müssen Sie Zahlungsinformationen hinterlegt haben.
-Möchten Sie die Heritage Key Website öffnen, um diese Angaben zu hinterlegen?
+Möchten Sie die Rezzable Website öffnen, um diese Angaben zu hinterlegen?
 
 [_URL]
 		</message>
