@@ -75,7 +75,7 @@ class PlatformSetup(object):
     build_type = build_types['relwithdebinfo']
     standalone = 'FALSE'
     unattended = 'FALSE'
-    project_name = 'HeritageKey'
+    project_name = 'Rezzable'
     distcc = True
     cmake_opts = []
 
@@ -564,9 +564,9 @@ class WindowsSetup(PlatformSetup):
                 continue
             vstool_cmd = (os.path.join('tools','vstool','VSTool.exe') +
                           ' --solution ' +
-                          os.path.join(build_dir,'HeritageKey.sln') +
+                          os.path.join(build_dir,'Rezzable.sln') +
                           ' --config ' + self.build_type +
-                          ' --startup heritagekey-bin')
+                          ' --startup rezzable-bin')
             print 'Running %r in %r' % (vstool_cmd, getcwd())
             self.run(vstool_cmd)        
             print >> open(stamp, 'w'), self.build_type
