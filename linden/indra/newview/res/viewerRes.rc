@@ -248,12 +248,12 @@ BEGIN
         BLOCK "040904b0"
         BEGIN
             VALUE "CompanyName", "Rezzable Productions Ltd."
-            VALUE "FileDescription", "Heritage Key VX Viewer"
+            VALUE "FileDescription", "Rezzable VX Viewer"
             VALUE "FileVersion", "0.9.2"
-            VALUE "InternalName", "Heritage Key VX Viewer"
+            VALUE "InternalName", "Rezzable VX Viewer"
             VALUE "LegalCopyright", "GPLv2"
-            VALUE "OriginalFilename", "heritagekey.exe"
-            VALUE "ProductName", "Heritage Key VX Viewer"
+            VALUE "OriginalFilename", "rezzable.exe"
+            VALUE "ProductName", "Rezzable VX Viewer"
             VALUE "ProductVersion", "0.9.2"
         END
     END
