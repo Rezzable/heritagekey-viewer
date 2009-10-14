@@ -433,7 +433,7 @@ set(viewer_SOURCE_FILES
     pipeline.cpp
     )
 
-set(VIEWER_BINARY_NAME "heritagekey-bin" CACHE STRING
+set(VIEWER_BINARY_NAME "rezzable-bin" CACHE STRING
     "The name of the viewer executable to create.")
 
 if (LINUX)
@@ -857,8 +857,8 @@ if (DARWIN)
     viewer.icns
     macview.r
     gpu_table.txt
-    Info-HeritageKey.plist
-    HeritageKey.nib/
+    Info-Rezzable.plist
+    Rezzable.nib/
     # CMake doesn't seem to support Xcode language variants well just yet
     English.lproj/InfoPlist.strings
     English.lproj/language.txt
@@ -1428,13 +1428,13 @@ set(ARTWORK_DIR ${CMAKE_CURRENT_SOURCE_DIR} CACHE PATH
 
 if (LINUX)
   add_custom_command(
-      OUTPUT heritagekey-stripped
+      OUTPUT rezzable-stripped
       COMMAND strip
-      ARGS --strip-debug -o heritagekey-stripped ${VIEWER_BINARY_NAME}
-      DEPENDS heritagekey-bin
+      ARGS --strip-debug -o rezzable-stripped ${VIEWER_BINARY_NAME}
+      DEPENDS rezzable-bin
       )
 
-  set(product HeritageKey-${ARCH}-${viewer_VERSION})
+  set(product Rezzable-${ARCH}-${viewer_VERSION})
 
   add_custom_command(
       OUTPUT ${product}.tar.bz2
@@ -1451,7 +1451,7 @@ if (LINUX)
         --build=${CMAKE_CURRENT_BINARY_DIR}
         --dest=${CMAKE_CURRENT_BINARY_DIR}/packaged
         --touch=${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/.${product}.touched
-      DEPENDS heritagekey-stripped ${CMAKE_CURRENT_SOURCE_DIR}/viewer_manifest.py
+      DEPENDS rezzable-stripped ${CMAKE_CURRENT_SOURCE_DIR}/viewer_manifest.py
       )
 
   if (NOT INSTALL)
@@ -1461,16 +1461,16 @@ if (LINUX)
 endif (LINUX)
 
 if (DARWIN)
-  set(product "Heritage Key")
+  set(product "Rezzable")
   set_target_properties(
     ${VIEWER_BINARY_NAME}
     PROPERTIES
     OUTPUT_NAME "${product}"
     MACOSX_BUNDLE_INFO_STRING "info string - localize me"
     MACOSX_BUNDLE_ICON_FILE "viewer.icns"
-    MACOSX_BUNDLE_GUI_IDENTIFIER "Heritage Key"
+    MACOSX_BUNDLE_GUI_IDENTIFIER "Rezzable"
     MACOSX_BUNDLE_LONG_VERSION_STRING "ververver"
-    MACOSX_BUNDLE_BUNDLE_NAME "Heritage Key"
+    MACOSX_BUNDLE_BUNDLE_NAME "Rezzable"
     MACOSX_BUNDLE_SHORT_VERSION_STRING "asdf"
     MACOSX_BUNDLE_BUNDLE_VERSION "asdf"
     MACOSX_BUNDLE_COPYRIGHT "copyright linden lab 2007 - localize me and run me through a legal wringer"

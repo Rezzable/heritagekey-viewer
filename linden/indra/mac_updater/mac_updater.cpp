@@ -934,7 +934,7 @@ void *updatethreadproc(void*)
 
 #endif // 0 *HACK for DEV-11935
 		
-		strncat(temp, "/HeritageKeyUpdate_XXXXXX", (sizeof(temp) - strlen(temp)) - 1);
+		strncat(temp, "/RezzableUpdate_XXXXXX", (sizeof(temp) - strlen(temp)) - 1);
 		if(mkdtemp(temp) == NULL)
 		{
 			throw 0;
@@ -952,7 +952,7 @@ void *updatethreadproc(void*)
 				
 		chdir(tempDir);
 		
-		snprintf(temp, sizeof(temp), "HeritageKey.dmg");		
+		snprintf(temp, sizeof(temp), "Rezzable.dmg");		
 		
 		downloadFile = LLFile::fopen(temp, "wb");		/* Flawfinder: ignore */
 		if(downloadFile == NULL)
@@ -999,7 +999,7 @@ void *updatethreadproc(void*)
 		// NOTE: we could add -private at the end of this command line to keep the image from showing up in the Finder,
 		//		but if our cleanup fails, this makes it much harder for the user to unmount the image.
 		std::string mountOutput;
-		FILE* mounter = popen("hdiutil attach HeritageKey.dmg -mountpoint mnt", "r");		/* Flawfinder: ignore */
+		FILE* mounter = popen("hdiutil attach Rezzable.dmg -mountpoint mnt", "r");		/* Flawfinder: ignore */
 		
 		if(mounter == NULL)
 		{

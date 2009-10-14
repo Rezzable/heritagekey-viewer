@@ -156,7 +156,7 @@ if (LINUX)
   endif (SERVER)
 
   if (VIEWER)
-    add_definitions(-DAPPID=heritagekey)
+    add_definitions(-DAPPID=rezzable)
     add_definitions(-fvisibility=hidden)
     if (NOT STANDALONE)
       # this stops us requiring a really recent glibc at runtime

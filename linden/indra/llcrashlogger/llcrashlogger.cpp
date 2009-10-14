@@ -202,7 +202,7 @@ void LLCrashLogger::gatherFiles()
 	{
 		// Figure out the filename of the second life log
 		LLCurl::setCAFile(gDirUtilp->getCAFile());
-		mFileMap["SecondLifeLog"] = gDirUtilp->getExpandedFilename(LL_PATH_LOGS,"HeritageKey.log");
+		mFileMap["SecondLifeLog"] = gDirUtilp->getExpandedFilename(LL_PATH_LOGS,"Rezzable.log");
 		mFileMap["SettingsXml"] = gDirUtilp->getExpandedFilename(LL_PATH_USER_SETTINGS,"settings.xml");
 	}
 
@@ -331,7 +331,7 @@ bool LLCrashLogger::sendCrashLogs()
 	updateApplication("Sending reports...");
 
 	std::string dump_path = gDirUtilp->getExpandedFilename(LL_PATH_LOGS,
-															   "HeritageKeyCrashReport");
+															   "RezzableCrashReport");
 	std::string report_file = dump_path + ".log";
 
 	std::ofstream out_file(report_file.c_str());
@@ -390,7 +390,7 @@ bool LLCrashLogger::init()
 	//If we've opened the crash logger, assume we can delete the marker file if it exists	
 	if( gDirUtilp )
 	{
-		std::string marker_file = gDirUtilp->getExpandedFilename(LL_PATH_LOGS,"HeritageKey.exec_marker");
+		std::string marker_file = gDirUtilp->getExpandedFilename(LL_PATH_LOGS,"Rezzable.exec_marker");
 		ll_apr_file_remove( marker_file );
 	}
 	
