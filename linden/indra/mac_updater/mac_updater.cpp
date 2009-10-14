@@ -378,7 +378,7 @@ int main(int argc, char **argv)
 		}
 		else
 		{
-			gProductName = "Heritage Key";
+			gProductName = "Rezzable VX Viewer";
 		}
 	}
 	
@@ -471,7 +471,7 @@ int main(int argc, char **argv)
 		err = CreateStandardAlert(
 				kAlertStopAlert,
 				CFSTR("Error"),
-				CFSTR("An error occurred while updating Heritage Key.  Please download the latest version from http://imprudenceviewer.org/download/"),
+				CFSTR("An error occurred while updating Rezzable VX Viewer.  Please download the latest version from http://imprudenceviewer.org/download/"),
 				&params,
 				&alert);
 		

@@ -280,10 +280,10 @@ BOOL gLogoutInProgress = FALSE;
 // Internal globals... that should be removed.
 static std::string gArgs;
 
-const std::string MARKER_FILE_NAME("HeritageKey.exec_marker");
-const std::string ERROR_MARKER_FILE_NAME("HeritageKey.error_marker");
-const std::string LLERROR_MARKER_FILE_NAME("HeritageKey.llerror_marker");
-const std::string LOGOUT_MARKER_FILE_NAME("HeritageKey.logout_marker");
+const std::string MARKER_FILE_NAME("Rezzable.exec_marker");
+const std::string ERROR_MARKER_FILE_NAME("Rezzable.error_marker");
+const std::string LLERROR_MARKER_FILE_NAME("Rezzable.llerror_marker");
+const std::string LOGOUT_MARKER_FILE_NAME("Rezzable.logout_marker");
 static BOOL gDoDisconnect = FALSE;
 static std::string gLaunchFileOnQuit;
 
@@ -1487,15 +1487,15 @@ bool LLAppViewer::initLogging()
 	
 	// Remove the last ".old" log file.
 	std::string old_log_file = gDirUtilp->getExpandedFilename(LL_PATH_LOGS,
-							     "HeritageKey.old");
+							     "Rezzable.old");
 	LLFile::remove(old_log_file);
 
 	// Rename current log file to ".old"
 	std::string log_file = gDirUtilp->getExpandedFilename(LL_PATH_LOGS,
-							     "HeritageKey.log");
+							     "Rezzable.log");
 	LLFile::rename(log_file, old_log_file);
 
-	// Set the log file to HeritageKey.log
+	// Set the log file to Rezzable.log
 
 	LLError::logToFile(log_file);
 
@@ -1613,7 +1613,7 @@ bool LLAppViewer::initConfiguration()
 
 	// - set procedural settings 
 	gSavedSettings.setString("ClientSettingsFile", 
-        gDirUtilp->getExpandedFilename(LL_PATH_USER_SETTINGS, "settings_heritagekey.xml"));
+        gDirUtilp->getExpandedFilename(LL_PATH_USER_SETTINGS, "settings_rezzable.xml"));
 
 	gSavedSettings.setString("VersionChannelName", HK_VIEWER_NAME);
 
@@ -2200,10 +2200,10 @@ void LLAppViewer::writeSystemInfo()
 	gDebugInfo["SLLog"] = LLError::logFileName();
 
 	gDebugInfo["ClientInfo"]["Name"] = gSavedSettings.getString("VersionChannelName");
-	gDebugInfo["ClientInfo"]["HeritageKeyMajorVersion"] = HK_VERSION_MAJOR;
-	gDebugInfo["ClientInfo"]["HeritageKeyMinorVersion"] = HK_VERSION_MINOR;
-	gDebugInfo["ClientInfo"]["HeritageKeyPatchVersion"] = HK_VERSION_PATCH;
-	gDebugInfo["ClientInfo"]["HeritageKeyTestVersion"] = HK_VERSION_TEST;
+	gDebugInfo["ClientInfo"]["RezzableMajorVersion"] = HK_VERSION_MAJOR;
+	gDebugInfo["ClientInfo"]["RezzableMinorVersion"] = HK_VERSION_MINOR;
+	gDebugInfo["ClientInfo"]["RezzablePatchVersion"] = HK_VERSION_PATCH;
+	gDebugInfo["ClientInfo"]["RezzableTestVersion"] = HK_VERSION_TEST;
 	gDebugInfo["ClientInfo"]["ImpMajorVersion"] = IMP_VERSION_MAJOR;
 	gDebugInfo["ClientInfo"]["ImpMinorVersion"] = IMP_VERSION_MINOR;
 	gDebugInfo["ClientInfo"]["ImpPatchVersion"] = IMP_VERSION_PATCH;
@@ -2295,10 +2295,10 @@ void LLAppViewer::handleViewerCrash()
 	//to check against no matter what
 	gDebugInfo["ClientInfo"]["Name"] = gSavedSettings.getString("VersionChannelName");
 
-	gDebugInfo["ClientInfo"]["HeritageKeyMajorVersion"] = HK_VERSION_MAJOR;
-	gDebugInfo["ClientInfo"]["HeritageKeyMinorVersion"] = HK_VERSION_MINOR;
-	gDebugInfo["ClientInfo"]["HeritageKeyPatchVersion"] = HK_VERSION_PATCH;
-	gDebugInfo["ClientInfo"]["HeritageKeyTestVersion"] = HK_VERSION_TEST;
+	gDebugInfo["ClientInfo"]["RezzableMajorVersion"] = HK_VERSION_MAJOR;
+	gDebugInfo["ClientInfo"]["RezzableMinorVersion"] = HK_VERSION_MINOR;
+	gDebugInfo["ClientInfo"]["RezzablePatchVersion"] = HK_VERSION_PATCH;
+	gDebugInfo["ClientInfo"]["RezzableTestVersion"] = HK_VERSION_TEST;
 	gDebugInfo["ClientInfo"]["ImpMajorVersion"] = IMP_VERSION_MAJOR;
 	gDebugInfo["ClientInfo"]["ImpMinorVersion"] = IMP_VERSION_MINOR;
 	gDebugInfo["ClientInfo"]["ImpPatchVersion"] = IMP_VERSION_PATCH;
@@ -2462,10 +2462,10 @@ void LLAppViewer::initMarkerFile()
 	LL_DEBUGS("MarkerFile") << "Checking marker file for lock..." << LL_ENDL;
 
 	//We've got 4 things to test for here
-	// - Other Process Running (HeritageKey.exec_marker present, locked)
-	// - Freeze (HeritageKey.exec_marker present, not locked)
-	// - LLError Crash (HeritageKey.llerror_marker present)
-	// - Other Crash (HeritageKey.error_marker present)
+	// - Other Process Running (Rezzable.exec_marker present, locked)
+	// - Freeze (Rezzable.exec_marker present, not locked)
+	// - LLError Crash (Rezzable.llerror_marker present)
+	// - Other Crash (Rezzable.error_marker present)
 	// These checks should also remove these files for the last 2 cases if they currently exist
 
 	//LLError/Error checks. Only one of these should ever happen at a time.

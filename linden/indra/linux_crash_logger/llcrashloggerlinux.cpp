@@ -53,13 +53,13 @@
 
 // These need to be localized.
 static const char dialog_text[] =
-"Heritage Key appears to have crashed or frozen last time it ran.\n"
-"This crash reporter collects information about your computer's hardware, operating system, and some Heritage Key logs, all of which are used for debugging purposes only.\n"
+"Rezzable VX Viewer appears to have crashed or frozen last time it ran.\n"
+"This crash reporter collects information about your computer's hardware, operating system, and some Rezzable VX Viewer logs, all of which are used for debugging purposes only.\n"
 "\n"
 "Send crash report?";
 
 static const char dialog_title[] =
-"Heritage Key Crash Logger";
+"Rezzable VX Viewer Crash Logger";
 
 #if LL_GTK
 static void response_callback (GtkDialog *dialog,

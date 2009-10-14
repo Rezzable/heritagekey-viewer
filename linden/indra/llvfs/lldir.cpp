@@ -229,7 +229,7 @@ const std::string  LLDir::getCacheDir(bool get_default) const
 		}
 		else
 		{
-			res = getOSCacheDir() + mDirDelimiter + "Heritage Key";
+			res = getOSCacheDir() + mDirDelimiter + "Rezzable VX Viewer";
 		}
 		return res;
 	}

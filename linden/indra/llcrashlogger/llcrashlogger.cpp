@@ -365,10 +365,10 @@ void LLCrashLogger::updateApplication(const std::string& message)
 bool LLCrashLogger::init()
 {
 	// We assume that all the logs we're looking for reside on the current drive
-	gDirUtilp->initAppDirs("Heritage Key");
+	gDirUtilp->initAppDirs("Rezzable VX Viewer");
 
-	// Default to the product name "Heritage Key" (this is overridden by the -name argument)
-	mProductName = "Heritage Key";
+	// Default to the product name "Rezzable VX Viewer" (this is overridden by the -name argument)
+	mProductName = "Rezzable VX Viewer";
 	
 	mCrashSettings.declareS32(CRASH_BEHAVIOR_SETTING, CRASH_BEHAVIOR_ASK, "Controls behavior when viewer crashes "
 		"(0 = ask before sending crash report, 1 = always send crash report, 2 = never send crash report)");

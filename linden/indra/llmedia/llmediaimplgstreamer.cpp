@@ -243,7 +243,7 @@ void LLMediaImplGStreamer::set_gst_plugin_path()
 	TCHAR buf[MAX_PATH];
 	DWORD dwType = REG_SZ;
 	DWORD dwBufSize = sizeof(buf);
-	std::wstring subkey_str = L"Software\\Rezzable\\HeritageKey";
+	std::wstring subkey_str = L"Software\\Rezzable\\Rezzable";
 	std::wstring defaultkey_str = L"";
 
 	LPCWSTR subkey = subkey_str.c_str();
@@ -261,13 +261,13 @@ void LLMediaImplGStreamer::set_gst_plugin_path()
 		}
 		else 
 		{
-			LL_WARNS("MediaImpl") << "Default value at HKEY_LOCAL_MACHINE\\Software\\Rezzable\\HeritageKey not found" << LL_ENDL;
+			LL_WARNS("MediaImpl") << "Default value at HKEY_LOCAL_MACHINE\\Software\\Rezzable\\Rezzable not found" << LL_ENDL;
 		}
 		RegCloseKey(hKey);
 	}
 	else
 	{
-		LL_WARNS("MediaImpl") << "Registry key HKEY_LOCAL_MACHINE\\Software\\Rezzable\\HeritageKey not found" << LL_ENDL;
+		LL_WARNS("MediaImpl") << "Registry key HKEY_LOCAL_MACHINE\\Software\\Rezzable\\Rezzable not found" << LL_ENDL;
 	}
 	
 	if (imp_dir == "")

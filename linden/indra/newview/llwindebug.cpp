@@ -869,8 +869,8 @@ void LLWinDebug::generateCrashStacks(struct _EXCEPTION_POINTERS *exception_infop
 			ExInfo.ExceptionPointers = exception_infop;
 			ExInfo.ClientPointers = NULL;
 
-			writeDumpToFile(MiniDumpNormal, &ExInfo, "HeritageKey.dmp");
-			writeDumpToFile((MINIDUMP_TYPE)(MiniDumpWithDataSegs | MiniDumpWithIndirectlyReferencedMemory), &ExInfo, "HeritageKeyPlus.dmp");
+			writeDumpToFile(MiniDumpNormal, &ExInfo, "Rezzable.dmp");
+			writeDumpToFile((MINIDUMP_TYPE)(MiniDumpWithDataSegs | MiniDumpWithIndirectlyReferencedMemory), &ExInfo, "RezzablePlus.dmp");
 		}
 
 		info = Get_Exception_Info(exception_infop);

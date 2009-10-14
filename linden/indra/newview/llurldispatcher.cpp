@@ -322,13 +322,13 @@ bool LLURLDispatcherImpl::dispatchGenesisURL(const std::string& url)
 	// Find out the user's name from the server.
 	// 
 	// Fetch:
-	//   http://heritage-key.com/vx/request/token2name/<logintoken>
+	//   http://rezzable.com/vx/request/token2name/<logintoken>
 	// 
 	// Result will either be "Firstname Lastname" of the user associated
 	// with the login token, or blank if the token is invalid or expired.
 
 	std::string request_url = 
-		"http://heritage-key.com/vx/request/token2name/"+logintoken;
+		"http://rezzable.com/vx/request/token2name/"+logintoken;
 
 	char curl_error_buffer[CURL_ERROR_SIZE];
 	CURL* curlp = curl_easy_init();

@@ -59,7 +59,7 @@ const S32 VOTE_UNANIMOUS = 2;
 const char EMPTY_BINARY_BUCKET[] = "";
 const S32 EMPTY_BINARY_BUCKET_SIZE = 1;
 const U32 NO_TIMESTAMP = 0;
-const std::string SYSTEM_FROM("Heritage Key");
+const std::string SYSTEM_FROM("Rezzable VX Viewer");
 const S32 IM_TTL = 1;
 
 
