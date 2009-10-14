@@ -573,7 +573,7 @@ void LLNotifyBox::format(std::string& msg, const LLStringUtil::format_map_t& arg
 {
 	// XUI:translate!
 	LLStringUtil::format_map_t targs = args;
-	targs["[HERITAGE_KEY]"] = "Heritage Key VX Viewer";
+	targs["[HERITAGE_KEY]"] = "Rezzable VX Viewer";
 	LLStringUtil::format(msg, targs);
 }
 

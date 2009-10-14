@@ -257,6 +257,6 @@
 		</menu>
 		<menu_item_call label="출시 정보" name="Release Notes..." />
 		<menu_item_separator label="-----------" name="separator6" />
-		<menu_item_call label="세컨드라이프 정보" name="About Heritage Key..." />
+		<menu_item_call label="세컨드라이프 정보" name="About Rezzable..." />
 	</menu>
 </menu_bar>

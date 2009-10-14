@@ -295,7 +295,7 @@ const char *VFS_INDEX_FILE_BASE = "index.db2.x.";
 static std::string gSecondLife;
 static std::string gWindowTitle;
 #ifdef LL_WINDOWS
-	static char sWindowClass[] = "Heritage Key VX Viewer";
+	static char sWindowClass[] = "Rezzable VX Viewer";
 #endif
 
 std::string gLoginPage;
@@ -1600,7 +1600,7 @@ bool LLAppViewer::initConfiguration()
 	if(!loadSettingsFromDirectory(LL_PATH_APP_SETTINGS, set_defaults))
 	{
 		std::ostringstream msg;
-		msg << "Heritage Key could not load its default settings file. \n" 
+		msg << "Rezzable VX Viewer could not load its default settings file. \n" 
 			<< "The installation may be corrupted. \n";
 
 		OSMessageBox(

@@ -302,7 +302,7 @@
 		<menu_item_separator label="-----------" name="separator5" />
 		<menu_item_call label="发行说明..." name="Release Notes..." />
 		<menu_item_separator label="-----------" name="separator6" />
-		<menu_item_call label="关于第二人生..." name="About Heritage Key..." />
+		<menu_item_call label="关于第二人生..." name="About Rezzable..." />
 	</menu>
 </menu_bar>
 <!--Translated for Second Life 1.19.0 (79185)-->

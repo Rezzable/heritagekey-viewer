@@ -510,7 +510,7 @@ L$が不足しているのでこのグループに参加することができま
 	</alert>
 	<alert name="ConfirmLandSaleToAnyoneChange">
 		<message name="message">
-			注:「誰にでも売却する」をクリックすると、あなたの土地は、Heritage Keyのコミュニティのどこからでも（この地域にないコミュニティを含む）購入できるようになります。
+			注:「誰にでも売却する」をクリックすると、あなたの土地は、Rezzableのコミュニティのどこからでも（この地域にないコミュニティを含む）購入できるようになります。
 
 選択された[LAND_SIZE]平方メートルの土地は、売り出し中に設定されています。
 売却価格L$[SALE_PRICE]で、[NAME]に売却を認可します。
@@ -1010,14 +1010,14 @@ L$が不足しているのでこのグループに参加することができま
 	</alert>
 	<alert name="UnsupportedGLRequirements">
 		<message name="message">
-			Heritage Key の使用に必要なハードウェアの環境が満たされていないようです。 Heritage Key ではマルチテクスチャーに対応したOpenGLグラフィック・カードが必要です。 この場合、グラフィック・カードの最新ドライバがインストールされていること、およびオペレーティング・システムにサービス・パックと修正プログラムが適用されていることをご確認ください。
+			Rezzable の使用に必要なハードウェアの環境が満たされていないようです。 Rezzable ではマルチテクスチャーに対応したOpenGLグラフィック・カードが必要です。 この場合、グラフィック・カードの最新ドライバがインストールされていること、およびオペレーティング・システムにサービス・パックと修正プログラムが適用されていることをご確認ください。
 
 問題が解決されない場合には、次のサイトにアクセスしてください。 http://heritage-key.com/virtual-experience-info
 		</message>
 	</alert>
 	<alert name="UnsupportedHardware">
 		<message name="message">
-			警告： あなたのシステムは Heritage Key を使用するために必要な必須動作環境の条件を満たしていません。 Heritage Key をこのままご使用になると、不十分なパフォーマンスしか得られないおそれがあります。 また、サポート外のシステム構成でご使用の場合、テクニカルサポートをご利用いただくことができません。 
+			警告： あなたのシステムは Rezzable を使用するために必要な必須動作環境の条件を満たしていません。 Rezzable をこのままご使用になると、不十分なパフォーマンスしか得られないおそれがあります。 また、サポート外のシステム構成でご使用の場合、テクニカルサポートをご利用いただくことができません。 
 
  必須動作環境の条件
 [_URL] にアクセスして、さらに詳しい情報をご覧になりますか?
@@ -1063,7 +1063,7 @@ L$が不足しているのでこのグループに参加することができま
 	<alert name="UnknownGPU">
 		<message name="message">
 			お使いのシステムには、現時点では不明なグラフィック・カードが搭載されています。  
-これは、当社による動作テストが行われていない新しいハードウェアが使用されている場合がほとんどです。  Heritage Keyはほぼ間違いなく正常に動作しますが、必要に応じたグラフィック設定の調整が必要になる場合があります。
+これは、当社による動作テストが行われていない新しいハードウェアが使用されている場合がほとんどです。  Rezzableはほぼ間違いなく正常に動作しますが、必要に応じたグラフィック設定の調整が必要になる場合があります。
 ([編集]&gt;[環境設定]&gt;[グラフィック])。
 		</message>
 		<ignore name="ignore">
@@ -1781,7 +1781,7 @@ http://heritage-key.com/virtual-experience-infoに戻って、新規アカウン
 	</alert>
 	<alert name="CannotCloseFloaterBuyLand">
 		<message name="message">
-			Heritage Keyによるこの取引の見積りが完了するまで［土地を購入］ウィンドウを閉じることはできません。
+			Rezzableによるこの取引の見積りが完了するまで［土地を購入］ウィンドウを閉じることはできません。
 		</message>
 	</alert>
 	<alert name="CannotDeedLandNothingSelected">
@@ -2497,7 +2497,7 @@ http://heritage-key.com/virtual-experience-infoに戻って、新規アカウン
 	</alert>
 	<alert name="LoginPacketNeverReceived">
 		<message name="message">
-			接続に問題が生じています。 あなたのインターネット接続、またはHeritage Keyサーバーに問題がある可能性があります。
+			接続に問題が生じています。 あなたのインターネット接続、またはRezzableサーバーに問題がある可能性があります。
 
 あなたのインターネット接続を確認して数分後にもう一度試みるか、[ヘルプ]をクリックして当社のサポート・サイトに接続してください。または、[テレポート]をクリックしてホームにテレポートしてみてください。
 		</message>
@@ -3927,7 +3927,7 @@ Linden社所有のメインランドの不動産での太陽の位置に
 	</alert>
 	<alert name="VoiceVersionMismatch" title="ボイスバージョンの不一致">
 		<message name="message">
-			このバージョンの Heritage Key は、この地域のボイスチャット機能に対応していません。ボイスチャットを正しく使用するには、Heritage Key のアップデートが必要です。
+			このバージョンの Rezzable は、この地域のボイスチャット機能に対応していません。ボイスチャットを正しく使用するには、Rezzable のアップデートが必要です。
 		</message>
 	</alert>
 	<alert name="HelpEstateCovenant" title="不動産約款">
@@ -4165,10 +4165,10 @@ Linden社所有のメインランドの不動産での太陽の位置に
 	</alert>
 	<alert name="ClickOpenF1Help">
 		<message name="message">
-			Heritage Key のサポートウェブサイトを利用しますか？
+			Rezzable のサポートウェブサイトを利用しますか？
 		</message>
 		<ignore name="ignore">
-			Heritage Key のサポートウェブサイトを閲覧するにあたって。
+			Rezzable のサポートウェブサイトを閲覧するにあたって。
 		</ignore>
 		<option name="Gotopage">
 			行く
@@ -4196,7 +4196,7 @@ Linden社所有のメインランドの不動産での太陽の位置に
 			終了しようとしています。操作を続行しますか？
 		</message>
 		<ignore name="ignore">
-			Heritage Key の終了にあたって。
+			Rezzable の終了にあたって。
 		</ignore>
 		<option name="Quit">
 			終了
@@ -4300,12 +4300,12 @@ http://heritage-key.com/contact
  
 知的財産の侵害に関する報告を行う際には、以下の点に注意してください。
 
-(1) 嫌がらせの報告のプロセス。Heritage Keyの権限システムを悪用している住人を見つけたら、嫌がらせの報告を行ってください。
+(1) 嫌がらせの報告のプロセス。Rezzableの権限システムを悪用している住人を見つけたら、嫌がらせの報告を行ってください。
 例えばコピーBotの使用、それに似たツールの使用による知的財産権の侵害があります。
-アビューズチームは調査に基づきHeritage Keyのコミュニティースタンダードや利用規約に違反する行為と判断された場合には適切な処置を行っています。
-ただし、コンテンツをHeritage Keyから撤去してほしい、といった要望にはアビューズチームは応えることができません。
+アビューズチームは調査に基づきRezzableのコミュニティースタンダードや利用規約に違反する行為と判断された場合には適切な処置を行っています。
+ただし、コンテンツをRezzableから撤去してほしい、といった要望にはアビューズチームは応えることができません。
 
-(2) DMCA（デジタルミレニアム著作権法）及びコンテンツ撤去プロセス。 Heritage Keyからのコンテンツの撤去をリクエストするには、著作権侵害通知の提出を行う必要があります。
+(2) DMCA（デジタルミレニアム著作権法）及びコンテンツ撤去プロセス。 Rezzableからのコンテンツの撤去をリクエストするには、著作権侵害通知の提出を行う必要があります。
 参照：http://secondlife.com/corporate/dmca.php
 
 この件に関する嫌がらせの報告を続ける際は、このウィンドウを閉じてください。選択すべきカテゴリは「知的財産の侵害 &gt; コピーBot及び権限の悪用」が適しているかもしれませんのでご確認ください。
@@ -4524,7 +4524,7 @@ Rezzable
 	</alert>
 	<alert name="HelpDayCycle">
 		<message name="message">
-			［デイ・サイクル編集］では Heritage Key での昼と夜の空の変化を制御できます。 これは［基本環境編集］の［時間帯］スライダーで使用されるサイクルです。
+			［デイ・サイクル編集］では Rezzable での昼と夜の空の変化を制御できます。 これは［基本環境編集］の［時間帯］スライダーで使用されるサイクルです。
 
 ［デイ・サイクル編集］はキーフレームを設定することで機能します。  各キーフレームにはプリセットされた空の設定が関連付けられています（時間グラフに灰色の節として表示されます）。 ウィンドライト（ WindLight ）はキーフレーム間をデータ補間し、時間の経過とともに空の自然なアニメーションを作り出します。 
 
@@ -4655,7 +4655,7 @@ Rezzable
 	</alert>
 	<alert name="HelpClassicClouds">
 		<message name="message">
-			このボックスを有効にすると、WindLight の雲に加えて、Heritage Key の従来の雲もレンダリングできるようになります。
+			このボックスを有効にすると、WindLight の雲に加えて、Rezzable の従来の雲もレンダリングできるようになります。
 		</message>
 	</alert>
 	<alert name="HelpWaterFogColor">
@@ -4823,7 +4823,7 @@ Rezzable
 	</alert>
 	<alert name="BadURL">
 		<message name="message">
-			Heritage Key がリンク（[SLURL]）を処理できません。
+			Rezzable がリンク（[SLURL]）を処理できません。
 ほとんどのリンクは、次のような形式です。
 
 secondlife:///app/agent/0e346d8b-4433-4d66-a6b0-
@@ -4835,7 +4835,7 @@ fd37083abc4c/about
 	<alert name="NotAgeVerified">
 		<message name="message">
 			この区画にアクセスするためには、年齢確認を行う必要があります。
-Heritage Keyのウェブサイトにアクセスして、年齢確認を行いますか？
+Rezzableのウェブサイトにアクセスして、年齢確認を行いますか？
 
 [_URL]
 		</message>
@@ -4855,7 +4855,7 @@ Heritage Keyのウェブサイトにアクセスして、年齢確認を行い�
 	<alert name="Cannot enter parcel: no payment info on file">
 		<message name="message">
 			この区画にアクセスするには、支払い情報が事前に登録されている必要があります。
-Heritage Keyのウェブサイトにアクセスして、設定しますか？
+Rezzableのウェブサイトにアクセスして、設定しますか？
 
 [_URL]
 		</message>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <panel name="content_panel">
 	<text_editor name="voice_intro_text1">
-		Willkommen beim Heritage Key Voice-Chat! Mit dem Voice-Chat können Sie sich mit anderen Einwohnern unterhalten. Dieser Assistent führt Sie durch die Einrichtung von Voice-Chat. Für den Voice-Chat benötigen Sie Lautsprecher und ein Mikrofon bzw. Kopfhörer mit einem eingebauten Mikrofon.
+		Willkommen beim Rezzable Voice-Chat! Mit dem Voice-Chat können Sie sich mit anderen Einwohnern unterhalten. Dieser Assistent führt Sie durch die Einrichtung von Voice-Chat. Für den Voice-Chat benötigen Sie Lautsprecher und ein Mikrofon bzw. Kopfhörer mit einem eingebauten Mikrofon.
 	</text_editor>
 	<text_editor name="voice_intro_text2">
 		Voice-Chat ist standardmäßig aktiviert. Möchten Sie Voice-Chat weiterverwenden?
@@ -18,6 +18,6 @@
 		Sie können den Voice-Chat jederzeit in den Einstellungen auf der Registerkarte „Voice-Chat“ aktivieren.
 	</text_editor>
 	<text_editor name="voice_intro_text4">
-		Klicken Sie auf „Weiter“, um den Voice-Chat jetzt zu konfigurieren oder klicken Sie auf „Fertig stellen“, um zu Heritage Key zu wechseln.
+		Klicken Sie auf „Weiter“, um den Voice-Chat jetzt zu konfigurieren oder klicken Sie auf „Fertig stellen“, um zu Rezzable zu wechseln.
 	</text_editor>
 </panel>

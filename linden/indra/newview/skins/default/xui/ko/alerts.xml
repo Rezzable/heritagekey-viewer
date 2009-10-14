@@ -3941,7 +3941,7 @@ http://secondlife.com/tiki/tiki-index.php?page=RawTerrainFile
 	</alert>
 	<alert name="VoiceVersionMismatch" title="음성 버전이 일치하지 않음.">
 		<message name="message">
-			현재Heritage Key 버전은 이 지역의 음성 채팅 사양과 일치하지 않습니다. 음성 채팅 기능이 올바르게 작동하려면Heritage Key를 업데이트 해야 합니다.
+			현재Rezzable 버전은 이 지역의 음성 채팅 사양과 일치하지 않습니다. 음성 채팅 기능이 올바르게 작동하려면Rezzable를 업데이트 해야 합니다.
 		</message>
 	</alert>
 	<alert name="HelpEstateCovenant" title="사유지 시행 규칙">
@@ -4195,10 +4195,10 @@ http://secondlife.com/tiki/tiki-index.php?page=RawTerrainFile
 	</alert>
 	<alert name="ClickOpenF1Help">
 		<message name="message">
-			Heritage Key 지원 웹 사이트를 방문하시겠습니까?
+			Rezzable 지원 웹 사이트를 방문하시겠습니까?
 		</message>
 		<ignore name="ignore">
-			Heritage Key 지원 웹 사이트를 방문할 때.
+			Rezzable 지원 웹 사이트를 방문할 때.
 		</ignore>
 		<option name="Gotopage">
 			이동
@@ -4226,7 +4226,7 @@ http://secondlife.com/tiki/tiki-index.php?page=RawTerrainFile
 			종료 하시겠습니까?
 		</message>
 		<ignore name="ignore">
-			Heritage Key를 종료할 때.
+			Rezzable를 종료할 때.
 		</ignore>
 		<option name="Quit">
 			종료
@@ -4264,10 +4264,10 @@ http://secondlife.com/community/blotter.php
 (시행 규칙을 열람하려면 월드 메뉴에서 토지 소개를
 선택하십시오.)
 -
-이 보고서의 해결은 이 지역에서만 적용되며, Heritage Key 내의
+이 보고서의 해결은 이 지역에서만 적용되며, Rezzable 내의
 기타 지역에 대한 주민들의 접근 권한은 이 보고서의 결과에
 영향을 받지 않습니다. 오직 Rezzable만이
-Heritage Key 전체의 접근 권한을 제한할 수 있습니다.
+Rezzable 전체의 접근 권한을 제한할 수 있습니다.
 		</message>
 	</alert>
 	<alert name="HelpReportBug">
@@ -4877,7 +4877,7 @@ D 슬라이더를 사용해서는 구름의 농도를
 	</alert>
 	<alert name="BadURL">
 		<message name="message">
-			Heritage Key에서 링크로 연결되지 않습니다:
+			Rezzable에서 링크로 연결되지 않습니다:
  [SLURL]
 대부분의 링크 형식은 다음과 유사합니다:
 
@@ -4890,7 +4890,7 @@ fd37083abc4c/about
 	<alert name="NotAgeVerified">
 		<message name="message">
 			이 구획에 출입하려면 성인 인증이 필요합니다.
-Heritage Key 웹사이트를 방문하여 성인 인증을 하시겠습니까?
+Rezzable 웹사이트를 방문하여 성인 인증을 하시겠습니까?
 
 [_URL]
 		</message>
@@ -4910,7 +4910,7 @@ Heritage Key 웹사이트를 방문하여 성인 인증을 하시겠습니까?
 	<alert name="Cannot enter parcel: no payment info on file">
 		<message name="message">
 			이 구획에 출입 하려면 결제 수단 정보가 있어야 합니다.
-Heritage Key 웹사이트를 방문하여 이 정보를 설정하시겠습니까?
+Rezzable 웹사이트를 방문하여 이 정보를 설정하시겠습니까?
 
 [_URL]
 		</message>

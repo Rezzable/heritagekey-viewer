@@ -47,10 +47,10 @@ struct LLGridData
 static LLGridData gGridInfo[GRID_INFO_COUNT] = 
 {
 	{ "None", "", "", "", "" },
-	{ "Heritage Key Grid",
+	{ "Rezzable Grid",
 	  "",
-	  "HeritageKey",
-	  "http://login.heritage-key.com/",
+	  "Rezzable",
+	  "http://login.rezzable.com/",
 	  "" },
 	{ "SL Main Grid",
 	  "Agni",

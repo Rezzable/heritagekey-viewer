@@ -501,7 +501,7 @@ Votre prix de vente sera de [SALE_PRICE] L$ et la vente sera disponible à [NAME
 	<alert name="ConfirmLandSaleToAnyoneChange">
 		<message name="message">
 			Attention : en cliquant sur Vendre à n&apos;importe qui, vous rendez votre
-terrain disponible à toute la communauté de Heritage Key, même aux personnes qui ne sont pas dans
+terrain disponible à toute la communauté de Rezzable, même aux personnes qui ne sont pas dans
 cette région.
 
 Le terrain sélectionné, de [LAND_SIZE] m², est mis en vente.
@@ -987,14 +987,14 @@ car vous avez activé le mode sans échec.
 	</alert>
 	<alert name="UnsupportedGLRequirements">
 		<message name="message">
-			Vous semblez ne pas avoir le matériel requis pour utiliser Heritage Key. Heritage Key requiert une carte graphique OpenGL avec une prise en charge du multitexturing. Si vous avez une telle carte, assurez-vous que vous avez aussi les drivers les plus récents pour la carte, ainsi que les service packs et les patchs pour votre système d&apos;exploitation.
+			Vous semblez ne pas avoir le matériel requis pour utiliser Rezzable. Rezzable requiert une carte graphique OpenGL avec une prise en charge du multitexturing. Si vous avez une telle carte, assurez-vous que vous avez aussi les drivers les plus récents pour la carte, ainsi que les service packs et les patchs pour votre système d&apos;exploitation.
 
 Si vous avez toujours des problèmes, veuillez consulter la page suivante : http://www.heritage-key.com
 		</message>
 	</alert>
 	<alert name="UnsupportedHardware">
 		<message name="message">
-			Avertissement : vous n&apos;avez pas la configuration système requise pour utiliser Heritage Key. Si vous continuez à utiliser Heritage Key, votre performance risque d&apos;être moindre. Malheureusement, nous n&apos;offrons aucune assistance pour les problèmes de configuration système. 
+			Avertissement : vous n&apos;avez pas la configuration système requise pour utiliser Rezzable. Si vous continuez à utiliser Rezzable, votre performance risque d&apos;être moindre. Malheureusement, nous n&apos;offrons aucune assistance pour les problèmes de configuration système. 
 
 MINSPECS
 Voulez-vous visiter [_URL] pour plus d&apos;informations ?
@@ -1038,7 +1038,7 @@ Voulez-vous visiter [_URL] pour plus d&apos;informations ?
 		<message name="message">
 			Votre système contient une carte graphique que nous ne connaissons pas actuellement. 
 Cela est souvent le cas avec le nouveau materiel qui n&apos;a pas encore été testé.
-Vous pourrez probablement utiliser Heritage Key sans problème, mais vous devrez peut-être ajuster les paramètres de vos graphiques.
+Vous pourrez probablement utiliser Rezzable sans problème, mais vous devrez peut-être ajuster les paramètres de vos graphiques.
 (Menu Édition &gt; Préférences &gt; Graphiques).
 		</message>
 		<ignore name="ignore">
@@ -1743,7 +1743,7 @@ la région dans laquelle il est situé est introuvable.
 	</alert>
 	<alert name="CannotCloseFloaterBuyLand">
 		<message name="message">
-			Vous ne pouvez pas fermer la fenêtre Acheter le terrain avant que Heritage Key n&apos;estime le montant de cette transaction.
+			Vous ne pouvez pas fermer la fenêtre Acheter le terrain avant que Rezzable n&apos;estime le montant de cette transaction.
 		</message>
 	</alert>
 	<alert name="CannotDeedLandNothingSelected">
@@ -2012,7 +2012,7 @@ Si le problème persiste, veuillez cliquer sur Aide | Signaler un bug dans le me
 			[MESSAGE]
  
 Nous ne pouvons résoudre ce problème. Veuillez
-désinstaller et réinstaller Heritage Key avant de réessayer.
+désinstaller et réinstaller Rezzable avant de réessayer.
 Si le problème persiste, consultez la FAQ du support technique :
 www.heritage-key.com.
 		</message>
@@ -2421,7 +2421,7 @@ Veuillez vérifier votre connexion.
 	</alert>
 	<alert name="LoginPacketNeverReceived">
 		<message name="message">
-			Vous avez des problèmes à vous connecter. Il peut s&apos;agir d&apos;un problème avec votre connexion internet ou les serveurs de Heritage Key.
+			Vous avez des problèmes à vous connecter. Il peut s&apos;agir d&apos;un problème avec votre connexion internet ou les serveurs de Rezzable.
 
 Nous vous conseillons de vérifier votre connexion Internet et de réessayer dans quelques minutes, de cliquer sur Aide, ou bien de cliquer sur Téléporter pour être téléporté vers votre domicile.
 		</message>
@@ -3740,7 +3740,7 @@ Défaut : désactivé
 	</alert>
 	<alert name="VoiceVersionMismatch" title="Versions de voix non compatibles">
 		<message name="message">
-			Cette version de Heritage Key n&apos;est pas compatible avec la fonctionnalité de chat vocal dans cette région. Vous devez mettre à jour Heritage Key pour que le chat vocal fonctionne correctement.
+			Cette version de Rezzable n&apos;est pas compatible avec la fonctionnalité de chat vocal dans cette région. Vous devez mettre à jour Rezzable pour que le chat vocal fonctionne correctement.
 		</message>
 	</alert>
 	<alert name="HelpEstateCovenant" title="Règlement du domaine">
@@ -3962,7 +3962,7 @@ Déplacer les objets de l&apos;inventaire ?
 	</alert>
 	<alert name="WebLaunchAccountHistory">
 		<message name="message">
-			Aller sur le site de Heritage Key pour consulter l&apos;historique de votre compte ?
+			Aller sur le site de Rezzable pour consulter l&apos;historique de votre compte ?
 		</message>
 		<ignore name="ignore">
 			Lors du chargement de la page web contenant l&apos;historique de votre compte
@@ -3976,10 +3976,10 @@ Déplacer les objets de l&apos;inventaire ?
 	</alert>
 	<alert name="ClickOpenF1Help">
 		<message name="message">
-			Visiter les pages d&apos;aide de Heritage Key ?
+			Visiter les pages d&apos;aide de Rezzable ?
 		</message>
 		<ignore name="ignore">
-			Lors de la visite des pages d&apos;aide de Heritage Key
+			Lors de la visite des pages d&apos;aide de Rezzable
 		</ignore>
 		<option name="Gotopage">
 			Aller
@@ -4007,7 +4007,7 @@ Déplacer les objets de l&apos;inventaire ?
 			Êtes-vous certain de vouloir quitter ?
 		</message>
 		<ignore name="ignore">
-			Lorsque vous quittez Heritage Key
+			Lorsque vous quittez Rezzable
 		</ignore>
 		<option name="Quit">
 			Quitter
@@ -4044,9 +4044,9 @@ des règles de cette région, comme indiqué dans le réglement du domaine.
 À propos du terrain.)
 
 La résolution de ce rapport ne s&apos;applique qu&apos;à cette région ; 
-L&apos;accès aux autres endroits de Heritage Key 
+L&apos;accès aux autres endroits de Rezzable 
 ne sera pas affecté par les résultats de cette enquête. Seul Rezzable peut 
-interdire l&apos;accès à l&apos;ensemble de Heritage Key.
+interdire l&apos;accès à l&apos;ensemble de Rezzable.
 		</message>
 	</alert>
 	<alert name="HelpReportBug">
@@ -4119,9 +4119,9 @@ Les descriptions précises nous permettent de résoudre les bugs plus rapidement
  
 Il semble que vous souhaitiez reporter une infraction à des droits de propriété intellectuelle. Pour signaler correctement cette infraction :
 
-(1) Remplissez un rapport d&apos;infraction. Vous pouvez soumettre un rapport d&apos;infraction si vous pensez qu&apos;un résident exploite le système de permissions de Heritage Key, par exemple en utilisant un CopyBot ou des outils similaires pour enfreindre des droits de propriété intellectuelle. Notre équipe chargée des infractions mènera une enquête et prendra les mesures nécessaires à l&apos;encontre du résident non respectueux des Conditions d&apos;utilisation ou des règles de la communauté. Sachez toutefois que l&apos;équipe chargée des infractions ne supprimera pas de contenu à l&apos;intérieur de Heritage Key.
+(1) Remplissez un rapport d&apos;infraction. Vous pouvez soumettre un rapport d&apos;infraction si vous pensez qu&apos;un résident exploite le système de permissions de Rezzable, par exemple en utilisant un CopyBot ou des outils similaires pour enfreindre des droits de propriété intellectuelle. Notre équipe chargée des infractions mènera une enquête et prendra les mesures nécessaires à l&apos;encontre du résident non respectueux des Conditions d&apos;utilisation ou des règles de la communauté. Sachez toutefois que l&apos;équipe chargée des infractions ne supprimera pas de contenu à l&apos;intérieur de Rezzable.
 
-(2) Demandez à ce que du contenu à l&apos;intérieur de Heritage Key soit supprimé. Pour demander à ce que du contenu soit supprimé de Heritage Key, vous devez soumettre un rapport d&apos;infraction valide, tel que fourni dans notre Règlement contre les violations des droit d&apos;auteurs (DMCA), à http://secondlife.com/corporate/dmca.php.
+(2) Demandez à ce que du contenu à l&apos;intérieur de Rezzable soit supprimé. Pour demander à ce que du contenu soit supprimé de Rezzable, vous devez soumettre un rapport d&apos;infraction valide, tel que fourni dans notre Règlement contre les violations des droit d&apos;auteurs (DMCA), à http://secondlife.com/corporate/dmca.php.
 
 Si vous souhaitez toujours reporter cette infraction, veuillez fermer cette fenêtre et soumettre votre rapport.  Vous devrez peut-être sélectionner la catégorie CopyBot ou exploitation abusive des permissions.
 
@@ -4336,7 +4336,7 @@ En cliquant sur le bouton Eau Avancée, vous aurez accès à tous les réglages 
 	</alert>
 	<alert name="HelpDayCycle">
 		<message name="message">
-			L&apos;éditeur du cycle du jour vous permet de contrôler le ciel au cours du cycle jour/nuit de Heritage Key. C&apos;est ce même cycle qui est contrôlé par le curseur Heure de la journée dans l&apos;éditeur d&apos;environnement basique.
+			L&apos;éditeur du cycle du jour vous permet de contrôler le ciel au cours du cycle jour/nuit de Rezzable. C&apos;est ce même cycle qui est contrôlé par le curseur Heure de la journée dans l&apos;éditeur d&apos;environnement basique.
 
 L&apos;éditeur du jour fonctionne grâce au réglage d&apos;images-clés. Ces images-clés sont représentées par les marques grises sur la ligne du temps et ont des préréglages qui leurs sont associées. Au cours de la journée et de la nuit, le ciel WindLight s&apos;anime en passant d&apos;une clé à l&apos;autre. 
 
@@ -4462,7 +4462,7 @@ Même chose que l&apos;azimut.
 	</alert>
 	<alert name="HelpClassicClouds">
 		<message name="message">
-			Cochez cette option pour utiliser les anciens nuages de Heritage Key en plus des nuages WindLight.
+			Cochez cette option pour utiliser les anciens nuages de Rezzable en plus des nuages WindLight.
 		</message>
 	</alert>
 	<alert name="HelpWaterFogColor">
@@ -4630,7 +4630,7 @@ Même chose que l&apos;azimut.
 	<alert name="NotAgeVerified">
 		<message name="message">
 			Pour que vous puissiez accéder à cette parcelle, votre âge doit être vérifié.
-Voulez-vous aller sur le site de Heritage Key pour vérifier votre âge ?
+Voulez-vous aller sur le site de Rezzable pour vérifier votre âge ?
 
 [_URL]
 		</message>
@@ -4647,7 +4647,7 @@ Voulez-vous aller sur le site de Heritage Key pour vérifier votre âge ?
 	<alert name="Cannot enter parcel: no payment info on file">
 		<message name="message">
 			Avant de pouvoir pénétrer sur cette parcelle, vous devez enregistrer vos informations de paiement.
-Voulez-vous aller sur le site de Heritage Key pour enregistrer ces informations ?
+Voulez-vous aller sur le site de Rezzable pour enregistrer ces informations ?
 
 [_URL]
 		</message>

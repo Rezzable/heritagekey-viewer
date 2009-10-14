@@ -585,7 +585,7 @@ Follow the red arrow to the beacon, or click the arrow to dismiss the beacon.
 <b_path>/panel_login/connect_btn</b_path>
 <c_attribute>label</c_attribute>
 <d_old>Connect</d_old>
-<e_new>Enter Heritage Key</e_new>
+<e_new>Enter Rezzable</e_new>
 <f_translation>세컨드라이프 연결</f_translation>
 <f_old_trans>연결</f_old_trans>
 </string><string><a_file>panel_preferences_chat.xml</a_file>

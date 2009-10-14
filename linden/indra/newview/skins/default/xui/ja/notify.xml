@@ -888,7 +888,7 @@ Mキーを押して変更します。
 	<notify name="FirstDebugMenus">
 		<message name="message">
 			高度な設定を有効にしました。 
-このメニューには、Heritage Key をデバッグするデベロッパーにとって有用な機能があります。
+このメニューには、Rezzable をデバッグするデベロッパーにとって有用な機能があります。
 このメニューを切り替えるには、Windows では Ctrl-Alt-Dを押します。Macの場合は、Cmd-Opt-Shift-Dを押してください。.
 		</message>
 	</notify>

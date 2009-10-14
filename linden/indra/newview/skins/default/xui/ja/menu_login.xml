@@ -8,6 +8,6 @@
 	</menu>
 	<menu label="ヘルプ" name="Help">
 		<menu_item_call label="セカンドライフヘルプ" name="Help" />
-		<menu_item_call label="Heritage Key について..." name="About Heritage Key..." />
+		<menu_item_call label="Rezzable について..." name="About Rezzable..." />
 	</menu>
 </menu_bar>

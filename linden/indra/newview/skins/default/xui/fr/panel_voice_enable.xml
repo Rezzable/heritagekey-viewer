@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <panel name="content_panel">
 	<text_editor name="voice_intro_text1">
-		Bienvenue dans le chat vocal de Heritage Key ! Le chat vocal vous permet de communiquer avec les autres résidents. Cet assistant vous aidera à le paramétrer correctement.  Le chat vocal requiert l&apos;utilisation de speakers audio. Pour parler, il vous faudra aussi un micro ou un casque stéréo avec un micro.
+		Bienvenue dans le chat vocal de Rezzable ! Le chat vocal vous permet de communiquer avec les autres résidents. Cet assistant vous aidera à le paramétrer correctement.  Le chat vocal requiert l&apos;utilisation de speakers audio. Pour parler, il vous faudra aussi un micro ou un casque stéréo avec un micro.
 	</text_editor>
 	<text_editor name="voice_intro_text2">
 		Le chat vocal est activé par défaut. Souhaitez-vous continuer à l&apos;utiliser ?
@@ -18,6 +18,6 @@
 		Vous pouvez activer le chat vocal à tout moment à partir de l&apos;onglet Chat Vocal, sous Préférences.
 	</text_editor>
 	<text_editor name="voice_intro_text4">
-		Pour configurer vos préférences de chat, cliquez sur le bouton Suivant. Pour continuer sur Heritage Key, cliquez sur Finir.
+		Pour configurer vos préférences de chat, cliquez sur le bouton Suivant. Pour continuer sur Rezzable, cliquez sur Finir.
 	</text_editor>
 </panel>

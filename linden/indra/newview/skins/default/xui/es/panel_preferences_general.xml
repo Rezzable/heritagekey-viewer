@@ -23,7 +23,7 @@
 	<check_box label="Girar minimapa" name="rotate_mini_map_checkbox" />
 	<check_box label="Autodetectar hardware gráfico en la próxima vez que iniciar"
 	     name="probe_hardware_checkbox"
-	     tool_tip="Seconf Life automáticamente ajusta algunas configuraciones gráficas con base en su hardware.  Si usted instala un  nuevo hardware,  Heritage Key debe detectarlo nuevamente." />
+	     tool_tip="Seconf Life automáticamente ajusta algunas configuraciones gráficas con base en su hardware.  Si usted instala un  nuevo hardware,  Rezzable debe detectarlo nuevamente." />
 	<text type="string" length="1" name="start_location_textbox">
 		Local de inicio:
 	</text>
