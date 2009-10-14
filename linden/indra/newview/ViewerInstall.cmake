@@ -1,4 +1,4 @@
-install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/heritagekey-bin
+install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/rezzable-bin
         DESTINATION ${APP_BINARY_DIR}
         )
 
