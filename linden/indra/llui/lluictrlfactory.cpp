@@ -53,6 +53,7 @@
 #include "lliconctrl.h"
 #include "lllineeditor.h"
 #include "llmenugl.h"
+#include "llprogressbar.h"
 #include "llradiogroup.h"
 #include "llscrollcontainer.h"
 #include "llscrollingpanellist.h"

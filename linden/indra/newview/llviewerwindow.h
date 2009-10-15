@@ -51,7 +51,7 @@
 class LLView;
 class LLViewerObject;
 class LLUUID;
-class LLProgressView;
+class LLPanelProgress;
 class LLTool;
 class LLVelocityBar;
 class LLTextBox;
@@ -253,7 +253,7 @@ public:
 	void			setProgressPercent(const F32 percent);
 	void			setProgressMessage(const std::string& msg);
 	void			setProgressCancelButtonVisible( BOOL b, const std::string& label = LLStringUtil::null );
-	LLProgressView *getProgressView() const;
+	LLPanelProgress *getProgressView() const;;
 
 	void			updateObjectUnderCursor();
 
@@ -399,7 +399,7 @@ protected:
 	BOOL			mLeftMouseDown;
 	BOOL			mRightMouseDown;
 
-	LLProgressView	*mProgressView;
+	LLPanelProgress *mPanelProgress;
 
 	LLTextBox*		mToolTip;
 	BOOL			mToolTipBlocked;			// True after a key press or a mouse button event.  False once the mouse moves again.

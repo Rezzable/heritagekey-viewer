@@ -73,7 +73,7 @@ const std::string
 	LL_VOLUME_SLIDER_CTRL_TAG("volume_slider"),
 	LL_WEB_BROWSER_CTRL_TAG("web_browser"),
 	LL_STAT_VIEW_TAG("stat_view"),
-	LL_PROGRESS_VIEW_TAG("progress_view"),
+	LL_PROGRESS_BAR_TAG("progress_bar"),
 	LL_STAT_BAR_TAG("stat_bar"),
 	LL_STATUS_BAR_TAG("status_bar"),
 	LL_VIEWER_TEXT_EDITOR_TAG("viewer_text_editor"),

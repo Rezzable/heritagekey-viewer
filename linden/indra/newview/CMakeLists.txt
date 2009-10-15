@@ -300,7 +300,7 @@ set(viewer_SOURCE_FILES
     llpreviewscript.cpp
     llpreviewsound.cpp
     llpreviewtexture.cpp
-    llprogressview.cpp
+    llpanelprogress.cpp
     llregionposition.cpp
     llremoteparcelrequest.cpp
     llsavedsettingsglue.cpp
@@ -695,7 +695,7 @@ set(viewer_HEADER_FILES
     llpreviewscript.h
     llpreviewsound.h
     llpreviewtexture.h
-    llprogressview.h
+    llpanelprogress.h
     llregionposition.h
     llremoteparcelrequest.h
     llresourcedata.h

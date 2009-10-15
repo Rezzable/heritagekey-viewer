@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<panel name="panel_progress" mouse_opaque="true" bottom="0" left="0"
+    follows="left|top|right|bottom">
+
+  <text name="top_line" text_color="1,1,1" top="560" left="20" width="600">
+    Second Life
+  </text>
+
+  <text name="status" text_color="1,1,1" top="540" left="20" width="600">
+    Loading Hippos...
+  </text>
+
+  <progress_bar top="480" bottom="460" left="20" width="600"
+	     color_background="0.32, 0.40, 0.50, 1.0"
+	     color_bar="0.57, 0.66, 0.83, 1.0"
+	     color_bar2="0.68, 0.68, 0.68, 1.0"
+	     color_shadow="0.2, 0.2, 0.4, 1.0"
+	     image_bar="rounded_square.tga"
+	     image_shadow="rounded_square_soft.tga" />
+
+  <text name="message" text_color="1,1,1" wordwrap="true"
+	     top="450" left="20" height="200" width="600">
+    Were You Cognizant...? Hippos can sprint at speeds up to 30 mph (50 kmh) over short distances!
+  </text>
+
+  <button name="cancel_btn" font="SansSerif" label="Quit" scale_image="TRUE"
+	     bottom="16" left="20" height="20" width="70" follows="right|bottom" />
+
+</panel>

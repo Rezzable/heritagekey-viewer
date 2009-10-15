@@ -124,7 +124,7 @@
 #include "llnotify.h"
 #include "lloverlaybar.h"
 #include "llpreviewtexture.h"
-#include "llprogressview.h"
+#include "llpanelprogress.h"
 #include "llresmgr.h"
 #include "llrootview.h"
 #include "llselectmgr.h"
@@ -1678,8 +1678,8 @@ void LLViewerWindow::initBase()
 	mToolTip->setVisible( FALSE );
 
 	// Add the progress bar view (startup view), which overrides everything
-	mProgressView = new LLProgressView(std::string("ProgressView"), full_window);
-	mRootView->addChild(mProgressView);
+	mPanelProgress = new LLPanelProgress("PanelProgress", full_window);
+	mRootView->addChild(mPanelProgress);
 	setShowProgress(FALSE);
 	setProgressCancelButtonVisible(FALSE);
 }
@@ -4453,63 +4453,63 @@ void LLViewerWindow::setup2DRender()
 
 void LLViewerWindow::setShowProgress(const BOOL show)
 {
-	if (mProgressView)
+	if (mPanelProgress)
 	{
-		mProgressView->setVisible(show);
+		mPanelProgress->setVisible(show);
 	}
 }
 
 BOOL LLViewerWindow::getShowProgress() const
 {
-	return (mProgressView && mProgressView->getVisible());
+	return (mPanelProgress && mPanelProgress->getVisible());
 }
 
 
 void LLViewerWindow::moveProgressViewToFront()
 {
-	if( mProgressView && mRootView )
+	if( mPanelProgress && mRootView )
 	{
-		mRootView->removeChild( mProgressView );
-		mRootView->addChild( mProgressView );
+		mRootView->removeChild( mPanelProgress );
+		mRootView->addChild( mPanelProgress );
 	}
 }
 
 void LLViewerWindow::setProgressString(const std::string& string)
 {
-	if (mProgressView)
+	if (mPanelProgress)
 	{
-		mProgressView->setText(string);
+		mPanelProgress->setText(string);
 	}
 }
 
 void LLViewerWindow::setProgressMessage(const std::string& msg)
 {
-	if(mProgressView)
+	if(mPanelProgress)
 	{
-		mProgressView->setMessage(msg);
+		mPanelProgress->setMessage(msg);
 	}
 }
 
 void LLViewerWindow::setProgressPercent(const F32 percent)
 {
-	if (mProgressView)
+	if (mPanelProgress)
 	{
-		mProgressView->setPercent(percent);
+		mPanelProgress->setPercent(percent);
 	}
 }
 
 void LLViewerWindow::setProgressCancelButtonVisible( BOOL b, const std::string& label )
 {
-	if (mProgressView)
+	if (mPanelProgress)
 	{
-		mProgressView->setCancelButtonVisible( b, label );
+		mPanelProgress->setCancelButtonVisible( b, label );
 	}
 }
 
 
-LLProgressView *LLViewerWindow::getProgressView() const
+LLPanelProgress *LLViewerWindow::getProgressView() const
 {
-	return mProgressView;
+	return mPanelProgress;
 }
 
 void LLViewerWindow::dumpState()
